@@ -25,7 +25,7 @@ One row = one data center facility (building or campus). Fields mirror
 | power_demand_mw | float? | actual/estimated demand ("entry demand") |
 | year_opened, planned_year | int? | |
 | in_conus | bool | False = AK/HI/territory or outside CONUS bbox (kept, not dropped) |
-| included | bool | curated-view flag; False for excluded_minor / non-CONUS |
+| included | bool | type-inclusion flag; False for excluded_minor (geography tracked separately by in_conus) |
 | confidence | enum | high / medium / low — record-level identity confidence |
 | notes | str? | free text, incl. why a record is low-confidence |
 | sources | list[FacilitySource] | provenance: source_name, source_url, source_record_id, date_accessed, confidence, raw_attributes |
