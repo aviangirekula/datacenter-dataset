@@ -1,0 +1,22 @@
+# Pipeline settings. No secrets here — keys come from environment variables.
+
+geocoder:
+  backend: census          # census | nominatim  (pluggable; google/mapbox addable later)
+  nominatim_user_agent: "gmu-geoai-dc-dataset/0.1 (research contact: <set me>)"
+  rate_limit_per_sec: 1    # Nominatim ToS: max 1 req/s, no heavy bulk use
+
+conus_bounds:              # WGS84; excludes AK, HI, territories
+  min_lat: 24.396308
+  max_lat: 49.384358
+  min_lon: -124.848974
+  max_lon: -66.885444
+non_conus_states: [AK, HI, PR, GU, VI, MP, AS]
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+
+dataset:
+  version: "0.1.0"
+  snapshot_date: null      # stamped at run time

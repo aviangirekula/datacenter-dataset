@@ -1,0 +1,26 @@
+# Source registry. Each collector reads its config block by key.
+# enabled=false sources are scaffolded but not yet implemented.
+
+osm:
+  enabled: true
+  collector: dcdata.collectors.osm:OSMCollector
+  overpass_url: https://overpass-api.de/api/interpreter
+  cache: data/raw/osm/osm_datacenters.json
+  license: ODbL
+  attribution: "© OpenStreetMap contributors"
+
+lbnl_queue:
+  enabled: false
+  collector: dcdata.collectors.lbnl_queue:LBNLQueueCollector
+  notes: "Interconnection queues — planned large loads + MW capacity. Build after OSM slice."
+
+eia:
+  enabled: false
+  collector: dcdata.collectors.eia:EIACollector
+  requires_key: EIA_API_KEY
+  notes: "Free key from https://www.eia.gov/opendata/ — grid context, not a DC registry."
+
+sec_edgar:
+  enabled: false
+  collector: dcdata.collectors.sec_edgar:SECCollector
+  notes: "Operator portfolios (Equinix, Digital Realty) from 10-K filings. Public domain."
