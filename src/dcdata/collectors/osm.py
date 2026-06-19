@@ -44,6 +44,7 @@ class OSMCollector(BaseCollector):
     """Collect US data centers from OpenStreetMap via the Overpass API."""
 
     source_name = "OpenStreetMap"
+    QUERY = OVERPASS_QUERY  # overridable by subclasses (e.g. lifecycle collector)
 
     def __init__(self, config: Optional[dict] = None, accessed: Optional[date] = None) -> None:
         super().__init__(config)
@@ -60,7 +61,7 @@ class OSMCollector(BaseCollector):
         self.cache.parent.mkdir(parents=True, exist_ok=True)
         resp = requests.post(
             self.overpass_url,
-            data={"data": OVERPASS_QUERY},
+            data={"data": self.QUERY},
             headers={"User-Agent": USER_AGENT, "Accept": "application/json"},
             timeout=300,
         )
@@ -90,6 +91,10 @@ class OSMCollector(BaseCollector):
             c = el["center"]
             return c["lat"], c["lon"], GeomType.point, GeocodePrecision.parcel, Confidence.high
         return None
+
+    def _status(self, tags: dict) -> Status:
+        """Operational by default; lifecycle subclasses override this."""
+        return Status.operational
 
     @staticmethod
     def _address(tags: dict) -> Optional[str]:
@@ -123,7 +128,7 @@ class OSMCollector(BaseCollector):
             name=name,
             operator_company=operator,
             facility_type=ftype,
-            status=Status.operational,  # OSM base = operational; planned comes from queues
+            status=self._status(tags),
             latitude=lat,
             longitude=lon,
             geom_type=geom,

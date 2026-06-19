@@ -93,3 +93,10 @@ behalf — licensing decisions go to the lab.
   OSM's `addr:state` tag — geometry wins and the count is flagged in the report.
 - Coordinate precision is capped by free geocoders until/unless a paid key is
   added; `geocode_precision` records the level actually achieved.
+- **Planned coverage is thin** (~16 under-construction/proposed sites from OSM
+  lifecycle tags). That is the honest license-clean ceiling; richer planned data
+  needs Tier-2 directories (pending the ToS report).
+- `facility_type` is operator-based. Records that name a brand only in the
+  facility name (common for under-construction OSM entries like
+  `Google datacenter`) classify as `unknown`. A name-based brand pass is a
+  candidate future enrichment.
