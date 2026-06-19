@@ -84,5 +84,12 @@ behalf — licensing decisions go to the lab.
 
 - OSM base layer mixes hyperscale campuses with minor facilities (handled via
   `excluded_minor` tagging).
-- No energy/capacity data until the interconnection-queue and operator collectors land.
-- Coordinate precision is capped by free geocoders until/unless a paid key is added.
+- **No per-facility energy/capacity data yet.** Public interconnection queues are
+  *generation-only* (LBNL) or *aggregate/confidential* (ISO large-load queues), so
+  energy enters as a separate **grid-context layer** on the roadmap — not as
+  facility rows. See [SOURCES.md](SOURCES.md).
+- `state`/`county` are reverse-geocoded from coordinates via Census TIGER
+  (authoritative, ~100% within CONUS). A small number of records disagree with
+  OSM's `addr:state` tag — geometry wins and the count is flagged in the report.
+- Coordinate precision is capped by free geocoders until/unless a paid key is
+  added; `geocode_precision` records the level actually achieved.

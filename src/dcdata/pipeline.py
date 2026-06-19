@@ -19,6 +19,8 @@ import yaml
 
 from dcdata.collectors.osm import OSMCollector
 from dcdata.export import export_dataset, write_quality_report
+from dcdata.geocode.reverse import DEFAULT_COUNTY_URL as DEFAULT_TIGER_URL
+from dcdata.geocode.reverse import TigerReverseGeocoder
 from dcdata.resolve.dedup import resolve_entities
 from dcdata.schema import Facility
 from dcdata.validate.checks import in_conus
@@ -46,7 +48,16 @@ def run(root: Path = ROOT, accessed: Optional[date] = None) -> dict:
     # Entity resolution: merge duplicate facilities across (and within) sources.
     facilities, merge_log = resolve_entities(collected)
 
-    # CONUS tagging (flag, don't drop) + stamp version/snapshot
+    # Reverse-geocode coordinates -> state/county via Census TIGER (public domain).
+    tiger_cfg = settings.get("tiger", {})
+    reverse_geocoder = TigerReverseGeocoder(
+        county_url=tiger_cfg.get("county_url", DEFAULT_TIGER_URL),
+        cache_dir=str(root / tiger_cfg.get("cache_dir", "data/raw/tiger")),
+    )
+    print("Reverse-geocoding via Census TIGER county shapefile (downloads/caches to data/raw/tiger/)...")
+    geo_stats = reverse_geocoder.assign(facilities)
+
+    # CONUS tagging (flag, don't drop) using the authoritative state + stamp version
     for f in facilities:
         f.in_conus = in_conus(f.latitude, f.longitude, f.state)
         f.snapshot_date = snapshot
@@ -57,6 +68,7 @@ def run(root: Path = ROOT, accessed: Optional[date] = None) -> dict:
     (outdir / "merge_log.json").write_text(json.dumps(merge_log, indent=2, default=str))
     stats["collected_pre_resolve"] = len(collected)
     stats["merged_clusters"] = len(merge_log)
+    stats.update(geo_stats)
     write_quality_report(facilities, outdir / "data_quality_report.md", stats)
     return stats
 

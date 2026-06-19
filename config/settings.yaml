@@ -12,6 +12,10 @@ conus_bounds:              # WGS84; excludes AK, HI, territories
   max_lon: -66.885444
 non_conus_states: [AK, HI, PR, GU, VI, MP, AS]
 
+tiger:                     # Census TIGER/Line reverse-geocoding (state/county)
+  county_url: https://www2.census.gov/geo/tiger/TIGER2024/COUNTY/tl_2024_us_county.zip
+  cache_dir: data/raw/tiger
+
 paths:
   raw: data/raw
   interim: data/interim
