@@ -10,6 +10,7 @@ them here.
 """
 from __future__ import annotations
 
+import json
 from datetime import date
 from pathlib import Path
 from typing import Optional
@@ -18,6 +19,7 @@ import yaml
 
 from dcdata.collectors.osm import OSMCollector
 from dcdata.export import export_dataset, write_quality_report
+from dcdata.resolve.dedup import resolve_entities
 from dcdata.schema import Facility
 from dcdata.validate.checks import in_conus
 
@@ -39,7 +41,10 @@ def run(root: Path = ROOT, accessed: Optional[date] = None) -> dict:
     osm_cfg = dict(sources["osm"])
     osm_cfg["cache"] = str(root / osm_cfg["cache"])  # resolve cache path against repo root
 
-    facilities: list[Facility] = list(OSMCollector(osm_cfg, accessed=snapshot).collect())
+    collected: list[Facility] = list(OSMCollector(osm_cfg, accessed=snapshot).collect())
+
+    # Entity resolution: merge duplicate facilities across (and within) sources.
+    facilities, merge_log = resolve_entities(collected)
 
     # CONUS tagging (flag, don't drop) + stamp version/snapshot
     for f in facilities:
@@ -49,6 +54,9 @@ def run(root: Path = ROOT, accessed: Optional[date] = None) -> dict:
 
     outdir = root / "data" / "processed"
     stats = export_dataset(facilities, outdir)
+    (outdir / "merge_log.json").write_text(json.dumps(merge_log, indent=2, default=str))
+    stats["collected_pre_resolve"] = len(collected)
+    stats["merged_clusters"] = len(merge_log)
     write_quality_report(facilities, outdir / "data_quality_report.md", stats)
     return stats
 
