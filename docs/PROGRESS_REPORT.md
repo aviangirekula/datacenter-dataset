@@ -76,43 +76,7 @@ OSM lifecycle    ┘→ entity resolution → reverse-geocode → validate → e
 
 ---
 
-## 5. What's left
-
-### Done this session (no blockers)
-- ✅ Name-based brand classification (fixed ~85 "unknown" → hyperscale/colocation)
-- ✅ GeoJSON output added
-- ✅ arXiv + SEC feasibility investigated (findings above)
-
-### Can do next without permission (I can build these)
-- **Power-grid context layer (separate layer, not facility rows)** — natural first
-  piece is EIA-860 power plants (public, no key). Needs a scoping decision on
-  resolution; an EIA API key (free, **your** action) unlocks demand/load series.
-- **Forward-geocoding pass** to refine any address-only records to coordinates.
-- Optional SEC enrichment (operator/size by metro) — only if we decide metro-level
-  size is worth it despite no coordinates.
-
-### Blocked on a decision (biggest gaps)
-- **Power capacity (MW) + size (sq ft) + fuller planned coverage** → require a
-  **licensed source**. **Baxtel** is the recommended path (covers all three).
-- **Repo home** → push to your GitHub or the lab org? Currently local only.
-
-### Not started — the downstream research phase
-- Join dataset to natural-hazard layers + power-grid → the actual multi-hazard
-  risk assessment (the paper). The dataset is built to make this clean.
-
----
-
-## 6. Decisions needed (advisor)
-
-1. **Baxtel license** — request the free sample, then decide on cost. This single
-   step fills MW + size + most planned coverage. Without it, those fields stay empty.
-2. **Repo hosting** — personal GitHub vs lab org (nothing pushed until confirmed).
-3. **Coverage target** — current ~1,547 is ~⅓ of the likely true US universe;
-   the rest largely requires licensed/commercial sources.
-
----
-
-## 7. How to run
+## 5. How to run
 
 ```bash
 cd ~/datacenter-dataset
