@@ -19,6 +19,8 @@ import yaml
 
 from dcdata.collectors.osm import OSMCollector
 from dcdata.collectors.osm_lifecycle import OSMLifecycleCollector
+from dcdata.collectors.peeringdb import PeeringDBCollector
+from dcdata.collectors.wikidata import WikidataCollector
 from dcdata.export import export_dataset, write_quality_report
 from dcdata.geocode.reverse import DEFAULT_COUNTY_URL as DEFAULT_TIGER_URL
 from dcdata.geocode.reverse import TigerReverseGeocoder
@@ -54,6 +56,19 @@ def run(root: Path = ROOT, accessed: Optional[date] = None) -> dict:
     collected += list(OSMLifecycleCollector(life_cfg, accessed=snapshot).collect())
     n_lifecycle = len(collected) - n_operational
 
+    # PeeringDB (colocation/interconnection) + Wikidata (CC0) coverage layers.
+    pdb_cfg = dict(sources.get("peeringdb", {}))
+    pdb_cfg["cache"] = str(root / pdb_cfg.get("cache", "data/raw/peeringdb/fac_us.json"))
+    before = len(collected)
+    collected += list(PeeringDBCollector(pdb_cfg, accessed=snapshot).collect())
+    n_peeringdb = len(collected) - before
+
+    wd_cfg = dict(sources.get("wikidata", {}))
+    wd_cfg["cache"] = str(root / wd_cfg.get("cache", "data/raw/wikidata/datacenters_us.json"))
+    before = len(collected)
+    collected += list(WikidataCollector(wd_cfg, accessed=snapshot).collect())
+    n_wikidata = len(collected) - before
+
     # Entity resolution: merge duplicate facilities across (and within) sources.
     facilities, merge_log = resolve_entities(collected)
 
@@ -78,6 +93,8 @@ def run(root: Path = ROOT, accessed: Optional[date] = None) -> dict:
     stats["collected_pre_resolve"] = len(collected)
     stats["osm_operational"] = n_operational
     stats["osm_lifecycle_planned"] = n_lifecycle
+    stats["peeringdb"] = n_peeringdb
+    stats["wikidata"] = n_wikidata
     stats["merged_clusters"] = len(merge_log)
     stats.update(geo_stats)
     write_quality_report(facilities, outdir / "data_quality_report.md", stats)

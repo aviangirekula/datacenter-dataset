@@ -91,7 +91,7 @@
   },
   {
     "canonical_id": "dc_158b610b5b1a",
-    "n_merged": 2,
+    "n_merged": 3,
     "members": [
       {
         "facility_id": "dc_ac4ad77b20a7",
@@ -110,11 +110,28 @@
         ],
         "lat": 41.1285628,
         "lon": -104.8968815
+      },
+      {
+        "facility_id": "dc_5cccb59f5198",
+        "name": "NCAR-Wyoming Supercomputing Center",
+        "sources": [
+          "Wikidata"
+        ],
+        "lat": 41.1289,
+        "lon": -104.8974
       }
     ],
     "evidence": [
       {
         "distance_m": 50.4,
+        "name_sim": null
+      },
+      {
+        "distance_m": 17.2,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 57.4,
         "name_sim": null
       }
     ]
@@ -861,6 +878,36 @@
     ]
   },
   {
+    "canonical_id": "dc_c0fdbe032d75",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_d0fa4d3ac833",
+        "name": "Meta Henrico Data Center",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.4839132,
+        "lon": -77.2373305
+      },
+      {
+        "facility_id": "dc_3222e19dec0a",
+        "name": "Meta Henrico Data Center",
+        "sources": [
+          "Wikidata"
+        ],
+        "lat": 37.483928208,
+        "lon": -77.237311146
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 2.4,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
     "canonical_id": "dc_a84467e0fe1e",
     "n_merged": 2,
     "members": [
@@ -1194,6 +1241,36 @@
     ]
   },
   {
+    "canonical_id": "dc_510bb94c664b",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_65fefbf794e1",
+        "name": "SU Green Data Center",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 43.0120761,
+        "lon": -76.1159253
+      },
+      {
+        "facility_id": "dc_abc02094c96a",
+        "name": "Syracuse University Green Data Center",
+        "sources": [
+          "Wikidata"
+        ],
+        "lat": 43.012101013,
+        "lon": -76.115887155
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 4.2,
+        "name_sim": 91
+      }
+    ]
+  },
+  {
     "canonical_id": "dc_2e0d7065c5b2",
     "n_merged": 2,
     "members": [
@@ -1465,6 +1542,66 @@
       {
         "distance_m": 43.0,
         "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_485eed312522",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_8ac00910cbf1",
+        "name": "Bryant Building",
+        "sources": [
+          "Wikidata"
+        ],
+        "lat": 39.100808333,
+        "lon": -94.581047222
+      },
+      {
+        "facility_id": "dc_8ac00910cbf1",
+        "name": "Bryant Building",
+        "sources": [
+          "Wikidata"
+        ],
+        "lat": 39.100808333,
+        "lon": -94.581047222
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 0.0,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_412dfa4bb61c",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_a9b2d46b42b4",
+        "name": "Maui High Performance Computing Center",
+        "sources": [
+          "Wikidata"
+        ],
+        "lat": 20.748752579,
+        "lon": -156.440136421
+      },
+      {
+        "facility_id": "dc_a9b2d46b42b4",
+        "name": "Maui High Performance Computing Center",
+        "sources": [
+          "Wikidata"
+        ],
+        "lat": 20.748752579,
+        "lon": -156.440136421
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 0.0,
+        "name_sim": 100
       }
     ]
   }

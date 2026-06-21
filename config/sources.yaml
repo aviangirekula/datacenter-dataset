@@ -18,6 +18,22 @@ osm_lifecycle:
   attribution: "© OpenStreetMap contributors"
   notes: "Planned/under-construction DCs via OSM construction:/proposed: tags."
 
+peeringdb:
+  enabled: true
+  collector: dcdata.collectors.peeringdb:PeeringDBCollector
+  api_url: https://www.peeringdb.com/api/fac?country=US
+  cache: data/raw/peeringdb/fac_us.json
+  license: "PeeringDB public API — verify redistribution terms"
+  notes: "Colocation/interconnection facilities; ~1,357 US with coordinates."
+
+wikidata:
+  enabled: true
+  collector: dcdata.collectors.wikidata:WikidataCollector
+  sparql_url: https://query.wikidata.org/sparql
+  cache: data/raw/wikidata/datacenters_us.json
+  license: CC0
+  notes: "US data centers (Q671224) with coordinates; low volume (~12)."
+
 lbnl_queue:
   enabled: false
   collector: dcdata.collectors.lbnl_queue:LBNLQueueCollector

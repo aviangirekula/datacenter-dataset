@@ -1,0 +1,238 @@
+{
+  "head" : {
+    "vars" : [ "dc", "dcLabel", "coord", "operatorLabel" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "dc" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q227873"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-74.0012 40.7108)"
+      },
+      "dcLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "375 Pearl Street"
+      }
+    }, {
+      "dc" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7199401"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-79.949326 40.445566)"
+      },
+      "dcLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Pittsburgh Supercomputing Center"
+      }
+    }, {
+      "dc" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q12857142"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-111.933092 40.43153)"
+      },
+      "dcLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Utah Data Center"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "National Security Agency"
+      }
+    }, {
+      "dc" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q24259253"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-104.8974 41.1289)"
+      },
+      "dcLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "NCAR-Wyoming Supercomputing Center"
+      }
+    }, {
+      "dc" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113134265"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-94.581047222 39.100808333)"
+      },
+      "dcLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Bryant Building"
+      }
+    }, {
+      "dc" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q3947008"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-117.239 32.8844)"
+      },
+      "dcLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "San Diego Supercomputer Center"
+      }
+    }, {
+      "dc" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5157282"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-73.6973 42.6805)"
+      },
+      "dcLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Computational Center for Nanotechnology Innovations"
+      }
+    }, {
+      "dc" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6784277"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-72.607933 42.202521)"
+      },
+      "dcLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Massachusetts Green High Performance Computing Center"
+      }
+    }, {
+      "dc" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q51078337"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-156.440136421 20.748752579)"
+      },
+      "dcLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Maui High Performance Computing Center"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "University of Hawaiʻi System"
+      }
+    }, {
+      "dc" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q51078337"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-156.440136421 20.748752579)"
+      },
+      "dcLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Maui High Performance Computing Center"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Air Force Maui Optical and Supercomputing observatory"
+      }
+    }, {
+      "dc" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113134265"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-94.581047222 39.100808333)"
+      },
+      "dcLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Bryant Building"
+      }
+    }, {
+      "dc" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q125698075"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-76.115887155 43.012101013)"
+      },
+      "dcLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Syracuse University Green Data Center"
+      }
+    }, {
+      "dc" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q138001063"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-91.632333 32.477149)"
+      },
+      "dcLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hyperion"
+      },
+      "operatorLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Meta"
+      }
+    }, {
+      "dc" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139609394"
+      },
+      "coord" : {
+        "datatype" : "http://www.opengis.net/ont/geosparql#wktLiteral",
+        "type" : "literal",
+        "value" : "Point(-77.237311146 37.483928208)"
+      },
+      "dcLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Meta Henrico Data Center"
+      }
+    } ]
+  }
+}
