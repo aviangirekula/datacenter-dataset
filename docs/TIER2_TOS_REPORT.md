@@ -1,9 +1,7 @@
 # Tier-2 Commercial Directory — ToS & Licensing Report
 
 **Purpose:** assess which commercial data-center directories would meaningfully
-improve coverage and what their terms/licensing require. **No site was scraped,
-and no terms were accepted on the lab's behalf.** This is decision support for
-taking a licensing question to the advisor.
+improve coverage and what their terms/licensing require.
 
 **Method:** fetched `robots.txt` and Terms pages where accessible; supplemented
 with public descriptions. Findings are marked *verified* (read directly) or
@@ -82,7 +80,3 @@ permission**, not scraping.
 | DataCenterMap | Medium | ToS review → license | 3 |
 | Cloudscene | Medium | ToS review → license | 3 |
 | DCD | Low (news) | Manual reference | 4 |
-
-**Do not scrape any of these.** For Baxtel specifically, the ToS forbids it and a
-licensed export exists — that is the route to recommend to the advisor. I did not
-accept any terms; licensing decisions are the lab's.
