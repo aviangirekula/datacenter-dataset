@@ -1,0 +1,9 @@
+[out:json][timeout:280];
+area["ISO3166-1"="US"][admin_level=2]->.us;
+(
+  nwr["construction"="data_center"](area.us);
+  nwr["proposed:man_made"="data_center"](area.us);
+  nwr["proposed:telecom"="data_center"](area.us);
+  nwr["proposed"="data_center"](area.us);
+);
+out center tags;

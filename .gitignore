@@ -11,14 +11,12 @@ venv/
 # Secrets
 .env
 
-# Data — raw cache is reproducible; processed/interim are build artifacts.
-# Tracked .gitkeep files preserve the directory structure.
-data/raw/**
-!data/raw/.gitkeep
+# Data — publish the final outputs + the small OSM source cache so the repo is
+# self-contained and shareable. Exclude only the bulky, re-downloadable TIGER
+# shapefile (~80 MB, auto-fetched by the pipeline) and interim build files.
+data/raw/tiger/
 data/interim/**
 !data/interim/.gitkeep
-data/processed/**
-!data/processed/.gitkeep
 
 # OS
 .DS_Store

@@ -1,0 +1,229 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-06-19T13:39:37Z",
+    "timestamp_areas_base": "2026-06-19T04:44:14Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 11721960464,
+  "lat": 45.5706361,
+  "lon": -122.9206693,
+  "tags": {
+    "name": "QTS Data Center - Hillsboro 3",
+    "proposed:telecom": "data_center",
+    "source": "https://www.hillsboro-oregon.gov/home/showpublisheddocument/30425"
+  }
+},
+{
+  "type": "way",
+  "id": 1173822721,
+  "center": {
+    "lat": 47.3594969,
+    "lon": -120.1600907
+  },
+  "tags": {
+    "building": "construction",
+    "construction": "data_center",
+    "construction:telecom": "data_center",
+    "name": "EAT14"
+  }
+},
+{
+  "type": "way",
+  "id": 1173822722,
+  "center": {
+    "lat": 47.3584257,
+    "lon": -120.1599758
+  },
+  "tags": {
+    "building": "construction",
+    "construction": "data_center",
+    "construction:telecom": "data_center",
+    "name": "EAT13"
+  }
+},
+{
+  "type": "way",
+  "id": 1173822723,
+  "center": {
+    "lat": 47.3574330,
+    "lon": -120.1595463
+  },
+  "tags": {
+    "building": "construction",
+    "construction": "data_center",
+    "construction:telecom": "data_center",
+    "name": "EAT12"
+  }
+},
+{
+  "type": "way",
+  "id": 1194169753,
+  "center": {
+    "lat": 38.7376365,
+    "lon": -77.5078529
+  },
+  "tags": {
+    "addr:housenumber": "10051",
+    "addr:street": "Brickyard Way",
+    "check_date": "2024-04-12",
+    "construction": "data_center",
+    "landuse": "construction",
+    "operator": "HITT"
+  }
+},
+{
+  "type": "way",
+  "id": 1288894119,
+  "center": {
+    "lat": 33.1769601,
+    "lon": -80.5349420
+  },
+  "tags": {
+    "construction": "data_center",
+    "landuse": "construction",
+    "name": "Google datacenter",
+    "source": "https://www.datacenterdynamics.com/en/news/google-breaks-ground-on-two-data-center-campuses-in-south-carolina-at-33bn/"
+  }
+},
+{
+  "type": "way",
+  "id": 1288894120,
+  "center": {
+    "lat": 33.1776984,
+    "lon": -80.5365658
+  },
+  "tags": {
+    "building": "construction",
+    "construction": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1319699416,
+  "center": {
+    "lat": 38.9362536,
+    "lon": -77.4246756
+  },
+  "tags": {
+    "construction": "data_center",
+    "landuse": "construction",
+    "name": "AWS IAD-500 and IAD-501",
+    "source": "https://www.datacenterdynamics.com/en/news/amazon-named-as-end-customer-for-starwood-data-centers-in-herndon-virginia/"
+  }
+},
+{
+  "type": "way",
+  "id": 1319701990,
+  "center": {
+    "lat": 32.9582784,
+    "lon": -80.3080686
+  },
+  "tags": {
+    "construction": "data_center",
+    "landuse": "construction",
+    "name": "Dorchester County Google Datacenter",
+    "source": "https://www.dorchestercountysc.gov/business/data-center-fact-sheet"
+  }
+},
+{
+  "type": "way",
+  "id": 1319707421,
+  "center": {
+    "lat": 32.9026069,
+    "lon": -97.3954256
+  },
+  "tags": {
+    "construction": "data_center",
+    "landuse": "construction",
+    "name": "CyrusOne Datacenter",
+    "opening_date": "2026",
+    "source": "https://www.datacenterdynamics.com/en/news/cyrusone-plans-200m-data-center-facility-in-dallas-texas/"
+  }
+},
+{
+  "type": "way",
+  "id": 1344901566,
+  "center": {
+    "lat": 39.0005691,
+    "lon": -77.4607882
+  },
+  "tags": {
+    "construction": "data_center",
+    "landuse": "construction",
+    "name": "Sentinel Data Centers"
+  }
+},
+{
+  "type": "way",
+  "id": 1430720170,
+  "center": {
+    "lat": 32.5963048,
+    "lon": -90.0892580
+  },
+  "tags": {
+    "building": "construction",
+    "construction": "data_center",
+    "construction:building": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1430720171,
+  "center": {
+    "lat": 32.5944619,
+    "lon": -90.0980012
+  },
+  "tags": {
+    "building": "construction",
+    "construction": "data_center",
+    "construction:building": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1430720172,
+  "center": {
+    "lat": 32.5944763,
+    "lon": -90.0944115
+  },
+  "tags": {
+    "building": "construction",
+    "construction": "data_center",
+    "construction:building": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1430720173,
+  "center": {
+    "lat": 32.5960505,
+    "lon": -90.0944274
+  },
+  "tags": {
+    "building": "construction",
+    "construction": "data_center",
+    "construction:building": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1430720174,
+  "center": {
+    "lat": 32.5960391,
+    "lon": -90.0980115
+  },
+  "tags": {
+    "building": "construction",
+    "construction": "data_center",
+    "construction:building": "data_center"
+  }
+}
+
+  ]
+}

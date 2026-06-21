@@ -1,0 +1,1471 @@
+[
+  {
+    "canonical_id": "dc_74f18bfa8df0",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_c4fd2bbaf429",
+        "name": "8100 Boone Boulevard",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.9137236,
+        "lon": -77.2258825
+      },
+      {
+        "facility_id": "dc_ab25ab8c144c",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.913702,
+        "lon": -77.2258342
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 4.8,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_8f61bbab2b18",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_ce670e1ebb38",
+        "name": "STACK Infrastructure",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.4027449,
+        "lon": -121.891051
+      },
+      {
+        "facility_id": "dc_aa55da00762e",
+        "name": "STACK Infrastructure",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.4026341,
+        "lon": -121.891057
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 12.3,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_e567c4149e4f",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_61068b370d88",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.8034341,
+        "lon": -77.5105821
+      },
+      {
+        "facility_id": "dc_52e520a818ee",
+        "name": "Equinix DC14",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.8033786,
+        "lon": -77.5105458
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 6.9,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_158b610b5b1a",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_ac4ad77b20a7",
+        "name": "NCAR-Wyoming Supercomputing Center",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.1287467,
+        "lon": -104.8974315
+      },
+      {
+        "facility_id": "dc_cc7d5c86d819",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.1285628,
+        "lon": -104.8968815
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 50.4,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_be6fbb486171",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_a71c7ee646bf",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 29.4472024,
+        "lon": -98.6409962
+      },
+      {
+        "facility_id": "dc_2d1522255464",
+        "name": "Texas Cryptologic Center",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 29.4473786,
+        "lon": -98.6407158
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 33.5,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_23cf9d5d92b8",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_92cfc5aeafd8",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.9848664,
+        "lon": -77.4256702
+      },
+      {
+        "facility_id": "dc_4071a3a56d3e",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.9848368,
+        "lon": -77.4259111
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 21.1,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_3e47ba6ea7d4",
+    "n_merged": 5,
+    "members": [
+      {
+        "facility_id": "dc_16d029451ff4",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.2459914,
+        "lon": -119.8297912
+      },
+      {
+        "facility_id": "dc_a9f2366b1e5a",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.2459894,
+        "lon": -119.8291703
+      },
+      {
+        "facility_id": "dc_4758ce8a7ff3",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.2459893,
+        "lon": -119.8281588
+      },
+      {
+        "facility_id": "dc_480bae153cb6",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.2460033,
+        "lon": -119.8275415
+      },
+      {
+        "facility_id": "dc_c49d9d640e3b",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.2460663,
+        "lon": -119.8286631
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 46.9,
+        "name_sim": null
+      },
+      {
+        "distance_m": 39.2,
+        "name_sim": null
+      },
+      {
+        "distance_m": 46.6,
+        "name_sim": null
+      },
+      {
+        "distance_m": 39.0,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_3f486e9e678a",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_f824392ae4a1",
+        "name": "Apple Data Center",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.3470334,
+        "lon": -111.6041418
+      },
+      {
+        "facility_id": "dc_143ad53d0ce0",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.3470334,
+        "lon": -111.6042679
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 11.7,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_b89ba8f2218f",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_f90c7d6c8de4",
+        "name": "CyrusOne Austin Data Center II",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 30.2059205,
+        "lon": -97.6979506
+      },
+      {
+        "facility_id": "dc_3a0e5d9b74b5",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 30.2059357,
+        "lon": -97.6979411
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 1.9,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_506d216f297e",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_19f00b0dd28e",
+        "name": "KOMO Plaza East",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.6192326,
+        "lon": -122.3482873
+      },
+      {
+        "facility_id": "dc_32495030651f",
+        "name": "KOMO Plaza West",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.6189596,
+        "lon": -122.3485259
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 35.2,
+        "name_sim": 93
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_f40c26b1ceb4",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_9063e6dba4f5",
+        "name": "One Wilshire",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 34.0478876,
+        "lon": -118.2555409
+      },
+      {
+        "facility_id": "dc_8b5fcff2bcbb",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 34.0479149,
+        "lon": -118.2555689
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 4.0,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_042da0f1f99d",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_3e14765bb321",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.7841733,
+        "lon": -74.0655505
+      },
+      {
+        "facility_id": "dc_cc0a3f967cbf",
+        "name": "CoreSite Secaucus Campus",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.7842844,
+        "lon": -74.0652426
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 28.7,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_97311ae7d1ad",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_79ebb9bd517e",
+        "name": "CyrusOne Austin Data Center III",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 30.2070062,
+        "lon": -97.7011317
+      },
+      {
+        "facility_id": "dc_8e85cd7e010a",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 30.207113,
+        "lon": -97.7006616
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 46.7,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_a1ec41fa9483",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_9ee25cf0f6ac",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.9865152,
+        "lon": -77.4422565
+      },
+      {
+        "facility_id": "dc_09192d712705",
+        "name": "Amazon IAD58",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.9863003,
+        "lon": -77.4418855
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 40.0,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_c4a43ff19d8c",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_f8160498b46f",
+        "name": "Amazon IAD52",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.7911185,
+        "lon": -77.5483863
+      },
+      {
+        "facility_id": "dc_ef007f496d3a",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.7908136,
+        "lon": -77.5484173
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 34.0,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_af33dfbf5532",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_13ad49e70cca",
+        "name": "Amazon Web Services Datacenter Complex",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.0937454,
+        "lon": -82.7518317
+      },
+      {
+        "facility_id": "dc_ec1b0e6bfa83",
+        "name": "Amazon Web Services  CMH53",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.0936164,
+        "lon": -82.7514553
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 35.1,
+        "name_sim": 86
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_bd0c4df6edc8",
+    "n_merged": 8,
+    "members": [
+      {
+        "facility_id": "dc_f943b7cc962e",
+        "name": "Amazon Web Services",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 45.9158356,
+        "lon": -119.2663235
+      },
+      {
+        "facility_id": "dc_4441b2c61136",
+        "name": "Amazon Web Services",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 45.9158356,
+        "lon": -119.2665274
+      },
+      {
+        "facility_id": "dc_292f5ab7d268",
+        "name": "Amazon Web Services",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 45.9158356,
+        "lon": -119.2667259
+      },
+      {
+        "facility_id": "dc_847060778776",
+        "name": "Amazon Web Services",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 45.9158356,
+        "lon": -119.2671122
+      },
+      {
+        "facility_id": "dc_e204ad5c0e5d",
+        "name": "Amazon Web Services",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 45.9158431,
+        "lon": -119.2673159
+      },
+      {
+        "facility_id": "dc_e9f2dd57a6a0",
+        "name": "Amazon Web Services",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 45.9158319,
+        "lon": -119.2675117
+      },
+      {
+        "facility_id": "dc_a8f5311ba5c0",
+        "name": "Amazon Web Services",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 45.9158356,
+        "lon": -119.2677169
+      },
+      {
+        "facility_id": "dc_ea77c6ff01c9",
+        "name": "Amazon Web Services",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 45.916359,
+        "lon": -119.2677512
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 15.8,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 31.1,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 15.4,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 45.2,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 29.9,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 45.6,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 15.8,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 30.9,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 46.8,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 15.2,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 31.0,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 15.9,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 58.3,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_b5290c0e29e0",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_0b3141540488",
+        "name": "Intergate Columbia",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.4080112,
+        "lon": -120.1917998
+      },
+      {
+        "facility_id": "dc_79e219520d8b",
+        "name": "Intergate Columbia D",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.4075849,
+        "lon": -120.1915785
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 50.2,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_605d28c1cd25",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_1a4d70b8133b",
+        "name": "Centeris SH2 Build-to-Suit",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.1589163,
+        "lon": -122.2798634
+      },
+      {
+        "facility_id": "dc_a1501db56d4d",
+        "name": "Centeris",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.1590698,
+        "lon": -122.2795641
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 28.3,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_f5660e5d21c4",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_e832bc2e85cf",
+        "name": "CyrusOne Quincy",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.243847,
+        "lon": -119.869669
+      },
+      {
+        "facility_id": "dc_f2a8dab746dd",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.2436449,
+        "lon": -119.8690512
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 51.8,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_1a6315f98500",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_299104eebe5d",
+        "name": "Amazon IAD121",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.9567768,
+        "lon": -77.4977837
+      },
+      {
+        "facility_id": "dc_484c84ff5aab",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.9572529,
+        "lon": -77.4978409
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 53.2,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_f7f92d6bf396",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_3c9e11f6a5d6",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.9995402,
+        "lon": -77.4498559
+      },
+      {
+        "facility_id": "dc_436318a6a2da",
+        "name": "QTS Ashburn 1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.9995277,
+        "lon": -77.4501109
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 22.1,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_4a132824cfec",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_5c7a2a64f547",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.8159745,
+        "lon": -77.6525395
+      },
+      {
+        "facility_id": "dc_131149d15522",
+        "name": "Amazon IAD84",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.8161031,
+        "lon": -77.6524994
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 14.7,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_1b4a6e68cdff",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_b9dfbc950f12",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.5993632,
+        "lon": -74.7096745
+      },
+      {
+        "facility_id": "dc_9abedde75592",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.5997411,
+        "lon": -74.7100727
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 53.8,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_a84467e0fe1e",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_16bcc12fb955",
+        "name": "Tennessee Processing Center LLC",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 36.2156443,
+        "lon": -86.7840012
+      },
+      {
+        "facility_id": "dc_549c9ad87aad",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 36.2153921,
+        "lon": -86.7836293
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 43.6,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_6d4376c7e8a2",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_c87798b47d1d",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.4072423,
+        "lon": -120.213935
+      },
+      {
+        "facility_id": "dc_070a26a62b45",
+        "name": "Actapio",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.4075084,
+        "lon": -120.2140106
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 30.1,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_89ac9b873c30",
+    "n_merged": 4,
+    "members": [
+      {
+        "facility_id": "dc_782d27cb2fe5",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.3921494,
+        "lon": -120.2174624
+      },
+      {
+        "facility_id": "dc_2943db9b8e2c",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.3917941,
+        "lon": -120.2178774
+      },
+      {
+        "facility_id": "dc_71f6ca347d8f",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.3917569,
+        "lon": -120.2175143
+      },
+      {
+        "facility_id": "dc_538a24732925",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.391759,
+        "lon": -120.2169013
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 50.4,
+        "name_sim": null
+      },
+      {
+        "distance_m": 43.8,
+        "name_sim": null
+      },
+      {
+        "distance_m": 27.6,
+        "name_sim": null
+      },
+      {
+        "distance_m": 46.1,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_cffe36ef20e3",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_95b674a4826c",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 36.0327164,
+        "lon": -86.637789
+      },
+      {
+        "facility_id": "dc_549a08baaee6",
+        "name": "HCA Information Technology & Services Data Center",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 36.0326354,
+        "lon": -86.6377169
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 11.1,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_aa188d117b03",
+    "n_merged": 11,
+    "members": [
+      {
+        "facility_id": "dc_e9b26262a2f1",
+        "name": "Blockfusion Niagra Falls",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 43.0834925,
+        "lon": -79.0029405
+      },
+      {
+        "facility_id": "dc_9d3ed6959f83",
+        "name": "Blockfusion Niagra Falls",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 43.083258,
+        "lon": -79.003061
+      },
+      {
+        "facility_id": "dc_86b2b0266e00",
+        "name": "Blockfusion Niagra Falls",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 43.0830315,
+        "lon": -79.003982
+      },
+      {
+        "facility_id": "dc_16fc2d94803a",
+        "name": "Blockfusion Niagra Falls",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 43.0820287,
+        "lon": -79.0034174
+      },
+      {
+        "facility_id": "dc_0153d086beb3",
+        "name": "Blockfusion Niagra Falls",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 43.0821783,
+        "lon": -79.0035091
+      },
+      {
+        "facility_id": "dc_87e098f606b4",
+        "name": "Blockfusion Niagra Falls",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 43.0828078,
+        "lon": -79.0032805
+      },
+      {
+        "facility_id": "dc_fefd740ddff7",
+        "name": "Blockfusion Niagra Falls",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 43.08313,
+        "lon": -79.0031111
+      },
+      {
+        "facility_id": "dc_9cfcc65850bb",
+        "name": "Blockfusion Niagra Falls",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 43.0832048,
+        "lon": -79.0033421
+      },
+      {
+        "facility_id": "dc_4d6b7c619c7d",
+        "name": "Blockfusion Niagra Falls",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 43.0831645,
+        "lon": -79.003903
+      },
+      {
+        "facility_id": "dc_4ba4f00c6590",
+        "name": "Blockfusion Niagra Falls",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 43.0832839,
+        "lon": -79.0039047
+      },
+      {
+        "facility_id": "dc_74d3b23ac4f6",
+        "name": "Blockfusion Niagra Falls",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 43.0824049,
+        "lon": -79.003228
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 27.9,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 42.6,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 45.7,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 53.1,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 14.8,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 23.6,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 55.4,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 16.1,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 28.8,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 18.2,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 44.6,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 34.0,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 38.4,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 44.4,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 45.0,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 20.5,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 45.8,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 46.5,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 13.3,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_2e0d7065c5b2",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_edcab4d08adf",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.5580811,
+        "lon": -93.5276562
+      },
+      {
+        "facility_id": "dc_0eff933c97c3",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.5581522,
+        "lon": -93.528225
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 48.0,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_31eac5a9a731",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_73fb64d144d1",
+        "name": "DLI ONE",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 32.4982046,
+        "lon": -84.8836237
+      },
+      {
+        "facility_id": "dc_f7d9c0c660ea",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 32.4982544,
+        "lon": -84.8835911
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 6.3,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_e60910dea260",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_86e75a83eed6",
+        "name": "QTS Manassas DC1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.7525433,
+        "lon": -77.513108
+      },
+      {
+        "facility_id": "dc_66b86a5aac6c",
+        "name": "QTS Manassas DC1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.7525454,
+        "lon": -77.5124598
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 56.2,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_232553a6ff95",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_2f9364ba5588",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.2121073,
+        "lon": -95.8778947
+      },
+      {
+        "facility_id": "dc_88707596e6c4",
+        "name": "CyrusOne OCB1 Council Bluffs",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.212197,
+        "lon": -95.878
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 13.3,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_ac16fc556bbf",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_f25bead0fca4",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.0004483,
+        "lon": -77.4607956
+      },
+      {
+        "facility_id": "dc_8b5003083261",
+        "name": "Sentinel Data Centers",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.0005691,
+        "lon": -77.4607882
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 13.4,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_5f6e752e8332",
+    "n_merged": 3,
+    "members": [
+      {
+        "facility_id": "dc_f5a2126d511b",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 46.0123214,
+        "lon": -98.5730984
+      },
+      {
+        "facility_id": "dc_f2416289d266",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 46.0123988,
+        "lon": -98.5737419
+      },
+      {
+        "facility_id": "dc_99c989d37c17",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 46.0123953,
+        "lon": -98.5726175
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 50.4,
+        "name_sim": null
+      },
+      {
+        "distance_m": 38.0,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_c6bcbe1b8a1f",
+    "n_merged": 6,
+    "members": [
+      {
+        "facility_id": "dc_26401d2ed7dd",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 46.0135016,
+        "lon": -98.5716711
+      },
+      {
+        "facility_id": "dc_2fdda1278f82",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 46.0134892,
+        "lon": -98.5711056
+      },
+      {
+        "facility_id": "dc_c820a2fb3efe",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 46.0135084,
+        "lon": -98.5722994
+      },
+      {
+        "facility_id": "dc_9547a75a38fc",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 46.0135225,
+        "lon": -98.5729003
+      },
+      {
+        "facility_id": "dc_fa4d198fdd17",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 46.0135308,
+        "lon": -98.574046
+      },
+      {
+        "facility_id": "dc_66ac4dd9956f",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 46.0135163,
+        "lon": -98.5734901
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 43.7,
+        "name_sim": null
+      },
+      {
+        "distance_m": 48.5,
+        "name_sim": null
+      },
+      {
+        "distance_m": 46.4,
+        "name_sim": null
+      },
+      {
+        "distance_m": 45.6,
+        "name_sim": null
+      },
+      {
+        "distance_m": 43.0,
+        "name_sim": null
+      }
+    ]
+  }
+]
