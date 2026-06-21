@@ -57,6 +57,7 @@ def export_dataset(facilities: list[Facility], outdir: Path) -> dict:
     if curated_facilities:
         gdf = to_geodataframe(curated_facilities)
         gdf.to_file(outdir / "datacenters.gpkg", layer="datacenters", driver="GPKG")
+        gdf.to_file(outdir / "datacenters.geojson", driver="GeoJSON")
 
     return {
         "total_collected": len(df),

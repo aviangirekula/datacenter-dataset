@@ -24,6 +24,18 @@ def test_classify_unknown_stays_included():
     assert classify_facility_type("Acme Data Center", "Acme Holdings") == FacilityType.unknown
 
 
+def test_classify_by_name_when_operator_missing():
+    # Brand is in the name but the operator tag is empty (common for OSM lifecycle).
+    assert classify_facility_type("Google datacenter", None) == FacilityType.hyperscale
+    assert classify_facility_type("AWS IAD-500 and IAD-501", None) == FacilityType.hyperscale
+    assert classify_facility_type("CyrusOne Datacenter", None) == FacilityType.colocation
+
+
+def test_classify_name_brand_no_false_positive():
+    assert classify_facility_type("Sentinel Data Centers", None) == FacilityType.unknown
+    assert classify_facility_type("Metairie Exchange", None) == FacilityType.unknown  # not "meta"
+
+
 def _collector():
     return OSMCollector({"cache": "/nonexistent_cache_for_test.json"})
 
