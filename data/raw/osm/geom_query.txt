@@ -1,0 +1,8 @@
+[out:json][timeout:240];
+area["ISO3166-1"="US"][admin_level=2]->.us;
+(
+  nwr["telecom"="data_center"](area.us);
+  nwr["man_made"="data_center"](area.us);
+  nwr["building"="data_center"](area.us);
+);
+out geom;

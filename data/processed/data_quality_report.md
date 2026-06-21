@@ -11,6 +11,9 @@
 - **peeringdb**: 0
 - **wikidata**: 14
 - **merged_clusters**: 40
+- **footprint_size_filled**: 1462
+- **estimated_mw_filled**: 1429
+- **oversized_footprints_flagged**: 33
 - **reverse_geocoded_state**: 1556
 - **reverse_geocoded_county**: 1556
 - **admin_conflicts_with_source**: 6
@@ -51,4 +54,4 @@
 ## Sanity checks (full collection)
 - suspected lat/lon swaps: 0
 - rows missing a required field (id/lat/lon): 0
-- implausible MW values: 0 (of 0 with power data)
+- implausible MW values: 4 (of 1375 with power data)

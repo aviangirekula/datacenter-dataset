@@ -21,6 +21,7 @@ from dcdata.collectors.osm import OSMCollector
 from dcdata.collectors.osm_lifecycle import OSMLifecycleCollector
 from dcdata.collectors.peeringdb import PeeringDBCollector
 from dcdata.collectors.wikidata import WikidataCollector
+from dcdata.enrich.footprint import attach_footprint_size, ensure_geom_file
 from dcdata.export import export_dataset, write_quality_report
 from dcdata.geocode.reverse import DEFAULT_COUNTY_URL as DEFAULT_TIGER_URL
 from dcdata.geocode.reverse import TigerReverseGeocoder
@@ -69,6 +70,17 @@ def run(root: Path = ROOT, accessed: Optional[date] = None) -> dict:
     collected += list(WikidataCollector(wd_cfg, accessed=snapshot).collect())
     n_wikidata = len(collected) - before
 
+    # Footprint enrichment: real size_sqft (+ flagged MW estimate) from OSM geometry.
+    try:
+        geom_path = ensure_geom_file(
+            root / "data" / "raw" / "osm" / "osm_datacenters_geom.json",
+            osm_cfg.get("overpass_url", "https://overpass-api.de/api/interpreter"),
+        )
+        size_stats = attach_footprint_size(collected, geom_path)
+    except Exception as exc:  # network/parse failure must not break the pipeline
+        print(f"  [footprint] enrichment skipped ({exc}).")
+        size_stats = {"footprint_size_filled": 0, "estimated_mw_filled": 0}
+
     # Entity resolution: merge duplicate facilities across (and within) sources.
     facilities, merge_log = resolve_entities(collected)
 
@@ -96,6 +108,7 @@ def run(root: Path = ROOT, accessed: Optional[date] = None) -> dict:
     stats["peeringdb"] = n_peeringdb
     stats["wikidata"] = n_wikidata
     stats["merged_clusters"] = len(merge_log)
+    stats.update(size_stats)
     stats.update(geo_stats)
     write_quality_report(facilities, outdir / "data_quality_report.md", stats)
     return stats

@@ -84,10 +84,13 @@ behalf — licensing decisions go to the lab.
 
 - OSM base layer mixes hyperscale campuses with minor facilities (handled via
   `excluded_minor` tagging).
-- **No per-facility energy/capacity data yet.** Public interconnection queues are
-  *generation-only* (LBNL) or *aggregate/confidential* (ISO large-load queues), so
-  energy enters as a separate **grid-context layer** on the roadmap — not as
-  facility rows. See [SOURCES.md](SOURCES.md).
+- **Power capacity (MW) is currently a ROUGH MODELED ESTIMATE** from building
+  footprint (≈100 W/sqft), flagged per record in `notes` — **not measured**.
+  *Measured* MW needs a licensed source (Baxtel); public interconnection queues
+  are generation-only (LBNL) or aggregate/confidential (ISO large-load queues).
+- **`size_sqft` is the real building footprint** (ground area from OSM geometry),
+  not gross floor area or IT white-space. Footprints above ~1.5M sqft are treated
+  as site/campus boundaries (flagged, no MW estimate).
 - `state`/`county` are reverse-geocoded from coordinates via Census TIGER
   (authoritative, ~100% within CONUS). A small number of records disagree with
   OSM's `addr:state` tag — geometry wins and the count is flagged in the report.
