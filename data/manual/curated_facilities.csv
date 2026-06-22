@@ -1,0 +1,2 @@
+name,operator_company,facility_type,status,compute_capabilities,address,city,state,zip,latitude,longitude,coordinate_precision,num_floors,size_sqft,power_demand_mw,confidence,source_url,record_id,notes
+__EXAMPLE__,Example Operator,hyperscale,operational,AI/GPU,123 Example Rd,Ashburn,VA,20147,39.0153,-77.4711,building,2,250000,40,high,https://example.com/news-article,manual-0001,"Delete this example row. Fill one row per building. Only name + latitude + longitude are required; leave the rest blank if unknown."

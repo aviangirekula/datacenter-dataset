@@ -18,7 +18,7 @@ import requests
 from pyproj import Geod
 from shapely.geometry import Polygon
 
-from dcdata.schema import AreaBasis, Facility, PowerBasis
+from dcdata.schema import AreaBasis, CoordinatePrecision, Facility, PowerBasis
 
 _GEOD = Geod(ellps="WGS84")
 SQM_TO_SQFT = 10.76391
@@ -94,7 +94,7 @@ def attach_footprint_size(
     """
     areas = footprint_areas(geom_path)
     n_size = n_mw = n_big = 0
-    note = "power_capacity_mw is a ROUGH ESTIMATE from building footprint (modeled, not measured)."
+    note = "power_demand_mw is a modeled estimate (footprint × floors × density), not measured."
     for f in facilities:
         ref = next(
             (
@@ -106,18 +106,22 @@ def attach_footprint_size(
         )
         if not ref:
             continue
-        f.size_sqft = areas[ref]
+        f.size_sqft = areas[ref]  # per-floor building footprint
         n_size += 1
         if areas[ref] > MAX_BUILDING_SQFT:
-            # Likely a site/campus boundary, not a building — keep size, flag, no MW.
+            # Likely a site/campus boundary, not a building — keep size, flag, no MW,
+            # and downgrade the coordinate to a campus centroid.
             f.area_basis = AreaBasis.unknown
+            f.coordinate_precision = CoordinatePrecision.campus_centroid
             big = "Large footprint — likely a site/campus boundary, not a single building; MW not estimated."
             f.notes = (f.notes + " " + big) if f.notes else big
             n_big += 1
             continue
         f.area_basis = AreaBasis.gross_building
-        if estimate_power and f.power_capacity_mw is None:
-            f.power_capacity_mw = estimate_power_mw(areas[ref])
+        if estimate_power and f.power_demand_mw is None:
+            # Total floor area ≈ footprint × floors (default 1 floor when unknown).
+            total_floor_sqft = areas[ref] * (f.num_floors or 1)
+            f.power_demand_mw = estimate_power_mw(total_floor_sqft)
             f.power_basis = PowerBasis.unknown
             f.notes = (f.notes + " " + note) if f.notes else note
             n_mw += 1

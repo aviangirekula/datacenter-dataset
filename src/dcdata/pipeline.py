@@ -17,6 +17,7 @@ from typing import Optional
 
 import yaml
 
+from dcdata.collectors.manual import ManualCurationCollector
 from dcdata.collectors.osm import OSMCollector
 from dcdata.collectors.osm_lifecycle import OSMLifecycleCollector
 from dcdata.collectors.peeringdb import PeeringDBCollector
@@ -70,6 +71,13 @@ def run(root: Path = ROOT, accessed: Optional[date] = None) -> dict:
     collected += list(WikidataCollector(wd_cfg, accessed=snapshot).collect())
     n_wikidata = len(collected) - before
 
+    # Manual curation — hand-curated building-specific records/attributes.
+    man_cfg = dict(sources.get("manual", {}))
+    man_cfg["path"] = str(root / man_cfg.get("path", "data/manual/curated_facilities.csv"))
+    before = len(collected)
+    collected += list(ManualCurationCollector(man_cfg, accessed=snapshot).collect())
+    n_manual = len(collected) - before
+
     # Footprint enrichment: real size_sqft (+ flagged MW estimate) from OSM geometry.
     try:
         geom_path = ensure_geom_file(
@@ -107,6 +115,7 @@ def run(root: Path = ROOT, accessed: Optional[date] = None) -> dict:
     stats["osm_lifecycle_planned"] = n_lifecycle
     stats["peeringdb"] = n_peeringdb
     stats["wikidata"] = n_wikidata
+    stats["manual_curation"] = n_manual
     stats["merged_clusters"] = len(merge_log)
     stats.update(size_stats)
     stats.update(geo_stats)

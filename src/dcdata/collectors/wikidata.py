@@ -20,6 +20,7 @@ from dcdata.classify import classify_facility_type
 from dcdata.collectors.base import BaseCollector
 from dcdata.schema import (
     Confidence,
+    CoordinatePrecision,
     Facility,
     FacilitySource,
     FacilityType,
@@ -111,6 +112,7 @@ class WikidataCollector(BaseCollector):
             longitude=lon,
             geom_type=GeomType.point,
             geocode_precision=GeocodePrecision.unknown,  # Wikidata coord precision varies
+            coordinate_precision=CoordinatePrecision.unknown,
             coord_confidence=Confidence.low,
             included=included,
             confidence=Confidence.medium if name else Confidence.low,

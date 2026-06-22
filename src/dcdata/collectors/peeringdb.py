@@ -22,6 +22,7 @@ from dcdata.classify import classify_facility_type
 from dcdata.collectors.base import BaseCollector
 from dcdata.schema import (
     Confidence,
+    CoordinatePrecision,
     Facility,
     FacilitySource,
     FacilityType,
@@ -107,6 +108,7 @@ class PeeringDBCollector(BaseCollector):
             longitude=float(lon),
             geom_type=GeomType.point,
             geocode_precision=GeocodePrecision.address,  # PeeringDB geocodes addresses
+            coordinate_precision=CoordinatePrecision.geocoded_address,
             coord_confidence=Confidence.medium,
             address=rec.get("address1") or None,
             city=rec.get("city") or None,

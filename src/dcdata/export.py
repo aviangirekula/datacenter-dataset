@@ -94,16 +94,25 @@ def write_quality_report(facilities: list[Facility], path: Path, stats: dict) ->
         lines.append(f"- {s}: {n}")
     lines.append("")
 
+    lines.append("## Coordinate precision (curated CONUS)")
+    lines.append("How building-specific each coordinate is (key for the hazard join):")
+    for p, c in Counter(cur["coordinate_precision"]).most_common():
+        lines.append(f"- {p}: {c}")
+    lines.append("")
+
     lines.append("## Completeness (curated CONUS)")
     n = max(len(cur), 1)
-    for col in ["name", "operator_company", "state", "address", "zip"]:
+    for col in [
+        "name", "operator_company", "state", "address", "zip",
+        "size_sqft", "num_floors", "power_demand_mw", "compute_capabilities",
+    ]:
         present = int(cur[col].notna().sum())
         lines.append(f"- {col}: {present}/{len(cur)} ({100 * present // n}%)")
     lines.append("")
 
     lines.append("## Sanity checks (full collection)")
     swapped = sum(looks_lat_lon_swapped(la, lo) for la, lo in zip(df["latitude"], df["longitude"]))
-    mw = df["power_capacity_mw"].dropna()
+    mw = df["power_demand_mw"].dropna()
     bad_mw = int(sum(not power_in_range(v) for v in mw))
     missing_required = int(df[["facility_id", "latitude", "longitude"]].isna().any(axis=1).sum())
     lines.append(f"- suspected lat/lon swaps: {swapped}")

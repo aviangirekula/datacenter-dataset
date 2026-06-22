@@ -17,6 +17,7 @@ from rapidfuzz import fuzz
 from dcdata.schema import (
     AreaBasis,
     Confidence,
+    CoordinatePrecision,
     Facility,
     FacilityType,
     GeocodePrecision,
@@ -33,6 +34,13 @@ PREC_RANK = {
     GeocodePrecision.city: 2,
     GeocodePrecision.county: 1,
     GeocodePrecision.unknown: 0,
+}
+# Prefer building-specific coordinates when merging duplicate observations.
+COORD_PREC_RANK = {
+    CoordinatePrecision.building: 3,
+    CoordinatePrecision.geocoded_address: 2,
+    CoordinatePrecision.campus_centroid: 1,
+    CoordinatePrecision.unknown: 0,
 }
 _RANK_TO_CONF = {3: Confidence.high, 2: Confidence.medium, 1: Confidence.low}
 
@@ -134,9 +142,14 @@ def _merge_cluster(members: list[Facility]) -> Facility:
     if len(members) == 1:
         return members[0]
     ranked = _ranked(members)
+    # Prefer the most building-specific coordinate, then finest geocode precision.
     best_coord = max(
         members,
-        key=lambda f: (PREC_RANK.get(f.geocode_precision, 0), CONF_RANK.get(f.coord_confidence, 0)),
+        key=lambda f: (
+            COORD_PREC_RANK.get(f.coordinate_precision, 0),
+            PREC_RANK.get(f.geocode_precision, 0),
+            CONF_RANK.get(f.coord_confidence, 0),
+        ),
     )
     name = _first(ranked, "name")
 
@@ -163,10 +176,12 @@ def _merge_cluster(members: list[Facility]) -> Facility:
         operator_company=_first(ranked, "operator_company"),
         facility_type=facility_type,
         status=_first(ranked, "status", skip=(Status.unknown,)) or Status.unknown,
+        compute_capabilities=_first(ranked, "compute_capabilities"),
         latitude=best_coord.latitude,
         longitude=best_coord.longitude,
         geom_type=best_coord.geom_type,
         geocode_precision=best_coord.geocode_precision,
+        coordinate_precision=best_coord.coordinate_precision,
         coord_confidence=best_coord.coord_confidence,
         address=_first(ranked, "address"),
         city=_first(ranked, "city"),
@@ -175,6 +190,7 @@ def _merge_cluster(members: list[Facility]) -> Facility:
         zip=_first(ranked, "zip"),
         size_sqft=_first(ranked, "size_sqft"),
         area_basis=_first(ranked, "area_basis", skip=(AreaBasis.unknown,)) or AreaBasis.unknown,
+        num_floors=_first(ranked, "num_floors"),
         power_capacity_mw=_first(ranked, "power_capacity_mw"),
         power_basis=_first(ranked, "power_basis", skip=(PowerBasis.unknown,)) or PowerBasis.unknown,
         power_demand_mw=_first(ranked, "power_demand_mw"),

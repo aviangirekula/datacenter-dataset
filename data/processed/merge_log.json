@@ -1,7 +1,67 @@
 [
   {
-    "canonical_id": "dc_74f18bfa8df0",
+    "canonical_id": "dc_9bb24f423687",
     "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_7f3ccc12073c",
+        "name": "CoreSite DC1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.9028879,
+        "lon": -77.0291491
+      },
+      {
+        "facility_id": "dc_9df7015be8db",
+        "name": "CoreSite - Washington,DC (DC1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.902918,
+        "lon": -77.029149
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 3.3,
+        "name_sim": 80
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_c15c28bd70c1",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_f478dd9ef550",
+        "name": "Oso Grande",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 35.0925015,
+        "lon": -106.6536712
+      },
+      {
+        "facility_id": "dc_ab677550414b",
+        "name": "Oso Grande Technologies",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 35.09252,
+        "lon": -106.653315
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 32.5,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_74f18bfa8df0",
+    "n_merged": 3,
     "members": [
       {
         "facility_id": "dc_c4fd2bbaf429",
@@ -20,11 +80,24 @@
         ],
         "lat": 38.913702,
         "lon": -77.2258342
+      },
+      {
+        "facility_id": "dc_306df39d5512",
+        "name": "Gosnell - International Gateway 1 (8100 Boone)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.913686,
+        "lon": -77.225887
       }
     ],
     "evidence": [
       {
         "distance_m": 4.8,
+        "name_sim": null
+      },
+      {
+        "distance_m": 4.9,
         "name_sim": null
       }
     ]
@@ -60,6 +133,1087 @@
     ]
   },
   {
+    "canonical_id": "dc_165fe373f4a4",
+    "n_merged": 3,
+    "members": [
+      {
+        "facility_id": "dc_08edc7c25387",
+        "name": "Stream Data Centers Houston",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 30.1781365,
+        "lon": -95.4860464
+      },
+      {
+        "facility_id": "dc_e2e71247eaee",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 30.1777082,
+        "lon": -95.486593
+      },
+      {
+        "facility_id": "dc_5c72a7baa037",
+        "name": "Stream Data Centers - Houston I",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 30.177801,
+        "lon": -95.486494
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 56.9,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 14.0,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_70473eb49a8f",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_0e04fefab68f",
+        "name": "Crown Castle Baltimore",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.2877017,
+        "lon": -76.6064893
+      },
+      {
+        "facility_id": "dc_5ca30440a833",
+        "name": "Crown Castle Baltimore (111 Market, 700 E Pratt)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.287345,
+        "lon": -76.606434
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 39.9,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_14899623a0b1",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_744d1af27151",
+        "name": "TierPoint Milwaukee",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 43.0093779,
+        "lon": -87.9610618
+      },
+      {
+        "facility_id": "dc_2f551bf8db0d",
+        "name": "TierPoint Milwaukee",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 43.009336,
+        "lon": -87.96114
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 7.9,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_8d9f4b8cf0b8",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_65bb0220991a",
+        "name": "505 Marquette",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 35.0886289,
+        "lon": -106.6526456
+      },
+      {
+        "facility_id": "dc_15ed97b8640d",
+        "name": "505 Marquette -- Lobo Internet",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 35.088935,
+        "lon": -106.652526
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 35.7,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_02eebfd81a53",
+    "n_merged": 4,
+    "members": [
+      {
+        "facility_id": "dc_a73011a6bd32",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.1011816,
+        "lon": -94.5788209
+      },
+      {
+        "facility_id": "dc_01f02a43ba8a",
+        "name": "Oak Tower",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.101138,
+        "lon": -94.578927
+      },
+      {
+        "facility_id": "dc_0074118d7a4b",
+        "name": "NetSolus Inc",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.101274,
+        "lon": -94.578821
+      },
+      {
+        "facility_id": "dc_b1f86a66f1e7",
+        "name": "IP Pathways KC1",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.101199,
+        "lon": -94.578884
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 10.4,
+        "name_sim": null
+      },
+      {
+        "distance_m": 10.3,
+        "name_sim": null
+      },
+      {
+        "distance_m": 5.8,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_52be2b848b4f",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_3e66f18578a7",
+        "name": "Netrality",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.8728811,
+        "lon": -87.63344
+      },
+      {
+        "facility_id": "dc_83b21e8bbc28",
+        "name": "Netrality Chicago - 717 S Wells",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.872911,
+        "lon": -87.63327
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 14.5,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_1771855b67b2",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_df2ff10d6779",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.7796531,
+        "lon": -122.3940005
+      },
+      {
+        "facility_id": "dc_2f61e3d6d639",
+        "name": "TelePacific",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.77942,
+        "lon": -122.394082
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 26.9,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_54fd156f6e89",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_a00b59dd7f6f",
+        "name": "Centersquare Chicago Data Center - ORD1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.8533827,
+        "lon": -87.6186071
+      },
+      {
+        "facility_id": "dc_96334204cd7e",
+        "name": "Centersquare Chicago (ORD1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.85365,
+        "lon": -87.618342
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 37.0,
+        "name_sim": 85
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_b5221ae8a695",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_7f825ec9635c",
+        "name": "Iron Mountain Data Centers AZS-1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.6446663,
+        "lon": -111.8960985
+      },
+      {
+        "facility_id": "dc_668a1539186b",
+        "name": "Iron Mountain Data Center - Scottsdale (AZS-1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.64465,
+        "lon": -111.895495
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 55.9,
+        "name_sim": 82
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_1ecd2bc35dc3",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_9aa82f5bcf8d",
+        "name": "CoreSite Chicago Data Center (CH1)",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.8759405,
+        "lon": -87.6314655
+      },
+      {
+        "facility_id": "dc_fe6b469c70bb",
+        "name": "CoreSite - Chicago (CH1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.876212,
+        "lon": -87.631453
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 30.2,
+        "name_sim": 95
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_41dcb90246ba",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_22bd386b822b",
+        "name": "Expedient Owings Mills",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.4273178,
+        "lon": -76.8115503
+      },
+      {
+        "facility_id": "dc_57cddaa722cb",
+        "name": "Expedient Baltimore - Owings Mills",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.427117,
+        "lon": -76.811709
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 26.2,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_06efc6377b82",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_abf4253b53e6",
+        "name": "Lumen Baltimore",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.2917592,
+        "lon": -76.6204024
+      },
+      {
+        "facility_id": "dc_e47d52adfcc5",
+        "name": "Lumen Baltimore",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.291768,
+        "lon": -76.620065
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 29.1,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_023d2663ae5d",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_a9515e056822",
+        "name": "Flexential Denver - Downtown",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.7459702,
+        "lon": -104.9941589
+      },
+      {
+        "facility_id": "dc_baf883b1e640",
+        "name": "Flexential - Denver/Downtown (DEN02)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.745765,
+        "lon": -104.994399
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 30.7,
+        "name_sim": 84
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_65dbd76e7604",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_23a241040b6a",
+        "name": "Flexential Dallas - Downtown Dallas",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 32.8004101,
+        "lon": -96.8193707
+      },
+      {
+        "facility_id": "dc_3c51372713fc",
+        "name": "Flexential - Dallas/Downtown (DAL01)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 32.800748,
+        "lon": -96.819412
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 37.8,
+        "name_sim": 84
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_4861bf2a2b63",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_83393c40afc4",
+        "name": "Flexential Jacksonville",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 30.2457482,
+        "lon": -81.5817226
+      },
+      {
+        "facility_id": "dc_3b7413305277",
+        "name": "Flexential - Jacksonville (JAX1/2)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 30.24567,
+        "lon": -81.581866
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 16.3,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_193e064bdc4b",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_12284eec50e8",
+        "name": "Flexential Salt Lake City - Lindon",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.332648,
+        "lon": -111.7278754
+      },
+      {
+        "facility_id": "dc_639419b76bb4",
+        "name": "Flexential - Salt Lake City/Lindon (SLC03)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.332493,
+        "lon": -111.728052
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 22.8,
+        "name_sim": 86
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_e17d7e79bbea",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_a2a8e5a52479",
+        "name": "CoreSite AT1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.7559857,
+        "lon": -84.3911712
+      },
+      {
+        "facility_id": "dc_039f98feaf88",
+        "name": "CoreSite - Atlanta (AT1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.755801,
+        "lon": -84.390928
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 30.5,
+        "name_sim": 80
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_e40648befe43",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_bc06b8d0c532",
+        "name": "Dataverge",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.6576957,
+        "lon": -74.0048163
+      },
+      {
+        "facility_id": "dc_b6009fe02670",
+        "name": "Dataverge",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.657808,
+        "lon": -74.004881
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 13.6,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_5b7a9e3b7823",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_5a5000882226",
+        "name": "Fiberhub LAS1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 36.065929,
+        "lon": -115.13856
+      },
+      {
+        "facility_id": "dc_b4cf279e45a0",
+        "name": "Fiberhub LAS1",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 36.066019,
+        "lon": -115.138297
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 25.7,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_7c8e1e4ba3bf",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_285c69f8535f",
+        "name": "Parsec Data Management",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 45.7430786,
+        "lon": -108.6030144
+      },
+      {
+        "facility_id": "dc_be3cfce1c37b",
+        "name": "Parsec",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 45.742945,
+        "lon": -108.602984
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 15.0,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_515444aaf104",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_2137052a8144",
+        "name": "Digital Fortress - Portland 1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 45.5212569,
+        "lon": -122.6817537
+      },
+      {
+        "facility_id": "dc_0278e07b9582",
+        "name": "Digital Fortress (PTL)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 45.521223,
+        "lon": -122.681823
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 6.6,
+        "name_sim": 84
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_9b38f4695f6f",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_69cbe51074aa",
+        "name": "Digital Fortress - Portland 2",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 45.4762137,
+        "lon": -122.7760868
+      },
+      {
+        "facility_id": "dc_d02eea13474e",
+        "name": "Digital Fortress (PTL2)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 45.476347,
+        "lon": -122.776398
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 28.4,
+        "name_sim": 82
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_0a5b4dcabb86",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_652b613162d6",
+        "name": "Digital Fortress - Portland 3",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 45.475634,
+        "lon": -122.7764098
+      },
+      {
+        "facility_id": "dc_3d8c507a90dc",
+        "name": "Digital Fortress (PTL3)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 45.475663,
+        "lon": -122.776066
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 27.0,
+        "name_sim": 82
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_37b6e4984473",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_daf48eb758bd",
+        "name": "H5 DC - Portland",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 45.5316902,
+        "lon": -122.6837652
+      },
+      {
+        "facility_id": "dc_b691b183692e",
+        "name": "H5 Data Centers Portland (OR01)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 45.531851,
+        "lon": -122.683964
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 23.7,
+        "name_sim": 81
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_23feba8dfbd6",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_b35d1fad2ebe",
+        "name": "Date Center West - Eugene",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 44.0506071,
+        "lon": -123.0929782
+      },
+      {
+        "facility_id": "dc_c794741cc47c",
+        "name": "Data Center West Eugene",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 44.05071,
+        "lon": -123.093116
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 15.9,
+        "name_sim": 91
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_e569435cdfa4",
+    "n_merged": 6,
+    "members": [
+      {
+        "facility_id": "dc_d73c1443575d",
+        "name": "Equinix Infomart",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 32.8009535,
+        "lon": -96.8195234
+      },
+      {
+        "facility_id": "dc_5a73de7e6cf9",
+        "name": "Equinix DA1 - Dallas",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 32.800955,
+        "lon": -96.81955
+      },
+      {
+        "facility_id": "dc_3562d36e67c1",
+        "name": "Equinix DA3 - Dallas",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 32.800955,
+        "lon": -96.81955
+      },
+      {
+        "facility_id": "dc_bf597feac95e",
+        "name": "Equinix DA - Dallas (previously Infomart Dallas)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 32.800748,
+        "lon": -96.819412
+      },
+      {
+        "facility_id": "dc_9c39c8f18fed",
+        "name": "Equinix DA6 - Dallas",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 32.800748,
+        "lon": -96.819412
+      },
+      {
+        "facility_id": "dc_a07c0b81da10",
+        "name": "Equinix DA2 - Dallas",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 32.800955,
+        "lon": -96.81955
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 25.1,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 26.4,
+        "name_sim": 88
+      },
+      {
+        "distance_m": 26.4,
+        "name_sim": 88
+      },
+      {
+        "distance_m": 0.0,
+        "name_sim": 88
+      },
+      {
+        "distance_m": 26.4,
+        "name_sim": 88
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_686c58c1074a",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_1712a2f3393d",
+        "name": "CoreSite BO1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 42.3767059,
+        "lon": -71.0797577
+      },
+      {
+        "facility_id": "dc_06469df949e4",
+        "name": "CoreSite - Boston (BO1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 42.376703,
+        "lon": -71.079763
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 0.5,
+        "name_sim": 80
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_ac08463eb4ec",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_665c1b195ee2",
+        "name": "DataBank",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 32.7783107,
+        "lon": -96.7984357
+      },
+      {
+        "facility_id": "dc_5b36d7894c70",
+        "name": "DataBank Dallas (DFW1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 32.778287,
+        "lon": -96.7984
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 4.3,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_613e1ba146fa",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_f2b1a55baf3f",
+        "name": "RagingWire CA2",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.6504002,
+        "lon": -121.4919461
+      },
+      {
+        "facility_id": "dc_0413bc24a81e",
+        "name": "RagingWire CA2 - NTT",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.650382,
+        "lon": -121.49192
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 3.0,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_8313dc48caac",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_a713af458e45",
+        "name": "RagingWire CA1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.6504319,
+        "lon": -121.4891868
+      },
+      {
+        "facility_id": "dc_55aeebb6caeb",
+        "name": "RagingWire CA1 - NTT",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.650318,
+        "lon": -121.489184
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 12.7,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_4c8ff415be80",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_185ce37bbaff",
+        "name": "OpenColo",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.3788292,
+        "lon": -121.9559257
+      },
+      {
+        "facility_id": "dc_f45c08215984",
+        "name": "OpenColo",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.378892,
+        "lon": -121.956248
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 29.3,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_764778a857ca",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_8c00f263e60b",
+        "name": "Equinix Santa Clara SV2",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.3784704,
+        "lon": -121.9549839
+      },
+      {
+        "facility_id": "dc_5f0314735fd5",
+        "name": "Equinix SV2 - Silicon Valley, Santa Clara",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.378463,
+        "lon": -121.954945
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 3.5,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_9590e95f1c65",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_516e2ebdf087",
+        "name": "Cologix Santa Clara SV1 Data Center",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.3654018,
+        "lon": -121.9616726
+      },
+      {
+        "facility_id": "dc_513e952526c6",
+        "name": "Cologix SV1",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.365431,
+        "lon": -121.961738
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 6.6,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
     "canonical_id": "dc_e567c4149e4f",
     "n_merged": 2,
     "members": [
@@ -86,6 +1240,846 @@
       {
         "distance_m": 6.9,
         "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_15ae64532452",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_68ba3df3fe01",
+        "name": "NTT RagingWire DC - Hillsboro",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 45.5496803,
+        "lon": -122.9373872
+      },
+      {
+        "facility_id": "dc_bae061aefe19",
+        "name": "RagingWire HI1 - NTT",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 45.549514,
+        "lon": -122.937479
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 19.8,
+        "name_sim": 88
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_03fb7c7b8edd",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_87e520303e57",
+        "name": "CoreSite SV8",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.3773827,
+        "lon": -121.97184
+      },
+      {
+        "facility_id": "dc_510e37c36222",
+        "name": "CoreSite - Santa Clara (SV8)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.377388,
+        "lon": -121.97175
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 8.0,
+        "name_sim": 80
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_77cbe277429a",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_d057665baee6",
+        "name": "CoreSite SV5",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.3751959,
+        "lon": -121.9706889
+      },
+      {
+        "facility_id": "dc_02592f2a2df0",
+        "name": "CoreSite - Santa Clara (SV3)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.374919,
+        "lon": -121.970216
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 51.9,
+        "name_sim": 80
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_938af684faa3",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_1e3dae2ef5b1",
+        "name": "Equinix SV4",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.4145109,
+        "lon": -122.0145563
+      },
+      {
+        "facility_id": "dc_e2f1f888132c",
+        "name": "Equinix SV4 - Silicon Valley, Sunnyvale",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.41438,
+        "lon": -122.014482
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 16.0,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_08bc73ca6961",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_6a529e3e0f95",
+        "name": "H5 Data Centers San Antonio",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 29.4293706,
+        "lon": -98.4869057
+      },
+      {
+        "facility_id": "dc_a4324ce80103",
+        "name": "H5 Data Centers San Antonio",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 29.429369,
+        "lon": -98.486791
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 11.1,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_8570f2737bd4",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_544ae9acbaa8",
+        "name": "Aureon",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.5879926,
+        "lon": -93.6310139
+      },
+      {
+        "facility_id": "dc_bae54610ab74",
+        "name": "Aureon Downtown",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.5879,
+        "lon": -93.631042
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 10.6,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_7dc677ea1823",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_3a444936f6d9",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.0944683,
+        "lon": -94.5794418
+      },
+      {
+        "facility_id": "dc_387a33ddccce",
+        "name": "Patmos KC2",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.094739,
+        "lon": -94.579376
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 30.6,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_73dc9624ff3e",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_babcd1b95de5",
+        "name": "Lincoln Rackhouse",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.7721034,
+        "lon": -88.2170821
+      },
+      {
+        "facility_id": "dc_95e38ff1b9bf",
+        "name": "Lincoln Rackhouse Aurora",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.772203,
+        "lon": -88.217055
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 11.3,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_56b1c9faf7e3",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_26ed23daef0b",
+        "name": "H5 Minneapolis",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 44.972195,
+        "lon": -93.1474731
+      },
+      {
+        "facility_id": "dc_f482dab81195",
+        "name": "H5 Data Centers Minneapolis",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 44.972309,
+        "lon": -93.147411
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 13.6,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_01f94da97123",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_4e65fd1e0ef8",
+        "name": "Equinix SV8",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.4458951,
+        "lon": -122.160786
+      },
+      {
+        "facility_id": "dc_a5011e0ac444",
+        "name": "Equinix SV8 - Silicon Valley, Palo Alto",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.445896,
+        "lon": -122.160775
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 1.0,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_af553fcece3c",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_01a37f7ac0ca",
+        "name": "Serverfarm CH1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.8709439,
+        "lon": -87.6401413
+      },
+      {
+        "facility_id": "dc_d0d6511c4f66",
+        "name": "Serverfarm CH1 Chicago",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.870905,
+        "lon": -87.640153
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 4.4,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_fb37a9ca7ac1",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_9962d749c3f4",
+        "name": "Flexential Phoenix - Deer Valley",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.6846775,
+        "lon": -112.0983398
+      },
+      {
+        "facility_id": "dc_37b5d850d437",
+        "name": "Flexential - Phoenix (PHX01)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.684671,
+        "lon": -112.098312
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 2.7,
+        "name_sim": 83
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_8a38216b0122",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_9bc25527bc15",
+        "name": "TierPoint",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 36.1585898,
+        "lon": -95.9886293
+      },
+      {
+        "facility_id": "dc_a77f873adb23",
+        "name": "TierPoint Tulsa-Archer",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 36.158798,
+        "lon": -95.988577
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 23.6,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_270c6c0a4182",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_9e19db71f19b",
+        "name": "DataBank Pittsburgh PIT2",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.4513704,
+        "lon": -80.1901663
+      },
+      {
+        "facility_id": "dc_0a96975535ea",
+        "name": "DataBank Pittsburgh (PIT2)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.451321,
+        "lon": -80.190035
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 12.4,
+        "name_sim": 96
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_da72086b812a",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_518dc97b062b",
+        "name": "Switch Las Vegas 7",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 36.0599191,
+        "lon": -115.210197
+      },
+      {
+        "facility_id": "dc_d6b164f14d95",
+        "name": "Switch Las Vegas",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 36.059914,
+        "lon": -115.210194
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 0.6,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_535d66b5f9b6",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_0c6435d72a6a",
+        "name": "RagingWire CA3",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.6442393,
+        "lon": -121.4987627
+      },
+      {
+        "facility_id": "dc_c62f317a38b8",
+        "name": "RagingWire CA3 - NTT",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.644384,
+        "lon": -121.498636
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 19.5,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_8d7d400daa85",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_df2f1e84df81",
+        "name": "360 Spear Street Data Center",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.7889916,
+        "lon": -122.3901367
+      },
+      {
+        "facility_id": "dc_15d41804dc7c",
+        "name": "360 Spear",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.788931,
+        "lon": -122.390267
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 13.3,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_df94ebb7df29",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_4ac9009da168",
+        "name": "Equinix New York Secaucus NY5",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.7785845,
+        "lon": -74.0723242
+      },
+      {
+        "facility_id": "dc_510b9aeb0005",
+        "name": "Equinix NY2/NY4/NY5/NY6 - New York, Secaucus",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.778534,
+        "lon": -74.072237
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 9.2,
+        "name_sim": 81
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_d983542baf94",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_1bf1fe9cdfe8",
+        "name": "QTS Sacramento",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.6463763,
+        "lon": -121.4862686
+      },
+      {
+        "facility_id": "dc_d0731f9bc90b",
+        "name": "QTS Sacramento (SAC1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.646407,
+        "lon": -121.486335
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 6.7,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_0ea9fc7adeb0",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_9372a4bdf24e",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.2955554,
+        "lon": -94.6734862
+      },
+      {
+        "facility_id": "dc_cb8350d28130",
+        "name": "Lincoln Rackhouse Kansas City",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.295603,
+        "lon": -94.67394
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 39.4,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_09e2e192a4eb",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_5e4e5d9a52f9",
+        "name": "IU Data Center",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.1744228,
+        "lon": -86.5006878
+      },
+      {
+        "facility_id": "dc_2785fb1c9fc7",
+        "name": "Indiana University Data Center",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.174464,
+        "lon": -86.500753
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 7.3,
+        "name_sim": 88
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_72f68f42d432",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_1e7a6fb5cb25",
+        "name": "DataBank Piscataway EWR2",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.5492135,
+        "lon": -74.4582096
+      },
+      {
+        "facility_id": "dc_93f12613c4ab",
+        "name": "DataBank Piscataway (EWR2)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.549247,
+        "lon": -74.458241
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 4.6,
+        "name_sim": 96
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_9c927d5b249c",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_0e90ddf7604d",
+        "name": "Equinix SV17",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.3765309,
+        "lon": -121.9885825
+      },
+      {
+        "facility_id": "dc_2dc7e156b309",
+        "name": "Equinix SV17 - Silicon Valley, Santa Clara",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.376348,
+        "lon": -121.988591
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 20.4,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_27bede9eb66c",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_531bb12b3f6a",
+        "name": "CoreSite SV4",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.3762614,
+        "lon": -121.9706851
+      },
+      {
+        "facility_id": "dc_a49036c073fc",
+        "name": "CoreSite - Santa Clara (SV4)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.376259,
+        "lon": -121.970705
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 1.8,
+        "name_sim": 80
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_a0f51e098a77",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_acf57f813e37",
+        "name": "Evocative Santa Clara SJC11",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.3895364,
+        "lon": -121.9619398
+      },
+      {
+        "facility_id": "dc_4f61e8f31072",
+        "name": "Evocative SJC11",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.389466,
+        "lon": -121.962115
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 17.3,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_c737f1f6d886",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_be9c945061a1",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 42.6857078,
+        "lon": -71.2086024
+      },
+      {
+        "facility_id": "dc_18df6e5c16e2",
+        "name": "TierPoint Boston - Andover",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 42.685693,
+        "lon": -71.208694
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 7.7,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_2705b2329455",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_2dc6c8f7ebee",
+        "name": "Flexential Charlotte - South",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 35.1354147,
+        "lon": -80.9368313
+      },
+      {
+        "facility_id": "dc_fb28bbe3cf15",
+        "name": "Flexential - Charlotte/South (CLT1/2/3)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 35.135366,
+        "lon": -80.93693
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 10.5,
+        "name_sim": 80
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_470dccd260a2",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_7c5a9f503ef9",
+        "name": "Westin Building",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.6143555,
+        "lon": -122.3388637
+      },
+      {
+        "facility_id": "dc_168af1b5bef0",
+        "name": "Optic Fusion - Westin Building 2505",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 47.614358,
+        "lon": -122.338864
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 0.3,
+        "name_sim": 100
       }
     ]
   },
@@ -137,6 +2131,126 @@
     ]
   },
   {
+    "canonical_id": "dc_1cbea47b2e15",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_7deaab0fb9b8",
+        "name": "H5 Data Centers Ashburn",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.0136782,
+        "lon": -77.4517194
+      },
+      {
+        "facility_id": "dc_81162f6394bb",
+        "name": "H5 Data Centers Ashburn",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.013682,
+        "lon": -77.451713
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 0.7,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_201440cfd9cd",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_25f297d7033e",
+        "name": "PhoenixNAP",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.416077,
+        "lon": -112.0094718
+      },
+      {
+        "facility_id": "dc_beaeba10c57c",
+        "name": "PhoenixNAP",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.41601,
+        "lon": -112.009445
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 7.9,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_0dc2e0d5e422",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_f36fc1d877e2",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.9059013,
+        "lon": -77.4689724
+      },
+      {
+        "facility_id": "dc_879651261854",
+        "name": "4120 Lafayette Center Drive",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.905944,
+        "lon": -77.469017
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 6.1,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_dd62b4cfd23c",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_1e04272ef63c",
+        "name": "TierPoint",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.6297601,
+        "lon": -90.1964208
+      },
+      {
+        "facility_id": "dc_3326a2a87de4",
+        "name": "TierPoint St. Louis - Olive",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.629757,
+        "lon": -90.196398
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 2.0,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
     "canonical_id": "dc_be6fbb486171",
     "n_merged": 2,
     "members": [
@@ -167,6 +2281,126 @@
     ]
   },
   {
+    "canonical_id": "dc_5a66fc0b92a1",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_528898b2862b",
+        "name": "Flexential - Richmond",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.6468902,
+        "lon": -77.4386952
+      },
+      {
+        "facility_id": "dc_bfbdeb0af8e5",
+        "name": "Flexential - Richmond (RIC01/02)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.646784,
+        "lon": -77.438443
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 25.1,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_827fe89cbc5e",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_eedd58236ae5",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.9092366,
+        "lon": -77.4722656
+      },
+      {
+        "facility_id": "dc_2d739f0b9031",
+        "name": "H5 Data Centers Virginia (4050)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.909241,
+        "lon": -77.472266
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 0.5,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_edae91eea7f3",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_1dfd0f78fd70",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.9097961,
+        "lon": -77.4734544
+      },
+      {
+        "facility_id": "dc_ea3021e7cf6c",
+        "name": "H5 Data Centers Virginia (4040)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.909881,
+        "lon": -77.473498
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 10.2,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_6a1b8137ce48",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_06be3b8e3a50",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.908136,
+        "lon": -77.4752182
+      },
+      {
+        "facility_id": "dc_e6f1651af234",
+        "name": "ATI Solutions",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.908137,
+        "lon": -77.475261
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 3.7,
+        "name_sim": null
+      }
+    ]
+  },
+  {
     "canonical_id": "dc_23cf9d5d92b8",
     "n_merged": 2,
     "members": [
@@ -192,6 +2426,96 @@
     "evidence": [
       {
         "distance_m": 21.1,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_79ba191d0ddc",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_11d8e71aea19",
+        "name": "Digital Realty New Jersey EWR10",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.7618178,
+        "lon": -74.0250281
+      },
+      {
+        "facility_id": "dc_90899f0f3d8f",
+        "name": "Digital Realty New Jersey EWR10 (closed)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.761802,
+        "lon": -74.025183
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 13.2,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_3c54f97d781a",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_305a60972aa4",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.246168,
+        "lon": -119.815756
+      },
+      {
+        "facility_id": "dc_9a6f977e4091",
+        "name": "Intergate.Quincy",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 47.246308,
+        "lon": -119.815715
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 15.9,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_ae9448694997",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_ca0113a123db",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.2525738,
+        "lon": -119.8196649
+      },
+      {
+        "facility_id": "dc_8b8db2514341",
+        "name": "H5 Data Centers Quincy",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 47.252471,
+        "lon": -119.819721
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 12.2,
         "name_sim": null
       }
     ]
@@ -266,6 +2590,156 @@
     ]
   },
   {
+    "canonical_id": "dc_7c8f0dd59535",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_139c81f1a97d",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.5901315,
+        "lon": -104.8469632
+      },
+      {
+        "facility_id": "dc_79af689e4977",
+        "name": "Databank Denver (DEN5)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.590123,
+        "lon": -104.846655
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 26.4,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_0d9b2c88b783",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_3d192293ec26",
+        "name": "CoreSite SV2",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.4056857,
+        "lon": -121.9162604
+      },
+      {
+        "facility_id": "dc_34277afee49b",
+        "name": "Coresite - Milpitas (SV2)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.405693,
+        "lon": -121.916261
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 0.8,
+        "name_sim": 80
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_ae3e7c1ac44d",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_65f13502c71d",
+        "name": "Digital Realty Phoenix PHX15",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.2749228,
+        "lon": -111.8866379
+      },
+      {
+        "facility_id": "dc_652f47ebc917",
+        "name": "Digital Realty PHX15 (2121 S Price Rd)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.27485,
+        "lon": -111.886948
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 29.9,
+        "name_sim": 83
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_c9783b27622b",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_97c0f7fe755b",
+        "name": "H5 Phoenix",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.2769993,
+        "lon": -111.8858906
+      },
+      {
+        "facility_id": "dc_52d7a875845c",
+        "name": "H5 Data Centers Phoenix",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.277073,
+        "lon": -111.885739
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 16.3,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_4f768adc7131",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_d9a4221014af",
+        "name": "CyrusOne PHX1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.2708783,
+        "lon": -111.8819954
+      },
+      {
+        "facility_id": "dc_e26fa92a6cd9",
+        "name": "CyrusOne Phoenix",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.270744,
+        "lon": -111.882056
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 16.0,
+        "name_sim": 82
+      }
+    ]
+  },
+  {
     "canonical_id": "dc_3f486e9e678a",
     "n_merged": 2,
     "members": [
@@ -296,8 +2770,111 @@
     ]
   },
   {
-    "canonical_id": "dc_b89ba8f2218f",
+    "canonical_id": "dc_5fa783970111",
+    "n_merged": 3,
+    "members": [
+      {
+        "facility_id": "dc_f02ee32c2c83",
+        "name": "AiNET",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.0528404,
+        "lon": -76.9259248
+      },
+      {
+        "facility_id": "dc_9f2af96c1de9",
+        "name": "AINET - Beltsville",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.052767,
+        "lon": -76.925864
+      },
+      {
+        "facility_id": "dc_839cb75b998c",
+        "name": "AiNET WDC8",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.052767,
+        "lon": -76.925864
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 9.7,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 9.7,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_d7bbe1a551ea",
     "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_a3ff2d57e617",
+        "name": "CSSNW Bellingham",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 48.75726,
+        "lon": -122.4805485
+      },
+      {
+        "facility_id": "dc_3d4c328317ec",
+        "name": "CSSNW Bellingham",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 48.757306,
+        "lon": -122.4805
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 6.2,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_c5239980dbb9",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_9aaf525800d1",
+        "name": "Element Critical CH2",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.9742269,
+        "lon": -87.9671756
+      },
+      {
+        "facility_id": "dc_76c00c6b8b6c",
+        "name": "Element Critical Chicago CH2",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.974047,
+        "lon": -87.966966
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 26.5,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_b89ba8f2218f",
+    "n_merged": 3,
     "members": [
       {
         "facility_id": "dc_f90c7d6c8de4",
@@ -316,18 +2893,301 @@
         ],
         "lat": 30.2059357,
         "lon": -97.6979411
+      },
+      {
+        "facility_id": "dc_b0f9f5156d04",
+        "name": "CyrusOne Austin (Met 2)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 30.205925,
+        "lon": -97.69791
       }
     ],
     "evidence": [
       {
         "distance_m": 1.9,
         "name_sim": null
+      },
+      {
+        "distance_m": 3.2,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_25afe0ab10d4",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_208308e07562",
+        "name": "LightEdge Austin I",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 30.2142972,
+        "lon": -97.7126675
+      },
+      {
+        "facility_id": "dc_3799b886db2f",
+        "name": "LightEdge Austin 1 (AUS1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 30.214315,
+        "lon": -97.712733
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 6.6,
+        "name_sim": 94
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_1e7f741f9284",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_47ba232f327f",
+        "name": "Hurricane Electric Fremont 1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.4898848,
+        "lon": -121.9310239
+      },
+      {
+        "facility_id": "dc_f5861cddaecd",
+        "name": "Hurricane Electric Fremont 1",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.489879,
+        "lon": -121.931012
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 1.2,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_6b99d502d133",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_b60da2b750d8",
+        "name": "Data Foundry - Texas 1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 30.198907,
+        "lon": -97.7137835
+      },
+      {
+        "facility_id": "dc_b964479e7396",
+        "name": "Data Foundry Texas 1",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 30.198926,
+        "lon": -97.713716
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 6.8,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_9a40b00a652d",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_d8f7336522a1",
+        "name": "Hurricane Electric Fremont 2",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.471834,
+        "lon": -121.9202907
+      },
+      {
+        "facility_id": "dc_d11551b6f088",
+        "name": "Hurricane Electric Fremont 2",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.471809,
+        "lon": -121.920111
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 16.1,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_a89104d1dea0",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_22f7de1d5003",
+        "name": "Element Critical CH1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.9757324,
+        "lon": -87.9646913
+      },
+      {
+        "facility_id": "dc_87a1ef536bce",
+        "name": "Element Critical Chicago CH1",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.975882,
+        "lon": -87.964568
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 19.5,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_a94598173ea8",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_c43397fe09ac",
+        "name": "TierPoint Little Rock",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 34.7562396,
+        "lon": -92.4447234
+      },
+      {
+        "facility_id": "dc_0289c0442337",
+        "name": "TIerPoint Little Rock",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 34.756041,
+        "lon": -92.444207
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 52.1,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_6553f43d85f7",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_dbe6083df83f",
+        "name": "Equinix SV6",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.3996265,
+        "lon": -122.0145584
+      },
+      {
+        "facility_id": "dc_af0d70a4bfd7",
+        "name": "Equinix SV6 - Silicon Valley, Sunnyvale",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.399589,
+        "lon": -122.014572
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 4.3,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_d493afe55f15",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_8ba9fbca85f3",
+        "name": "Flexential Atlanta - Norcross",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.9547396,
+        "lon": -84.1985246
+      },
+      {
+        "facility_id": "dc_c77e01763dc8",
+        "name": "Flexential - Atlanta/Norcross (ATL1/2)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.954763,
+        "lon": -84.198645
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 11.4,
+        "name_sim": 83
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_a83a8d15a315",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_1594416e5756",
+        "name": "Equinix",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.8507525,
+        "lon": -118.3040815
+      },
+      {
+        "facility_id": "dc_d47323de7f51",
+        "name": "Equinix LA7 - Los Angeles",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.850864,
+        "lon": -118.304002
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 14.4,
+        "name_sim": 100
       }
     ]
   },
   {
     "canonical_id": "dc_506d216f297e",
-    "n_merged": 2,
+    "n_merged": 3,
     "members": [
       {
         "facility_id": "dc_19f00b0dd28e",
@@ -346,18 +3206,65 @@
         ],
         "lat": 47.6189596,
         "lon": -122.3485259
+      },
+      {
+        "facility_id": "dc_2b12f8482965",
+        "name": "KOMO Plaza Seattle (Formerly Fisher Plaza)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 47.619238,
+        "lon": -122.348278
       }
     ],
     "evidence": [
       {
         "distance_m": 35.2,
         "name_sim": 93
+      },
+      {
+        "distance_m": 0.9,
+        "name_sim": 80
+      },
+      {
+        "distance_m": 36.1,
+        "name_sim": 80
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_4c87d97ffa9a",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_70a2bb50bc56",
+        "name": "Serverfarm - LAX1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.9217415,
+        "lon": -118.3864588
+      },
+      {
+        "facility_id": "dc_eb50c2816580",
+        "name": "Serverfarm LAX1 Los Angeles",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.921614,
+        "lon": -118.386551
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 16.5,
+        "name_sim": 93
       }
     ]
   },
   {
     "canonical_id": "dc_f40c26b1ceb4",
-    "n_merged": 2,
+    "n_merged": 7,
     "members": [
       {
         "facility_id": "dc_9063e6dba4f5",
@@ -376,18 +3283,151 @@
         ],
         "lat": 34.0479149,
         "lon": -118.2555689
+      },
+      {
+        "facility_id": "dc_d92618e02953",
+        "name": "CoreSite - Los Angeles (LA1) One Wilshire",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 34.047942,
+        "lon": -118.255564
+      },
+      {
+        "facility_id": "dc_0cb113ea8aa2",
+        "name": "Multacom One Wilshire",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 34.047942,
+        "lon": -118.255564
+      },
+      {
+        "facility_id": "dc_dbbab5395c09",
+        "name": "LADC1 - 624 S Grand Ave",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 34.047948,
+        "lon": -118.255358
+      },
+      {
+        "facility_id": "dc_2cb4468c0ebc",
+        "name": "Crown Castle Los Angeles (624 S Grand)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 34.047948,
+        "lon": -118.255358
+      },
+      {
+        "facility_id": "dc_b5fed559b416",
+        "name": "DataBank Los Angeles (LAX1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 34.047948,
+        "lon": -118.255358
       }
     ],
     "evidence": [
       {
         "distance_m": 4.0,
         "name_sim": null
+      },
+      {
+        "distance_m": 6.4,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 6.4,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 3.0,
+        "name_sim": null
+      },
+      {
+        "distance_m": 3.0,
+        "name_sim": null
+      },
+      {
+        "distance_m": 19.8,
+        "name_sim": null
+      },
+      {
+        "distance_m": 19.8,
+        "name_sim": null
+      },
+      {
+        "distance_m": 19.8,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_cc1e6f846f5c",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_d7a40b37150d",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 25.7975445,
+        "lon": -80.2300338
+      },
+      {
+        "facility_id": "dc_b37734571947",
+        "name": "CoreSite - Miami (MI1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 25.797548,
+        "lon": -80.230038
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 0.6,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_f8d214368884",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_036fd972428b",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.3336326,
+        "lon": -121.8879639
+      },
+      {
+        "facility_id": "dc_8c696f86c63c",
+        "name": "DataPipe Silicon Valley One",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.333597,
+        "lon": -121.887886
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 7.9,
+        "name_sim": null
       }
     ]
   },
   {
     "canonical_id": "dc_042da0f1f99d",
-    "n_merged": 2,
+    "n_merged": 5,
     "members": [
       {
         "facility_id": "dc_3e14765bb321",
@@ -406,18 +3446,65 @@
         ],
         "lat": 40.7842844,
         "lon": -74.0652426
+      },
+      {
+        "facility_id": "dc_eb328b405040",
+        "name": "CoreSite NY3",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.7849038,
+        "lon": -74.0653573
+      },
+      {
+        "facility_id": "dc_4dc7dcc0724a",
+        "name": "CoreSite - Secaucus (NY2)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.784501,
+        "lon": -74.065119
+      },
+      {
+        "facility_id": "dc_5c52270ab350",
+        "name": "CoreSite - Secaucus (NY3)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.784289,
+        "lon": -74.064895
       }
     ],
     "evidence": [
       {
         "distance_m": 28.7,
         "name_sim": null
+      },
+      {
+        "distance_m": 51.5,
+        "name_sim": null
+      },
+      {
+        "distance_m": 56.7,
+        "name_sim": null
+      },
+      {
+        "distance_m": 26.2,
+        "name_sim": 82
+      },
+      {
+        "distance_m": 29.3,
+        "name_sim": 82
+      },
+      {
+        "distance_m": 49.1,
+        "name_sim": 80
       }
     ]
   },
   {
     "canonical_id": "dc_97311ae7d1ad",
-    "n_merged": 2,
+    "n_merged": 3,
     "members": [
       {
         "facility_id": "dc_79ebb9bd517e",
@@ -436,11 +3523,24 @@
         ],
         "lat": 30.207113,
         "lon": -97.7006616
+      },
+      {
+        "facility_id": "dc_0492f15c351d",
+        "name": "CyrusOne Austin (Met 3)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 30.207107,
+        "lon": -97.700668
       }
     ],
     "evidence": [
       {
         "distance_m": 46.7,
+        "name_sim": null
+      },
+      {
+        "distance_m": 0.9,
         "name_sim": null
       }
     ]
@@ -668,7 +3768,37 @@
     ]
   },
   {
-    "canonical_id": "dc_b5290c0e29e0",
+    "canonical_id": "dc_b8308dcc18bb",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_b5f0a27351dd",
+        "name": "Equinix San Jose SV3",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.388274,
+        "lon": -121.8884463
+      },
+      {
+        "facility_id": "dc_46260a1b5a0f",
+        "name": "Equinix SV3 - Silicon Valley, San Jose",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.388235,
+        "lon": -121.888457
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 4.4,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_2418d90f9371",
     "n_merged": 2,
     "members": [
       {
@@ -694,6 +3824,512 @@
       {
         "distance_m": 50.2,
         "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_2488b59ec2e1",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_a537b83d3ab6",
+        "name": "DataBank Dallas Empire Central Data Center",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 32.8217503,
+        "lon": -96.873553
+      },
+      {
+        "facility_id": "dc_4a942cfa6f9f",
+        "name": "DataBank Dallas (DFW4)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 32.821596,
+        "lon": -96.873457
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 19.4,
+        "name_sim": 81
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_a3670fa43098",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_58ee2885dacd",
+        "name": "TierPoint Dallas Data Center",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 32.8079818,
+        "lon": -96.8573889
+      },
+      {
+        "facility_id": "dc_f05e7731c654",
+        "name": "TierPoint Dallas",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 32.807982,
+        "lon": -96.857362
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 2.5,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_3a8551ffe989",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_7c0f501af192",
+        "name": "Stream Data Centers PHX-1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.4194907,
+        "lon": -112.3599883
+      },
+      {
+        "facility_id": "dc_c674e783c4b4",
+        "name": "Stream Data Centers - Phoenix I",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.419639,
+        "lon": -112.359487
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 49.4,
+        "name_sim": 86
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_a8e6550e1c77",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_1f37795fdc6d",
+        "name": "Cologix Jacksonville JAX1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 30.3314298,
+        "lon": -81.6624257
+      },
+      {
+        "facility_id": "dc_56e7f87ca353",
+        "name": "Cologix JAX1",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 30.331403,
+        "lon": -81.66242
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 3.0,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_e5a14b588180",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_603ecb471187",
+        "name": "CyrusOne San Antonio I",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 29.4666098,
+        "lon": -98.6880869
+      },
+      {
+        "facility_id": "dc_1f571ab5e4fa",
+        "name": "CyrusOne San Antonio",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 29.46661,
+        "lon": -98.688078
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 0.9,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_96e798de1923",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_cffea971d6cd",
+        "name": "Stream San Antonio II",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 29.472003,
+        "lon": -98.6717199
+      },
+      {
+        "facility_id": "dc_bc1f275be310",
+        "name": "Stream Data Centers - San Antonio II",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 29.471741,
+        "lon": -98.671576
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 32.3,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_bfc0dc91e53d",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_5f3fec81a27f",
+        "name": "DC Blox Chattanooga",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 35.0315499,
+        "lon": -85.2972523
+      },
+      {
+        "facility_id": "dc_a0edd779dad3",
+        "name": "DC BLOX CHA1 - DCBLOX Chattanooga",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 35.031582,
+        "lon": -85.297262
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 3.7,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_71df8167e3fe",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_c6ae4293dd0c",
+        "name": "QTS Irving - Dallas Data Center Campus",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 32.8972479,
+        "lon": -96.9826475
+      },
+      {
+        "facility_id": "dc_e524d62b553d",
+        "name": "QTS Irving - Dallas (DFW1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 32.89709,
+        "lon": -96.982993
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 36.7,
+        "name_sim": 84
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_a4961042eb4e",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_1f5825260f22",
+        "name": "Expedient Pittsburgh South",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.427371,
+        "lon": -80.0425212
+      },
+      {
+        "facility_id": "dc_54842e64b9fe",
+        "name": "Expedient Pittsburgh - Green Tree",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.42735,
+        "lon": -80.042457
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 5.9,
+        "name_sim": 86
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_7f37dc601968",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_365379e1abd8",
+        "name": "Centersquare: Phoenix - (PHX1 - Mesa)",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.4212542,
+        "lon": -111.8590191
+      },
+      {
+        "facility_id": "dc_48be1a0385d8",
+        "name": "Centersquare Phoenix (PHX3)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.421225,
+        "lon": -111.858984
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 4.6,
+        "name_sim": 80
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_cee882b53bd3",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_8ce667e2d3bf",
+        "name": "Liquid Web, Inc",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 42.7053904,
+        "lon": -84.6660891
+      },
+      {
+        "facility_id": "dc_6b2b0123de49",
+        "name": "Liquid Web DC3",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 42.705368,
+        "lon": -84.666064
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 3.2,
+        "name_sim": 82
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_e0c9ea4740c6",
+    "n_merged": 4,
+    "members": [
+      {
+        "facility_id": "dc_ad5e9dfb45e5",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.1157427,
+        "lon": -83.0025794
+      },
+      {
+        "facility_id": "dc_1bbcee25bcb0",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.1158246,
+        "lon": -83.0014877
+      },
+      {
+        "facility_id": "dc_089bb061ee07",
+        "name": "DataCenter.BZ - Worthington-Columbus",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.115838,
+        "lon": -83.00176
+      },
+      {
+        "facility_id": "dc_136ac614cfed",
+        "name": "Datacenter.BZ",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.115757,
+        "lon": -83.002414
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 14.2,
+        "name_sim": null
+      },
+      {
+        "distance_m": 23.2,
+        "name_sim": null
+      },
+      {
+        "distance_m": 56.3,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_99361789c568",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_402e4a67e1c9",
+        "name": "Stack Infrastructure",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.4022094,
+        "lon": -121.8923868
+      },
+      {
+        "facility_id": "dc_5f34425be4bf",
+        "name": "Stack Infrastructure Silicon Valley SVY01",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.402211,
+        "lon": -121.892822
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 38.4,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_37283499bff1",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_9332a9170ecf",
+        "name": "Digital Fortress Lynnwood",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 47.8224039,
+        "lon": -122.2896138
+      },
+      {
+        "facility_id": "dc_f8918b9083ae",
+        "name": "Digital Fortress (LYN)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 47.822503,
+        "lon": -122.289478
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 15.0,
+        "name_sim": 85
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_ab141916e295",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_3f991bcc412c",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 32.9662442,
+        "lon": -96.7112265
+      },
+      {
+        "facility_id": "dc_33c24a63c47e",
+        "name": "DataBank Dallas (DFW2)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 32.966683,
+        "lon": -96.711345
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 50.0,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_5ee3b5325f08",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_e33abf5ebb55",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 28.6174494,
+        "lon": -81.3934606
+      },
+      {
+        "facility_id": "dc_3f353c496423",
+        "name": "HostDime Orlando Data Center",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 28.617526,
+        "lon": -81.393381
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 11.5,
+        "name_sim": null
       }
     ]
   },
@@ -728,7 +4364,7 @@
     ]
   },
   {
-    "canonical_id": "dc_f5660e5d21c4",
+    "canonical_id": "dc_1dd477f34bc5",
     "n_merged": 2,
     "members": [
       {
@@ -754,6 +4390,96 @@
       {
         "distance_m": 51.8,
         "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_e4b9d11fc296",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_d866b4a8d306",
+        "name": "Flexential Dallas - Plano",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.007033,
+        "lon": -96.6663507
+      },
+      {
+        "facility_id": "dc_4b7c40ef07be",
+        "name": "Flexential - Dallas/Plano (DFW01)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.007418,
+        "lon": -96.666318
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 42.9,
+        "name_sim": 82
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_ac648486d8b7",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_b0faaa85f48d",
+        "name": "US Signal - OR01 Bend",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 44.0861049,
+        "lon": -121.2830411
+      },
+      {
+        "facility_id": "dc_f100ff74bc30",
+        "name": "US Signal OR01 - Bend",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 44.086238,
+        "lon": -121.282971
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 15.8,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_be3f35a6c8d6",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_1fb5d490d6d9",
+        "name": "Iron Mountain AZP-2",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.4521575,
+        "lon": -111.9772945
+      },
+      {
+        "facility_id": "dc_200dcd9d612b",
+        "name": "Iron Mountain Data Center - Phoenix (AZP-2)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.452061,
+        "lon": -111.977263
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 11.1,
+        "name_sim": 81
       }
     ]
   },
@@ -848,6 +4574,126 @@
     ]
   },
   {
+    "canonical_id": "dc_3754a7061eec",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_78e971c1c0b0",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.0154219,
+        "lon": -77.4782699
+      },
+      {
+        "facility_id": "dc_e74e4cff30d4",
+        "name": "Sabey Intergate.Ashburn",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.015352,
+        "lon": -77.478264
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 7.8,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_3a23c08ab006",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_4c4ee9f809a9",
+        "name": "Flexential Salt Lake City - Downtown",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.7563065,
+        "lon": -111.9548375
+      },
+      {
+        "facility_id": "dc_8e5a62f4b1db",
+        "name": "Flexential - Salt Lake City/Downtown (SLC04)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.756302,
+        "lon": -111.954307
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 44.7,
+        "name_sim": 87
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_443bffa57334",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_e90c6c722d5e",
+        "name": "Flexential Fort Lauderdale",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 26.1900857,
+        "lon": -80.1932967
+      },
+      {
+        "facility_id": "dc_23345c499da8",
+        "name": "Flexential - Fort Lauderdale (FLL1/2)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 26.190264,
+        "lon": -80.19326
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 20.2,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_f5a70ed2b195",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_c250033ef90f",
+        "name": "Fort Rock DC",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 44.0474074,
+        "lon": -121.3285496
+      },
+      {
+        "facility_id": "dc_9642877ecb4d",
+        "name": "Fort Rock Data Center",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 44.047402,
+        "lon": -121.328535
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 1.3,
+        "name_sim": 85
+      }
+    ]
+  },
+  {
     "canonical_id": "dc_1b4a6e68cdff",
     "n_merged": 2,
     "members": [
@@ -933,6 +4779,36 @@
     "evidence": [
       {
         "distance_m": 43.6,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_83f0a31399f3",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_164c93c122d9",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.5590684,
+        "lon": -104.8335336
+      },
+      {
+        "facility_id": "dc_6d8a5065bcbb",
+        "name": "US Signal CO01 - Denver",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.559076,
+        "lon": -104.833542
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 1.1,
         "name_sim": null
       }
     ]
@@ -1028,6 +4904,49 @@
     ]
   },
   {
+    "canonical_id": "dc_9f86a9be9cdb",
+    "n_merged": 3,
+    "members": [
+      {
+        "facility_id": "dc_14943c92719a",
+        "name": "1623 Farnam",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.257291,
+        "lon": -95.9378494
+      },
+      {
+        "facility_id": "dc_4b71f63851f5",
+        "name": "1623 Farnam - Omaha",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.257352,
+        "lon": -95.938191
+      },
+      {
+        "facility_id": "dc_6dee0e940ccf",
+        "name": "1623 Farmam",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.25737,
+        "lon": -95.938164
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 29.3,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 27.7,
+        "name_sim": 90
+      }
+    ]
+  },
+  {
     "canonical_id": "dc_cffe36ef20e3",
     "n_merged": 2,
     "members": [
@@ -1054,6 +4973,36 @@
       {
         "distance_m": 11.1,
         "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_ca4ce1d1a929",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_60edd097dba9",
+        "name": "TierPoint",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 35.9245097,
+        "lon": -86.8556872
+      },
+      {
+        "facility_id": "dc_a1aad7411f1e",
+        "name": "TierPoint Nashville",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 35.924575,
+        "lon": -86.85582
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 14.0,
+        "name_sim": 100
       }
     ]
   },
@@ -1241,6 +5190,216 @@
     ]
   },
   {
+    "canonical_id": "dc_3abd12c5de38",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_c6a7f40f5f7d",
+        "name": "TierPoint - Charlotte Data Center",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 35.1731955,
+        "lon": -80.928121
+      },
+      {
+        "facility_id": "dc_0ca861ca12e4",
+        "name": "TierPoint Charlotte - Center Park",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 35.173088,
+        "lon": -80.927807
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 30.9,
+        "name_sim": 91
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_3aebc3edbd4d",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_ee0b47c8c853",
+        "name": "CoreSite Chicago Data Center (CH2)",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.8627972,
+        "lon": -87.6413012
+      },
+      {
+        "facility_id": "dc_45e6f7a272bb",
+        "name": "CoreSite - Chicago (CH2)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.86255,
+        "lon": -87.640966
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 39.1,
+        "name_sim": 95
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_91489ab87680",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_be65944011bf",
+        "name": "Stream Chicago II",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.9991244,
+        "lon": -87.9577647
+      },
+      {
+        "facility_id": "dc_a3250b195be4",
+        "name": "Stream Data Centers - Chicago II",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.999144,
+        "lon": -87.958291
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 43.5,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_9c4211d3ccea",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_ed37057b65e9",
+        "name": "Stream Chicago I",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 42.0026304,
+        "lon": -87.9511119
+      },
+      {
+        "facility_id": "dc_56cdea6e409a",
+        "name": "Stream Data Centers - Chicago I",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 42.002586,
+        "lon": -87.951707
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 49.4,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_23b0f1f2b92c",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_82cb3f2f7552",
+        "name": "Turnkey Internet",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 42.7454447,
+        "lon": -73.7592013
+      },
+      {
+        "facility_id": "dc_40472556c10c",
+        "name": "TurnKey Internet",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 42.74545,
+        "lon": -73.75914
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 5.0,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_e06c46dabeb5",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_d9edac17108d",
+        "name": null,
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.9406295,
+        "lon": -94.7552326
+      },
+      {
+        "facility_id": "dc_2e1b200a10bf",
+        "name": "TierPoint Kansas City - Lenexa",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.940686,
+        "lon": -94.755003
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 20.8,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_f5513f749da8",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_ccad01142f01",
+        "name": "CloudHQ MCC1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.7170622,
+        "lon": -77.4999396
+      },
+      {
+        "facility_id": "dc_f3319fb30d96",
+        "name": "CloudHQ MCC1",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.716855,
+        "lon": -77.499738
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 28.9,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
     "canonical_id": "dc_510bb94c664b",
     "n_merged": 2,
     "members": [
@@ -1267,6 +5426,36 @@
       {
         "distance_m": 4.2,
         "name_sim": 91
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_a0c66ebeafd4",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_0afacdaa152d",
+        "name": "Omnis Network",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.3944358,
+        "lon": -111.9525168
+      },
+      {
+        "facility_id": "dc_44dfffd1938e",
+        "name": "Omnis Network Phoenix",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.394673,
+        "lon": -111.952418
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 27.9,
+        "name_sim": 100
       }
     ]
   },
@@ -1302,7 +5491,7 @@
   },
   {
     "canonical_id": "dc_31eac5a9a731",
-    "n_merged": 2,
+    "n_merged": 3,
     "members": [
       {
         "facility_id": "dc_73fb64d144d1",
@@ -1321,12 +5510,239 @@
         ],
         "lat": 32.4982544,
         "lon": -84.8835911
+      },
+      {
+        "facility_id": "dc_3c2cf6ae27b3",
+        "name": "DLI One",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 32.498252,
+        "lon": -84.883576
       }
     ],
     "evidence": [
       {
         "distance_m": 6.3,
         "name_sim": null
+      },
+      {
+        "distance_m": 6.9,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 1.4,
+        "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_3d475b731d7a",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_7db4c82ee375",
+        "name": "Iron Mountain VA-1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.777963,
+        "lon": -77.5471012
+      },
+      {
+        "facility_id": "dc_666288759fd8",
+        "name": "Iron Mountain Data Center - Manassas (VA-1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.778046,
+        "lon": -77.547069
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 9.6,
+        "name_sim": 83
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_03018a9d0b6e",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_91362b3bf20a",
+        "name": "CloudHQ MCC2",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.7231919,
+        "lon": -77.4989708
+      },
+      {
+        "facility_id": "dc_9f6447b5eb53",
+        "name": "CloudHQ MCC2",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.722972,
+        "lon": -77.499229
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 33.2,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_27b1c3e36589",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_09c1f5c9c259",
+        "name": "Flexential Salt Lake City - Millcreek",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.685569,
+        "lon": -111.8850505
+      },
+      {
+        "facility_id": "dc_36a54ecace6a",
+        "name": "Flexential - Salt Lake City/Millcreek (SLC10)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.685494,
+        "lon": -111.885063
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 8.4,
+        "name_sim": 87
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_1cb556e009e0",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_bc533eb1e87c",
+        "name": "T5@Colorado Springs",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 38.7861601,
+        "lon": -104.7885828
+      },
+      {
+        "facility_id": "dc_5d00f3e55d5e",
+        "name": "T5@Colorado Springs",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 38.785862,
+        "lon": -104.788567
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 33.2,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_f377bd967513",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_5a2f1a973e68",
+        "name": "TierPoint Valley Forge",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.1218812,
+        "lon": -75.4208776
+      },
+      {
+        "facility_id": "dc_72875820f973",
+        "name": "TierPoint Valley Forge",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.121849,
+        "lon": -75.420907
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 4.4,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_25c7e68064cd",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_5a5885f7ef09",
+        "name": "Flexential Salt Lake City - Fair Park",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 40.7667963,
+        "lon": -111.9202947
+      },
+      {
+        "facility_id": "dc_f96a029da9f9",
+        "name": "Flexential - Salt Lake City/Fairpark (SLC07)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.766785,
+        "lon": -111.920263
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 3.0,
+        "name_sim": 86
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_ced68be9f4dd",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_f0dcaef8ef30",
+        "name": "Equinix Ashburn DC16",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 39.0242573,
+        "lon": -77.4523268
+      },
+      {
+        "facility_id": "dc_d86a68c86bcb",
+        "name": "Equinix DC16",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.024202,
+        "lon": -77.452284
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 7.2,
+        "name_sim": 100
       }
     ]
   },
@@ -1356,6 +5772,66 @@
     "evidence": [
       {
         "distance_m": 56.2,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_a7a75774014b",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_4683491b1eb7",
+        "name": "CoreSite SV7",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.3760788,
+        "lon": -121.9730567
+      },
+      {
+        "facility_id": "dc_72f3485ce157",
+        "name": "CoreSite - Santa Clara (SV7)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.3761,
+        "lon": -121.973055
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 2.4,
+        "name_sim": 80
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_b90668346127",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_087ba98f5f1f",
+        "name": "Lightedge Des Moines 2",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.666814,
+        "lon": -93.4559432
+      },
+      {
+        "facility_id": "dc_5f372c287976",
+        "name": "LightEdge Des Moines 2 (DSM2)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.666762,
+        "lon": -93.455725
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 19.0,
         "name_sim": 100
       }
     ]
@@ -1391,6 +5867,156 @@
     ]
   },
   {
+    "canonical_id": "dc_f8de9711b6d9",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_a75407ad7174",
+        "name": "Lightedge Des Moines 1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.6676628,
+        "lon": -93.4554841
+      },
+      {
+        "facility_id": "dc_42046a922cdb",
+        "name": "LightEdge Des Moines 1 (DSM1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.667665,
+        "lon": -93.455473
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 1.0,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_00b2737ad841",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_022215cae19c",
+        "name": "fifteenfortyseven CSR ORNY1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 41.0344926,
+        "lon": -73.9757865
+      },
+      {
+        "facility_id": "dc_334282b129df",
+        "name": "ORNY1",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 41.034512,
+        "lon": -73.97584
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 5.0,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_789e4943512c",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_619f3cea52cf",
+        "name": "Ark Duluth Data Center",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 46.8274678,
+        "lon": -92.1304819
+      },
+      {
+        "facility_id": "dc_864293fbf97b",
+        "name": "ark data centers - Duluth, MN",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 46.827451,
+        "lon": -92.130338
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 11.1,
+        "name_sim": 86
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_fd766e3bc945",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_15874976ef20",
+        "name": "Flexential Charlotte - North",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 35.329773,
+        "lon": -80.7657588
+      },
+      {
+        "facility_id": "dc_89694d1207a2",
+        "name": "Flexential - Charlotte/North (CLT4/5)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 35.329674,
+        "lon": -80.766017
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 25.9,
+        "name_sim": 83
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_e1a3bd223170",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_c79cd36ca393",
+        "name": "NTT",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 32.980928,
+        "lon": -96.6579435
+      },
+      {
+        "facility_id": "dc_7af4dcc99721",
+        "name": "RagingWire TX1 - NTT",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 32.981068,
+        "lon": -96.657798
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 20.7,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
     "canonical_id": "dc_ac16fc556bbf",
     "n_merged": 2,
     "members": [
@@ -1417,6 +6043,66 @@
       {
         "distance_m": 13.4,
         "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_74688765b678",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_270344c0ce68",
+        "name": "DataBank Santa Clara SFO1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 37.4073026,
+        "lon": -121.9659803
+      },
+      {
+        "facility_id": "dc_7c75ff237e70",
+        "name": "DataBank Santa Clara (SFO1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 37.407382,
+        "lon": -121.965885
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 12.2,
+        "name_sim": 96
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_abb2744b3a0e",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_e2c6e9391014",
+        "name": "Iron Mountain AZP-1",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.4547261,
+        "lon": -111.9762182
+      },
+      {
+        "facility_id": "dc_81af47973b61",
+        "name": "Iron Mountain Data Center - Phoenix (AZP-1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.454411,
+        "lon": -111.976435
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 40.4,
+        "name_sim": 81
       }
     ]
   },
@@ -1542,6 +6228,354 @@
       {
         "distance_m": 43.0,
         "name_sim": null
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_2b393a3841c5",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_3ba8dc0997d3",
+        "name": "QTS",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 33.4484031,
+        "lon": -84.5224887
+      },
+      {
+        "facility_id": "dc_c955d280b22b",
+        "name": "QTS Atlanta-Fayetteville (ATL2)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 33.448789,
+        "lon": -84.522289
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 46.7,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_e985cd8a1feb",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_520cb9205a60",
+        "name": "MDC",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 31.7500067,
+        "lon": -106.3099264
+      },
+      {
+        "facility_id": "dc_942d2658f7de",
+        "name": "MDC El Paso",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 31.750001,
+        "lon": -106.309928
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 0.7,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_b1bab62f304f",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_202c8c3b090d",
+        "name": "Liberty Center One",
+        "sources": [
+          "OpenStreetMap"
+        ],
+        "lat": 42.5334813,
+        "lon": -83.1774894
+      },
+      {
+        "facility_id": "dc_6e691783a54b",
+        "name": "Liberty Center One",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 42.533508,
+        "lon": -83.177393
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 8.4,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_eb804c8b0e43",
+    "n_merged": 5,
+    "members": [
+      {
+        "facility_id": "dc_16ed7ddf4a80",
+        "name": "Equinix PH1 - Philadelphia",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.959668,
+        "lon": -75.161377
+      },
+      {
+        "facility_id": "dc_cdadf366ee5b",
+        "name": "DataBank Philadelphia (PHL1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.959612,
+        "lon": -75.161014
+      },
+      {
+        "facility_id": "dc_68a432489fef",
+        "name": "Crown Castle Philadelphia (401 N Broad)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.959668,
+        "lon": -75.161377
+      },
+      {
+        "facility_id": "dc_00c9ca71335d",
+        "name": "Sungard AS Philadelphia",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.959612,
+        "lon": -75.161014
+      },
+      {
+        "facility_id": "dc_891ea9a0ee81",
+        "name": "Lumen Philadelphia",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.959621,
+        "lon": -75.161021
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 30.8,
+        "name_sim": 80
+      },
+      {
+        "distance_m": 1.2,
+        "name_sim": 80
+      },
+      {
+        "distance_m": 30.8,
+        "name_sim": 80
+      },
+      {
+        "distance_m": 1.2,
+        "name_sim": 80
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_0967d5287af9",
+    "n_merged": 4,
+    "members": [
+      {
+        "facility_id": "dc_8c78a4ab0556",
+        "name": "FiberNet Telecom Group - 60 Hudson St",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.717664,
+        "lon": -74.008333
+      },
+      {
+        "facility_id": "dc_da2cbacf24da",
+        "name": "60 Hudson",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.717723,
+        "lon": -74.008299
+      },
+      {
+        "facility_id": "dc_2815821439aa",
+        "name": "Encompass New York 60 Hudson",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.717729,
+        "lon": -74.008306
+      },
+      {
+        "facility_id": "dc_c5126b57f618",
+        "name": "Metanet New York Data Center 60 HUDSON",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 40.717729,
+        "lon": -74.008306
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 7.2,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 0.9,
+        "name_sim": 100
+      },
+      {
+        "distance_m": 0.9,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_cc49cc794d73",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_99ce80cd3e90",
+        "name": "Telecom Center LA",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 34.048428,
+        "lon": -118.255186
+      },
+      {
+        "facility_id": "dc_8cfc8c00acf3",
+        "name": "Multacom Telecom Center",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 34.048428,
+        "lon": -118.255186
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 0.0,
+        "name_sim": 90
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_1cab594215d1",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_67b09aeae3a5",
+        "name": "WowRack",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 47.49312,
+        "lon": -122.293712
+      },
+      {
+        "facility_id": "dc_991ed617a25b",
+        "name": "Wowrack Datacenter - Tukwila",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 47.493158,
+        "lon": -122.293832
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 10.0,
+        "name_sim": 100
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_6d88b75bdb12",
+    "n_merged": 3,
+    "members": [
+      {
+        "facility_id": "dc_86792f84a0b0",
+        "name": "Lincoln Rackhouse Silver Spring",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.058289,
+        "lon": -76.964548
+      },
+      {
+        "facility_id": "dc_53b6dc64fa2b",
+        "name": "Agile Silver Spring",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.058289,
+        "lon": -76.964548
+      },
+      {
+        "facility_id": "dc_18bf02b09118",
+        "name": "Databridge Sites Silver Spring",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.05867,
+        "lon": -76.964486
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 0.0,
+        "name_sim": 81
+      },
+      {
+        "distance_m": 42.7,
+        "name_sim": 81
+      }
+    ]
+  },
+  {
+    "canonical_id": "dc_e61bb2d7e36b",
+    "n_merged": 2,
+    "members": [
+      {
+        "facility_id": "dc_414d96e2a0ae",
+        "name": "365 Data Centers Buffalo (PA1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.962369,
+        "lon": -75.163734
+      },
+      {
+        "facility_id": "dc_6400957c18ee",
+        "name": "365 Data Centers Philadelphia (PA1)",
+        "sources": [
+          "PeeringDB"
+        ],
+        "lat": 39.962369,
+        "lon": -75.163734
+      }
+    ],
+    "evidence": [
+      {
+        "distance_m": 0.0,
+        "name_sim": 84
       }
     ]
   },

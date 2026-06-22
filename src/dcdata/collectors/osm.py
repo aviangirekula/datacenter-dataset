@@ -19,6 +19,7 @@ from dcdata.classify import classify_facility_type
 from dcdata.collectors.base import BaseCollector
 from dcdata.schema import (
     Confidence,
+    CoordinatePrecision,
     Facility,
     FacilitySource,
     FacilityType,
@@ -102,6 +103,15 @@ class OSMCollector(BaseCollector):
         street = " ".join(p for p in parts if p)
         return street or None
 
+    @staticmethod
+    def _num_floors(tags: dict) -> Optional[int]:
+        """Parse OSM ``building:levels`` into an integer floor count, if present."""
+        v = tags.get("building:levels") or tags.get("building:levels:aboveground")
+        try:
+            return int(float(v)) if v not in (None, "") else None
+        except (ValueError, TypeError):
+            return None
+
     def _to_facility(self, el: dict, accessed: date) -> Optional[Facility]:
         coords = self._coords(el)
         if coords is None:
@@ -133,7 +143,11 @@ class OSMCollector(BaseCollector):
             longitude=lon,
             geom_type=geom,
             geocode_precision=precision,
+            # OSM features map the specific building; oversized site polygons are
+            # downgraded to campus_centroid during footprint enrichment.
+            coordinate_precision=CoordinatePrecision.building,
             coord_confidence=coord_conf,
+            num_floors=self._num_floors(tags),
             address=self._address(tags),
             city=tags.get("addr:city"),
             state=tags.get("addr:state"),

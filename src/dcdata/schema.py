@@ -68,6 +68,21 @@ class GeomType(str, Enum):
     polygon = "polygon"
 
 
+class CoordinatePrecision(str, Enum):
+    """How building-specific the coordinate is — the analysis-facing precision.
+
+    Distinct from ``geocode_precision`` (rooftop/parcel/...): this answers the
+    question the downstream hazard join cares about — *is this point on the
+    specific facility building, or on the campus / a network building / an
+    address geocode?*
+    """
+
+    building = "building"                  # pinned to the specific facility building
+    campus_centroid = "campus_centroid"    # campus / site / network-building centroid
+    geocoded_address = "geocoded_address"  # derived from a street-address geocode
+    unknown = "unknown"
+
+
 class FacilitySource(BaseModel):
     """One observation of a facility from a single source.
 
@@ -98,12 +113,14 @@ class Facility(BaseModel):
     operator_company: Optional[str] = None
     facility_type: FacilityType = FacilityType.unknown
     status: Status = Status.unknown
+    compute_capabilities: Optional[str] = None  # e.g. "AI/GPU", "HPC", "traditional"
 
     # --- location ---
     latitude: float
     longitude: float
     geom_type: GeomType = GeomType.point
     geocode_precision: GeocodePrecision = GeocodePrecision.unknown
+    coordinate_precision: CoordinatePrecision = CoordinatePrecision.unknown  # building vs campus vs geocoded
     coord_confidence: Confidence = Confidence.medium  # confidence in LOCATION specifically
 
     address: Optional[str] = None
@@ -114,11 +131,12 @@ class Facility(BaseModel):
     country: str = "US"
 
     # --- size & power (basis enums because sources disagree on definitions) ---
-    size_sqft: Optional[float] = None
+    size_sqft: Optional[float] = None       # per-floor building footprint (ground area)
     area_basis: AreaBasis = AreaBasis.unknown
-    power_capacity_mw: Optional[float] = None
+    num_floors: Optional[int] = None        # storeys; total floor area ≈ size_sqft × num_floors
+    power_capacity_mw: Optional[float] = None  # measured/rated capacity (reserved for licensed source)
     power_basis: PowerBasis = PowerBasis.unknown
-    power_demand_mw: Optional[float] = None  # "entry demand" per advisor
+    power_demand_mw: Optional[float] = None  # "entry demand" — modeled estimate (footprint × floors × density)
 
     year_opened: Optional[int] = None
     planned_year: Optional[int] = None

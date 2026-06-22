@@ -34,6 +34,12 @@ wikidata:
   license: CC0
   notes: "US data centers (Q671224) with coordinates; low volume (~12)."
 
+manual:
+  enabled: true
+  collector: dcdata.collectors.manual:ManualCurationCollector
+  path: data/manual/curated_facilities.csv
+  notes: "Hand-curated building-specific records/attributes; see docs/MANUAL_CURATION.md."
+
 lbnl_queue:
   enabled: false
   collector: dcdata.collectors.lbnl_queue:LBNLQueueCollector
