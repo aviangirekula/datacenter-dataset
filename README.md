@@ -4,10 +4,8 @@ A geospatially explicit, reproducible dataset of **current and planned data
 centers across the contiguous US (CONUS)**. Each row is one facility with
 building-level coordinates, status, descriptive attributes, and full provenance.
 
-Built for **Prof. Edward Oughton's GeoAI lab (George Mason University)** as input
-to a multi-hazard risk assessment of US data centers (power-grid interaction +
-natural-hazard exposure). The dataset is designed to join cleanly against
-power-grid and natural-hazard geospatial layers.
+The dataset is designed to join cleanly against power-grid and natural-hazard
+geospatial layers for a multi-hazard risk assessment of US data centers.
 
 > **Status: v0.1 scaffold.** Schema, config, validation, and the OpenStreetMap
 > base layer (1,592 CONUS facilities, cached) are in place. The end-to-end
