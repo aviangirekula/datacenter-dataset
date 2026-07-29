@@ -52,10 +52,24 @@ def haz_seismic_pga(lon, lat):
     )
 
 
+def haz_wildfire_whp(lon, lat):
+    """USFS Wildfire Hazard Potential 2023, classified, 270 m (EPSG:5070).
+
+    Class codes: 1 Very Low, 2 Low, 3 Moderate, 4 High, 5 Very High,
+    6 non-burnable (developed/urban/agriculture), 7 open water. 255 = outside
+    CONUS -> NaN. Codes are kept raw; interpretation lives in the docs.
+    """
+    tif = HAZ_RAW / "wildfire" / "whp" / "Data" / "whp2023_GeoTIF" / "whp2023_cls_conus.tif"
+    if not tif.exists():
+        return None
+    return sample_raster_at_points(tif, lon, lat)
+
+
 # name -> (column, sampler, units)
 HAZARDS = {
     "lightning": ("haz_lightning_flash_per_km2_yr", haz_lightning, "flashes/km2/yr"),
     "seismic":   ("haz_seismic_pga_g_475yr",        haz_seismic_pga, "g (PGA, 10%/50yr, BC)"),
+    "wildfire":  ("haz_wildfire_whp_class",         haz_wildfire_whp, "WHP class 1-5, 6=non-burnable, 7=water"),
 }
 
 
