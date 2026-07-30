@@ -34,3 +34,21 @@ licensing requires. No data pulled until you take any licensing decision to the 
   `geocode_precision`.
 - (b) Commercial directory license/export — pending lab decision.
 - (c) Final repo home (lab GitHub org vs. personal) — local only until confirmed.
+
+## Hazard layers (exposure analysis)
+
+Used by `scripts/build_hazard_exposure.py`. Acquisition details (URLs, byte
+sizes, checksums, target paths) are machine-readable in
+`scripts/fetch_hazard_data.py`. Raw layers are gitignored; the derived
+`data/processed/hazard_exposure.csv` is committed and redistributes values
+derived from these sources, so attribution is required.
+
+| Source | Layer | Licence | DOI |
+|---|---|---|---|
+| Oughton, E. J., & Weigel, R. (2026), *A Comparative Multi-Hazard Risk Assessment of the US High-Voltage Transmission Network*, Zenodo | LIS/OTD lightning annual flash rate | **CC BY 4.0** (attribution required on derived works) | 10.5281/zenodo.20331026 |
+| Petersen, M. D., et al. (2023), *2023 US National Seismic Hazard Model*, USGS | Uniform-hazard PGA, site class BC | US Government public domain | 10.5066/P9GNPCOD |
+| Dillon, G. K. (2023), *Wildfire Hazard Potential for the United States (270-m), v2023 4th ed.*, USDA Forest Service | Wildfire hazard potential, classified | US Government public domain | 10.2737/RDS-2015-0047-4 |
+
+The lightning raster is a reprojected derivative of the NASA LIS/OTD
+climatology; the upstream NASA product should be cited alongside the Zenodo
+archive in any publication.

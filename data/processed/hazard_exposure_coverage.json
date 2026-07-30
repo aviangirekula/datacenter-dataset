@@ -1,0 +1,65 @@
+{
+  "generated": "2026-07-29",
+  "git_commit": "0e9aecf",
+  "n_facilities": 2696,
+  "source_table": "data/processed/datacenters_final.csv",
+  "hazards": {
+    "lightning": {
+      "column": "haz_lightning_flash_per_km2_yr",
+      "measured": 2696,
+      "imputed": 0,
+      "total": 2696,
+      "native_resolution": "0.5 deg (~50 km)",
+      "distinct_values": 385,
+      "units": "flashes/km2/yr"
+    },
+    "seismic_475yr": {
+      "column": "haz_seismic_pga_g_475yr",
+      "measured": 2696,
+      "imputed": 0,
+      "total": 2696,
+      "multi_polygon_matches": 0,
+      "units": "g (PGA, site class BC / Vs30 760 m/s reference rock)",
+      "note": "contour-band midpoint; band width 0.01 g so +/-0.005 g discretisation"
+    },
+    "seismic_975yr": {
+      "column": "haz_seismic_pga_g_975yr",
+      "measured": 2696,
+      "imputed": 0,
+      "total": 2696,
+      "multi_polygon_matches": 0,
+      "units": "g (PGA, site class BC / Vs30 760 m/s reference rock)",
+      "note": "contour-band midpoint; band width 0.01 g so +/-0.005 g discretisation"
+    },
+    "seismic_2475yr": {
+      "column": "haz_seismic_pga_g_2475yr",
+      "measured": 2696,
+      "imputed": 0,
+      "total": 2696,
+      "multi_polygon_matches": 0,
+      "units": "g (PGA, site class BC / Vs30 760 m/s reference rock)",
+      "note": "contour-band midpoint; band width 0.01 g so +/-0.005 g discretisation"
+    },
+    "wildfire": {
+      "column_raw": "haz_wildfire_whp_code",
+      "column_ordinal": "haz_wildfire_whp_severity",
+      "measured_any_code": 2696,
+      "measured_ordinal_1_5": 404,
+      "non_burnable_code6": 2284,
+      "water_code7": 8,
+      "total": 2696,
+      "native_resolution": "270 m (EPSG:5070)",
+      "warning": "codes 6 and 7 are NOMINAL surface classes, not a continuation of the 1-5 ordinal severity scale; never average the raw code",
+      "buffer_radii_m": [
+        1000,
+        2400,
+        5000
+      ]
+    }
+  },
+  "caveats": [
+    "Values are sampled at a single facility point, not intersected with the building footprint. Adequate where the hazard's correlation length greatly exceeds the building (seismic, lightning); a known limitation for wildfire (270 m) and for flood once added.",
+    "Seismic values are reference-rock (site class BC, Vs30 760 m/s) and are therefore a systematic underestimate at soft-soil sites.",
+    "Exposure only. No vulnerability or consequence term is applied, so these columns are not risk estimates."
+  ]
+}

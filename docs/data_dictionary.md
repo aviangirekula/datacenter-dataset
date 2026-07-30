@@ -63,3 +63,29 @@ represented as separate building rows.
 record it is set on, and is intended to be superseded by a licensed/measured
 source. `power_capacity_mw` is reserved for that future measured capacity.
 
+
+## Hazard exposure fields
+
+Produced by `scripts/build_hazard_exposure.py` into
+`data/processed/hazard_exposure.csv`. These are **exposure** values, not risk:
+no vulnerability or consequence term is applied. Full method, limitations and
+citations in [hazard_exposure.md](hazard_exposure.md).
+
+| Field | Units / domain | Source | Notes |
+|---|---|---|---|
+| `haz_seismic_pga_g_475yr` | g | USGS NSHM 2023 (BC) | PGA, 10% in 50 yr. Contour-band midpoint, +/-0.005 g. |
+| `haz_seismic_pga_g_975yr` | g | USGS NSHM 2023 (BC) | PGA, 5% in 50 yr. |
+| `haz_seismic_pga_g_2475yr` | g | USGS NSHM 2023 (BC) | PGA, 2% in 50 yr. Design-relevant level for Risk Category III/IV. |
+| `haz_seismic_pga_g_*_method` | 0/1/2 | derived | 0 = no data, 1 = point-in-polygon, 2 = nearest-filled. |
+| `haz_lightning_flash_per_km2_yr` | flashes/km2/yr | NASA LIS/OTD via MHTran | 0.5 deg (~50 km). **Regional, not building-scale.** |
+| `haz_wildfire_whp_code` | 1-7 | USFS WHP 2023 | Raw code. **Do not average**: 6/7 are nominal, not ordinal. |
+| `haz_wildfire_whp_severity` | 1-5 or null | USFS WHP 2023 | Ordinal severity only. Use this for statistics. |
+| `haz_wildfire_surface` | category | USFS WHP 2023 | `very_low`..`very_high`, `non_burnable`, `water`. |
+| `haz_wildfire_burnable_frac_{1000,2400,5000}m` | 0-1 | USFS WHP 2023 | Fraction of burnable pixels within the radius. |
+| `haz_wildfire_max_severity_{1000,2400,5000}m` | 0-5 | USFS WHP 2023 | Max burnable severity within the radius. WUI-style metric. |
+| `qa_coordinate_on_water` | bool | derived | Facility sampled on an open-water pixel: a coordinate error, flagged not dropped. |
+
+Seismic values are **reference rock** (site class BC, Vs30 760 m/s) and
+underestimate ground motion at soft-soil sites. Hazard values inherit the
+positional accuracy of the coordinate, so `coordinate_precision`,
+`verification_status` and `coord_confidence` are carried into the same table.
