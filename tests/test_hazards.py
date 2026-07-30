@@ -131,6 +131,80 @@ def test_buffer_requires_projected_crs(wgs84_raster):
         sample_raster_in_buffer(wgs84_raster, [0.5], [1.5], radius_m=100)
 
 
+def test_buffer_is_a_circle_centred_on_the_point_not_the_window(tmp_path):
+    """The disc must be centred on the facility and must be round, not square.
+
+    Regression for two distinct bugs: (a) centring the mask on the array index
+    centre, which displaces the disc by up to half a pixel per axis once
+    rasterio rounds a fractional window offset, and (b) using the whole square
+    window instead of the inscribed circle.
+    """
+    from pyproj import Transformer
+
+    lon, lat = -77.4875, 39.0437
+    tr = Transformer.from_crs("EPSG:4326", "EPSG:5070", always_xy=True)
+    x, y = tr.transform(lon, lat)
+
+    res = 100.0
+    # Deliberately offset the grid origin by a third of a pixel so the point is
+    # NOT at a pixel centre and the window offset is fractional.
+    t = Affine.translation(x - 10 * res - res / 3, y + 10 * res + res / 3) \
+        * Affine.scale(res, -res)
+    arr = np.zeros((21, 21), dtype="float32")
+    p = _write_raster(tmp_path / "c.tif", arr, "EPSG:5070", t)
+
+    r = 500.0
+    got = sample_raster_in_buffer(p, [lon], [lat], radius_m=r)
+    n = int(got["n"][0])
+
+    # A circle of radius r on a res-grid holds about pi*r^2/res^2 pixels.
+    expected = np.pi * r**2 / res**2
+    assert abs(n - expected) / expected < 0.10, (
+        f"got {n} pixels, expected ~{expected:.0f} for a circle; "
+        "a square window would give ~"
+        f"{(2 * r / res) ** 2:.0f}"
+    )
+    # And must be clearly fewer than the enclosing square.
+    assert n < (2 * r / res) ** 2 * 0.85
+
+
+@pytest.mark.parametrize("frac", [0.3, 0.7, 0.5, 0.0])
+def test_buffer_disc_is_centred_on_the_true_point(tmp_path, frac):
+    """The disc's centre of mass must sit on the facility, not on the window.
+
+    Each pixel carries its own column index as its value, so the mean of the
+    sampled values locates the disc centre in pixel space. For a disc centred on
+    a point at fractional column ``fcol``, that mean is ``fcol - 0.5``.
+
+    ``frac`` is swept because the bug this guards (centring on the array index
+    centre after rasterio rounds a fractional window offset) cancels out when
+    the point happens to land on a pixel boundary or centre. A test fixed at one
+    alignment silently passes.
+    """
+    from pyproj import Transformer
+
+    lon, lat = -77.4875, 39.0437
+    tr = Transformer.from_crs("EPSG:4326", "EPSG:5070", always_xy=True)
+    x, y = tr.transform(lon, lat)
+
+    res = 100.0
+    fcol = frow = 12.0 + frac
+    t = Affine.translation(x - fcol * res, y + frow * res) * Affine.scale(res, -res)
+
+    n = 30
+    arr = np.tile(np.arange(n, dtype="float32"), (n, 1))  # value == column index
+    p = _write_raster(tmp_path / f"ctr{frac}.tif", arr, "EPSG:5070", t)
+
+    vals = sample_raster_in_buffer(p, [lon], [lat], radius_m=500)["values"][0]
+    assert vals.size > 50
+    got = float(vals.mean())
+    expected = fcol - 0.5
+    assert abs(got - expected) < 0.12, (
+        f"disc centre is at column {got:.3f}, expected {expected:.3f} "
+        f"(offset {abs(got - expected) * res:.0f} m at frac={frac})"
+    )
+
+
 # --- polygon join --------------------------------------------------------------
 
 @pytest.fixture
@@ -201,3 +275,38 @@ def test_documented_nodata_region_is_never_backfilled(bands):
                            fill_nearest=True, max_fill_m=1_000_000)
     assert np.isnan(r["value"][0])
     assert r["method"][0] == 0
+
+
+def test_fill_nearest_defaults_to_off(bands):
+    """A point WELL INSIDE the default fill radius must still be NaN by default.
+
+    Regression: an earlier default of True would silently impute. The point is
+    ~85 m outside band B, i.e. inside any plausible cap, so this fails loudly if
+    the default flips.
+    """
+    r = join_polygon_value([-97.999], [40.5], bands, _mid, _sentinel)
+    assert np.isnan(r["value"][0]), "imputation must be opt-in"
+    assert r["method"][0] == 0
+
+
+def test_invalid_geometry_is_repaired_before_join(tmp_path):
+    """Self-intersecting rings make `within` undefined; they must be repaired."""
+    gpd = pytest.importorskip("geopandas")
+    from shapely.geometry import Polygon
+
+    # Bow-tie: self-intersecting, invalid.
+    bowtie = Polygon([(-100, 40), (-99, 41), (-100, 41), (-99, 40)])
+    assert not bowtie.is_valid
+
+    g = gpd.GeoDataFrame(
+        {"low_cont": [0.10], "high_cont": [0.11], "geometry": [bowtie]},
+        crs="EPSG:4326",
+    )
+    p = tmp_path / "bad.gpkg"
+    g.to_file(p, driver="GPKG")
+
+    # The bow-tie self-intersects at (-99.5, 40.5), leaving a lower lobe with
+    # apex there and base along y = 40. This point sits inside that lobe.
+    r = join_polygon_value([-99.7], [40.1], p, _mid)
+    assert r["value"][0] == pytest.approx(0.105)
+    assert r["method"][0] == 1

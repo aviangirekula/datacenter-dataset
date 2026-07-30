@@ -57,7 +57,7 @@ ember cast and spread from the **surroundings**. The buffer columns capture that
 
 | Metric | 1 km | 2.4 km | 5 km |
 |---|---|---|---|
-| Facilities with High/Very-High (class >= 4) burnable land in radius | 333 | 656 | 954 |
+| Facilities with High/Very-High (class >= 4) burnable land in radius | 342 | 646 | 953 |
 
 ### Return periods
 

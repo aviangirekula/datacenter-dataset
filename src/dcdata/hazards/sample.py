@@ -106,12 +106,14 @@ def sample_raster_in_buffer(
     """
     import rasterio
     from pyproj import Transformer
-    from rasterio.windows import from_bounds
+    from rasterio.windows import Window
 
     lon = np.asarray(lon, dtype=float)
     lat = np.asarray(lat, dtype=float)
     n_pts = len(lon)
-    values: list[np.ndarray] = [np.array([], dtype=float)] * n_pts
+    values = np.empty(n_pts, dtype=object)
+    for i in range(n_pts):
+        values[i] = np.array([], dtype=float)
     counts = np.zeros(n_pts, dtype=int)
 
     with rasterio.open(raster_path) as src:
@@ -125,14 +127,24 @@ def sample_raster_in_buffer(
         tr = Transformer.from_crs(WGS84, src.crs, always_xy=True)
         xs, ys = tr.transform(lon, lat)
         px, py = src.res
+        inv = ~src.transform
 
         for i, (x, y) in enumerate(zip(xs, ys)):
             if not (np.isfinite(x) and np.isfinite(y)):
                 continue
-            win = from_bounds(
-                x - radius_m, y - radius_m, x + radius_m, y + radius_m,
-                transform=src.transform,
-            )
+
+            # Integer window covering the radius, with one pixel of slack. Using
+            # integer offsets keeps the window transform exact, so distances can
+            # be measured from the TRUE point rather than from the array centre
+            # (rasterio rounds fractional window offsets, which would displace
+            # the disc by up to half a pixel per axis).
+            fcol, frow = inv * (x, y)
+            col_off = int(np.floor(fcol - radius_m / px)) - 1
+            row_off = int(np.floor(frow - radius_m / py)) - 1
+            width = int(np.ceil(fcol + radius_m / px)) - col_off + 1
+            height = int(np.ceil(frow + radius_m / py)) - row_off + 1
+            win = Window(col_off, row_off, width, height)
+
             try:
                 arr = src.read(band, window=win, masked=True, boundless=True)
             except Exception:
@@ -140,11 +152,14 @@ def sample_raster_in_buffer(
             if arr.size == 0:
                 continue
 
-            # Mask to the inscribed circle using pixel-centre distances.
+            # Pixel centres in projected coordinates, from the window's own
+            # transform, then true Euclidean distance to (x, y).
+            wt = src.window_transform(win)
             h, w = arr.shape
             gy, gx = np.mgrid[0:h, 0:w]
-            cx, cy = (w - 1) / 2.0, (h - 1) / 2.0
-            dist = np.sqrt(((gx - cx) * px) ** 2 + ((gy - cy) * py) ** 2)
+            wx = wt.c + (gx + 0.5) * wt.a
+            wy = wt.f + (gy + 0.5) * wt.e
+            dist = np.hypot(wx - x, wy - y)
             circle = dist <= radius_m
 
             sel = arr[circle & ~np.ma.getmaskarray(arr)]
@@ -152,7 +167,7 @@ def sample_raster_in_buffer(
             values[i] = vals
             counts[i] = vals.size
 
-    return {"values": np.array(values, dtype=object), "n": counts}
+    return {"values": values, "n": counts}
 
 
 def join_polygon_value(

@@ -17,6 +17,7 @@ Run from the repo root:
 """
 from __future__ import annotations
 
+import argparse
 import json
 import subprocess
 from datetime import date
@@ -69,15 +70,32 @@ WHP_RADII_M = (1_000, 2_400, 5_000)
 
 
 def _git_sha() -> str:
+    """Short HEAD SHA, suffixed '-dirty' if the worktree has uncommitted changes.
+
+    An unqualified SHA would imply the outputs are reproducible from that commit
+    even when they were produced by modified code.
+    """
     try:
-        return subprocess.check_output(
+        sha = subprocess.check_output(
             ["git", "rev-parse", "--short", "HEAD"], cwd=REPO, text=True
         ).strip()
+        dirty = subprocess.check_output(
+            ["git", "status", "--porcelain"], cwd=REPO, text=True
+        ).strip()
+        return f"{sha}-dirty" if dirty else sha
     except Exception:
         return "unknown"
 
 
 def main() -> None:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument(
+        "--allow-missing", action="store_true",
+        help="write outputs even if a registered hazard layer is absent",
+    )
+    args = ap.parse_args()
+    skipped: list[str] = []
+
     dc = pd.read_csv(DC_CSV, low_memory=False)
     lon = dc["longitude"].astype(float).to_numpy()
     lat = dc["latitude"].astype(float).to_numpy()
@@ -104,6 +122,7 @@ def main() -> None:
         print(f"  [ok]   lightning  measured {k}/{n}  "
               f"({cov['lightning']['distinct_values']} distinct values - regional scale)")
     else:
+        skipped.append("lightning")
         print("  [skip] lightning  layer missing")
 
     # --- Seismic, all three return periods -------------------------------------
@@ -111,6 +130,7 @@ def main() -> None:
         shp = SEISMIC_DIR / f"US_PGA_{tag}50Yrs_BC_poly.shp"
         col = f"haz_seismic_pga_g_{rp}yr"
         if not shp.exists():
+            skipped.append(f"seismic_{rp}yr")
             print(f"  [skip] seismic {rp}yr  layer missing")
             continue
         res = join_polygon_value(
@@ -156,7 +176,9 @@ def main() -> None:
                     continue
                 burnable = vals[(vals >= 1) & (vals <= 5)]
                 frac[i] = burnable.size / vals.size
-                mx[i] = float(burnable.max()) if burnable.size else 0.0
+                # NaN, not 0: zero is not a WHP class. burnable_frac == 0
+                # already records "no burnable land in radius".
+                mx[i] = float(burnable.max()) if burnable.size else np.nan
             out[f"haz_wildfire_burnable_frac_{r}m"] = frac
             out[f"haz_wildfire_max_severity_{r}m"] = mx
             hi = int(np.nansum(mx >= 4))
@@ -179,6 +201,7 @@ def main() -> None:
         print(f"  [ok]   wildfire   ordinal severity present for {k_sev}/{n} "
               f"(rest are developed/water surfaces)")
     else:
+        skipped.append("wildfire")
         print("  [skip] wildfire  layer missing")
 
     # --- QA flag: coordinates that landed on water ------------------------------
@@ -198,6 +221,7 @@ def main() -> None:
         "n_facilities": n,
         "source_table": str(DC_CSV.relative_to(REPO)),
         "hazards": cov,
+        "skipped_layers": skipped,
         "caveats": [
             "Values are sampled at a single facility point, not intersected with "
             "the building footprint. Adequate where the hazard's correlation "
@@ -212,6 +236,14 @@ def main() -> None:
     OUT_JSON.write_text(json.dumps(meta, indent=2) + "\n")
     print(f"\nWrote {OUT_CSV.relative_to(REPO)}  ({len(out)} rows, {len(out.columns)} cols)")
     print(f"Wrote {OUT_JSON.relative_to(REPO)}")
+
+    if skipped:
+        msg = ("missing hazard layers: " + ", ".join(skipped)
+               + "\nRun scripts/fetch_hazard_data.py, or pass --allow-missing "
+                 "to accept a partial table.")
+        if not args.allow_missing:
+            raise SystemExit(f"ERROR: {msg}")
+        print(f"\nWARNING: {msg}")
 
 
 if __name__ == "__main__":

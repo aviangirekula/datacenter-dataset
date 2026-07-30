@@ -82,7 +82,7 @@ citations in [hazard_exposure.md](hazard_exposure.md).
 | `haz_wildfire_whp_severity` | 1-5 or null | USFS WHP 2023 | Ordinal severity only. Use this for statistics. |
 | `haz_wildfire_surface` | category | USFS WHP 2023 | `very_low`..`very_high`, `non_burnable`, `water`. |
 | `haz_wildfire_burnable_frac_{1000,2400,5000}m` | 0-1 | USFS WHP 2023 | Fraction of burnable pixels within the radius. |
-| `haz_wildfire_max_severity_{1000,2400,5000}m` | 0-5 | USFS WHP 2023 | Max burnable severity within the radius. WUI-style metric. |
+| `haz_wildfire_max_severity_{1000,2400,5000}m` | 1-5 or null | USFS WHP 2023 | Max burnable severity within the radius (WUI-style metric). Null when no burnable land is in range; 0 is not a WHP class, so `burnable_frac == 0` is what records that case. |
 | `qa_coordinate_on_water` | bool | derived | Facility sampled on an open-water pixel: a coordinate error, flagged not dropped. |
 
 Seismic values are **reference rock** (site class BC, Vs30 760 m/s) and

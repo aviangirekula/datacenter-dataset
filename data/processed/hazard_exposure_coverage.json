@@ -1,6 +1,6 @@
 {
   "generated": "2026-07-29",
-  "git_commit": "0e9aecf",
+  "git_commit": "76b4877-dirty",
   "n_facilities": 2696,
   "source_table": "data/processed/datacenters_final.csv",
   "hazards": {
@@ -57,6 +57,7 @@
       ]
     }
   },
+  "skipped_layers": [],
   "caveats": [
     "Values are sampled at a single facility point, not intersected with the building footprint. Adequate where the hazard's correlation length greatly exceeds the building (seismic, lightning); a known limitation for wildfire (270 m) and for flood once added.",
     "Seismic values are reference-rock (site class BC, Vs30 760 m/s) and are therefore a systematic underestimate at soft-soil sites.",
