@@ -23,3 +23,6 @@ data/interim/**
 
 # Multi-hazard layers from Dennies Bor (Zenodo 10.5281/zenodo.20331026, ~929MB, not redistributed here)
 data/hazards/
+
+# Cached ArcGIS responses for building/flood attributes (regenerable)
+data/raw/buildings/

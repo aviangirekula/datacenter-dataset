@@ -1,0 +1,32 @@
+{
+  "n_facilities": 2696,
+  "radius_m": 40000.0,
+  "method": "Poisson event rate: events intersecting a radius buffer divided by record length in years",
+  "caveat": "SPC records are reports, not a complete census. Report density correlates with population and detection capability. Significant-event rates are the defensible cross-region comparison; all-event rates are restricted to the modern era and still carry population bias.",
+  "datasets": {
+    "tornado": {
+      "record": "1950-2024",
+      "modern_window": "1996-2024",
+      "significant_threshold": "EF2 or greater",
+      "n_events_total": 71813,
+      "n_events_significant": 13182,
+      "radius_m": 40000.0
+    },
+    "hail": {
+      "record": "1955-2024",
+      "modern_window": "1996-2024",
+      "significant_threshold": "2 inch diameter or greater",
+      "n_events_total": 404910,
+      "n_events_significant": 28794,
+      "radius_m": 40000.0
+    },
+    "wind": {
+      "record": "1955-2024",
+      "modern_window": "1996-2024",
+      "significant_threshold": "65 knots or greater",
+      "n_events_total": 536782,
+      "n_events_significant": 35676,
+      "radius_m": 40000.0
+    }
+  }
+}
