@@ -263,6 +263,10 @@ def main() -> None:
         rec.update(F.get(fid, {"flood_zone": None, "flood_mapped": None}))
         rows.append(rec)
     out = pd.DataFrame(rows)
+    if "build_id" in out:
+        # Nullable integer, so the id does not round-trip through the CSV as
+        # 16010881.0 and stop matching the source's integer BUILD_ID.
+        out["build_id"] = pd.to_numeric(out["build_id"], errors="coerce").astype("Int64")
 
     # Distance-based confidence, so a rescue at 600 m is visibly weaker than a
     # containment. Downstream analysis can require "high".

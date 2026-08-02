@@ -1,0 +1,28 @@
+{
+  "n_compared": 2674,
+  "modal_class_differs_from_point": 328,
+  "pct_differs": 12.3,
+  "burnable_at_point": 389,
+  "burnable_anywhere_on_footprint": 657,
+  "note": "Wildfire varies at 270 m, so footprint sampling can disagree with the point. Seismic and lightning have correlation lengths far larger than a building and are not re-sampled.",
+  "storey_control": {
+    "low_rise": {
+      "n": 857,
+      "median_height_m": 7.32,
+      "median_footprint_sqft": 54841.3,
+      "median_pga_475": 0.055,
+      "pct_in_sfha": 4.201
+    },
+    "multi_storey": {
+      "n": 470,
+      "median_height_m": 27.645,
+      "median_footprint_sqft": 68405.5,
+      "median_pga_475": 0.055,
+      "pct_in_sfha": 4.255
+    }
+  },
+  "storey_coverage": {
+    "measured": 1327,
+    "total": 2696
+  }
+}
