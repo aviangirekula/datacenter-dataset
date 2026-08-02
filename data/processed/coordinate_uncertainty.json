@@ -1,5 +1,5 @@
 {
-  "draws": 50,
+  "draws": 500,
   "seed": 20260731,
   "sigma_m_by_tier": {
     "building": 10.0,
@@ -9,34 +9,36 @@
     "unknown": 500.0
   },
   "wildfire": {
-    "mean_class_change_prob": 0.03235905044510386,
-    "facilities_over_25pct_change": 139,
-    "facilities_stable": 2367
+    "mean_class_change_prob": 0.06191617210682493,
+    "facilities_over_25pct_change": 279,
+    "facilities_stable": 2067
   },
   "lightning": {
     "median_relative_sd": 0.0,
-    "note": "near zero confirms a ~50 km grid is insensitive to coordinate error of this magnitude"
+    "facilities_that_moved_at_all": 58,
+    "max_relative_sd": 0.16256904432606317,
+    "note": "The median is 0 by construction: on a 0.5 degree grid only points within sigma of a cell edge can move at all, so the informative statistics are how many moved and by how much."
   },
   "by_tier": {
     "sigma_10m": {
-      "n": 1681,
-      "mean_whp_change_prob": 0.010838786436644854
+      "n": 870,
+      "mean_whp_change_prob": 0.013248275862068965
     },
     "sigma_30m": {
-      "n": 631,
-      "mean_whp_change_prob": 0.05242472266244057
+      "n": 417,
+      "mean_whp_change_prob": 0.05247002398081534
     },
     "sigma_100m": {
-      "n": 361,
-      "mean_whp_change_prob": 0.08121883656509696
+      "n": 1372,
+      "mean_whp_change_prob": 0.0903527696793003
     },
     "sigma_250m": {
-      "n": 20,
-      "mean_whp_change_prob": 0.276
+      "n": 29,
+      "mean_whp_change_prob": 0.2574482758620689
     },
     "sigma_500m": {
-      "n": 3,
-      "mean_whp_change_prob": 0.3666666666666667
+      "n": 8,
+      "mean_whp_change_prob": 0.26125
     }
   }
 }

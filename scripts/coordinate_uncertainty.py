@@ -64,15 +64,25 @@ def assign_sigma(dc: pd.DataFrame, attr: pd.DataFrame) -> np.ndarray:
     sig = np.where(prec == "geocoded_address", SIGMA_M["geocoded_address"], sig)
     sig = np.where(prec == "campus_centroid", SIGMA_M["campus_centroid"], sig)
     sig = np.where(prec == "building", SIGMA_M["verified"], sig)
-    # A coordinate that actually falls inside a building polygon is the best
-    # evidence we have, and overrides the source-declared precision.
-    sig = np.where(m["building_match"] == "contains", SIGMA_M["building"], sig)
+    # Falling inside a building polygon tightens a coordinate only if the source
+    # already claimed building precision. A street-segment geocode that happens
+    # to land inside a footprint is still a street-segment geocode, and treating
+    # 797 such records as 10 m was the largest single distortion in an earlier
+    # version of this analysis.
+    inside = (m["building_match"] == "contains").to_numpy()
+    sig = np.where(inside & (prec == "building").to_numpy(),
+                   SIGMA_M["building"], sig)
+    # The 30 m tier is meant to be "within a parcel", so require it.
+    dist = pd.to_numeric(m.get("building_dist_m"), errors="coerce").to_numpy()
+    far = np.isfinite(dist) & (dist > 200)
+    sig = np.where(far & (sig < SIGMA_M["geocoded_address"]),
+                   SIGMA_M["geocoded_address"], sig)
     return sig
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--draws", type=int, default=50)
+    ap.add_argument("--draws", type=int, default=500)
     args = ap.parse_args()
 
     dc = pd.read_csv(DC_CSV, low_memory=False)
@@ -123,8 +133,11 @@ def main() -> None:
         },
         "lightning": {
             "median_relative_sd": float(np.nanmedian(lit_cv)),
-            "note": "near zero confirms a ~50 km grid is insensitive to "
-                    "coordinate error of this magnitude",
+            "facilities_that_moved_at_all": int(np.nansum(lit_cv > 0)),
+            "max_relative_sd": float(np.nanmax(lit_cv)),
+            "note": "The median is 0 by construction: on a 0.5 degree grid only "
+                    "points within sigma of a cell edge can move at all, so the "
+                    "informative statistics are how many moved and by how much.",
         },
         "by_tier": {},
     }
@@ -142,7 +155,10 @@ def main() -> None:
     print("\n  by positional sigma:")
     for k, v in stats["by_tier"].items():
         print(f"    {k:>12s}: n={v['n']:5d}  mean change prob {v['mean_whp_change_prob']:.3f}")
-    print(f"\n=== lightning ===\n  median relative SD: {stats['lightning']['median_relative_sd']:.4f}")
+    print(f"\n=== lightning ===")
+    print(f"  facilities whose value moved at all: "
+          f"{stats['lightning']['facilities_that_moved_at_all']} of {n}")
+    print(f"  max relative SD: {stats['lightning']['max_relative_sd']:.4f}")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(OUT, index=False)

@@ -10,13 +10,16 @@ the same underlying model but delivered independently of the shapefiles and with
 its own spatial interpolation. Agreement between the two is therefore a real
 external check on the sampling, not a restatement of it.
 
-The two are related but not identical quantities:
+Both are uniform-hazard 2%-in-50-year quantities. ``pgam`` is that mapped PGA
+multiplied by the site coefficient F_PGA, and it does **not** depend on risk
+category (verified directly: the service returns the same value for categories
+I, III and IV). An earlier version of this script claimed ``pgam`` was
+risk-targeted and used that to excuse the discrepancy. That was wrong, so the
+disagreement is reported as a disagreement.
 
-- ours is a **uniform-hazard** 2%-in-50-year PGA at reference rock (site class BC),
-- ``pgam`` is a **risk-targeted, site-modified** MCEg value.
-
-So the expectation is a strong monotonic relationship with a systematic offset,
-not equality. The offset is reported rather than explained away.
+Because the service accepts ``siteClass=BC`` directly, the comparison is made at
+the same site class our column uses, and the residual difference reflects
+spatial interpolation and model delivery rather than a definitional gap.
 
 **2. Soil sensitivity.** Our values assume reference rock. Many of the largest
 data-center clusters sit on soft ground, where motion amplifies. Querying the
@@ -46,7 +49,7 @@ OUT_CSV = REPO / "data" / "processed" / "seismic_validation.csv"
 URL = "https://earthquake.usgs.gov/ws/designmaps/asce7-22.json"
 UA = {"User-Agent": "datacenter-dataset/0.1 (academic research; GMU GeoAI)"}
 SEED = 20260731
-SITE_CLASSES = ["B", "C", "D", "E"]
+SITE_CLASSES = ["BC", "B", "C", "D", "E"]
 
 
 def query(lat: float, lon: float, site_class: str) -> float | None:
@@ -85,7 +88,7 @@ def main() -> None:
         print(f"  site class {sc}: {got}/{len(s)} returned")
 
     ours = s["haz_seismic_pga_g_2475yr"]
-    ref = s["usgs_pgam_C"]          # closest single class to our BC reference
+    ref = s["usgs_pgam_BC"]         # same site class as our column
     ok = ours.notna() & ref.notna()
     d = (ours[ok] - ref[ok])
     rel = 100 * d / ref[ok]
@@ -93,18 +96,34 @@ def main() -> None:
     stats = {
         "n_sampled": int(len(s)), "n_compared": int(ok.sum()), "seed": SEED,
         "our_column": "haz_seismic_pga_g_2475yr (uniform-hazard 2% in 50 yr, site class BC)",
-        "reference": "USGS ASCE 7-22 pgam (risk-targeted MCEg, site-modified)",
+        "reference": "USGS ASCE 7-22 pgam at siteClass=BC (uniform-hazard "
+                     "2% in 50 yr mapped PGA x F_PGA; NOT risk-targeted)",
         "pearson_r": float(np.corrcoef(ours[ok], ref[ok])[0, 1]),
         "spearman_r": float(pd.Series(ours[ok]).corr(pd.Series(ref[ok]), method="spearman")),
         "median_bias_g": float(d.median()),
         "median_relative_bias_pct": float(rel.median()),
         "rmse_g": float(np.sqrt(np.mean(d ** 2))),
-        "interpretation": "The two are related but distinct quantities "
-                          "(uniform-hazard reference-rock versus risk-targeted "
-                          "site-modified), so a strong rank correlation with a "
-                          "systematic offset is the expected result. Rank "
-                          "agreement is the meaningful validation.",
+        "iqr_relative_bias_pct": [float(rel.quantile(0.25)), float(rel.quantile(0.75))],
+        "range_relative_bias_pct": [float(rel.min()), float(rel.max())],
+        "within_10pct": int((rel.abs() <= 10).sum()),
+        "within_25pct": int((rel.abs() <= 25).sum()),
+        "bias_vs_level_spearman": float(
+            pd.Series(rel.to_numpy()).corr(pd.Series(ref[ok].to_numpy()),
+                                           method="spearman")),
+        "interpretation": "Both quantities are uniform-hazard 2% in 50 yr at the "
+                          "same site class, so they should agree closely. They do "
+                          "not. The bias is not a constant offset: it varies with "
+                          "hazard level and spans a wide range, so a single median "
+                          "would misrepresent it. The likely cause is that our "
+                          "column is sampled from a cartographic CONTOUR product "
+                          "(0.01 g bands) rather than the underlying gridded "
+                          "model. Sampling the NSHM grid or hazard-curve service "
+                          "directly is the recommended fix.",
     }
+    # Bias by hazard level, since a single median hides the structure.
+    q = pd.qcut(ref[ok], 5, duplicates="drop")
+    stats["bias_by_quintile_pct"] = {
+        str(k): round(float(v), 1) for k, v in rel.groupby(q, observed=True).median().items()}
 
     print("\n=== validation against USGS ===")
     print(f"  compared        : {stats['n_compared']}")
@@ -113,10 +132,19 @@ def main() -> None:
     print(f"  median bias     : {stats['median_bias_g']:+.4f} g "
           f"({stats['median_relative_bias_pct']:+.1f}%)")
     print(f"  RMSE            : {stats['rmse_g']:.4f} g")
+    print(f"  relative bias IQR: [{stats['iqr_relative_bias_pct'][0]:+.1f}%, "
+          f"{stats['iqr_relative_bias_pct'][1]:+.1f}%]  range "
+          f"[{stats['range_relative_bias_pct'][0]:+.1f}%, "
+          f"{stats['range_relative_bias_pct'][1]:+.1f}%]")
+    print(f"  within +/-10%   : {stats['within_10pct']}/{stats['n_compared']}"
+          f"   within +/-25%: {stats['within_25pct']}/{stats['n_compared']}")
+    print(f"  bias vs level (Spearman): {stats['bias_vs_level_spearman']:+.3f}"
+          "   (non-zero means the bias is NOT a constant offset)")
+    print("  bias by quintile of reference:", stats["bias_by_quintile_pct"])
 
     # --- soil sensitivity ------------------------------------------------------
     soil = {}
-    base = s["usgs_pgam_B"]
+    base = s["usgs_pgam_B"]  # true rock reference
     for sc in SITE_CLASSES:
         col = s[f"usgs_pgam_{sc}"]
         m = base.notna() & col.notna()

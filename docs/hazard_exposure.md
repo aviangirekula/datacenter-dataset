@@ -94,27 +94,55 @@ These are stated plainly because they bound what the data can support.
    orbital, and most facilities lie north of the LIS field of view, so their
    values rest on the sparser OTD record. A ground-network product (e.g. NLDN)
    would be the building-scale alternative.
-5. **Positional accuracy is now propagated.** A 50-draw Monte Carlo perturbs
-   each coordinate by a tier-appropriate sigma (10 m where the coordinate falls
-   inside a building, up to 500 m unresolved) and re-samples. Wildfire class
-   changes in 3.2% of draws on average, 2,367 of 2,696 facilities are stable,
-   and the change probability rises monotonically with positional sigma
-   (1.1 / 5.2 / 8.1 / 27.6 / 36.7%). Lightning has a relative standard deviation
-   of 0.0000, so the coarse grid is provably insensitive. See
-   `scripts/coordinate_uncertainty.py`.
+5. **Positional accuracy is propagated.** A 500-draw Monte Carlo perturbs each
+   coordinate by a tier-appropriate sigma and re-samples. Wildfire class changes
+   in 6.2% of draws on average, 2,067 of 2,696 facilities are stable, 279 change
+   in more than a quarter of draws, and the change probability rises with
+   positional sigma (1.3 / 5.2 / 9.0 / 25.7 / 26.1%). For lightning only 58
+   facilities move at all, with a maximum relative SD of 0.16, confirming the
+   coarse grid is nearly insensitive. See `scripts/coordinate_uncertainty.py`.
 6. **Eight facilities sample on an open-water pixel** (flagged
    `qa_coordinate_on_water`). These are coordinate errors surfaced by the
    sampling, kept and flagged rather than silently dropped.
 7. **No exposure weighting.** `power_capacity_mw` is entirely null, so every
    statistic counts a small colocation suite the same as a hyperscale campus.
    Capacity-weighted statements are not currently supportable.
-8. **Validation is now quantitative.** 150 random facilities were checked
-   against the USGS ASCE 7-22 web service, which delivers the same underlying
-   model independently of the shapefiles: Pearson r 0.896, Spearman 0.796,
-   RMSE 0.108 g, median bias +25%. The offset is expected, because our column
-   is uniform-hazard reference-rock while the service returns a risk-targeted
-   site-modified value. Rank agreement is the meaningful result. See
+8. **Validation is quantitative, and it FAILED.** 150 random facilities were
+   checked against the USGS ASCE 7-22 service at the same site class (BC).
+   Both quantities are uniform-hazard 2%-in-50-year PGA, so they should agree
+   closely. They do not: only 22 of 150 fall within 10%, the relative bias
+   spans -54% to +130%, and it varies systematically with hazard level (median
+   bias by quintile: +25%, +124%, +72%, +19%, +8%). Rank agreement is decent
+   (Spearman 0.83) so the spatial pattern is right, but the magnitudes are not
+   reliable. The likely cause is that the seismic column is sampled from a
+   cartographic **contour** product with 0.01 g bands rather than the underlying
+   gridded model. **Sampling the NSHM grid or hazard-curve service directly is
+   required before these values are published as magnitudes.** See
    `scripts/validate_seismic.py`.
+
+## Footprint sampling and the storey control
+
+`scripts/build_footprint_hazard.py` intersects hazards with the 2,674 recovered
+building polygons rather than a single point, using **true area-weighted** zonal
+statistics (each touched cell weighted by its overlap with the building).
+
+The honest result is a near-null. Area-weighted footprint severity differs from
+the point value for **29 of 326 comparable facilities (8.9%)**, and burnable land
+covers more than half the footprint for 367 against 389 at the point. An earlier
+unweighted version reported a much larger difference, but 99.4% of these
+footprints are smaller than one 270 m cell, so an unweighted mode summarised a
+median of 25 times the building's own area, and most of the apparent difference
+came from mixing the nominal surface codes with the ordinal severity ladder.
+
+**Storey control.** De-duplicated by building (many facilities share one, and a
+carrier hotel can carry a dozen): 668 low-rise against 261 multi-storey at a
+12 m threshold. A raw comparison is statistically significant (Mann-Whitney
+p = 0.025) but that is confounding, not signal: **within state the median PGA
+difference is exactly 0.0 across all 23 comparable states.** Multi-storey
+facilities concentrate in NY and WA, low-rise in VA and TX. Height should
+therefore enter as a vulnerability covariate, not as an exposure driver, and the
+right demand parameter for a taller building is spectral acceleration near 1 s
+rather than PGA.
 
 ## Building attributes and flood
 

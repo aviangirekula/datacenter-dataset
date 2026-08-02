@@ -3,14 +3,36 @@
   "n_compared": 150,
   "seed": 20260731,
   "our_column": "haz_seismic_pga_g_2475yr (uniform-hazard 2% in 50 yr, site class BC)",
-  "reference": "USGS ASCE 7-22 pgam (risk-targeted MCEg, site-modified)",
-  "pearson_r": 0.8964314516671337,
-  "spearman_r": 0.7956156120365288,
-  "median_bias_g": 0.024999999999999994,
-  "median_relative_bias_pct": 25.000000000000004,
-  "rmse_g": 0.1080468416937765,
-  "interpretation": "The two are related but distinct quantities (uniform-hazard reference-rock versus risk-targeted site-modified), so a strong rank correlation with a systematic offset is the expected result. Rank agreement is the meaningful validation.",
+  "reference": "USGS ASCE 7-22 pgam at siteClass=BC (uniform-hazard 2% in 50 yr mapped PGA x F_PGA; NOT risk-targeted)",
+  "pearson_r": 0.9049470374249976,
+  "spearman_r": 0.8320082271762345,
+  "median_bias_g": 0.026499999999999996,
+  "median_relative_bias_pct": 31.944444444444457,
+  "rmse_g": 0.11525036514765004,
+  "iqr_relative_bias_pct": [
+    10.178571428571422,
+    104.1903409090909
+  ],
+  "range_relative_bias_pct": [
+    -54.16666666666667,
+    130.26315789473682
+  ],
+  "within_10pct": 22,
+  "within_25pct": 58,
+  "bias_vs_level_spearman": -0.21710891303410002,
+  "interpretation": "Both quantities are uniform-hazard 2% in 50 yr at the same site class, so they should agree closely. They do not. The bias is not a constant offset: it varies with hazard level and spans a wide range, so a single median would misrepresent it. The likely cause is that our column is sampled from a cartographic CONTOUR product (0.01 g bands) rather than the underlying gridded model. Sampling the NSHM grid or hazard-curve service directly is the recommended fix.",
+  "bias_by_quintile_pct": {
+    "(0.020999999999999998, 0.072]": 25.0,
+    "(0.072, 0.078]": 124.4,
+    "(0.078, 0.12]": 72.2,
+    "(0.12, 0.18]": 18.5,
+    "(0.18, 0.83]": 7.9
+  },
   "soil_sensitivity": {
+    "BC": {
+      "median_pgam_g": 0.09,
+      "median_ratio_to_B": 1.0
+    },
     "B": {
       "median_pgam_g": 0.09,
       "median_ratio_to_B": 1.0

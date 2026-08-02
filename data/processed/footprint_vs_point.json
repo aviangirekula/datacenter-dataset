@@ -1,28 +1,38 @@
 {
-  "n_compared": 2674,
-  "modal_class_differs_from_point": 328,
-  "pct_differs": 12.3,
+  "n_with_footprint_stats": 2674,
+  "n_severity_comparable": 326,
+  "severity_differs_from_point": 29,
+  "pct_severity_differs": 8.9,
   "burnable_at_point": 389,
-  "burnable_anywhere_on_footprint": 657,
+  "burnable_over_half_of_footprint": 367,
   "note": "Wildfire varies at 270 m, so footprint sampling can disagree with the point. Seismic and lightning have correlation lengths far larger than a building and are not re-sampled.",
   "storey_control": {
-    "low_rise": {
-      "n": 857,
-      "median_height_m": 7.32,
-      "median_footprint_sqft": 54841.3,
-      "median_pga_475": 0.055,
-      "pct_in_sfha": 4.201
+    "table": {
+      "low_rise": {
+        "n": 668,
+        "median_height_m": 7.0,
+        "median_footprint_sqft": 47166.2,
+        "median_pga_475": 0.055,
+        "mean_pga_475": 0.1157,
+        "pct_in_sfha": 4.6407
+      },
+      "multi_storey": {
+        "n": 261,
+        "median_height_m": 23.78,
+        "median_footprint_sqft": 55418.0,
+        "median_pga_475": 0.055,
+        "mean_pga_475": 0.1168,
+        "pct_in_sfha": 5.7471
+      }
     },
-    "multi_storey": {
-      "n": 470,
-      "median_height_m": 27.645,
-      "median_footprint_sqft": 68405.5,
-      "median_pga_475": 0.055,
-      "pct_in_sfha": 4.255
-    }
+    "mannwhitney_p_pga": 0.024587323715680873,
+    "within_state_median_pga_difference": 0.0,
+    "n_states_comparable": 23,
+    "caveat": "Height is strongly confounded with geography: multi-storey facilities concentrate in NY and WA, low-rise in VA and TX, so an unconditioned split compares regions. Within state the difference is essentially zero. Height should be used as a VULNERABILITY covariate, not treated as an exposure driver, and the relevant demand parameter for a taller building is spectral acceleration at ~1 s rather than PGA."
   },
   "storey_coverage": {
-    "measured": 1327,
+    "facilities_with_height": 1327,
+    "distinct_buildings": 929,
     "total": 2696
   }
 }

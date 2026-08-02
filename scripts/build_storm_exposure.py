@@ -195,12 +195,32 @@ def main() -> None:
         tc = tc[(tc["SEASON"] >= TC_FROM) & (tc["SEASON"] <= YEAR_TO)]
         # USA_SSHS: negative and 0 are sub-hurricane (disturbance, depression,
         # tropical storm). 1-5 are Saffir-Simpson hurricane categories.
+        # Fixes are 3-hourly and a median 58 km apart, with 72% of legs longer
+        # than the search radius, so a storm can cross the whole disc between two
+        # recorded points. Joining points alone undercounts by ~35%. Build
+        # LineString tracks from consecutive fixes instead.
+        from shapely.geometry import LineString
+
+        def _tracks(sub: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
+            sub = sub.sort_values(["SID", "ISO_TIME"])
+            segs, sids = [], []
+            for sid, grp in sub.groupby("SID", sort=False):
+                pts = [(g.x, g.y) for g in grp.geometry if g is not None]
+                if len(pts) >= 2:
+                    segs.append(LineString(pts))
+                    sids.append(sid)
+                elif len(pts) == 1:
+                    segs.append(grp.geometry.iloc[0])
+                    sids.append(sid)
+            return gpd.GeoDataFrame({"SID": sids}, geometry=segs, crs=sub.crs)
+
         for label, sel in [("tc_named", tc["USA_SSHS"] >= 0),
                            ("tc_hurricane", tc["USA_SSHS"] >= 1),
                            ("tc_major", tc["USA_SSHS"] >= 3)]:
             sub = tc[sel].to_crs(EQUAL_AREA)
             if not len(sub):
                 continue
+            sub = _tracks(sub)
             j = gpd.sjoin(buf[["_i", "geometry"]], sub[["geometry", "SID"]],
                           how="inner", predicate="intersects")
             k = j.groupby("_i")["SID"].nunique().reindex(range(n), fill_value=0).to_numpy()
@@ -217,6 +237,9 @@ def main() -> None:
             "unit": "distinct storms whose track passes within the radius, per year",
             "intensity_levels": "tc_named = tropical storm or above (SSHS>=0), "
                                 "tc_hurricane = SSHS>=1, tc_major = SSHS>=3",
+            "geometry": "consecutive 3-hourly fixes joined into LineString "
+                        "tracks per storm; point-only joins undercount by ~35% "
+                        "because 72% of legs exceed the search radius",
             "note": "Track proximity is not landfall intensity. A track passing "
                     "within 40 km says the storm came close, not what wind the "
                     "site experienced. ASCE 7 design wind speed is the correct "

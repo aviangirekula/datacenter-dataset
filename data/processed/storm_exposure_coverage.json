@@ -40,6 +40,7 @@
       "years": 45,
       "unit": "distinct storms whose track passes within the radius, per year",
       "intensity_levels": "tc_named = tropical storm or above (SSHS>=0), tc_hurricane = SSHS>=1, tc_major = SSHS>=3",
+      "geometry": "consecutive 3-hourly fixes joined into LineString tracks per storm; point-only joins undercount by ~35% because 72% of legs exceed the search radius",
       "note": "Track proximity is not landfall intensity. A track passing within 40 km says the storm came close, not what wind the site experienced. ASCE 7 design wind speed is the correct measure of design demand."
     }
   }
