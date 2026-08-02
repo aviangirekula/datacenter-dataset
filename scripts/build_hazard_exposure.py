@@ -38,6 +38,8 @@ HAZ_RAW = REPO / "data" / "hazards"               # layers downloaded directly
 DC_CSV = REPO / "data" / "processed" / "datacenters_final.csv"
 OUT_CSV = REPO / "data" / "processed" / "hazard_exposure.csv"
 OUT_JSON = REPO / "data" / "processed" / "hazard_exposure_coverage.json"
+# Authoritative per-point seismic values from the USGS ASCE 7-22 service.
+SEISMIC_POINTS = REPO / "data" / "raw" / "seismic_points.jsonl"
 
 # Positional-accuracy fields carried into the exposure table. Hazard values are
 # only as good as the coordinate they were sampled at.
@@ -203,6 +205,43 @@ def main() -> None:
     else:
         skipped.append("wildfire")
         print("  [skip] wildfire  layer missing")
+
+    # --- Authoritative seismic, replacing the contour-sampled 2475 yr value -----
+    # Validation showed the contour product's magnitudes are unreliable (only
+    # 22 of 150 within 10% of the USGS value, error spanning -54% to +130%).
+    # The USGS ASCE 7-22 service returns the value for the exact coordinate.
+    if SEISMIC_POINTS.exists():
+        recs = {}
+        with open(SEISMIC_POINTS) as fh:
+            for line in fh:
+                try:
+                    r = json.loads(line)
+                except Exception:  # noqa: BLE001
+                    continue
+                if not r.get("error"):
+                    recs[r["facility_id"]] = r
+        fid = out["facility_id"].astype(str)
+        out["haz_seismic_pga_g_2475yr_usgs"] = fid.map(
+            lambda f: recs.get(f, {}).get("pgam"))
+        # Spectral accelerations: Sa(1s) is the demand parameter that actually
+        # distinguishes a tall building from a low one, unlike PGA.
+        out["haz_seismic_sa_02s_g"] = fid.map(lambda f: recs.get(f, {}).get("ss"))
+        out["haz_seismic_sa_1s_g"] = fid.map(lambda f: recs.get(f, {}).get("s1"))
+        out["haz_seismic_source"] = np.where(
+            out["haz_seismic_pga_g_2475yr_usgs"].notna(),
+            "USGS ASCE 7-22 point service (site class BC)", "contour sample")
+        k = int(out["haz_seismic_pga_g_2475yr_usgs"].notna().sum())
+        cov["seismic_authoritative"] = {
+            "column": "haz_seismic_pga_g_2475yr_usgs",
+            "measured": k, "total": n,
+            "source": "USGS ASCE 7-22 web service, siteClass=BC (Vs30 760 m/s)",
+            "note": "Authoritative for the 2% in 50 yr (~2475 yr) level. The 475 "
+                    "and 975 yr columns have no equivalent point service and "
+                    "remain contour-derived, so they keep the 0.01 g band "
+                    "discretisation caveat and are approximate.",
+        }
+        print(f"  [ok]   seismic USGS point service  measured {k}/{n} "
+              f"(replaces contour magnitudes at 2475 yr)")
 
     # --- QA flag: coordinates that landed on water ------------------------------
     if "haz_wildfire_whp_code" in out:

@@ -107,7 +107,20 @@ These are stated plainly because they bound what the data can support.
 7. **No exposure weighting.** `power_capacity_mw` is entirely null, so every
    statistic counts a small colocation suite the same as a hyperscale campus.
    Capacity-weighted statements are not currently supportable.
-8. **Validation is quantitative, and it FAILED.** 150 random facilities were
+8. **Validation was quantitative, it FAILED, and the cause is now fixed.**
+   The seismic column at the 2,475-year level is now taken from the USGS
+   ASCE 7-22 point service at site class BC for all 2,696 facilities
+   (`haz_seismic_pga_g_2475yr_usgs`), so no contour discretisation is involved.
+   Across the full dataset the old contour values agreed with the authoritative
+   ones within 10% for only 425 of 2,696 (16%), with a median bias of +29% and a
+   range of -54% to +189%. **Use the `_usgs` column.** The 475 and 975 year
+   columns have no equivalent public point service and remain contour-derived,
+   so they keep the caveat below. Spectral accelerations `haz_seismic_sa_02s_g`
+   and `haz_seismic_sa_1s_g` are also now available for all facilities, and
+   Sa(1 s) rather than PGA is the demand parameter that distinguishes a tall
+   building from a low one. Original finding follows.
+
+   *(historical)* 150 random facilities were
    checked against the USGS ASCE 7-22 service at the same site class (BC).
    Both quantities are uniform-hazard 2%-in-50-year PGA, so they should agree
    closely. They do not: only 22 of 150 fall within 10%, the relative bias
