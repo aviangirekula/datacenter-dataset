@@ -58,6 +58,8 @@ from scipy.stats import chi2
 REPO = Path(__file__).resolve().parents[1]
 DC_CSV = REPO / "data" / "processed" / "datacenters_final.csv"
 STORM_DIR = REPO / "data" / "hazards" / "storms"
+IBTRACS = (REPO / "data" / "hazards" / "hurricane"
+           / "IBTrACS.NA.list.v04r01.points.shp")
 OUT = REPO / "data" / "processed" / "storm_exposure.csv"
 OUT_JSON = REPO / "data" / "processed" / "storm_exposure_coverage.json"
 
@@ -177,6 +179,49 @@ def main() -> None:
             meta["tornado"]["strike_estimator"] = (
                 "path-area (Thom/Schaefer): sum of track length x width "
                 "intersecting the disc, divided by disc area and years")
+
+    # --- tropical cyclone (IBTrACS North Atlantic) -----------------------------
+    # Track fixes are 3-hourly points, so exposure is the count of DISTINCT
+    # storms (by SID) whose track passes within the radius, not the point count.
+    if IBTRACS.exists():
+        print("\nhurricane: reading IBTrACS ...")
+        tc = gpd.read_file(IBTRACS)
+        tc["SEASON"] = pd.to_numeric(tc["SEASON"], errors="coerce")
+        tc["USA_SSHS"] = pd.to_numeric(tc["USA_SSHS"], errors="coerce")
+        # Satellite era only. Pre-1980 intensities rest on sparser observation
+        # and would bias a rate computed over the full 1851 record.
+        TC_FROM = 1980
+        tc_years = YEAR_TO - TC_FROM + 1
+        tc = tc[(tc["SEASON"] >= TC_FROM) & (tc["SEASON"] <= YEAR_TO)]
+        # USA_SSHS: negative and 0 are sub-hurricane (disturbance, depression,
+        # tropical storm). 1-5 are Saffir-Simpson hurricane categories.
+        for label, sel in [("tc_named", tc["USA_SSHS"] >= 0),
+                           ("tc_hurricane", tc["USA_SSHS"] >= 1),
+                           ("tc_major", tc["USA_SSHS"] >= 3)]:
+            sub = tc[sel].to_crs(EQUAL_AREA)
+            if not len(sub):
+                continue
+            j = gpd.sjoin(buf[["_i", "geometry"]], sub[["geometry", "SID"]],
+                          how="inner", predicate="intersects")
+            k = j.groupby("_i")["SID"].nunique().reindex(range(n), fill_value=0).to_numpy()
+            out[f"{label}_storms_per_yr"] = k / tc_years
+            lo, hi = poisson_ci(k, tc_years)
+            out[f"{label}_lo95"] = lo
+            out[f"{label}_hi95"] = hi
+            print(f"  {label}: median {np.median(k / tc_years):.3f} storms/yr, "
+                  f"max {np.max(k / tc_years):.3f}, "
+                  f"facilities with none {int((k == 0).sum())}")
+        meta["tropical_cyclone"] = {
+            "source": "NOAA IBTrACS v04r01, North Atlantic basin",
+            "window": f"{TC_FROM}-{YEAR_TO}", "years": tc_years,
+            "unit": "distinct storms whose track passes within the radius, per year",
+            "intensity_levels": "tc_named = tropical storm or above (SSHS>=0), "
+                                "tc_hurricane = SSHS>=1, tc_major = SSHS>=3",
+            "note": "Track proximity is not landfall intensity. A track passing "
+                    "within 40 km says the storm came close, not what wind the "
+                    "site experienced. ASCE 7 design wind speed is the correct "
+                    "measure of design demand.",
+        }
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(OUT, index=False)

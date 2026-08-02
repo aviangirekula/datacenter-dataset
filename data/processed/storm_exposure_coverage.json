@@ -33,6 +33,14 @@
       "n_significant_events": 26735,
       "facilities_with_zero_events": 193,
       "median_density_per_10k_km2_yr": 1.3528170162811104
+    },
+    "tropical_cyclone": {
+      "source": "NOAA IBTrACS v04r01, North Atlantic basin",
+      "window": "1980-2024",
+      "years": 45,
+      "unit": "distinct storms whose track passes within the radius, per year",
+      "intensity_levels": "tc_named = tropical storm or above (SSHS>=0), tc_hurricane = SSHS>=1, tc_major = SSHS>=3",
+      "note": "Track proximity is not landfall intensity. A track passing within 40 km says the storm came close, not what wind the site experienced. ASCE 7 design wind speed is the correct measure of design demand."
     }
   }
 }

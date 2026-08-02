@@ -1,0 +1,2697 @@
+facility_id,name,state,coordinate_precision,positional_sigma_m,whp_class_change_prob,lightning_rel_sd
+dc_9bb24f423687,CoreSite DC1,DC,building,30.0,0.0,0.0
+dc_a6e2e1513613,Southwest Cyberport,NM,building,30.0,0.0,0.0
+dc_a686ad9e9a88,NocRoom Miami IT Services,FL,building,10.0,0.0,0.0
+dc_6d263b15b250,NocRoom Miami IT Services,FL,building,30.0,0.0,0.0
+dc_880a171377bb,Center for Computation & Technology (CCT),LA,building,10.0,0.0,0.0
+dc_537f282facb3,Google Fiber,GA,building,10.0,0.0,0.0
+dc_15be445c537f,Open Computing Facility,CA,building,30.0,0.0,0.0
+dc_e54691f8993e,Lumos Networks,VA,building,30.0,0.0,0.0
+dc_004d4bd391b5,Rack59 Data Center,OK,building,10.0,0.0,0.0
+dc_c15c28bd70c1,Oso Grande,NM,building,10.0,0.0,0.0
+dc_c2c582121fae,Morgan Wireless,WV,building,30.0,0.0,0.0
+dc_6324e54cb1f3,VIRTBIZ,TX,building,10.0,0.0,0.0
+dc_94697aa66760,FirstLight Data Center,ME,building,30.0,0.0,0.0
+dc_72d8cb06afd7,Learning GIS!,IN,building,10.0,0.0,0.0
+dc_ba3a04b0acb7,Agricultural and Biological Engineering,IN,building,10.0,0.0,0.0
+dc_eef3ba94431e,Windstream Communications,NC,building,10.0,0.0,0.0
+dc_d1631b663c48,Level 3 Communications,NC,building,10.0,0.0,0.0
+dc_a28b6b533687,OptimumHQ,AZ,building,10.0,0.0,0.0
+dc_2980260de3e5,The Chatfield Group,AZ,building,10.0,0.0,0.0
+dc_b9549d1a3e6c,All About Serving Process Server,AZ,building,10.0,0.0,0.0
+dc_4dccde6d1dfb,Emailage,AZ,building,10.0,0.0,0.0
+dc_0ffde5e0d6a1,Alliance Technology,AZ,building,10.0,0.0,0.0
+dc_74f18bfa8df0,8100 Boone Boulevard,VA,building,30.0,0.0,0.0
+dc_4465586fa278,Atlanta ATL13,GA,building,10.0,0.0,0.0
+dc_c91b689569e2,Data Holdings Data Center,WI,building,10.0,0.0,0.0
+dc_8f61bbab2b18,STACK Infrastructure,CA,building,30.0,0.0,0.0
+dc_16b0103c1ecb,Digital West Data Center,CA,building,10.0,0.0,0.0
+dc_e0a8ffe0675b,Chick-fil-A Hiring Center,MI,building,10.0,0.0,0.0
+dc_9fe2fa1cb2a0,Ergonomic Group,CT,building,30.0,0.0,0.0
+dc_e6031badf345,San Jose Colocation Center,CA,building,30.0,0.0,0.0
+dc_a6907eaa6ace,Amazon Web Services IAD69,VA,building,10.0,0.0,0.0
+dc_165fe373f4a4,Stream Data Centers Houston,TX,building,10.0,0.0,0.0
+dc_70473eb49a8f,Crown Castle Baltimore,MD,building,30.0,0.0,0.0
+dc_a5cc2c2adb3a,AiNET One Market Center,MD,building,10.0,0.0,0.0
+dc_8adc27a50dae,Lumen McLean,VA,building,10.0,0.0,0.0
+dc_14899623a0b1,TierPoint Milwaukee,WI,building,10.0,0.0,0.0
+dc_7cf3203418c1,Frontier Science,NY,building,10.0,0.0,0.0
+dc_8d9f4b8cf0b8,505 Marquette,NM,building,30.0,0.0,0.0
+dc_b82bb79938c5,123 Central,NM,building,10.0,0.0,0.0
+dc_02eebfd81a53,Oak Tower,MO,building,30.0,0.0,0.0
+dc_27fa53a57833,Netrality Data Centers,MO,building,30.0,0.0,0.0
+dc_52be2b848b4f,Netrality,IL,building,10.0,0.0,0.0
+dc_d5e6794a2612,Brandaleone Lab for Data and Visualization,NC,building,10.0,0.0,0.0
+dc_d1cc4e423ca1,Frontier (supercomputer),TN,building,10.0,0.0,0.0
+dc_1771855b67b2,TelePacific,CA,building,30.0,0.0,0.0
+dc_23be1dc53fc6,VaultLogix,AZ,building,10.0,0.0,0.0
+dc_60ad9b8f15c0,Profit Finder Pro Software,AZ,building,10.0,0.0,0.0
+dc_37739045bbd2,DataPro USA Web Development,AZ,building,10.0,0.0,0.0
+dc_4b4306dd4707,e360,CA,building,10.0,0.0,0.0
+dc_dd96fac8908c,Digital Realty ORD10,IL,building,10.0,0.0,0.0
+dc_54fd156f6e89,Centersquare Chicago Data Center - ORD1,IL,building,10.0,0.0,0.0
+dc_06c982ebea67,K-Motion Interactive,AZ,building,10.0,0.44,0.0
+dc_e2f0d5b0e152,West Monroe,IL,building,10.0,0.0,0.0
+dc_b5221ae8a695,Iron Mountain Data Centers AZS-1,AZ,building,10.0,0.0,0.0
+dc_1ecd2bc35dc3,CoreSite Chicago Data Center (CH1),IL,building,10.0,0.0,0.0
+dc_dc42b75a08e1,Accelera Data Systems,AZ,building,10.0,0.0,0.0
+dc_41dcb90246ba,Expedient Owings Mills,MD,building,10.0,0.0,0.0
+dc_06efc6377b82,Lumen Baltimore,MD,building,10.0,0.0,0.0
+dc_aeb9d6e08cbd,Expedient Tidepoint,MD,building,30.0,0.0,0.0
+dc_366bd093071c,Flexential - Denver - Centennial Data Center,CO,building,10.0,0.0,0.0
+dc_dbefe86a9d2c,EdgeConneX Data Center,AZ,building,10.0,0.0,0.0
+dc_c7c5fc8a1267,,MI,building,30.0,0.36,0.0
+dc_60a8427538d7,IT,CA,building,10.0,0.0,0.0
+dc_f96046272fcb,"Alembic Computer Services, Inc.",AZ,building,10.0,0.0,0.0
+dc_d80fbebeedc2,J-Curve Technologies,AZ,building,10.0,0.0,0.0
+dc_623234ef1b41,Flexential Cincinnati,OH,building,10.0,0.0,0.0
+dc_023d2663ae5d,Flexential Denver - Downtown,CO,building,30.0,0.0,0.0
+dc_65dbd76e7604,Flexential Dallas - Downtown Dallas,TX,building,10.0,0.0,0.0
+dc_4861bf2a2b63,Flexential Jacksonville,FL,building,10.0,0.0,0.0
+dc_a8ddb88fae41,Flexential - Denver - Aurora,CO,building,10.0,0.0,0.0
+dc_4bfdea1a9bd2,Flexential Nashville - Brentwood,TN,building,10.0,0.0,0.0
+dc_3d82ec0fd7d6,Flexential Raleigh,NC,building,10.0,0.0,0.0
+dc_672db836d74d,Flexential Tampa - West,FL,building,10.0,0.44,0.0
+dc_193e064bdc4b,Flexential Salt Lake City - Lindon,UT,building,10.0,0.0,0.0
+dc_d5a6dcb8e4b7,Digital Realty New York JFK13,NY,building,10.0,0.0,0.0
+dc_2e2dbc3e3848,Digital Realty New York JFK12,NY,building,10.0,0.0,0.0
+dc_e17d7e79bbea,CoreSite AT1,GA,building,10.0,0.0,0.0
+dc_a76f8d21216f,UNM Data Center,NM,building,10.0,0.0,0.0
+dc_73ec60377ab8,Prime Santa Clara,CA,building,30.0,0.0,0.0
+dc_36114ae3ca3e,Open Data Centers Piscataway,NJ,building,10.0,0.0,0.0
+dc_5b163fef210d,H5 Secaucus,NJ,building,10.0,0.0,0.0
+dc_e0ba05af04ef,"Forescout Technologies, Inc.",CA,building,10.0,0.0,0.0
+dc_10b31ee93f9a,Lumen Albany 4,NY,building,10.0,0.0,0.0
+dc_9c4395da1472,Equinix Chicago Data Center - CH1,IL,building,10.0,0.0,0.0
+dc_ad06f9a5ee9b,501 West,NJ,building,10.0,0.0,0.0
+dc_e40648befe43,Dataverge,NY,building,30.0,0.0,0.0
+dc_497196a639d6,TulsaConnect DC3,OK,building,10.0,0.0,0.0
+dc_8d43e8f81b7b,Comarch,AZ,building,30.0,0.02,0.0
+dc_d850cf921795,CoreSite - LA2,CA,building,10.0,0.0,0.0
+dc_feb9c3b5df7f,NTT Ashburn VA7 Data Center,VA,building,30.0,0.0,0.0
+dc_4d54edf1f2b3,NTT VA11 Data Center,VA,building,30.0,0.16,0.0
+dc_506cd0de8c4c,Lumen Madison 1 Data Center,WI,building,10.0,0.0,0.0
+dc_5b7a9e3b7823,Fiberhub LAS1,NV,building,10.0,0.0,0.0
+dc_c1dfe74f8be0,DāStor: 3400 Horizon Drive,PA,building,10.0,0.0,0.0
+dc_6f6d4e070042,Rad Web Hosting,TX,building,30.0,0.0,0.0
+dc_57b30b036cf1,Alpha Federal,WV,building,10.0,0.0,0.0
+dc_7c8e1e4ba3bf,Parsec Data Management,MT,building,10.0,0.0,0.0
+dc_b4dfc8453b28,Applied Digital,ND,building,30.0,0.24,0.0
+dc_380aecb0436f,RIC1 DC1,VA,building,10.0,0.0,0.0
+dc_d5435f3cc757,RIC1 DC2,VA,building,10.0,0.0,0.0
+dc_1aee472b3c86,RIC1 DC3,VA,building,10.0,0.0,0.0
+dc_40afc33af359,TulsaConnect,OK,building,10.0,0.0,0.0
+dc_4dbe408255c8,Windstream,OK,building,10.0,0.0,0.0
+dc_ddc20b8cfb33,TulsaConnect,OK,building,30.0,0.0,0.0
+dc_515444aaf104,Digital Fortress - Portland 1,OR,building,10.0,0.0,0.0
+dc_9b38f4695f6f,Digital Fortress - Portland 2,OR,building,10.0,0.0,0.0
+dc_0a5b4dcabb86,Digital Fortress - Portland 3,OR,building,10.0,0.0,0.0
+dc_37b6e4984473,H5 DC - Portland,OR,building,10.0,0.0,0.0
+dc_23feba8dfbd6,Date Center West - Eugene,OR,building,10.0,0.0,0.0
+dc_1d6382ebcca5,QTS Ashburn 2,VA,building,30.0,0.0,0.0
+dc_70ea5deecfdb,OCOSA,OK,building,10.0,0.0,0.0
+dc_01c60ff235ed,Vantage VA16,VA,building,30.0,0.24,0.0
+dc_a3b2dac5f2d0,Vantage VA15,VA,building,30.0,0.0,0.00022304818781188385
+dc_57ca1ebae8e5,Iron City No. 1 Power Generator and Compute Center,PA,building,30.0,0.0,0.0
+dc_a8ea97c0d02a,Cyxtera Dallas-Fort Worth Data Center,TX,building,30.0,0.0,0.0
+dc_e569435cdfa4,Equinix Infomart,TX,building,10.0,0.0,0.0
+dc_686c58c1074a,CoreSite BO1,MA,building,10.0,0.0,0.0
+dc_cb30a328369f,USPO Terminal Annex,CA,building,30.0,0.0,0.0
+dc_ac08463eb4ec,DataBank,TX,building,30.0,0.0,0.0
+dc_2d3e640cf930,CyrusOne Cincinnati-Mason CIN3,OH,building,10.0,0.0,0.0
+dc_24567abd6c58,LightEdge SAN1,CA,building,10.0,0.0,0.0
+dc_8d1887ea9099,EdgeConneX San Diego,CA,building,10.0,0.0,0.0
+dc_613e1ba146fa,RagingWire CA2,CA,building,10.0,0.0,0.0
+dc_8313dc48caac,RagingWire CA1,CA,building,10.0,0.0,0.0
+dc_aaeb2a6d5fa0,Hewlett-Packard,GA,building,10.0,0.0,0.0
+dc_4e99cc75cd39,Equinix SV1,CA,building,10.0,0.0,0.0
+dc_d4812e5e6145,,OH,building,10.0,0.0,0.0
+dc_9558c9615f47,Lumen Sunnyvale 1,CA,building,10.0,0.0,0.0
+dc_4c8ff415be80,OpenColo,CA,building,10.0,0.0,0.0
+dc_764778a857ca,Equinix Santa Clara SV2,CA,building,10.0,0.0,0.0
+dc_5de7805a4d95,Layer42 Santa Clara,CA,building,10.0,0.0,0.0
+dc_b00a5fe6d20d,Digital Realty Silicon Valley SJC34,CA,building,10.0,0.0,0.0
+dc_8e694360ade4,Csquare SFO1,CA,building,10.0,0.0,0.0
+dc_c55962889669,,CA,building,10.0,0.0,0.0
+dc_da9fd4387a5d,Strategic Datasphere,GA,building,10.0,0.0,0.0
+dc_c9d4281c0249,Flexential Atlanta - Alpharetta Data Center,GA,building,10.0,0.0,0.0
+dc_dca5ba467cc7,Secure Data Center,GA,building,10.0,0.0,0.0
+dc_9590e95f1c65,Cologix Santa Clara SV1 Data Center,CA,building,10.0,0.0,0.0
+dc_95ac86b8be5c,Netrality Data Centers,MO,building,30.0,0.0,0.0
+dc_88909d588f3f,Minneapolis Data Center #2,MN,building,10.0,0.0,0.0
+dc_e567c4149e4f,Equinix DC14,VA,building,10.0,0.0,0.0
+dc_8e9fdcb36e6f,Amazon IAD11,VA,building,10.0,0.0,0.0
+dc_efd5fc83731e,Amazon IAD24,VA,building,10.0,0.0,0.0
+dc_0af20c3aa097,Amazon IAD7,VA,building,10.0,0.0,0.0
+dc_e4369ccb8810,CyrusOne CIN2,OH,building,30.0,0.0,0.0
+dc_b067df925538,VA 4,VA,building,10.0,0.0,0.0
+dc_1cb42af58320,Amazon IAD10,VA,building,10.0,0.0,0.0
+dc_9fb1f8d58659,Amazon IAD32,VA,building,10.0,0.0,0.0
+dc_15ae64532452,NTT RagingWire DC - Hillsboro,OR,building,10.0,0.0,0.0
+dc_7d1f285cb791,Centersquare IAD1-B,VA,building,10.0,0.0,0.0
+dc_7c8c55acfb6b,Centersquare IAD1-A,VA,building,10.0,0.0,0.0
+dc_d41fb281d30a,Centersquare IAD1-C,VA,building,10.0,0.0,0.0
+dc_667e78753bcc,Flexential Minneapolis - Chaska,MN,building,10.0,0.0,0.0
+dc_f5142250b983,Pearl Plaza Office Building,CO,building,10.0,0.0,0.0
+dc_12f42ac7aa67,Csquare SFO2,CA,building,10.0,0.0,0.0
+dc_7535ad317c26,Csquare SFO2,CA,building,10.0,0.0,0.0
+dc_1162b8639226,QTS Santa Clara 1,CA,building,10.0,0.0,0.0
+dc_e1d7138b0007,CoreSite SV3,CA,building,10.0,0.0,0.0
+dc_c8e79bad6c96,CoreSite SV6,CA,building,10.0,0.0,0.0
+dc_03fb7c7b8edd,CoreSite SV8,CA,building,10.0,0.0,0.0
+dc_77cbe277429a,CoreSite SV5,CA,building,10.0,0.0,0.0
+dc_c6ae9e1f88c6,CoreSite SV9,CA,building,10.0,0.0,0.0
+dc_2358caf9e233,QTS Santa Clara 2,CA,building,10.0,0.0,0.0
+dc_1628a2b176c6,STACK NVA01A - Northern Virginia,VA,building,10.0,0.0,0.0
+dc_0f239b20a7ba,Minnesota Gateway Data Center,MN,building,10.0,0.0,0.0
+dc_806d588bcd8f,IBM Building,NY,building,30.0,0.0,0.0
+dc_6146656d1013,,MI,building,10.0,0.0,0.0
+dc_601b882f713f,VA3,VA,building,10.0,0.0,0.0
+dc_9f34fd0de9e0,IAD1,VA,building,10.0,0.0,0.0
+dc_1893390c83ef,CoreSite Reston Campus VA1,VA,building,10.0,0.0,0.0
+dc_0528a0ff632a,CoreSite Reston VA3,VA,building,30.0,0.0,0.0
+dc_22ddddb49a8e,,NH,building,10.0,0.0,0.0
+dc_4acc5a2218d7,Insurance Exchange Building,CO,building,10.0,0.0,0.0
+dc_5a1da1c84a02,Lincoln Rackhouse Maryland,MD,building,10.0,0.0,0.0
+dc_4c8f72b408e3,CyrusOne Cincinnati-Lebanon,OH,building,10.0,0.0,0.0
+dc_19939411d9e4,Equinix NY7 Data Center,NJ,building,10.0,0.42,0.0
+dc_938af684faa3,Equinix SV4,CA,building,10.0,0.0,0.0
+dc_69730b99b070,Verizon - Bloomington Network,MN,building,10.0,0.0,0.0
+dc_08bc73ca6961,H5 Data Centers San Antonio,TX,building,10.0,0.0,0.0
+dc_8570f2737bd4,Aureon,IA,building,10.0,0.0,0.0
+dc_329f757102fc,,NC,building,10.0,0.0,0.0
+dc_7dc677ea1823,Patmos KC2,MO,building,10.0,0.0,0.0
+dc_f3e921cb9abe,Digital Realty New York HVN10,CT,building,10.0,0.0,0.0
+dc_73dc9624ff3e,Lincoln Rackhouse,IL,building,10.0,0.12,0.0
+dc_4f3fb90492d6,Digital Realty CH1,IL,building,10.0,0.0,0.0
+dc_56b1c9faf7e3,H5 Minneapolis,MN,building,10.0,0.0,0.0
+dc_e797a6f7ed88,Iron Mountain Records Storage,AZ,building,10.0,0.0,0.0
+dc_01f94da97123,Equinix SV8,CA,building,10.0,0.0,0.0
+dc_8220a2e039af,NCSA Petascale Computing Facility,IL,building,10.0,0.0,0.0
+dc_cb35267e5332,LexisNexus Springfield,OH,building,10.0,0.18,0.0
+dc_5d6a143d4026,Digital Realty ORD11,IL,building,10.0,0.0,0.0
+dc_65815b1ef945,Lumen,AZ,building,10.0,0.0,0.0
+dc_71ee549f276d,L3Harris Technologies Inc,AZ,building,10.0,0.0,0.0
+dc_c9d94248f419,AZ Labs,AZ,building,10.0,0.0,0.0
+dc_af553fcece3c,Serverfarm CH1,IL,building,10.0,0.0,0.0
+dc_ed04a1ecbe51,Aligned Energy Data Center,AZ,building,10.0,0.0,0.0
+dc_94b7312e4711,Lakeside Technology Center,IL,building,10.0,0.0,0.0
+dc_fb37a9ca7ac1,Flexential Phoenix - Deer Valley,AZ,building,30.0,0.0,0.0
+dc_8a38216b0122,TierPoint,OK,building,10.0,0.0,0.0
+dc_a4d71aa335ce,Equinix SV5,CA,building,30.0,0.0,0.0
+dc_1a16f88c10dd,"Union Pacific Jack Koraleski Technology, Research & Development Center",NE,building,10.0,0.12,0.0
+dc_270c6c0a4182,DataBank Pittsburgh PIT2,PA,building,10.0,0.0,0.0
+dc_42b099cfcbc7,Molina Healthcare,NM,building,10.0,0.0,0.0
+dc_3cef3c541b5d,Switch12,NV,building,10.0,0.0,0.0
+dc_da72086b812a,Switch Las Vegas 7,NV,building,10.0,0.0,0.0
+dc_06cf1c89d97f,EdgeConneX CHI01,IL,building,10.0,0.0,0.0
+dc_f54271a3c826,,MD,building,10.0,0.0,0.0
+dc_2a69da90abd8,Verizon Wireline Network Building,NJ,building,30.0,0.0,0.0
+dc_535d66b5f9b6,RagingWire CA3,CA,building,10.0,0.0,0.0
+dc_f5d875508817,,IA,building,10.0,0.06,0.0
+dc_8d7d400daa85,360 Spear Street Data Center,CA,building,30.0,0.0,0.0
+dc_df94ebb7df29,Equinix New York Secaucus NY5,NJ,building,10.0,0.0,0.0
+dc_e2b5deb384b2,Equinix New York Secaucus NY4,NJ,building,10.0,0.0,0.0
+dc_73f7a3eb7f29,Equinix NY3,NJ,building,10.0,0.0,0.0
+dc_1cb4fe2a0b9e,Equinix New York Secaucus NY2,NJ,building,10.0,0.0,0.0
+dc_22a977948445,Centersquare NYC3 Data Center,NJ,building,10.0,0.0,0.0
+dc_d983542baf94,QTS Sacramento,CA,building,10.0,0.0,0.0
+dc_5c2f48f1f831,,MO,building,10.0,0.0,0.0
+dc_0ea9fc7adeb0,Lincoln Rackhouse Kansas City,MO,building,30.0,0.04,0.0
+dc_603a01fbe6f3,Black Rock Financial Management,MO,building,10.0,0.0,0.0
+dc_7517a65ae363,,MO,building,10.0,0.0,0.0
+dc_f9a1698669ea,Cherokee Data Center,OK,building,30.0,0.1,0.0
+dc_f9657e3a222d,CyrusOne Chicago Aurora CME,IL,building,30.0,0.12,0.0
+dc_56db95055eaf,Xfinity/Comcast Data Center,CO,building,10.0,0.0,0.0
+dc_84c0a8b27128,IO Datacenter,NJ,building,10.0,0.0,0.0
+dc_72f68f42d432,DataBank Piscataway EWR2,NJ,building,10.0,0.0,0.0
+dc_ba26367c42aa,Optimum,NJ,building,10.0,0.0,0.0
+dc_41293169fcf5,Equinix,NJ,building,10.0,0.0,0.0
+dc_8e83f64e34c5,Barclays Datacenter,NJ,building,10.0,0.0,0.0
+dc_22a625aec698,Digital Realty New York EWR12,NJ,building,10.0,0.0,0.0
+dc_c2f3fa259c37,Digital Realty New York EWR11,NJ,building,30.0,0.0,0.0
+dc_8eb668a8b3c3,Intergate Seattle East Building 2,WA,building,10.0,0.0,0.0
+dc_9f04712f31d7,Intergate Seattle East Building 1,WA,building,10.0,0.0,0.0
+dc_9244f32ac697,Equinix SV15,CA,building,10.0,0.0,0.0
+dc_518875f9d853,Equinix SV16,CA,building,10.0,0.0,0.0
+dc_9c927d5b249c,Equinix SV17,CA,building,10.0,0.0,0.0
+dc_a9ccce6607ff,Equinix SV14,CA,building,10.0,0.0,0.0
+dc_27bede9eb66c,CoreSite SV4,CA,building,10.0,0.0,0.0
+dc_49bdf2fd4426,Lumen Santa Clara,CA,building,10.0,0.0,0.0
+dc_3e5f70660fb6,Prime Santa Clara,CA,building,10.0,0.0,0.0
+dc_dc75a6364fe9,Digital Realty Silicon Valley SJC10,CA,building,10.0,0.0,0.0
+dc_7e1ec0fe32da,Colovore,CA,building,10.0,0.0,0.0
+dc_67a4e14e8e91,Digital Realty Silicon Valley SJC30,CA,building,10.0,0.0,0.0
+dc_bbef47685601,Digital Realty Silicon Valley SJC15,CA,building,10.0,0.0,0.0
+dc_3fa01f9ed0e0,Digital Realty Silicon Valley SJC16,CA,building,10.0,0.0,0.0
+dc_05ba33d454f3,Digital Realty Silicon Valley SJC29,CA,building,10.0,0.0,0.0
+dc_13ba42acb0f3,Csquare SFO4,CA,building,10.0,0.0,0.0
+dc_7cdd84794129,Prime SANTA CLARA DATA CENTER,CA,building,10.0,0.0,0.0
+dc_b7521d3b140b,Digital Realty Silicon Valley SJC11,CA,building,10.0,0.0,0.0
+dc_a33e0eaf3913,Lumen,CA,building,10.0,0.0,0.0
+dc_6e6524e46803,Silicon Valley SJC31,CA,building,10.0,0.0,0.0
+dc_3b4009cb1bbc,,CA,building,10.0,0.0,0.0
+dc_a0f51e098a77,Evocative Santa Clara SJC11,CA,building,10.0,0.0,0.0
+dc_c161f3e80fbd,QTS Chicago,IL,building,10.0,0.0,0.0
+dc_20809b86822e,Iron Mountain Data & Record Storage,IL,building,10.0,0.0,0.0
+dc_10efe220e9f8,Data Storage Centers,AZ,building,10.0,0.0,0.0
+dc_c737f1f6d886,TierPoint Boston - Andover,MA,building,10.0,0.0,0.0
+dc_277c0f0581fc,Markley Data Center,MA,building,10.0,0.0,0.0
+dc_2705b2329455,Flexential Charlotte - South,NC,building,10.0,0.0,0.0
+dc_83ab1d091133,Digital Realty Data Center,AZ,building,10.0,0.4,0.0
+dc_d05d1d438fa4,,WA,building,10.0,0.0,0.0
+dc_7595c5d5e7dc,Equinix DC97,VA,building,10.0,0.0,0.0
+dc_957ede7b418e,Amazon IAD-55,VA,building,10.0,0.0,0.0
+dc_2a2a32281bd3,CTI Biopharma,WA,building,10.0,0.0,0.0
+dc_470dccd260a2,Westin Building,WA,building,10.0,0.0,0.0
+dc_07c6d715a86b,COPT Data Center,VA,building,30.0,0.0,0.0
+dc_716763afa8e2,Dell 350 Holger Way,CA,building,30.0,0.0,0.0
+dc_4608aa9b25e5,SV Colo,CA,building,10.0,0.0,0.0
+dc_c006ad7d9563,Microsoft,CA,building,30.0,0.0,0.0
+dc_4b5149e761b0,OVH US East Vint Hill,VA,building,10.0,0.0,0.0
+dc_158b610b5b1a,NCAR-Wyoming Supercomputing Center,WY,building,10.0,0.1,0.0
+dc_2e8820a1a344,The Seattle Times,WA,building,10.0,0.0,0.0
+dc_5b707782623f,Google Data Center The Dalles Oregon,OR,building,10.0,0.0,0.0
+dc_3f99881e922b,Segra Data Center,NC,building,10.0,0.0,0.0
+dc_585eb4a76a27,Equinix Ashburn DC2,VA,building,10.0,0.0,0.0
+dc_1cbea47b2e15,H5 Data Centers Ashburn,VA,building,10.0,0.0,0.0
+dc_e797c79230f0,TierPoint Sioux Falls West Data Center,SD,building,30.0,0.0,0.0
+dc_7f9ae02ccc0f,Lumen McLean,VA,building,30.0,0.0,0.0
+dc_2844929e4bbb,DataBank McLean IAD2,VA,building,10.0,0.0,0.0
+dc_103846411abf,eBay,UT,building,10.0,0.0,0.0
+dc_7dc82ae0dd2a,Equinix Chicago Data CH7,IL,building,10.0,0.0,0.0
+dc_201440cfd9cd,PhoenixNAP,AZ,building,10.0,0.0,0.0
+dc_bdfc6ad54e05,Merrill Lynch Data Center,NY,building,30.0,0.0,0.0
+dc_1bc2b9120fd7,Telehouse Teleport,NY,building,10.0,0.0,0.0
+dc_dbe2757c8762,32 Avenue of the Americas,NY,building,10.0,0.0,0.0
+dc_0dc2e0d5e422,4120 Lafayette Center Drive,VA,building,10.0,0.0,0.0
+dc_574dbb1df5a6,Digital Realty,VA,building,10.0,0.0,0.0
+dc_3ea7dd208f28,Greenidge Power Plant and Data Center,NY,building,10.0,0.0,0.0
+dc_dd62b4cfd23c,TierPoint,MO,building,30.0,0.0,0.0
+dc_885116d1864f,Verizon,NV,building,10.0,0.0,0.0
+dc_8e1d55e66e4c,,TX,building,10.0,0.0,0.0
+dc_e007921e0e2a,,TX,building,10.0,0.0,0.0
+dc_be6fbb486171,Texas Cryptologic Center,TX,building,10.0,0.0,0.0
+dc_07598d7e4ad6,CenturyLink,NV,building,30.0,0.0,0.0
+dc_7da4291ec019,,TX,building,10.0,0.0,0.0
+dc_82571b787ee6,Evoque Allen DA1,TX,building,10.0,0.0,0.0
+dc_a40a7a61f53f,First National Technical Center,NE,building,10.0,0.0,0.0
+dc_5a66fc0b92a1,Flexential - Richmond,VA,building,10.0,0.0,0.0
+dc_7b085144d463,Amazon IAD-9,VA,building,30.0,0.0,0.0
+dc_e973f22c27bf,Amazon IAD22,VA,building,10.0,0.0,0.0
+dc_5ac7881d70a2,Amazon IAD-1,VA,building,10.0,0.0,0.0
+dc_827fe89cbc5e,H5 Data Centers Virginia (4050),VA,building,10.0,0.0,0.0
+dc_edae91eea7f3,H5 Data Centers Virginia (4040),VA,building,10.0,0.0,0.0
+dc_6a1b8137ce48,ATI Solutions,VA,building,10.0,0.0,0.0
+dc_a693333e3230,,VA,building,10.0,0.06,0.0
+dc_d7d660e610a2,Menlo Digital MD-DC1,VA,building,10.0,0.0,0.0
+dc_e7b041f66911,Cox Data Center,GA,building,10.0,0.0,0.0
+dc_8139e532c3de,QTS Atlanta Data Center 1,GA,building,10.0,0.0,0.0
+dc_8582438c63c9,Csquare SFO3,CA,building,10.0,0.0,0.0
+dc_bf1df6b842e9,Centersquare IAD3,VA,building,30.0,0.0,0.0
+dc_84a15c5e48cb,Centersquare IAD2-A,VA,building,10.0,0.0,0.0
+dc_23cf9d5d92b8,,VA,building,10.0,0.0,0.0
+dc_3a460ff301b5,Centersquare IAD2-B,VA,building,10.0,0.0,0.0
+dc_825c795eeabf,Digital Realty Data Center,GA,building,10.0,0.0,0.0
+dc_c5f760fd708b,Cyxtera (Digital Realty Trust) Citibank Data Center,NJ,building,10.0,0.04,0.0
+dc_79ba191d0ddc,Digital Realty New Jersey EWR10,NJ,building,10.0,0.0,0.0
+dc_5ce1bef66bfd,,WA,building,30.0,0.0,0.0
+dc_e1ec41460f16,,WA,building,30.0,0.0,0.0
+dc_3c54f97d781a,Intergate.Quincy,WA,building,30.0,0.0,0.0
+dc_7c4e0d045a9c,Intergate Quincy Data Center,WA,campus_centroid,250.0,0.34,0.0
+dc_5cc1bdab179a,H5 Data Center,WA,campus_centroid,10.0,0.0,0.0
+dc_ae9448694997,H5 Data Centers Quincy,WA,building,30.0,0.62,0.0
+dc_824340142f56,Yahoo Data Center,WA,campus_centroid,250.0,0.08,0.0
+dc_37ffc1fb3121,,WA,building,10.0,0.0,0.0
+dc_3e47ba6ea7d4,,WA,building,10.0,0.0,0.0
+dc_dc8fb9b88484,CoreSite AT2 - Marietta Data Center,GA,building,10.0,0.0,0.0
+dc_64536bf4ec69,,MO,building,30.0,0.0,0.0
+dc_a48459500fa0,Digital Realty San Francisco SFO10,CA,building,10.0,0.0,0.0
+dc_e16c0048b956,33 Thomas Street,NY,building,30.0,0.0,0.0
+dc_2d220fd00df6,VentureData,ID,building,10.0,0.0,0.0
+dc_78a95ede9fd2,Cogent Data Center,AZ,building,10.0,0.0,0.0
+dc_ddc8ce7e149c,CoreSpace Dallas,TX,building,10.0,0.0,0.0
+dc_7c8f0dd59535,Databank Denver (DEN5),CO,building,10.0,0.0,0.0
+dc_70319b137cc4,zColo by Zayo,CO,building,10.0,0.0,0.0
+dc_d4a1a829c73b,Intergate Seattle East Building 5,WA,building,10.0,0.0,0.0
+dc_a155358ecc51,Intergate Seattle East Building 3,WA,building,10.0,0.0,0.0
+dc_e1661b2a1f9b,Intergate Seattle East Building 4,WA,building,10.0,0.0,0.0
+dc_948f3bdc4314,Flexential Allentown data center,PA,building,10.0,0.0,0.0
+dc_d2de7906afe4,Digital Realty ACC4,VA,building,10.0,0.0,0.0
+dc_fc796ff9d529,Equinix Ashburn DC1,VA,building,10.0,0.0,0.0
+dc_eb543ca87716,Equinix Ashburn DC5,VA,building,30.0,0.0,0.0
+dc_61423542fa9a,Equinix Ashburn DC11,VA,building,30.0,0.0,0.0
+dc_131aa5f35967,Equinix Ashburn DC3,VA,building,30.0,0.0,0.0
+dc_b50a00a06b55,Digital Realty ACC3,VA,building,10.0,0.0,0.0
+dc_0d9b2c88b783,CoreSite SV2,CA,building,10.0,0.0,0.0
+dc_49375bfb4e76,Amazon IAD76,VA,building,10.0,0.0,0.0
+dc_2e4b032d0260,Amazon IAD12,VA,building,10.0,0.0,0.0
+dc_6bcbbbcd10b1,Digital Realty ACC5,VA,building,10.0,0.0,0.0
+dc_96abd1a194f0,Digital Realty ACC6,VA,building,10.0,0.0,0.0
+dc_2a70a9e5cc7b,Level 3 Ashburn,VA,building,10.0,0.0,0.0
+dc_883a5d1e99b8,Centersquare IAD4-B,VA,building,10.0,0.0,0.0
+dc_69fd86e9906c,NTT Ashburn VA1 Data Center,VA,building,10.0,0.0,0.0
+dc_ae3e7c1ac44d,Digital Realty Phoenix PHX15,AZ,building,10.0,0.0,0.0
+dc_c9783b27622b,H5 Phoenix,AZ,building,30.0,0.0,0.0
+dc_4f768adc7131,CyrusOne PHX1,AZ,building,10.0,0.0,0.0
+dc_81a17a603597,Equinix DC13,VA,building,10.0,0.0,0.0
+dc_631371da65c8,Digital Realty Northern Virginia IAD14,VA,building,10.0,0.0,0.0
+dc_3d20ef20699e,Amazon Web Services Building C,VA,building,10.0,0.0,0.0
+dc_2e787555193c,Digital Realty Northern Virginia IAD12,VA,building,10.0,0.0,0.0
+dc_832cb24853a8,Digital Realty Building A,VA,building,10.0,0.0,0.0
+dc_524910b48583,Digital Realty Northern Virginia IAD24,VA,building,10.0,0.0,0.0
+dc_087c9c57a7c0,Databank Ashburn IAD1,VA,building,30.0,0.0,0.0
+dc_ec2547a1d26b,DataBank Ashburn IAD4,VA,building,10.0,0.0,0.0
+dc_3f486e9e678a,Apple Data Center,AZ,building,30.0,0.0,0.0
+dc_381df857e073,VISA,IL,building,10.0,0.0,0.0
+dc_dd43c1afe709,John F. Simms Building,NM,building,10.0,0.0,0.0
+dc_d49059d0004a,Lumen San Antonio 2,TX,building,10.0,0.0,0.0
+dc_a3ed205f0651,Meta,OR,building,10.0,0.0,0.0
+dc_0b58b9cd7bf3,Adobe Data Center,OR,building,10.0,0.0,0.0
+dc_1935437c7e01,TGN Hillsboro,OR,building,10.0,0.0,0.0
+dc_3fef4ef0197e,Stack Infrastructure - POR02,OR,building,10.0,0.0,0.0
+dc_526c2a45ec28,Oracle,OR,building,10.0,0.0,0.0
+dc_88ceb844bdf4,Digital Realty PDX10 Data Center,OR,building,10.0,0.0,0.0
+dc_e1986068387b,Flexential Portland - Hillsboro 1,OR,building,10.0,0.0,0.0
+dc_084826c020f7,Flexential Portland - Hillsboro 1,OR,building,10.0,0.0,0.0
+dc_a58e2ed3ead5,Flexential Louisville - East,KY,building,10.0,0.0,0.0
+dc_9996d2a0e21d,Flexential Louisville - Downtown,KY,building,10.0,0.0,0.0
+dc_570dcd095704,Verizon Hillsboro (Tanasbourne) Data Center,OR,building,10.0,0.0,0.0
+dc_805132b8f582,Terminal Commerce Building,PA,building,30.0,0.0,0.0
+dc_cc28d7536dbd,TierPoint,WA,building,10.0,0.0,0.0
+dc_50050da00f9b,Baltimore Technology Park,MD,building,10.0,0.0,0.0
+dc_479fe0de6655,Intergate Seattle West Building C,WA,building,10.0,0.0,0.0
+dc_556a64184f4a,Intergate Seattle West Building B,WA,building,10.0,0.0,0.0
+dc_e00eb2aece58,Intergate Seattle West Building A,WA,building,10.0,0.0,0.0
+dc_5f6777919547,Vantage WA11,WA,building,10.0,0.0,0.0
+dc_69b15e769d4a,NTT Data Quincy,WA,building,10.0,0.0,0.0
+dc_4ad26dcfcc07,,WA,building,30.0,0.0,0.0
+dc_31e1262f634a,,WA,building,10.0,0.0,0.0
+dc_a6f917b12861,Geneseo Communications Inc,IA,building,10.0,0.0,0.0
+dc_905ee378fa5e,,IL,building,10.0,0.0,0.0
+dc_c4556817118d,,NJ,building,10.0,0.0,0.0
+dc_ffd9669a659e,,IN,building,10.0,0.0,0.0
+dc_79462a7aea36,,NJ,building,10.0,0.0,0.0
+dc_6a57259367cd,Flexential Salt Lake City - South Valley,UT,building,30.0,0.0,0.0
+dc_d4b9ccf16584,Digital Realty Silicon Valley SC1,CA,building,10.0,0.0,0.0
+dc_f4bc65542ad7,QES Computers,CA,building,10.0,0.0,0.0
+dc_038b8645007d,Equinix SE3 Data Center,WA,building,10.0,0.0,0.0
+dc_b56773cdbfc2,QTS Piscataway Data Center,NJ,building,30.0,0.0,0.0
+dc_5fa783970111,AiNET,MD,building,10.0,0.2,0.0
+dc_f08ca5bf1c62,Microsoft,TX,building,30.0,0.0,0.0
+dc_89729ff0b85d,Microsoft San Antonio,TX,building,10.0,0.0,0.0
+dc_dfd792c8e17d,Microsoft,TX,building,10.0,0.0,0.0
+dc_2d99d5205c9e,Lumen Norristown,PA,building,10.0,0.0,0.0
+dc_d85b37adc53e,Equinix DC7,VA,building,10.0,0.08,0.0
+dc_11f7728742a2,Element Critical VA1,VA,building,10.0,0.0,0.0
+dc_40672a8077dd,Pittock Block,OR,building,10.0,0.0,0.0
+dc_db8f9132c159,Cisco Allen,TX,building,10.0,0.0,0.0
+dc_f88ba23a982f,Meta,OR,building,10.0,0.0,0.0
+dc_d7bbe1a551ea,CSSNW Bellingham,WA,building,10.0,0.0,0.0
+dc_0bca91742046,EdgeConneX CHI02,IL,building,10.0,0.0,0.0
+dc_b42253a6f4e0,Equinix Chicago CH3,IL,building,10.0,0.0,0.0
+dc_c5239980dbb9,Element Critical CH2,IL,building,10.0,0.0,0.0
+dc_3ae192f6e1fc,Centersquare Elk Grove Village Data Center Campus ORD2,IL,building,10.0,0.0,0.0
+dc_5476035b6014,Flexential Denver - Englewood,CO,building,10.0,0.0,0.0
+dc_101d7e8f8cd1,EdgeConneX Detroit DET01,MI,building,10.0,0.08,0.0
+dc_f905447e5849,Lumen Austin 3,TX,building,10.0,0.0,0.0
+dc_3fabf9be3929,Alpheus DataCenter,TX,building,30.0,0.0,0.0
+dc_c7e6eda1a3c3,Digital Realty Austin AUS11,TX,building,10.0,0.0,0.0
+dc_fe38ae01b067,LightEdge Austin II,TX,building,30.0,0.0,0.0
+dc_b89ba8f2218f,CyrusOne Austin Data Center II,TX,building,10.0,0.04,0.0
+dc_37e6baf63753,Data Foundry Austin 1 Data Center,TX,building,30.0,0.0,0.0
+dc_cc285f70fcb8,VISA Data Center,VA,building,10.0,0.0,0.0
+dc_25afe0ab10d4,LightEdge Austin I,TX,building,30.0,0.0,0.0
+dc_cdbcaaff9db4,Skybox Chicago I,IL,building,10.0,0.0,0.0
+dc_1e7f741f9284,Hurricane Electric Fremont 1,CA,building,10.0,0.0,0.0
+dc_27080243001e,,OH,building,30.0,0.0,0.0
+dc_938aec8e77ee,Lumen Austin 1,TX,building,30.0,0.0,0.0
+dc_6b99d502d133,Data Foundry - Texas 1,TX,building,30.0,0.0,0.0
+dc_8411b70ee9f3,XO Fremont,CA,building,10.0,0.0,0.0
+dc_9a40b00a652d,Hurricane Electric Fremont 2,CA,building,10.0,0.0,0.0
+dc_e5c5994d451d,Element Critical,TX,building,10.0,0.0,0.0
+dc_a89104d1dea0,Element Critical CH1,IL,building,10.0,0.0,0.0
+dc_b98bb7d5812f,165 Halsey / Equinix NY1 / Databank EWR1,NJ,building,10.0,0.0,0.0
+dc_e3d250e7b140,QTS Suwanee Data Center 1,GA,building,10.0,0.0,0.0
+dc_baa85d8160d3,QTS Suwanee Data Center 2,GA,building,10.0,0.0,0.0
+dc_a94598173ea8,TierPoint Little Rock,AR,building,30.0,0.0,0.0
+dc_6553f43d85f7,Equinix SV6,CA,building,10.0,0.0,0.0
+dc_d493afe55f15,Flexential Atlanta - Norcross,GA,building,10.0,0.0,0.0
+dc_bd791a1d5428,Centersquare Lynnwood SE1,WA,building,30.0,0.02,0.0
+dc_29fd6bdf13b7,Apple,OR,building,30.0,0.0,0.0
+dc_4f0e6f5bde7c,Walmart Colorado Data Center,CO,building,10.0,0.0,0.0
+dc_d9ae28f8917b,Verizon,NE,building,10.0,0.0,0.0
+dc_9c33e7edb393,Verizon,NE,building,10.0,0.0,0.0
+dc_3c8e7ae84da8,George C. Wallace Alabama Supercomputer Center,AL,building,30.0,0.02,0.0
+dc_a83a8d15a315,Equinix,CA,building,30.0,0.0,0.0
+dc_543c04d60b95,Digital Realty Chicago ORD12,IL,building,10.0,0.0,0.0
+dc_b5ee50bca064,,WA,building,10.0,0.0,0.0
+dc_36b4acad16e5,Microsoft,WA,building,10.0,0.0,0.0
+dc_a3e6b266b930,Microsoft,WA,building,10.0,0.0,0.0
+dc_c738a087d2cb,,WA,building,30.0,0.0,0.0
+dc_7b42f550217b,Microsoft CYS Datacenter,WY,campus_centroid,250.0,0.4,0.0
+dc_6be68fa9c112,,WY,building,30.0,0.28,0.0
+dc_506d216f297e,KOMO Plaza East,WA,building,10.0,0.0,0.0
+dc_0dcf4693d966,Fidelity,NE,building,30.0,0.02,0.0
+dc_efb9968b09e4,,CA,building,30.0,0.0,0.0
+dc_4c87d97ffa9a,Serverfarm - LAX1,CA,building,10.0,0.0,0.0
+dc_abc1bc37e941,DRT LAX12,CA,building,30.0,0.0,0.0
+dc_961fc1bc0c89,Google - Thornton,CO,building,10.0,0.0,0.0
+dc_5b5256c05523,DRT LAX10,CA,building,30.0,0.0,0.0
+dc_f40c26b1ceb4,One Wilshire,CA,building,30.0,0.0,0.0
+dc_ddf294b48205,,VA,building,10.0,0.06,0.0
+dc_66e879b37950,"CyrusOne NVA1, NVA2 & NVA3",VA,building,10.0,0.0,0.0
+dc_6a2a35ba07d2,NAP of the Americas,FL,building,10.0,0.0,0.0
+dc_cc1e6f846f5c,CoreSite - Miami (MI1),FL,building,30.0,0.0,0.0
+dc_5127aa265ade,CyrusOne NVA5,VA,building,30.0,0.0,0.0
+dc_7829f587ad00,Microsoft,IA,building,10.0,0.0,0.0
+dc_a16fdadb09e8,Facebook Altoona Data Center 1,IA,building,30.0,0.0,0.0
+dc_ce7c1d42d89e,Facebook Altoona Data Center 2,IA,building,10.0,0.0,0.0
+dc_fdae777cf363,Virginia Information Technologies Agency,VA,building,10.0,0.0,0.0
+dc_3804fbe962f8,Lumen Technologies,CA,building,30.0,0.0,0.0
+dc_87fe0ed9bf1c,Lumen,WA,building,10.0,0.0,0.0
+dc_fe7cb3e8830f,,WI,building,10.0,0.0,0.0
+dc_1674d44d30cc,Equinix CU2,VA,building,30.0,0.0,0.0
+dc_f8d214368884,DataPipe Silicon Valley One,CA,building,10.0,0.0,0.0
+dc_042da0f1f99d,CoreSite Secaucus Campus,NJ,building,10.0,0.0,0.0
+dc_01f485c24f90,Evocative Secaucus,NJ,building,10.0,0.0,0.0
+dc_f2511fb5508c,BT Radianz: 492 River Road,NJ,building,10.0,0.0,0.0
+dc_f9e6c86b33a9,Time Warner Datacenter,CO,building,10.0,0.02,0.0
+dc_3afce9f03886,Time Warner Datacenter,CO,building,30.0,0.12,0.0
+dc_97311ae7d1ad,CyrusOne Austin Data Center III,TX,building,10.0,0.0,0.0
+dc_7db3bba7c9ec,Apollo Cable Landing Station,NJ,building,10.0,0.42,0.0
+dc_96450fb1f38e,Cable & Wireless Cable Landing Station,NY,building,10.0,0.0,0.0
+dc_e4baea386a94,Equinix Ashburn DC10,VA,building,10.0,0.0,0.0
+dc_d92a5dd0e5f6,Amazon Web Services Datacenter Complex,VA,building,10.0,0.0,0.0
+dc_1ef09805fae1,Amazon Web Services,VA,building,10.0,0.16,0.0
+dc_9351a2fe0177,Amazon IAD-61,VA,building,30.0,0.0,0.0
+dc_a1ec41fa9483,Amazon IAD58,VA,building,30.0,0.0,0.0
+dc_df61119311e7,Amazon IAD51,VA,building,10.0,0.12,0.0
+dc_dd2e714c19e0,Amazon IAD56,VA,building,30.0,0.0,0.0
+dc_c20b2302aff2,Amazon IAD16,VA,building,10.0,0.0,0.0
+dc_dee61d200c43,Amazon IAD15,VA,building,10.0,0.0,0.0
+dc_ab293c583bc3,Amazon IAD14,VA,building,10.0,0.0,0.0
+dc_71354fe4b02d,Amazon IAD59,VA,building,10.0,0.04,0.0
+dc_c4a43ff19d8c,Amazon IAD52,VA,building,10.0,0.0,0.0
+dc_af33dfbf5532,Amazon Web Services Datacenter Complex,OH,building,30.0,0.0,0.0
+dc_2f2def1e8828,Amazon AWS: Hilliard Data Center,OH,campus_centroid,250.0,0.22,0.0
+dc_bd0c4df6edc8,Amazon Web Services,OR,building,30.0,0.3,0.0
+dc_8b5c9190f762,Amazon Web Services,OR,building,10.0,0.0,0.0
+dc_c3cd81b92a8d,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_ee2be26aa83a,Amazon Web Services,OR,building,30.0,0.04,0.0
+dc_b8308dcc18bb,Equinix San Jose SV3,CA,building,10.0,0.0,0.0
+dc_6bb9d780dce7,365 Main Street Data Center,CA,building,30.0,0.0,0.0
+dc_fa3d9251f7ad,Meta,NC,building,10.0,0.0,0.0
+dc_1aaac235c2f7,Meta,NC,building,10.0,0.0,0.0
+dc_b957334fcb5a,,CA,building,10.0,0.0,0.0
+dc_68281ce20aef,Csquare SFO1,CA,building,10.0,0.0,0.0
+dc_973ebac1cb09,,CA,building,10.0,0.0,0.0
+dc_13bf0cfc3848,Intergate Columbia B,WA,building,10.0,0.0,0.0
+dc_5c8f14e5f3fc,Intergate Columbia A,WA,building,10.0,0.0,0.0
+dc_2418d90f9371,Intergate Columbia,WA,building,30.0,0.04,0.0
+dc_82d5bf536c6b,QTS Ashburn-Moran,VA,building,10.0,0.02,0.0
+dc_2a3cef084baa,Centersquare IAD4-A,VA,building,10.0,0.0,0.0
+dc_76d8a96e6398,AWS Building E,VA,building,10.0,0.0,0.0
+dc_783ed530397e,Digital Realty New Jersey EWR20,NJ,building,10.0,0.0,0.0
+dc_4fe04b8d0451,CyrusOne Somerset,NJ,building,10.0,0.0,0.0
+dc_f56907de3951,BNY Mellon Somerset,NJ,building,30.0,0.0,0.0
+dc_afac4d785392,,NJ,building,10.0,0.0,0.0
+dc_b095480b552f,Digital Realty New Jersey EWR21,NJ,building,30.0,0.0,0.0
+dc_fd571f509631,,CA,building,30.0,0.0,0.0
+dc_085fa1c6cd48,Amazon IAD78,VA,building,10.0,0.0,0.0
+dc_f76653816c0f,Amazon IAD79,VA,building,10.0,0.0,0.0
+dc_f5f99e41c7eb,,NV,building,10.0,0.0,0.0
+dc_e47b672ce4ff,Kaiser Data Center,CA,building,10.0,0.0,0.0
+dc_89f803745a9e,Lumen Dallas - 3180 Irving Blvd.,TX,building,10.0,0.0,0.0
+dc_663e3aabdd3a,Prime DFW01-01,TX,building,10.0,0.0,0.0
+dc_2f2fa36dd479,Lumen Dallas 6,TX,building,10.0,0.0,0.0
+dc_c7388ffdcf0a,Digital Realty DFW36,TX,building,10.0,0.0,0.0
+dc_2488b59ec2e1,DataBank Dallas Empire Central Data Center,TX,building,10.0,0.0,0.0
+dc_a3670fa43098,TierPoint Dallas Data Center,TX,building,10.0,0.0,0.0
+dc_daf9220540a9,Amazon IAD87,VA,building,10.0,0.0,0.0
+dc_cfa3a5031c6d,Amazon IAD88,VA,building,10.0,0.0,0.0
+dc_021211d2ad4e,Verizon,CO,building,10.0,0.0,0.0
+dc_3a8551ffe989,Stream Data Centers PHX-1,AZ,building,10.0,0.0,0.0
+dc_a610d284990f,Live Oak Data Center,TX,building,10.0,0.0,0.0
+dc_2309affb2b7b,Stack Infrastructure - POR01,OR,building,10.0,0.0,0.0
+dc_c72d4cbdd423,Flexential Portland - Hillsboro 2,OR,building,10.0,0.0,0.0
+dc_34120cb9bfb9,NYSE Data Center,NJ,building,10.0,0.0,0.0
+dc_765868de3ac6,AT&T,CA,building,10.0,0.0,0.0
+dc_374ef12de243,,CO,building,10.0,0.0,0.0
+dc_f17c4c877a75,Siemens EDA - HDC / Data Center,OR,building,10.0,0.0,0.0
+dc_4dcce2e3f5c2,Aligned  DFW-01,TX,building,10.0,0.0,0.0
+dc_dd893891f25e,Tierpoint Dallas-Allen,TX,building,10.0,0.02,0.0
+dc_d6dfe2b4b690,,TX,building,10.0,0.0,0.0
+dc_65de9231db68,Amazon IAD73,VA,building,10.0,0.0,0.0
+dc_3d7a9b4bc895,Amazon IAD74,VA,building,10.0,0.0,0.0
+dc_98252a80dd0a,H5 Data Center,OH,building,10.0,0.0,0.0
+dc_daf3c5ec6554,TPx Colocation Datacenter,CA,building,10.0,0.0,0.0
+dc_a8e6550e1c77,Cologix Jacksonville JAX1,FL,building,10.0,0.0,0.0
+dc_8eb7845dad34,Microsoft,WA,building,30.0,0.0,0.0
+dc_913e6e43e473,,WA,building,10.0,0.0,0.0
+dc_9f5bae7df94d,,WA,building,10.0,0.0,0.0
+dc_971c8fad8ba8,Facebook Fort Worth Datacenter,TX,building,10.0,0.0,0.0
+dc_b1a8f1928f7c,Data Center Lenexa,KS,building,30.0,0.0,0.0
+dc_86ba61e0a58f,CITIGROUP TECHNOLOGY INC,TX,building,10.0,0.0,0.0
+dc_9499ddcbe5f4,QTS Data Center,TX,building,10.0,0.0,0.0
+dc_d4b6d917cc3b,Lowe's Data Center,TX,building,10.0,0.0,0.0
+dc_ce1390890e70,,TX,building,10.0,0.0,0.0
+dc_d20b0b46a331,,TX,building,10.0,0.0,0.0
+dc_e5a14b588180,CyrusOne San Antonio I,TX,building,10.0,0.0,0.0
+dc_1290cd43e2a4,Valero Wiserman,TX,building,10.0,0.0,0.0
+dc_96e798de1923,Stream San Antonio II,TX,building,10.0,0.0,0.0
+dc_73c1808d41a7,CyrusOne San Antonio II,TX,building,10.0,0.0,0.0
+dc_a3ef9d3df723,CyrusOne San Antonio III,TX,building,10.0,0.0,0.0
+dc_545444cd2c47,Spectrum Charlotte National Data Center,NC,building,10.0,0.0,0.0
+dc_5a2443390108,Apple,OR,building,30.0,0.08,0.0
+dc_fca78ca8bfb8,Google Data Center,AZ,campus_centroid,250.0,0.14,0.0
+dc_85d3abd0eef7,Cyxtera Tampa TP1,FL,building,30.0,0.0,0.0
+dc_bfc0dc91e53d,DC Blox Chattanooga,TN,building,10.0,0.0,0.0
+dc_71df8167e3fe,QTS Irving - Dallas Data Center Campus,TX,building,10.0,0.02,0.0
+dc_562f41628d8f,Centersquare Lisle ORD4 Data Center,IL,building,10.0,0.0,0.0
+dc_aabc1a713f0b,GoDaddy - Gilbert,AZ,building,10.0,0.0,0.0
+dc_d097e7925fc8,AT&T Center,CA,building,10.0,0.0,0.0
+dc_0882af2abe6a,,TN,building,10.0,0.0,0.0
+dc_56d92a649558,CenturyLink,GA,building,10.0,0.0,0.0
+dc_02fde467d5ca,,WY,building,30.0,0.4,0.0
+dc_d637d15aba22,,WY,building,10.0,0.02,0.0
+dc_42f487aa6732,,WY,building,10.0,0.0,0.0
+dc_7668d76b7f88,,WY,building,10.0,0.0,0.0
+dc_a4961042eb4e,Expedient Pittsburgh South,PA,building,10.0,0.04,0.0
+dc_7f37dc601968,Centersquare: Phoenix - (PHX1 - Mesa),AZ,building,10.0,0.0,0.0
+dc_c5410ccfaab6,,TX,building,10.0,0.0,0.0
+dc_a732fbbc8530,,TX,building,10.0,0.0,0.0
+dc_c192d1a8a58f,Liquid Web,MI,building,10.0,0.0,0.0
+dc_9886b7475b36,Amazon IAD63,VA,building,10.0,0.0,0.0
+dc_cee882b53bd3,"Liquid Web, Inc",MI,building,30.0,0.0,0.0
+dc_83eddcd908a9,Amazon IAD62,VA,building,10.0,0.0,0.0
+dc_e694b11642aa,,GA,building,10.0,0.0,0.0
+dc_c27350073d52,ADP South Dakota,SD,building,10.0,0.0,0.0
+dc_d0069abf7d58,TJX Corporate Techno,OH,building,10.0,0.0,0.0
+dc_47cb11fb436c,Compugen New Albany,OH,building,10.0,0.0,0.0
+dc_f011d85ef1f9,Compugen New Albany,OH,building,10.0,0.0,0.0
+dc_14a17660785d,Flexential Dallas - Richardson,TX,building,10.0,0.0,0.0
+dc_86ea4c3bc7df,Experian McKinney Data Center,TX,building,30.0,0.0,0.0
+dc_9004be7e046a,Digital Fortress: Richmond,VA,building,10.0,0.0,0.0
+dc_e0c9ea4740c6,DataCenter.BZ - Worthington-Columbus,OH,building,10.0,0.0,0.0
+dc_9fc2a0ec8776,Stack Infrastructure,CA,building,10.0,0.0,0.0
+dc_99361789c568,Stack Infrastructure,CA,building,10.0,0.0,0.0
+dc_cf02216bd8e1,Carfax,MO,building,10.0,0.0,0.0
+dc_2a18edd9d2aa,Facebook Altoona Data Center 3,IA,building,10.0,0.0,0.0
+dc_39191f37a067,Amazon IAD71,VA,building,10.0,0.0,0.0
+dc_1bea2a6b9476,Amazon IAD50,VA,building,30.0,0.0,0.0
+dc_0f68bcad00f6,Amazon IAD60,VA,building,10.0,0.0,0.0
+dc_4c5da4f27c7f,Amazon Web Services,TX,building,10.0,0.04,0.0
+dc_0d1d0eeeddb7,Amazon Web Services  CMH50,OH,building,10.0,0.2,0.0
+dc_b3c53f7424cf,,IN,building,10.0,0.2,0.0
+dc_b016da3f5d99,Thin-nology,TX,building,10.0,0.0,0.0
+dc_b28695cd9ccc,CyrusOne Norwalk,CT,building,10.0,0.0,0.0
+dc_07793c6ceca0,Data Foundry - Texas 2,TX,building,30.0,0.0,0.0
+dc_f962646a287f,Meta Los Lunas Data Center,NM,campus_centroid,250.0,0.44,0.0
+dc_e521fcdace02,Google Datacenter - Douglas County,GA,campus_centroid,10.0,0.0,0.0
+dc_52dd223d9f13,Google,IA,campus_centroid,250.0,0.16,0.0
+dc_855db3db7730,Microsoft - Azure Datacenter,IL,building,10.0,0.0,0.0
+dc_c48845706377,Cloud Storage Corp,KS,building,10.0,0.0,0.0
+dc_99f8820a08a4,Switch Las Vegas 8,NV,building,10.0,0.0,0.0
+dc_d8d14da2c80f,Switch Las Vegas 9,NV,building,10.0,0.0,0.0
+dc_5acd35df9012,,TX,building,10.0,0.0,0.0
+dc_1691e39922f2,Information Technology Data Center,NH,building,10.0,0.0,0.0
+dc_37283499bff1,Digital Fortress Lynnwood,WA,building,10.0,0.0,0.0
+dc_31ed378ec23d,,TX,building,10.0,0.0,0.0
+dc_337852dc4642,CyrusOne Allen,TX,building,10.0,0.0,0.0
+dc_0e8ad449fd73,Amazon Web Services,OR,building,10.0,0.0,0.0
+dc_7d9a53314d14,Amazon Web Services,OR,building,30.0,0.06,0.0
+dc_2735a8cdb5c5,DataBank SLC3,UT,building,10.0,0.0,0.0
+dc_d75a55f76a00,Amazon IAD80,VA,building,10.0,0.0,0.0
+dc_b0894a6e8d78,Equinix Ashburn DC12,VA,building,10.0,0.0,0.0
+dc_ccd80465a580,Stream DFW IV,TX,building,10.0,0.0,0.003132482592205861
+dc_b5e19f1a3ea5,Rackspace Richardson DFW3,TX,building,30.0,0.0,0.0
+dc_7bec7a33a3ec,Digital Realty Dallas DFW17,TX,building,30.0,0.0,0.0
+dc_6a37107362a1,Digital Realty Dallas DFW29,TX,building,30.0,0.0,0.0
+dc_ab141916e295,DataBank Dallas (DFW2),TX,building,10.0,0.0,0.0
+dc_833370eeca59,Digital Realty Dallas DFW28,TX,building,10.0,0.0,0.0
+dc_1f6063348ac4,Digital Realty Dallas DFW35,TX,building,30.0,0.0,0.0
+dc_cd26fe372499,Digital Realty Dallas DFW18,TX,building,30.0,0.0,0.0
+dc_4e931334ea09,Digital Realty Dallas DFW16,TX,building,10.0,0.0,0.0
+dc_086d8706935f,Digital Realty Northern Virginia IAD36,VA,building,10.0,0.0,0.0
+dc_ea0f41d7fc65,Digital Realty Northern Virginia IAD35,VA,building,10.0,0.0,0.0
+dc_1ee8b3394320,Digital Realty Northern Virginia IAD37,VA,building,10.0,0.0,0.0005315659383511928
+dc_340e8292278e,Digital Realty Northern Virginia IAD38,VA,building,10.0,0.0,0.0
+dc_4e2bc52efbde,State Farm Data Center,KS,building,10.0,0.0,0.0
+dc_74567a4bd1f1,U.S. Bank National Data Process Center,KS,building,10.0,0.0,0.0
+dc_0912ba349988,Equinix SV10,CA,building,10.0,0.4,0.0
+dc_cf6c58c618b0,,NJ,building,10.0,0.0,0.0
+dc_893226092cbf,,NE,building,10.0,0.0,0.0
+dc_5ee3b5325f08,HostDime Orlando Data Center,FL,building,10.0,0.32,0.0
+dc_0ef64a43e0fb,Google,SC,building,10.0,0.0,0.0
+dc_81f85512b730,TierPoint Baltimore BWI,MD,building,10.0,0.0,0.0
+dc_9ff573d8cbd4,NTT Ashburn VA2 Data Center,VA,building,10.0,0.0,0.0
+dc_1397a4d8be12,Strata Networks,UT,building,10.0,0.0,0.0
+dc_edfca97bd4a7,Goldman Sachs,NJ,building,10.0,0.0,0.0
+dc_94c07a192a70,Mapletree Industrial,GA,building,10.0,0.5,0.0
+dc_ee18f261d905,Switch Las Vegas 11,NV,building,10.0,0.0,0.0
+dc_12ade908d006,365 Bridgewater NJ,NJ,building,10.0,0.0,0.0
+dc_7dfcb0eb02f9,Google Berkeley County Data Center,SC,campus_centroid,10.0,0.0,0.0
+dc_c4e49d4ab25f,AngelTrax Data Center,AL,building,10.0,0.0,0.0
+dc_a0f70db62abb,Meta,NM,building,30.0,0.0,0.0
+dc_95f1c2f09a55,Amazon Web Services,OR,building,10.0,0.0,0.0
+dc_4099bfe11e86,Amazon Web Services,OR,building,10.0,0.0,0.0
+dc_605d28c1cd25,Centeris SH2 Build-to-Suit,WA,building,10.0,0.0,0.0
+dc_d39ed5f3b9d9,Centeris SH1 Colocation,WA,building,10.0,0.0,0.0
+dc_230712d60e56,Ascent - Atlanta Data Center,GA,building,10.0,0.02,0.0
+dc_09787eeb77bc,Microsoft TRP2,TX,building,30.0,0.0,0.0
+dc_0f59160e4785,Microsoft TRP1,TX,building,10.0,0.24,0.0
+dc_1dd477f34bc5,CyrusOne Quincy,WA,building,30.0,0.0,0.0
+dc_f6fb22a146c3,,MO,building,10.0,0.0,0.0
+dc_6665f22986f2,Digital Realty ACC7,VA,building,10.0,0.0,0.0
+dc_fdba30db93f1,NTT Ashburn VA3 Data Center,VA,building,10.0,0.0,0.0
+dc_b74d4fad6802,Digital Realty ACC9,VA,building,10.0,0.0,0.0
+dc_e4b9d11fc296,Flexential Dallas - Plano,TX,building,30.0,0.02,0.0
+dc_e3b416a1407f,,NC,building,10.0,0.0,0.0
+dc_ac648486d8b7,US Signal - OR01 Bend,OR,building,10.0,0.0,0.0
+dc_a07b002af4ce,Expedient Milwaukee,WI,building,10.0,0.0,0.0
+dc_4ff698fbffc3,Amazon Web Services,VA,building,10.0,0.0,0.0
+dc_420b62321920,Oxford Networks,ME,building,30.0,0.54,0.0
+dc_048121696554,NAO 1/NAO 2,OH,building,10.0,0.0,0.0
+dc_88e2629c4bed,NTT,TX,building,10.0,0.0,0.0
+dc_b5dbae714a3e,Rice Data Center,TX,building,10.0,0.0,0.0
+dc_90a6848e7223,Facebook Fort Worth Datacenter,TX,building,10.0,0.0,0.0
+dc_dfc666f9c4cb,Amazon Web Services,OH,building,30.0,0.28,0.0
+dc_3c709b4835c3,Microsoft Boydton Data Center,VA,campus_centroid,10.0,0.36,0.0
+dc_be3f35a6c8d6,Iron Mountain AZP-2,AZ,building,30.0,0.0,0.0
+dc_feaaf89fa226,Amazon IAD68,VA,building,10.0,0.0,0.0
+dc_0c42588f498d,Amazon IAD81,VA,building,10.0,0.0,0.0
+dc_91f5a2b35cfd,Google,VA,building,10.0,0.0,0.0
+dc_ef10904644d7,Amazon IAD120,VA,building,10.0,0.0,0.0
+dc_1a6315f98500,Amazon IAD121,VA,building,10.0,0.0,0.0
+dc_33704ffbd31e,Microsoft,WA,building,30.0,0.0,0.0
+dc_221b5b4e4cbe,Microsoft,WA,building,10.0,0.0,0.0
+dc_cb7067a8f749,Microsoft,WA,building,30.0,0.0,0.0
+dc_c78cab6d2736,Microsoft,WA,building,30.0,0.0,0.0
+dc_f3f12ded37f2,Vantage WA12,WA,building,30.0,0.0,0.0
+dc_05ea777c5bb7,,VA,building,10.0,0.0,0.0
+dc_f7f92d6bf396,QTS Ashburn 1,VA,building,10.0,0.0,0.0
+dc_9c363afc7136,Amazon IAD57,VA,building,10.0,0.0,0.0
+dc_ba22ed99a4e2,Amazon IAD64,VA,building,10.0,0.42,0.0
+dc_4a132824cfec,Amazon IAD84,VA,building,30.0,0.0,0.0
+dc_8efe4675d0f1,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_ecfbfcfe278f,Amazon Web Services,OR,building,10.0,0.0,0.0
+dc_5218a11a35e9,Amazon Web Services,OR,building,30.0,0.02,0.0
+dc_5aad22ea436a,Amazon Web Services,OR,building,10.0,0.0,0.0
+dc_bbebb5bd9416,Google Taylor Lake Data Center,OR,building,10.0,0.0,0.0
+dc_f8f41a355b01,Digital Realty Northern Virginia IAD73,VA,building,10.0,0.0,0.0
+dc_9e58a3cef4db,Digital Realty Northern Virginia IAD39,VA,building,10.0,0.0,0.0
+dc_cbf981ab067c,Digital Realty ACC10,VA,building,10.0,0.0,0.0
+dc_00512a7203c4,Sentinel Ashburn Nexus Data Center,VA,building,10.0,0.0,0.0
+dc_1abdc6f74897,Vantage VA11,VA,building,10.0,0.0,0.0
+dc_18fb4cc70d24,Amazon IAD90,VA,building,10.0,0.0,0.0
+dc_54774f9d575c,Amazon IAD91,VA,building,10.0,0.0,0.0
+dc_5c56cb4398bf,Amazon IAD92,VA,building,10.0,0.0,0.0
+dc_c46ec9dd6e53,Amazon IAD144,VA,building,30.0,0.0,0.0
+dc_6de50b540090,CyrusOne NVA8,VA,building,30.0,0.04,0.0
+dc_c5814c3bae92,Amazon IAD98,VA,building,10.0,0.0,0.0
+dc_0e2031e82e1b,Amazon IAD99,VA,building,10.0,0.0,0.0
+dc_f1a86c9afb0a,Amazon IAD114,VA,building,10.0,0.28,0.0
+dc_ad7345365e4c,Amazon IAD115,VA,building,10.0,0.0,0.0
+dc_790645b0b559,Amazon IAD65,VA,building,30.0,0.0,0.0
+dc_6b77189e7c43,Amazon IAD150,VA,building,10.0,0.0,0.0
+dc_d3c309846778,,NM,building,10.0,0.0,0.0
+dc_2ae3bfe26148,Stonewall Creek Business Park,VA,building,30.0,0.02,0.0
+dc_5f4d636f1ee7,Apple,OR,building,10.0,0.0,0.0
+dc_45390bd84c06,Meta,OR,building,10.0,0.0,0.0
+dc_efab6ab952e9,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_3754a7061eec,Sabey Intergate.Ashburn,VA,building,30.0,0.0,0.0
+dc_9f26b8e594c9,Google Montgomery Data Center,TN,campus_centroid,250.0,0.0,0.0
+dc_f03287bb770b,Google Data Center,VA,building,10.0,0.0,0.0
+dc_5447998cc8d7,Centersquare Atlanta ATL1,GA,building,10.0,0.0,0.0
+dc_20ffe88937a6,Digital Realty CH3,IL,building,30.0,0.0,0.0
+dc_0895931a44dc,Digital Realty CH2,IL,building,10.0,0.0,0.0
+dc_433c57ca1a5b,DataBank SLC2,UT,building,10.0,0.0,0.0
+dc_34f9f44aa908,DataBank SLC4,UT,building,10.0,0.0,0.0
+dc_5a2516f556b3,DataBank Plano Data Center,TX,building,10.0,0.0,0.0
+dc_adec6a6778f5,Equinix Secaucus NY6,NJ,building,10.0,0.0,0.0
+dc_0beb79d0e77c,Google Data Center,VA,campus_centroid,10.0,0.0,0.0
+dc_9b36c38fcc40,Skybox Houston One,TX,building,10.0,0.12,0.0
+dc_d44ec64700fa,Google Jackson County Data Center,AL,campus_centroid,250.0,0.62,0.0
+dc_8379a521a52c,PSE&G Delivery Emergency Response Center,NJ,building,10.0,0.0,0.0
+dc_ef8eba6bb65f,T5 Charlotte Campus,NC,building,10.0,0.0,0.0
+dc_d334913cb26e,Epic / Mayo Data Center,MN,building,10.0,0.0,0.0
+dc_7f2eb6b38fbd,STACK New Albany,OH,building,10.0,0.0,0.0
+dc_8af4ea407ec3,Choctaw Nation of Oklahoma Data Center,OK,building,10.0,0.0,0.0
+dc_3693cec0112a,QTS Data Center - Hillsboro 1,OR,building,10.0,0.0,0.0
+dc_330093ad86f7,,NJ,building,10.0,0.0,0.0
+dc_3a23c08ab006,Flexential Salt Lake City - Downtown,UT,building,10.0,0.0,0.0
+dc_d3c9d1fc34c5,Oregon State Data Center,OR,building,10.0,0.0,0.0
+dc_f9abac844891,Digital Realty PDX11 Data Center,OR,building,30.0,0.0,0.0
+dc_443bffa57334,Flexential Fort Lauderdale,FL,building,10.0,0.0,0.0
+dc_e9deb284a87f,Amazon IAD145,VA,building,10.0,0.0,0.0
+dc_ebdae989294c,Amazon Web Services IAD117,VA,building,10.0,0.0,0.0
+dc_7a35346543ed,Amazon Web Services IAD116,VA,building,10.0,0.0,0.0
+dc_8df36a0a09b5,Flexential Las Vegas - North,NV,building,10.0,0.0,0.0
+dc_8fb393ce5cb8,,TX,building,10.0,0.0,0.0
+dc_f5a70ed2b195,Fort Rock DC,OR,building,10.0,0.0,0.0
+dc_110a4aba51b3,,MI,building,10.0,0.0,0.0
+dc_1b4a6e68cdff,,NJ,building,10.0,0.0,0.0
+dc_03eee2face55,Meta,NM,building,30.0,0.0,0.0
+dc_c0e58b97b609,iGLASS Networks,NC,building,10.0,0.0,0.0
+dc_fd81772613cf,Central Office,WI,building,10.0,0.0,0.0
+dc_d139d3d1026e,,MT,building,10.0,0.0,0.0
+dc_685f4d6dffe6,Vital Records,NJ,building,10.0,0.1,0.0
+dc_1562ba96259b,Verizon Wireless NE Headquarters,NJ,building,10.0,0.0,0.0
+dc_c0fdbe032d75,Meta Henrico Data Center,VA,building,30.0,0.02,0.0
+dc_e0148a6d7cfe,,WI,building,10.0,0.18,0.0
+dc_72321c59e96b,Meta,OR,building,10.0,0.0,0.0
+dc_5da707de5ff8,Meta,OR,building,10.0,0.0,0.0
+dc_b38461998b03,,MI,building,30.0,0.04,0.0
+dc_69a7a940e136,,NV,building,10.0,0.0,0.0
+dc_6eb02d929ac3,,NV,building,10.0,0.0,0.0
+dc_e7490836256a,,NV,building,30.0,0.0,0.0
+dc_bd7ec689a7b2,,NV,building,10.0,0.0,0.0
+dc_b79d42c9a3ab,,NV,building,10.0,0.0,0.0
+dc_a6e1f2ad575b,,NV,building,10.0,0.0,0.0
+dc_a84467e0fe1e,Tennessee Processing Center LLC,TN,building,10.0,0.0,0.0
+dc_c52613c23f50,Allentown-TekPark,PA,building,10.0,0.0,0.0
+dc_66477ccffb02,Meta,NM,building,30.0,0.0,0.0
+dc_83f0a31399f3,US Signal CO01 - Denver,CO,building,10.0,0.0,0.0
+dc_bf74522cdc31,PG&E Datacenter,CA,building,10.0,0.0,0.0
+dc_697fb0253e39,CyrusOne PHX6,AZ,building,30.0,0.0,0.0
+dc_2a23ca86f39a,Facebook Altoona Data Center 4,IA,building,10.0,0.0,0.0
+dc_53d2895afa2f,Digital Realty IAD41 (Building P),VA,building,10.0,0.0,0.0
+dc_64b54588a2f9,Amazon IAD118,VA,building,10.0,0.0,0.0
+dc_340ff7de7b3d,Aligned Ashburn,VA,building,10.0,0.0,0.0
+dc_ee1d5c95c480,Equinix Ashburn DC15,VA,building,10.0,0.0,0.0
+dc_9a9772149ba3,Sabey Intergate.Ashburn (Building A),VA,building,10.0,0.0,0.0
+dc_1a5e11d27901,NTT Ashburn VA5 Data Center,VA,building,10.0,0.0,0.0
+dc_d740e4f61b56,NTT Ashburn VA4 Data Center,VA,building,10.0,0.0,0.0
+dc_ff3b81fbfd6f,CloudHQ LC1,VA,building,10.0,0.0,0.0
+dc_2328225d0c1f,CloudHQ LC2,VA,building,10.0,0.0,0.0
+dc_d693a8cbac60,Amazon IAD146,VA,building,10.0,0.0,0.0
+dc_4eff2c1f5e0f,PHX-10,AZ,building,30.0,0.0,0.0
+dc_c4b9bcee32cd,Equinix Ashburn DC21,VA,building,30.0,0.1,0.0
+dc_34504f6932cc,,NY,building,10.0,0.0,0.0
+dc_ed91aed5b37e,NAO 3,OH,building,30.0,0.0,0.0
+dc_114c47a01e77,,WA,building,30.0,0.0,0.0
+dc_aca4fdbc3f4a,EdgeCore,AZ,building,30.0,0.0,0.0
+dc_415ec14e7f88,Comcast,MI,building,10.0,0.0,0.0
+dc_ba84f7107278,SAP COS02,CO,building,10.0,0.0,0.0
+dc_6d4376c7e8a2,Actapio,WA,building,30.0,0.24,0.0
+dc_89ac9b873c30,,WA,building,30.0,0.0,0.0
+dc_93a4507ebb34,Facebook Fort Worth Datacenter,TX,building,30.0,0.0,0.0
+dc_c5af5e7b67f8,Charles Schwab Data Center,TX,building,10.0,0.0,0.0
+dc_230dec843522,Amazon IAD140,VA,building,10.0,0.0,0.0
+dc_d5be93382554,Amazon IAD141,VA,building,10.0,0.0,0.0
+dc_9f86a9be9cdb,1623 Farnam,NE,building,30.0,0.0,0.0
+dc_8a8de44b5d59,Credit Suisse: Clifton Data Center,NJ,building,10.0,0.0,0.0
+dc_cffe36ef20e3,HCA Information Technology & Services Data Center,TN,building,10.0,0.0,0.0
+dc_ca4ce1d1a929,TierPoint,TN,building,10.0,0.0,0.0
+dc_d1ab1505b7c8,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_7d1001e2c4ce,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_c123c483cf92,Flexential Brentwood Data Center,TN,building,30.0,0.0,0.0
+dc_eff2b6ea88b4,,TN,campus_centroid,10.0,0.0,0.0
+dc_2e8f13854547,StrongMind,AZ,building,10.0,0.0,0.0
+dc_f9dd91d3b5f8,BB&T Data Center,NC,building,10.0,0.0,0.0
+dc_4bbf56c61529,Microsoft,IA,building,10.0,0.0,0.0
+dc_adfa37d6eb75,Microsoft,IA,building,10.0,0.0,0.0
+dc_5c188ee0a08e,Microsoft,IA,building,10.0,0.0,0.0
+dc_82c838320fc4,Microsoft,IA,building,10.0,0.0,0.0
+dc_6b0fbb988249,Microsoft,IA,building,10.0,0.0,0.0
+dc_d022a0bae9de,Microsoft,IA,building,30.0,0.0,0.0
+dc_5077380c4e9c,Microsoft,IA,building,10.0,0.0,0.0
+dc_5655c21db942,Microsoft,IA,building,30.0,0.0,0.0
+dc_af3b818f5474,Microsoft,IA,building,30.0,0.0,0.0
+dc_3b086a495bdc,Microsoft,IA,building,30.0,0.34,0.0
+dc_91374edadfb6,Facebook Altoona Data Center 5,IA,building,30.0,0.0,0.0
+dc_25aa98305d4b,,NY,building,10.0,0.0,0.0
+dc_aa188d117b03,Blockfusion Niagra Falls,NY,building,30.0,0.0,0.0
+dc_ee6643a8eb7d,Lumen,UT,building,10.0,0.04,0.0
+dc_84ad60eb1b07,Sungard Systems International,AL,building,30.0,0.0,0.0
+dc_44d6e3741482,Myndshift Technologies,AZ,building,30.0,0.0,0.0
+dc_72e0b2b6bdf4,ForceAmp.com,IA,building,10.0,0.0,0.0
+dc_3abd12c5de38,TierPoint - Charlotte Data Center,NC,building,10.0,0.0,0.0
+dc_2b8dfc559922,SEGRA,NC,building,10.0,0.26,0.0
+dc_7d96f21e96e8,Middletown Data Center,VA,building,10.0,0.0,0.0
+dc_3aebc3edbd4d,CoreSite Chicago Data Center (CH2),IL,building,30.0,0.0,0.0
+dc_5251c1998ce0,Norma Beach Cable Landing Station,WA,building,10.0,0.0,0.0
+dc_d418410619e1,,AZ,building,10.0,0.0,0.0
+dc_d9771f2d7f9f,Google,NV,building,30.0,0.0,0.0
+dc_d9c874755de8,Google,NV,building,30.0,0.04,0.0
+dc_e022cb5d327b,Google,AL,building,30.0,0.0,0.0
+dc_1390c65c85f0,Google,AL,building,30.0,0.0,0.0
+dc_573f8a5781df,,VA,building,10.0,0.0,0.0
+dc_916641fe1369,Google,TX,building,10.0,0.0,0.0
+dc_7910da66ad06,Google,TX,building,10.0,0.0,0.0
+dc_e3eea2ec5e00,Google,TN,building,30.0,0.0,0.0
+dc_478c687740da,Google NBY-1,OH,building,30.0,0.06,0.0
+dc_cec54ea43a46,Meta Sarpy Data center,NE,building,10.0,0.0,0.0
+dc_ed5526cb2443,Meta Sarpy Data center,NE,building,10.0,0.0,0.0
+dc_83e8ea7d14a0,Google,NE,building,10.0,0.0,0.0
+dc_45101812ebde,JPMorgan Chase,CO,building,10.0,0.0,0.0
+dc_b7f05da064df,Marquette-Adams Telephone Coop,WI,building,10.0,0.0,0.0
+dc_c875f8a125cb,Compass Data Center,TX,building,10.0,0.0,0.0
+dc_787326b05d49,Amazon IAD119,VA,building,10.0,0.0,0.0
+dc_e3f7200338fd,Flexential Portland - Hillsboro 4,OR,building,30.0,0.0,0.0
+dc_91489ab87680,Stream Chicago II,IL,building,10.0,0.0,0.0
+dc_144cef939b14,STACK Chicago CHI01,IL,building,10.0,0.0,0.0
+dc_9c4211d3ccea,Stream Chicago I,IL,building,30.0,0.0,0.0
+dc_23b0f1f2b92c,Turnkey Internet,NY,building,10.0,0.0,0.0
+dc_2a56d8b8fa00,Microsoft,IA,building,10.0,0.0,0.0
+dc_12edc16ab3f5,,NC,building,30.0,0.0,0.0
+dc_3cee381ca6c0,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_1592f8a75bc6,Iron Mountain,WA,building,10.0,0.0,0.0
+dc_65d48b7b2fd8,DBT Data - Harrisonburg Center,VA,building,10.0,0.0,0.0
+dc_b93bd4dfbee7,amnet Data Center,CT,building,10.0,0.0,0.0
+dc_e06c46dabeb5,TierPoint Kansas City - Lenexa,KS,building,10.0,0.0,0.0
+dc_f5513f749da8,CloudHQ MCC1,VA,building,10.0,0.0,0.03162055495429543
+dc_7fc2fd8eb460,Meta,NC,building,30.0,0.0,0.0
+dc_d6f640fb6635,Amazon IAD129,VA,building,30.0,0.02,0.0
+dc_fd0192eae06a,Microsoft,VA,building,10.0,0.0,0.0
+dc_f66efb0a0bc9,NTT Silicon Valley SV1 Data Center,CA,building,30.0,0.0,0.0
+dc_b54674e4a1dd,T5 Data Center,GA,building,10.0,0.0,0.0
+dc_73600f71acda,Microsoft Data Center,VA,building,30.0,0.0,0.0
+dc_b8ec7b743908,Arcola Tech Park,VA,campus_centroid,250.0,0.26,0.0
+dc_8f7e3fd47d8b,Amazon IAD125,VA,building,30.0,0.0,0.0
+dc_e06390a3cf71,Amazon IAD124,VA,building,10.0,0.0,0.0
+dc_711866d61cdd,Stack Infrastructure - POR03,OR,building,30.0,0.0,0.0
+dc_924bac73f757,,MI,building,10.0,0.0,0.0
+dc_37633208c606,Family History Center,ID,building,10.0,0.0,0.0
+dc_02ca9e4d5343,,TN,building,10.0,0.06,0.0
+dc_8b186260df9f,42310 THUNDERBALL DR,VA,building,10.0,0.0,0.0
+dc_84d7cd7f77ed,QTS Data Center - Hillsboro 2,OR,building,30.0,0.0,0.0
+dc_6029c6e6072f,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_c01fb29e88f6,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_b1c2cb55694d,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_26679b49b723,,CO,building,10.0,0.0,0.0
+dc_f1a652f10359,,NY,building,10.0,0.0,0.0
+dc_d71a4f367977,QTS Data Center - Hillsboro 2,OR,building,30.0,0.0,0.0
+dc_3b5df59ce5b8,QTS Data Center - Hillsboro 2,OR,building,30.0,0.0,0.0
+dc_bac15142be82,QTS Data Center - Hillsboro 2,OR,building,30.0,0.0,0.0
+dc_403473c81f1f,Flexential Portland - Hillsboro 3,OR,building,30.0,0.38,0.0
+dc_5df588dae044,,WI,building,30.0,0.08,0.0
+dc_87d4cffa460b,Lumen Cleveland,OH,building,10.0,0.0,0.0
+dc_a2db55d0efea,,NC,building,30.0,0.0,0.0
+dc_1dd5890ebb6b,Tennessee South Data Center,TN,building,10.0,0.0,0.0
+dc_a452347faec2,,CA,building,30.0,0.0,0.0
+dc_4eb1e48ec0be,Amazon IAD163,VA,building,10.0,0.0,0.0
+dc_f04188e560e6,Johns Hopkins Data Center,MD,building,10.0,0.0,0.0
+dc_d365c72ea3b9,Ebay,UT,building,10.0,0.0,0.0
+dc_191efb7ea726,Edgeconnex Data Center,CA,building,10.0,0.0,0.0
+dc_1bdb44e1842a,,NJ,building,30.0,0.0,0.0
+dc_84eaf8742a3f,,AZ,building,30.0,0.16,0.0
+dc_a0c66ebeafd4,Omnis Network,AZ,building,10.0,0.0,0.0
+dc_a320d760368f,Travelers Insurance,NE,building,30.0,0.1,0.0
+dc_00a02e9b7cf8,Flexential Nashville - Franklin,TN,building,10.0,0.22,0.0
+dc_c3af76581e21,Verizon,UT,building,10.0,0.0,0.0
+dc_2e0d7065c5b2,,IA,building,10.0,0.0,0.0
+dc_7a05f73ca77d,,OK,building,10.0,0.0,0.0
+dc_d63cf08f250a,Amazon IAD175,VA,building,30.0,0.0,0.0
+dc_31eac5a9a731,DLI ONE,GA,building,10.0,0.0,0.0
+dc_869246c3ddf0,Amazon IAD147,VA,building,10.0,0.44,0.0
+dc_db551e60c8c7,E-Foam,FL,building,10.0,0.04,0.0
+dc_e3e2113ca594,,CT,building,10.0,0.0,0.0
+dc_585b130bbc37,SimpleHelix,AL,building,10.0,0.0,0.0
+dc_719da80ba59e,CenturyLink,OR,building,30.0,0.0,0.0
+dc_9656dea8298d,Date Center West - Eugene,OR,building,10.0,0.0,0.0
+dc_16409bb98d9c,DataBank SLC5,UT,building,10.0,0.0,0.0
+dc_e9ba7c30d146,Digital Realty Atlanta ATL11,GA,building,10.0,0.14,0.0
+dc_e7e879fe0f05,Switch Data Center,GA,building,30.0,0.04,0.0
+dc_e8a35c14d2f4,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_1624f2fc727a,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_0a48e11e6871,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_9df53017280d,CyrusOne PHX7,AZ,building,30.0,0.0,0.0
+dc_4099d52bf841,CyrusOne PHX4,AZ,building,30.0,0.0,0.0
+dc_04ab62405005,CyrusOne PHX5,AZ,building,30.0,0.0,0.0
+dc_2d889a97f7e9,Northwest Data Center and Communications Hub,CA,building,30.0,0.0,0.0
+dc_627ff60a8500,Digital Crossroad,IN,building,30.0,0.0,0.0
+dc_2e94aa76b2e3,CyrusOne NVA7,VA,building,10.0,0.0,0.0
+dc_8655b82b45fe,Switch Las Vegas 10,NV,building,30.0,0.0,0.0
+dc_ae5f9fdee7ee,Amazon IAD174,VA,building,10.0,0.0,0.0
+dc_8346029d9f3d,Amazon IAD164,VA,building,10.0,0.0,0.0
+dc_265564f45ed2,Vantage VA12,VA,building,10.0,0.0,0.0
+dc_199ded780f63,Microsoft,VA,building,10.0,0.0,0.0
+dc_c3e3abbeb801,Verizon Wireless Mew Building,TX,building,10.0,0.0,0.0
+dc_b2ae0d89652f,,NJ,building,10.0,0.0,0.0
+dc_e89730a17213,Amazon IAD152,VA,building,10.0,0.0,0.0
+dc_ede8e462546a,Amazon IAD151,VA,building,10.0,0.0,0.0
+dc_08e7c19da1a8,Amazon IAD83,VA,building,10.0,0.14,0.0
+dc_81f8dd3b6f39,Amazon Web Services,VA,building,10.0,0.0,0.0
+dc_ac6c1bbc4b5a,Amazon IAD122,VA,building,10.0,0.0,0.0
+dc_510cff48ca13,CyrusOne Sterling IX,VA,building,10.0,0.26,0.0
+dc_186227436fd6,Iron Mountain VA-2,VA,building,10.0,0.1,0.0
+dc_3d475b731d7a,Iron Mountain VA-1,VA,building,10.0,0.0,0.0
+dc_757f768eba9e,Amazon Web Services,VA,building,10.0,0.0,0.0
+dc_907bebabdb02,Amazon Web Services,VA,building,10.0,0.0,0.0
+dc_5270a2cc2b71,Amazon Web Services,VA,building,10.0,0.0,0.0
+dc_f64d056bbae2,Amazon IAD102,VA,building,10.0,0.0,0.0
+dc_215283604b6e,Amazon IAD101,VA,building,10.0,0.0,0.0
+dc_0f715e95c136,Amazon IAD100,VA,building,10.0,0.0,0.0
+dc_03018a9d0b6e,CloudHQ MCC2,VA,building,30.0,0.72,0.0
+dc_78d8f7c02c3f,Rackspace Somerset NYC1,NJ,building,10.0,0.0,0.0
+dc_dd7f371bd132,Rackspace Belmont NYC2,NJ,building,10.0,0.0,0.0
+dc_d8396c50b3ee,Amazon Web Services,VA,building,10.0,0.12,0.0
+dc_eb20055e37d8,QTS Ashburn-Shellhorn DC1,VA,building,10.0,0.0,0.0
+dc_e8d31e068a27,QTS Atlanta Data Center 2,GA,building,30.0,0.0,0.0
+dc_74a74b023e2f,,TX,building,10.0,0.0,0.0
+dc_6bab7da413ec,Microsoft TRP3 (SAT46),TX,building,30.0,0.14,0.0
+dc_28267cfc3b00,Microsoft,TX,building,30.0,0.38,0.0
+dc_fae6b5693fbe,Microsoft,TX,building,30.0,0.32,0.0
+dc_999534d8e27f,Pewaukee Data Center,WI,building,30.0,0.02,0.0
+dc_9d8cf5da6d03,,GA,building,10.0,0.0,0.0
+dc_08f38c9b891d,CenturyLink,NV,building,10.0,0.0,0.0
+dc_3bcbc5a11a48,EdgeConneX PHX02 Data Center,AZ,building,30.0,0.0,0.0
+dc_699df009d618,Amazon IAD601,VA,building,30.0,0.22,0.0
+dc_e956e70cd991,Switch Edge 1,NV,building,10.0,0.0,0.0
+dc_bb73a0990371,Switch Las Vegas 4,NV,building,10.0,0.0,0.0
+dc_3c2574f581bf,Switch Las Vegas 5,NV,building,10.0,0.0,0.0
+dc_0ecb384a674e,T-Mobile Everglades MSO Data Center,FL,building,30.0,0.36,0.0
+dc_ecc6d4f818f6,EdgeConneX - Portland,OR,building,30.0,0.0,0.0
+dc_9e9c29814c16,DC Blox Data Center,AL,building,10.0,0.0,0.0
+dc_db49eaafdae8,Amazon Web Services CMH56,OH,building,30.0,0.2,0.0
+dc_dd23e424efc1,Amazon Web Services  CMH59,OH,building,30.0,0.0,0.0
+dc_02d1d5411388,Searcy Information Technologies,AR,building,10.0,0.0,0.0
+dc_5ce525abc4b0,Amazon Web Services,VA,building,10.0,0.0,0.0
+dc_f16da2318b3f,Amazon Web Services,VA,building,10.0,0.06,0.0
+dc_5b3b4f66f387,Digital Loudoun Plaza,VA,building,30.0,0.0,0.0
+dc_2d6ea7ca3b60,Digital Loudoun Plaza,VA,campus_centroid,250.0,0.3,0.0004377950811074939
+dc_e99dc41af8d5,Meta Eagle Mountain Data Center,UT,building,30.0,0.08,0.0
+dc_10325eee14b2,Meta Eagle Mountain Data Center,UT,building,30.0,0.12,0.0
+dc_0c8314ec56c5,,KS,building,10.0,0.0,0.0
+dc_e4f0ffd292d9,Digital Realty IAD42 (Building R),VA,building,10.0,0.0,0.0
+dc_247030637655,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_d485de36a4e3,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_4fbb34622183,Meta Henrico Data Center,VA,building,30.0,0.0,0.0
+dc_0d21ead2053e,,FL,building,10.0,0.0,0.0
+dc_10de28f82ea3,DataBank Las Vegas LAS1,NV,building,10.0,0.0,0.0
+dc_57b520c4877c,Meta Eagle Mountain Data Center,UT,building,30.0,0.06,0.0
+dc_c6d76c93385d,Amazon IAD601,VA,building,10.0,0.0,0.0
+dc_262cc9519516,,AZ,building,10.0,0.0,0.0
+dc_48a36602236c,,AZ,building,10.0,0.0,0.0
+dc_c4344c114a1e,Meta Stanton Springs Data Center,GA,campus_centroid,10.0,0.0,0.0
+dc_3a1b184b17f4,,GA,building,10.0,0.0,0.0
+dc_27b1c3e36589,Flexential Salt Lake City - Millcreek,UT,building,10.0,0.0,0.0
+dc_99fd51d91906,Amazon Web Services,OR,building,30.0,0.08,0.0
+dc_3fcfdde53010,Amazon Web Services,VA,building,10.0,0.0,0.0
+dc_7ef3283adb5a,,VA,building,10.0,0.02,0.0
+dc_3c9eb2937c6d,COPT Innovation Park Data Center,VA,building,10.0,0.0,0.0
+dc_bb427e05d591,COPT Data Center Bldg 2,VA,building,10.0,0.0,0.0
+dc_43894af7cd6d,QTS Ashburn Lockridge,VA,building,30.0,0.0,0.0
+dc_b58a2083db92,Amazon,CA,building,10.0,0.0,0.0
+dc_178b28f5cd76,,SC,building,10.0,0.0,0.0
+dc_c806773aba18,Google,SC,building,10.0,0.0,0.0
+dc_e32fbe5604ea,Google,SC,building,10.0,0.0,0.0
+dc_da711190ad53,Google,SC,building,10.0,0.14,0.0
+dc_7c9ebf6e3c47,Google,SC,building,30.0,0.02,0.0
+dc_49df3f3fad96,Google,SC,building,10.0,0.0,0.0
+dc_46c732da4507,Google,SC,building,10.0,0.0,0.0
+dc_8b4592f3e993,Google,SC,building,10.0,0.0,0.0
+dc_4d8a5f0cb9bc,,GA,building,10.0,0.0,0.0
+dc_10d0eb56510d,,GA,building,10.0,0.0,0.0
+dc_7f252a87585c,Microsoft EAT02,WA,building,30.0,0.0,0.0
+dc_9f03a5bdb15d,Google,IA,building,10.0,0.0,0.0
+dc_d12fd41fa0cc,Google,IA,building,10.0,0.0,0.0
+dc_b13d123c2fa9,Google,IA,building,10.0,0.0,0.0
+dc_f7b7979f9b54,Google,IA,building,30.0,0.0,0.0
+dc_f9e787337659,Google,IA,building,30.0,0.1,0.0
+dc_e3094350f227,Google,IA,building,30.0,0.0,0.0
+dc_a2bac79b8856,Google,IA,building,30.0,0.0,0.0
+dc_1fea4ccdacb1,Google,IA,building,30.0,0.0,0.0
+dc_1569e6fccb74,Google,IA,building,30.0,0.0,0.0
+dc_d4eba7bb95c9,Google,IA,building,30.0,0.0,0.0
+dc_b8c6e0dbdf86,Google,IA,building,30.0,0.0,0.0
+dc_1da0c5d7a144,Google,IA,building,10.0,0.0,0.0
+dc_2c9c352d5cb0,Google,IA,building,10.0,0.0,0.0
+dc_a886b4d06283,Google,IA,building,10.0,0.0,0.0
+dc_90a5aa0e6a9f,Microsoft,IA,building,30.0,0.28,0.0
+dc_ec0baf9bd582,Microsoft,IA,building,10.0,0.0,0.0
+dc_abd7ac10d990,Microsoft,IA,building,10.0,0.0,0.0
+dc_f97d793b329a,,CA,building,30.0,0.0,0.0
+dc_d9f6b1c94072,xAI Macrohardrr,MS,building,10.0,0.0,0.0
+dc_5d6a8401ff0b,Flexential Portland - Hillsboro 4 Expansion,OR,building,30.0,0.0,0.0
+dc_b63c46c43ef7,Flexential Portland - Hillsboro 5,OR,building,30.0,0.0,0.0
+dc_7fe16fd74581,QTS San Antonio II,TX,building,30.0,0.18,0.0
+dc_1cb556e009e0,T5@Colorado Springs,CO,building,10.0,0.0,0.0
+dc_77bfb34f333b,Flexential Tampa - North,FL,building,10.0,0.0,0.0
+dc_42c854b8c335,,VA,building,10.0,0.0,0.0
+dc_370cc6f40ea9,Amazon IAD-169,VA,building,10.0,0.0,0.0
+dc_9b04c18bf82a,Amazon IAD-179,VA,building,10.0,0.24,0.0
+dc_b6815d83ac53,Aligned IAD02,VA,building,30.0,0.0,0.0
+dc_429c38217707,QTS Manassas DC5,VA,building,10.0,0.0,0.0
+dc_0a74f3f6a21d,PHX-11,AZ,building,30.0,0.02,0.0
+dc_abcef906ff55,,NY,building,30.0,0.0,0.0
+dc_624a20da991b,Compute North,NE,building,30.0,0.0,0.0
+dc_baa41125feea,Flexential Atlanta - Douglasville 1,GA,building,30.0,0.06,0.0
+dc_2143f8b4a2a6,Google,TN,building,30.0,0.0,0.0
+dc_f22eaad28efd,SPC3A,TN,building,30.0,0.0,0.0
+dc_7212377335fd,Amazon Web Services,VA,building,10.0,0.0,0.0
+dc_9efbddd27ce0,Meta,NC,building,30.0,0.08,0.0
+dc_a6ee91f963a9,,NY,building,10.0,0.0,0.0
+dc_f377bd967513,TierPoint Valley Forge,PA,building,10.0,0.0,0.0
+dc_c4a353e43e52,Aligned DC - PDX-01,OR,building,30.0,0.0,0.0
+dc_b98d99d8249f,Tahoe Reno 1,NV,building,10.0,0.0,0.0
+dc_d185c3f308a0,Tahoe Reno 2,NV,building,30.0,0.0,0.0
+dc_25c7e68064cd,Flexential Salt Lake City - Fair Park,UT,building,10.0,0.0,0.0
+dc_31eff1e33048,CyrusOne San Antonio IV,TX,building,10.0,0.0,0.0
+dc_ced68be9f4dd,Equinix Ashburn DC16,VA,building,10.0,0.0,0.0
+dc_d5219db2a1d5,Microsoft IAD11,VA,building,30.0,0.0,0.0
+dc_b365760cf1a8,Amazon Web Services,OR,building,30.0,0.1,0.0
+dc_0f5514724b8f,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_c7365e51dba0,Amazon Web Services,OR,building,30.0,0.58,0.0
+dc_8e0b128bc5f7,Amazon Web Services,OR,building,30.0,0.26,0.0
+dc_9acc4e51969d,Amazon Web Services,OR,building,10.0,0.0,0.0
+dc_782851ca8777,Amazon Web Services,OR,building,30.0,0.5,0.0
+dc_b6941fc8a5af,,VA,building,10.0,0.0,0.0
+dc_d10d2ffca929,,VA,building,10.0,0.0,0.0
+dc_af15da12f636,Meta Henrico Data Center,VA,building,10.0,0.0,0.0
+dc_9641476d2168,QTS,AZ,building,30.0,0.0,0.0
+dc_ff85876636d4,FiberState Datacenter,UT,building,10.0,0.0,0.0
+dc_cbea6272623c,,IL,building,30.0,0.0,0.0
+dc_451e126116e7,CoreSite Reston Campus VA2,VA,building,30.0,0.0,0.0
+dc_978ee4734a31,AWS IAD105,VA,building,30.0,0.0,0.0
+dc_6bda20d02c25,AWS IAD104,VA,building,30.0,0.0,0.0
+dc_e60910dea260,QTS Manassas DC1,VA,building,10.0,0.0,0.0
+dc_607669b8392b,,MD,building,30.0,0.0,0.0
+dc_2f34cf65f086,Meta,OR,building,30.0,0.0,0.0
+dc_cb36d1bfe77c,Meta,OR,building,30.0,0.28,0.0
+dc_1f13f2e4e800,Digital Realty PDX11 Data Center,OR,building,30.0,0.0,0.0
+dc_c0c1e9788a37,Datacenter (386),IL,building,30.0,0.2,0.0
+dc_40e30e32f22b,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_a5676724cc7b,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_8af951b34bae,Amazon Web Services,OH,building,30.0,0.1,0.0
+dc_f1fa89442e45,NTT Chicago CH1,IL,building,30.0,0.2,0.0
+dc_fde7fcc462d1,,WI,building,10.0,0.0,0.0
+dc_a7a75774014b,CoreSite SV7,CA,building,30.0,0.0,0.0
+dc_a01ca4642c9f,Meta Huntsville Data center,AL,building,30.0,0.38,0.0
+dc_7c600bd05cc6,Meta Huntsville Data center,AL,building,30.0,0.0,0.0
+dc_62fa7efb5bab,Meta Huntsville Data center,AL,building,30.0,0.0,0.0
+dc_1ce5c0466dac,Amazon Web Services,VA,building,10.0,0.04,0.0
+dc_e6229de1ac08,Microsoft EAT03,WA,building,30.0,0.0,0.0
+dc_07743f0f8a70,Microsoft EAT04,WA,building,30.0,0.0,0.0
+dc_329262a4db4d,Microsoft,IA,building,30.0,0.0,0.0
+dc_e59e36c03e54,Google: Arcola 2,VA,building,10.0,0.0,0.0
+dc_3253db789188,,TX,building,10.0,0.0,0.0
+dc_334b14b79218,Amazon IAD603,VA,building,10.0,0.0,0.0
+dc_0ec1cdf95464,,WY,building,10.0,0.0,0.0
+dc_06c6e7b867a1,,WY,building,10.0,0.38,0.0
+dc_38efcce0825d,,WY,building,30.0,0.0,0.0
+dc_895c21fc08cb,,WY,building,10.0,0.0,0.0
+dc_7804a006dda2,,WY,building,10.0,0.0,0.0
+dc_02a45ce844d8,Amazon IAD86,VA,building,10.0,0.0,0.0
+dc_a11921ca0756,Amazon IAD130,VA,building,10.0,0.0,0.0
+dc_d49e6fd6c32a,Amazon IAD131,VA,building,10.0,0.02,0.0
+dc_f9ad1aa121d1,Meta Data Center,MO,building,30.0,0.0,0.0
+dc_6216c49b2a10,QTS Ashburn-Shellhorn DC2,VA,building,10.0,0.0,0.0
+dc_45a130be2be9,QTS Ashburn Lockridge,VA,building,30.0,0.02,0.0
+dc_646e4da4cdc0,QTS Ashburn Lockridge,VA,building,10.0,0.0,0.0
+dc_068c81dbe338,Amazon IAD192,VA,building,10.0,0.0,0.0
+dc_f289518407b9,,VA,building,10.0,0.0,0.0
+dc_ca426d800c5e,NTT Ashburn VA8 Data Centre,VA,building,10.0,0.0,0.0
+dc_24d87e9fe5e5,DataBank Ashburn IAD3,VA,building,10.0,0.0,0.0
+dc_89af903960ac,PowerHouse ABX-1,VA,building,10.0,0.0,0.0
+dc_351caa7b27c5,Cologix ASH1,VA,building,30.0,0.0,0.0
+dc_2187c39b38fe,Meta,NM,building,30.0,0.0,0.0
+dc_be1a71831407,,WA,building,30.0,0.02,0.0
+dc_6e1ef83981b4,,WA,building,30.0,0.02,0.0
+dc_b90668346127,Lightedge Des Moines 2,IA,building,10.0,0.0,0.0
+dc_fcf51a120a52,QTS Suwanee,GA,building,30.0,0.0,0.0
+dc_55447331648c,,NV,building,10.0,0.02,0.0
+dc_eb8ab216ce0f,,NV,building,30.0,0.34,0.0
+dc_ccf5e5778bb2,,NV,building,10.0,0.0,0.0
+dc_26b206933be4,,NV,building,10.0,0.0,0.0
+dc_64a34293fec1,Carrier Services Group,OH,building,10.0,0.0,0.0
+dc_82df444c36ba,Flexential Nashville - Cool Springs,TN,building,10.0,0.0,0.0
+dc_c2b297bd8c6e,,WI,building,30.0,0.0,0.0
+dc_404bbc86384a,Gallatin Data Center,TN,campus_centroid,250.0,0.34,0.0
+dc_cc8fe699ab97,Aligned Data Center - Chicago ORD-01,IL,building,10.0,0.0,0.0
+dc_e750446c0bc0,Aligned Data Center - Chicago ORD-02,IL,building,10.0,0.0,0.0
+dc_132750142234,,IL,building,30.0,0.0,0.0
+dc_e3402b9266d8,T5 Chicago II,IL,building,30.0,0.0,0.0
+dc_fb65457c05e8,Cortex supercomputer,TX,building,30.0,0.0,0.0
+dc_f7e12f7229a2,AWS IAD106,VA,building,10.0,0.0,0.0
+dc_4f4a0b432dc9,Google NBY-2,OH,building,30.0,0.0,0.0
+dc_7b586018e4c3,Amazon Web Services,VA,building,10.0,0.0,0.0
+dc_232553a6ff95,CyrusOne OCB1 Council Bluffs,IA,building,30.0,0.36,0.0
+dc_68b508c5ceaf,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_2c47a18367ee,Novartis,TX,building,10.0,0.0,0.0
+dc_bf2eef1439d6,Equinix SV11,CA,building,30.0,0.0,0.0
+dc_9b042aff160a,Amazon IAD103,VA,building,10.0,0.0,0.0
+dc_10369a8df37e,CloudHQ MCC3,VA,building,10.0,0.0,0.0
+dc_3b1559745c3a,CyrusOne PHX8,AZ,building,30.0,0.0,0.0
+dc_6d2fa97e9079,CyrusOne PHX3,AZ,building,10.0,0.34,0.0
+dc_39ca538ce865,CyrusOne PHX4,AZ,building,10.0,0.06,0.0
+dc_7af833dd4dce,Vantage VA13,VA,building,10.0,0.0,0.0
+dc_f8de9711b6d9,Lightedge Des Moines 1,IA,building,10.0,0.0,0.0
+dc_5bfc1aecb5cf,Yahoo,NE,building,10.0,0.34,0.0
+dc_b96977f6c390,,NM,building,30.0,0.0,0.0
+dc_7cd73fdda023,Verizon North Las Vegas,NV,building,10.0,0.0,0.0
+dc_0549b113a011,Google,NE,building,30.0,0.04,0.0
+dc_51a81e12c581,Google,NE,building,30.0,0.0,0.0
+dc_f68c00c4207e,Involta Independence,OH,building,30.0,0.04,0.0
+dc_d0d2390b75ed,Bloomberg Data Center,NY,building,10.0,0.0,0.0
+dc_00b2737ad841,fifteenfortyseven CSR ORNY1,NY,building,10.0,0.04,0.0
+dc_091d046182c5,Stack Infrastructure - POR03,OR,building,30.0,0.0,0.0
+dc_6ff36699e16a,Stack Infrastructure - POR03,OR,building,30.0,0.02,0.0
+dc_2a1d188ac87d,Stack Infrastructure - POR03,OR,building,30.0,0.0,0.0
+dc_2d174e33a292,Amazon Web Services,VA,building,30.0,0.34,0.0
+dc_1f8be8294d52,Amazon Web Services,VA,building,30.0,0.0,0.0
+dc_0df484691fd4,Amazon Web Services,VA,building,30.0,0.0,0.0
+dc_e5ee534a8f75,Amazon Web Services,VA,building,10.0,0.0,0.0
+dc_abb797b53b98,Amazon Web Services CMH62,OH,building,30.0,0.0,0.0
+dc_65aed79b4274,Amazon Web Services,OH,building,30.0,0.4,0.0
+dc_4b83d9872e2e,Amazon Web Services,OH,building,30.0,0.04,0.0
+dc_9853927b6203,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_c878c41c84a1,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_b17651764b5b,,OH,building,30.0,0.0,0.0
+dc_54e21ce1cea4,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_b80ac4ec6ffb,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_c1dd5309d7d9,,OH,building,30.0,0.0,0.0
+dc_704355a73b47,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_89fdbc2bf070,Google NBY-3,OH,building,30.0,0.0,0.0
+dc_8e771aedabc9,Google NBY-4,OH,building,30.0,0.0,0.0
+dc_a565678c206d,NAO 5/NAO 6,OH,building,30.0,0.0,0.0
+dc_80aeb614dd61,Google,OH,building,30.0,0.02,0.0
+dc_4e24d0589219,Google,VA,building,30.0,0.0,0.0
+dc_b588afe1a787,Amazon Web Services,OR,building,30.0,0.1,0.0
+dc_9863a01aea38,Amazon Web Services,OR,building,30.0,0.16,0.0
+dc_2901313c8c49,Amazon Web Services,OR,building,30.0,0.38,0.0
+dc_f049b1fca45c,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_ef8be669f009,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_f8b9e84e51e9,Amazon Web Services,OR,building,30.0,0.02,0.0
+dc_dac6ac36fb92,Amazon Web Services,OR,building,30.0,0.02,0.0
+dc_8e4b8eb39168,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_9ddbd01cdc30,Google,OH,building,30.0,0.0,0.0
+dc_b49da9aafa96,Amazon Web Services,VA,building,10.0,0.0,0.0
+dc_1209b396219a,Amazon Web Services,VA,building,30.0,0.0,0.0
+dc_8f212e8b9568,Amazon Web Services,VA,building,10.0,0.0,0.0
+dc_7048b76fe40b,Meta Sarpy Data center,NE,building,30.0,0.0,0.0
+dc_8a06b58c62ce,Meta Sarpy Data center,NE,building,30.0,0.0,0.0
+dc_647ebabf6c68,Meta Sarpy Data center,NE,building,30.0,0.02,0.0
+dc_c5b50e13b2ca,Meta,IA,building,30.0,0.0,0.0
+dc_865686fc232f,Meta,IA,building,30.0,0.0,0.0
+dc_631b3757e900,Dynamics Mining,KY,building,10.0,0.0,0.0
+dc_4f0f453ed023,Flexential Atlanta - Douglasville 2,GA,building,30.0,0.0,0.0
+dc_e4283b7046b1,,NV,building,30.0,0.12,0.0
+dc_cd7f2ff1bb19,Windbreak Cable,WY,building,10.0,0.0,0.0
+dc_1971ec91f74b,,VA,building,30.0,0.0,0.0
+dc_409183797c0d,NTT Chicago CH2,IL,building,30.0,0.02,0.0
+dc_326516e596cc,QTS,CO,building,30.0,0.02,0.0
+dc_c7c753ce6dca,Apple,OR,building,30.0,0.0,0.0
+dc_29e4078ce63e,Amazon IAD214,VA,building,30.0,0.0,0.0
+dc_6697ca251c9a,Aligned IAD03,VA,building,10.0,0.0,0.0
+dc_7a9ad2611660,Digital Realty IAD55,VA,building,10.0,0.0,0.0
+dc_2565df2c93a6,Involta-Akron,OH,building,30.0,0.0,0.0
+dc_0d412ec4abac,Amazon Web Services,VA,building,30.0,0.0,0.0
+dc_d89bd2b62165,Amazon Web Services,VA,building,10.0,0.0,0.0
+dc_61f8ed64a9f7,Amazon Web Services,VA,building,30.0,0.08,0.0
+dc_074fbadebefb,Amazon Web Services,VA,building,30.0,0.0,0.0
+dc_fb656744b899,Amazon Web Services,VA,building,30.0,0.18,0.0
+dc_e1c1a14911c4,Amazon Web Services,VA,building,30.0,0.02,0.0
+dc_e810f98f642f,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_387828197fcf,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_a262f2e6c813,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_2b3e01a68c80,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_79ee14f34b57,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_86edd29795e4,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_ece390bb620e,Amazon Web Services,OR,building,30.0,0.3,0.0
+dc_9c10e28655f7,Amazon Web Services,OR,building,10.0,0.0,0.0
+dc_bbb7c9a29c06,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_2f483ca1c248,"Google Lockbourne, OH",OH,campus_centroid,250.0,0.04,0.004624348823007931
+dc_d02a64f6db73,Amazon New Albany: Jug and Beach Road,OH,campus_centroid,250.0,0.18,0.0
+dc_bb5ca6fb7836,UPS Data Center,GA,building,10.0,0.0,0.0
+dc_27736d0748c2,MineOne Wyoming Data Center,WY,building,30.0,0.0,0.0
+dc_0d3e2978537f,Iron Mountain VA-3,VA,building,30.0,0.0,0.0
+dc_d3cca9241046,Microsoft,AZ,building,30.0,0.0,0.0
+dc_a8c1a452b265,Google,VA,building,30.0,0.02,0.0
+dc_e5424615cf44,Amazon Web Services,VA,building,30.0,0.0,0.0
+dc_0a62b3bc7207,Amazon Web Services,VA,building,30.0,0.0,0.0
+dc_a46fb1abda97,Iron Mountain VA-4,VA,building,30.0,0.1,0.0
+dc_c06b85cd674e,Iron Mountain VA-5,VA,building,30.0,0.1,0.0
+dc_e1d5b1f3fda5,QTS Manassas DC2,VA,building,30.0,0.06,0.0
+dc_482ea594144f,,VA,building,30.0,0.0,0.0
+dc_e192ad80593e,Google,IA,building,30.0,0.0,0.0
+dc_b926ad69f0b0,Google,IA,building,30.0,0.0,0.0
+dc_2c01eccc6cb3,T5@Cleveland,OH,building,10.0,0.0,0.0
+dc_12f2ff8f7b4c,42311 THUNDERBALL DR,VA,building,10.0,0.0,0.0
+dc_ed1e2cf9b5d8,42255 THUNDERBALL DR,VA,building,10.0,0.0,0.0
+dc_d8e488d2ebd7,42254 THUNDERBALL DR,VA,building,10.0,0.0,0.0
+dc_9c834cc92f25,Meta Gallatin Data Center,TN,building,30.0,0.0,0.0
+dc_c5abef17961c,GVTC,TX,building,30.0,0.0,0.0
+dc_ad74ffb219ab,Stream Data Centers DFWA,TX,building,30.0,0.02,0.0
+dc_21bf956aedf2,MARA Data Center,TX,campus_centroid,250.0,0.7,0.0
+dc_709476f6cd40,,VA,building,30.0,0.08,0.0
+dc_533d38eafbc1,,VA,building,30.0,0.0,0.0
+dc_c11c998fe76e,Amazon AWS Data Center,IN,campus_centroid,250.0,0.0,0.0
+dc_66e21c80d487,Iron Mountain VA-6,VA,building,30.0,0.42,0.0
+dc_789e4943512c,Ark Duluth Data Center,MN,building,10.0,0.0,0.0
+dc_fd766e3bc945,Flexential Charlotte - North,NC,building,10.0,0.34,0.0
+dc_904e33ba7206,Equinix Ashburn DC6,VA,building,30.0,0.0,0.0
+dc_686beb9d707e,Equinix Ashburn DC4,VA,building,10.0,0.0,0.0
+dc_a9ba7c984e27,,TX,building,10.0,0.0,0.0
+dc_61d80369f0b7,,IL,building,30.0,0.0,0.0
+dc_e6bbbb28df9c,,IL,building,30.0,0.0,0.0
+dc_fa02eedb0951,,IL,building,30.0,0.24,0.0
+dc_bdd81f74b166,Meta Gallatin Data Center,TN,building,30.0,0.0,0.0
+dc_3a4bdb026ecc,Meta Gallatin Data Center,TN,building,30.0,0.0,0.0
+dc_6f3b49e3d03a,Google,NE,building,30.0,0.0,0.0
+dc_139e10563e60,,CA,building,10.0,0.0,0.0
+dc_c99149f78d34,Vantage Santa Clara CA2,CA,building,30.0,0.0,0.0
+dc_4f36c545582c,Digital Realty Silicon Valley SJC37,CA,building,10.0,0.0,0.0
+dc_1d940d38b3eb,Switch Las Vegas 12,NV,building,30.0,0.0,0.0
+dc_68ec06e28857,QTS,AZ,building,30.0,0.16,0.0
+dc_becc405617af,,IL,building,30.0,0.0,0.0
+dc_f152760b1463,NTT,TX,building,30.0,0.0,0.0
+dc_e1a3bd223170,NTT,TX,building,30.0,0.0,0.0
+dc_dd0e72c403c9,Digital Realty Northern Virginia IAD44,VA,building,30.0,0.06,0.0
+dc_710f9439619a,Centersquare Ashburn IAD4 Data Center,VA,building,30.0,0.0,0.0
+dc_2603730d0b62,Microsoft,IA,building,30.0,0.0,0.0
+dc_553e538d8ae8,Microsoft,IA,building,30.0,0.02,0.0
+dc_d8f1873aaf3c,Apple,IA,building,30.0,0.0,0.0
+dc_4b71e4693405,,VA,building,30.0,0.04,0.0
+dc_b297a9da2ee8,,OH,building,10.0,0.12,0.0
+dc_0ca47c2bf6c5,DC BLOX Myrtle Beach Cable Landing Station,SC,building,30.0,0.14,0.0
+dc_003ce6cf7b7b,Tahoe Reno 3,NV,building,30.0,0.0,0.0
+dc_ce6ae3a25086,,VA,building,10.0,0.0,0.0
+dc_466154b3dc5e,Nautilus Cryptomine,PA,building,30.0,0.44,0.0
+dc_94f25c0bbaa4,Nautilus Cryptomine,PA,building,30.0,0.22,0.0
+dc_c97789fd9abd,Amazon AWS PHL,PA,building,30.0,0.0,0.0
+dc_57e09c860fe5,,NE,campus_centroid,250.0,0.24,0.0
+dc_e63c56f58572,Meta,NM,building,30.0,0.0,0.0
+dc_3e79fab29b39,DataBank,MN,building,30.0,0.0,0.0
+dc_7cf9062a50bd,Vantage WA13,WA,building,30.0,0.0,0.0
+dc_906a3c0aa1a3,Amazon IAD-165,VA,building,30.0,0.0,0.0
+dc_5b99fee65568,Amazon IAD-166,VA,building,30.0,0.0,0.0
+dc_cffa148c7175,Amazon IAD-167,VA,building,30.0,0.0,0.0
+dc_8e7d1266b66c,CyrusOne SAT10 & SAT11,TX,building,30.0,0.02,0.0
+dc_bb9e276ee8a3,Amazon,TX,building,10.0,0.0,0.0
+dc_ec3ac5883e2e,,TX,building,30.0,0.34,0.0
+dc_1b52528a2400,Csquare SFO4,CA,building,30.0,0.0,0.0
+dc_ac16fc556bbf,Sentinel Data Centers,VA,building,30.0,0.0,0.00022330235904625078
+dc_a824cf17055c,,VA,building,30.0,0.0,0.00022304818781188388
+dc_8517c7de8a9c,Digital Realty IAD43 (Building S),VA,building,10.0,0.28,0.0
+dc_521feae1aae7,Vantage VA2,VA,building,30.0,0.0,0.0
+dc_6c4275f57202,CyrusOne Cincinnati-Hamilton CIN4,OH,campus_centroid,10.0,0.0,0.0
+dc_74688765b678,DataBank Santa Clara SFO1,CA,building,10.0,0.0,0.0
+dc_d79e66e14276,NTT PH1 Datacenter,AZ,campus_centroid,250.0,0.64,0.0
+dc_abb2744b3a0e,Iron Mountain AZP-1,AZ,building,10.0,0.0,0.0
+dc_3220818536c7,PTC,OR,building,10.0,0.0,0.0
+dc_21b651e90066,,IA,building,30.0,0.0,0.0
+dc_1ae3762b7463,,IA,building,30.0,0.08,0.0
+dc_10fa54833aa4,CenturyLink,MO,building,30.0,0.0,0.0
+dc_5255a71086fb,,AZ,building,30.0,0.0,0.0
+dc_18348e8eb436,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_679ff5ffd2c5,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_9f6f0a48ddbb,,OH,building,30.0,0.2,0.0
+dc_11f8cf85f74c,Microsoft,IA,building,30.0,0.0,0.0
+dc_18dc72c9dac5,Microsoft,IA,building,30.0,0.0,0.0
+dc_eee0a9900e19,Microsoft,IA,building,30.0,0.0,0.0
+dc_1fe64519a772,Flexential Las Vegas - Downtown,NV,building,10.0,0.0,0.0
+dc_e34d7f618094,,VA,building,30.0,0.0,0.0
+dc_9f2ca161d2a1,,VA,building,30.0,0.12,0.0
+dc_6d22761134df,xAI Colossus,TN,building,10.0,0.0,0.0
+dc_e1b3a8f32643,CloudHQ,VA,building,10.0,0.0,0.0
+dc_7f4a4b98d21f,T5@Cleveland,OH,building,30.0,0.0,0.0
+dc_1939617702b6,Databank LGA3,NY,building,30.0,0.0,0.0
+dc_3602336d3d9e,Amazon Web Services,OH,building,30.0,0.14,0.0
+dc_bfa1717c079a,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_e11210b1487c,Amazon Web Services,OH,building,30.0,0.34,0.0
+dc_33991d604090,Amazon Web Services,OH,building,30.0,0.38,0.0
+dc_3f57a6a92dfe,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_06bbdd2a31eb,Google NBY-5,OH,building,30.0,0.0,0.0
+dc_a1f012a7d971,Google NBY-6,OH,building,30.0,0.0,0.0
+dc_1963a1dab74f,LCO DCB 1,OH,building,30.0,0.0,0.0
+dc_295bde3d8f29,LCO DCB 2,OH,building,30.0,0.0,0.0
+dc_45a9d34cb56f,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_3341e1570713,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_62ad4ef31871,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_5e45345b536d,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_a97ad74f1324,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_c4278b67d2a7,Amazon Web Services,OH,building,30.0,0.0,0.0
+dc_1d3d51cfc269,Amazon Web Services,OH,building,30.0,0.02,0.0
+dc_7265e2ab382c,Amazon Web Services,OH,building,30.0,0.04,0.0
+dc_38ee88266071,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_33100f7e2542,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_384a3561c678,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_f138bbd8bc1d,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_d7d8441ed5db,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_e58443614b83,Amazon Web Services,OR,building,30.0,0.04,0.0
+dc_fb93b96e8ed9,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_3a2713412dbf,Amazon Web Services,OR,building,30.0,0.26,0.0
+dc_e33cbb7805bd,Amazon Web Services,OR,building,30.0,0.16,0.0
+dc_3fee772ee31d,Amazon Web Services,OR,building,30.0,0.42,0.0
+dc_0fe2a0efd4a5,CYS41 Datacenter,WY,building,30.0,0.0,0.0
+dc_cd516cae2531,CYS42 Datacenter,WY,building,30.0,0.36,0.0
+dc_eba87b29546a,xAI Macrohard Colossus 2,TN,building,30.0,0.0,0.0
+dc_673b340833e9,,OK,building,30.0,0.0,0.0
+dc_00e628ce6044,True North Data Centers,VA,campus_centroid,250.0,0.18,0.0
+dc_bf2b1134f899,TikTok Data Center,VA,building,10.0,0.02,0.0
+dc_c231fc51e3eb,Encompass Minneapolis Facility,MN,building,30.0,0.14,0.0
+dc_5049ca57aab5,,KS,building,30.0,0.62,0.0
+dc_1a859cfbdcb4,,OH,building,30.0,0.0,0.0
+dc_e577fdae7a20,,WY,building,30.0,0.0,0.0
+dc_cf3294ee628d,State of Montana Data Center,MT,building,10.0,0.0,0.0
+dc_4ecbe50b2051,Switch Las Vegas 14,NV,building,30.0,0.0,0.0
+dc_d6ad1ac37897,Google,NE,building,30.0,0.0,0.0
+dc_3e1e075b64ea,Google,NE,building,30.0,0.0,0.0
+dc_a6b4531def62,Google,NE,building,30.0,0.0,0.0
+dc_5f6e752e8332,,ND,building,30.0,0.0,0.0
+dc_c6bcbe1b8a1f,,ND,building,30.0,0.22,0.0
+dc_059baa53ed1a,,ND,building,30.0,0.26,0.0
+dc_cc1a5c76c102,QTS NAL 2 DC1,OH,building,30.0,0.0,0.0
+dc_2c541c5c30d6,QTS NAL 2 DC2,OH,building,30.0,0.0,0.0
+dc_b1c8c36b01b9,QTS NAL1 DC2,OH,building,30.0,0.0,0.0
+dc_a20930b79289,QTS NAL1 DC1,OH,building,30.0,0.0,0.0
+dc_21b4adeddde5,,IL,building,30.0,0.3,0.0
+dc_53100ad6729e,Google,TX,building,30.0,0.0,0.0
+dc_3fbc71924de1,Compass Data Center,TX,building,30.0,0.0,0.0
+dc_073b5a543445,Compass Data Center,TX,building,30.0,0.0,0.0
+dc_a53b0f3f5d96,Compass Data Center,TX,building,30.0,0.14,0.0
+dc_81873e5cdfa0,Compass Data Center,TX,building,30.0,0.4,0.0
+dc_cb4c961a9958,Compass Data Center,TX,building,30.0,0.2,0.0
+dc_fb27816330e8,Compass Data Center,TX,building,30.0,0.6,0.0
+dc_e95c9536a835,Compass Data Center,TX,building,30.0,0.0,0.0
+dc_1ef21e9efb64,Compass Data Center,TX,building,30.0,0.46,0.0
+dc_dcfd9a467a8b,Compass Data Center,TX,building,30.0,0.0,0.0
+dc_802db22e67f1,Compass Data Center,TX,building,30.0,0.02,0.0
+dc_bcd0a6c2165d,Amazon IAD-168,VA,building,30.0,0.6,0.0
+dc_3d890dc6520c,Amazon IAD-500,VA,building,30.0,0.0,0.0
+dc_7c029fb06937,Google NBY-7,OH,building,30.0,0.0,0.0
+dc_f568eee20c17,Vantage Building 1,OH,building,30.0,0.0,0.0
+dc_1491711e475b,Vantage Building 2,OH,building,30.0,0.02,0.0
+dc_4a8c1543df7d,Vantage Building 3,OH,building,30.0,0.26,0.0
+dc_dad966852eb4,Microsoft,WA,building,10.0,0.0,0.0
+dc_990f669f9ec2,,TX,building,30.0,0.0,0.0
+dc_9b9f99566927,,TX,building,30.0,0.0,0.0
+dc_080f1a37f4e4,,TX,building,30.0,0.0,0.0
+dc_f0527c78fab7,,MO,building,30.0,0.0,0.0
+dc_06b6217194bb,CloudHQ LC3,VA,building,10.0,0.02,0.0
+dc_5e9834409f88,Google,OR,building,30.0,0.0,0.0
+dc_b15a9ac2dbba,Alinged Data Center DFW-03,TX,building,30.0,0.24,0.0
+dc_227328ca29fa,,VA,building,30.0,0.02,0.0
+dc_d9595069df1d,,VA,building,30.0,0.06,0.0
+dc_45594dea9379,,VA,building,30.0,0.0,0.0
+dc_5040856febf7,NTT Chicago CH3,IL,building,30.0,0.02,0.0
+dc_becfb5c153fe,NTT Chicago CH4,IL,building,30.0,0.0,0.0
+dc_590024763fae,Microsoft Data Center 2,VA,building,30.0,0.24,0.0
+dc_42e5e1f19e3b,,OH,building,30.0,0.02,0.0
+dc_4360cc6ad80d,,OH,building,30.0,0.28,0.0
+dc_803d715f084d,PowerHouse CTP-02,VA,building,30.0,0.02,0.0
+dc_3678db5e848c,,MN,building,30.0,0.0,0.0
+dc_3d1532ca066a,,MN,building,30.0,0.0,0.0
+dc_d2de6bd1654c,NTT RagingWire DC - Hillsboro,OR,building,10.0,0.0,0.0
+dc_31978bedd946,,IA,building,30.0,0.0,0.0
+dc_6cff6c8c0f96,,IA,building,30.0,0.0,0.0
+dc_3e38f37da8cc,IONIC Digital Cedarvale,TX,campus_centroid,10.0,0.0,0.0
+dc_4cb7cf3af123,,ID,building,30.0,0.0,0.0
+dc_dd03aab3ce8e,,ID,building,30.0,0.0,0.0
+dc_0effc7beed6d,East Kentucky Network Datacenter,KY,building,30.0,0.52,0.0
+dc_ff5f3d1e936c,,AZ,building,30.0,0.0,0.0
+dc_2a63d0b145ad,,AZ,building,30.0,0.0,0.0
+dc_204d8cf6c427,,AZ,building,30.0,0.02,0.0
+dc_4ccb2c1d6e95,,TX,building,30.0,0.04,0.0
+dc_6908e0a4116d,Google,TX,building,30.0,0.0,0.0
+dc_145f8eb38f08,Newrays Two LLC Mining,TN,building,30.0,0.18,0.0
+dc_effe5dd6b5df,,VA,building,30.0,0.0,0.0
+dc_d13459ca6718,,VA,building,30.0,0.0,0.0
+dc_b3d26444c787,,VA,building,30.0,0.0,0.0
+dc_b9607f6a4899,EdgeCore Silicon Valley,CA,building,30.0,0.0,0.0
+dc_949ff6edb0fd,STACK SVY02,CA,building,10.0,0.0,0.0
+dc_4522ee78b5e3,Amazon AWS SAT - 12807 Donop,TX,building,30.0,0.0,0.0
+dc_75378fd737b2,Prime DFW01-01,TX,building,30.0,0.0,0.0
+dc_a40902f66f87,Google,VA,building,30.0,0.0,0.0
+dc_924134c2a4de,QTS Data Center - Hillsboro 3,OR,building,30.0,0.0,0.0
+dc_a2925ffcf201,QTS Data Center - Hillsboro 3,OR,building,30.0,0.0,0.0
+dc_104426d2e73e,,WA,building,10.0,0.0,0.0
+dc_254519e1eeb7,SPC4A,TN,building,30.0,0.0,0.0
+dc_5275a77e506f,,IN,building,30.0,0.0,0.0
+dc_0499ba5ee08a,,IN,building,30.0,0.0,0.0
+dc_94adf4e278f3,,IN,building,30.0,0.0,0.0
+dc_804db6bb2305,,IN,building,30.0,0.0,0.0
+dc_951ab6bcefa0,,IN,building,30.0,0.0,0.0
+dc_d6b57c7d2f07,,IN,building,30.0,0.0,0.0
+dc_2046ccb217ea,,IN,building,30.0,0.0,0.0
+dc_2b393a3841c5,QTS,GA,building,30.0,0.0,0.0
+dc_c46ca6c89e13,QTS,GA,building,30.0,0.0,0.0
+dc_2baa37ae6f4f,,UT,building,10.0,0.0,0.0
+dc_ddffff011e6b,,UT,building,30.0,0.04,0.0
+dc_60550a4f2094,CyrusOne CHI3,IL,building,30.0,0.0,0.0
+dc_955dd0d1f4c4,Edged Chicago ORD01,IL,building,30.0,0.0,0.0
+dc_c50964c22193,,VA,building,30.0,0.04,0.0
+dc_332cf8bf4e95,Amazon IAD230,VA,building,30.0,0.0,0.0
+dc_a55b0ad0ecd4,,TX,building,30.0,0.4,0.0
+dc_a88013721ba7,Aligned Data Centers DFW-04,TX,building,30.0,0.0,0.0
+dc_7260fa89b9b2,Verizon Wireless,TN,building,10.0,0.0,0.0
+dc_1daa73860d72,Argo Data Center,TX,campus_centroid,250.0,0.24,0.0
+dc_a4c02ff1ab9a,Switch: The Rock,TX,building,30.0,0.0,0.0
+dc_10b5ea15f75c,DC6,VA,building,30.0,0.0,0.0
+dc_4cde6afb83b5,DC5,VA,building,30.0,0.0,0.0
+dc_ada093eb611f,DC4,VA,building,30.0,0.18,0.0
+dc_026860356044,RIC2 DC1,VA,building,30.0,0.0,0.0
+dc_ccce259deff1,RIC2 DC2,VA,building,30.0,0.0,0.0
+dc_120e0272afcc,RIC2 DC3,VA,building,30.0,0.14,0.0
+dc_4500391b9a8b,RIC2 DC5,VA,building,30.0,0.02,0.0
+dc_69f514533469,RIC2 DC6,VA,building,30.0,0.0,0.0
+dc_6fc77096a366,RIC3 DC1,VA,building,30.0,0.0,0.0
+dc_5505e83a8a7d,RIC3 DC2,VA,building,30.0,0.0,0.0
+dc_dfcdf261d966,RIC3 DC3,VA,building,30.0,0.0,0.0
+dc_ffee65abd862,RIC3 DC5,VA,building,30.0,0.06,0.0
+dc_5daffb14e048,RIC3 DC4,VA,building,30.0,0.0,0.0
+dc_a2483b687fe0,Tahoe Reno 4,NV,building,30.0,0.0,0.0
+dc_6227bf84afd6,Tahoe Reno 5,NV,building,30.0,0.0,0.0
+dc_c23d657f1be3,,KS,building,30.0,0.32,0.0
+dc_690df06e6539,,TX,building,30.0,0.0,0.0
+dc_c89bb09da654,Google,OH,building,30.0,0.0,0.0
+dc_fa46f751ca71,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_feb977251d5e,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_90b6d7cbc168,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_bf3a5359df1d,Amazon Web Services,OR,building,30.0,0.04,0.0
+dc_38113ff13f32,Amazon Web Services,OR,building,30.0,0.0,0.0
+dc_4661711aa91c,Crane DC - Portland,OR,building,30.0,0.04,0.0
+dc_cd16309c74e0,Percheron DC,OR,building,30.0,0.52,0.0
+dc_de20ecdcfb85,Percheron DC,OR,building,30.0,0.14,0.0
+dc_d4f155a2b9d4,Percheron DC,OR,building,30.0,0.08,0.0
+dc_1d02d6941bfd,Percheron DC,OR,building,30.0,0.08,0.0
+dc_707f7bff6b02,NYGC Chateaugay,NY,building,30.0,0.08,0.0
+dc_0888941918ee,Vantage Data Centers TX22,TX,building,30.0,0.04,0.0
+dc_01fc94cf15b9,,TX,building,30.0,0.0,0.0
+dc_e985cd8a1feb,MDC,TX,building,10.0,0.0,0.0
+dc_a9eeb2ecdcc1,,WI,building,30.0,0.0,0.0
+dc_835c8b136700,,OR,building,30.0,0.0,0.0
+dc_044a443dd7e2,Google,OR,building,30.0,0.38,0.0
+dc_23dd70e27fd3,Amazon Web Services,MS,building,30.0,0.0,0.0
+dc_2cc523155665,Amazon Web Services,MS,building,30.0,0.0,0.0
+dc_aa437d7ed6c9,Amazon Web Services,MS,building,30.0,0.0,0.0
+dc_945543dfe7d9,Amazon Web Services,MS,building,30.0,0.0,0.0
+dc_cb943ec8c29b,QTS,GA,building,30.0,0.0,0.0
+dc_48932a950563,QTS,GA,building,30.0,0.0,0.0
+dc_104eefb08c2e,,VA,building,30.0,0.4,0.0
+dc_74f020694462,Amazon Web Services,VA,building,30.0,0.1,0.0
+dc_6eb415a8ef3b,Amazon Web Services,VA,building,30.0,0.48,0.0
+dc_62dd2b7fa7cc,Amazon Web Services,VA,building,30.0,0.0,0.0
+dc_acfd3a40de9f,Amazon Web Services,VA,building,30.0,0.0,0.0
+dc_85aaa696bf19,Amazon Web Services,VA,building,30.0,0.0,0.0
+dc_48d6192ea411,,TX,building,30.0,0.0,0.0
+dc_d8d34358af13,,TX,building,30.0,0.0,0.0
+dc_43d1b8fa745f,,TX,building,30.0,0.0,0.0
+dc_5e31a13f74b9,,TX,building,30.0,0.1,0.0
+dc_02cbb0a9f4e7,Digital Realty Northern Virginia IAD40,VA,building,10.0,0.0,0.0
+dc_d1e1933ac3d8,Vantage VA14,VA,building,10.0,0.36,0.0
+dc_640f760993bb,Information Systems Facility,NM,building,30.0,0.0,0.0
+dc_9ecfe9c3bf78,,VA,building,10.0,0.0,0.0
+dc_e83acd2e78d1,,VA,building,10.0,0.0,0.0
+dc_054193767570,Equinix,VA,building,30.0,0.48,0.0
+dc_daf88193f8d2,Digital Realty,TX,building,30.0,0.26,0.0
+dc_2e1860ff6362,"Landmax Data Systems, Inc",NY,building,10.0,0.0,0.0
+dc_5e1d8fbc3e75,DataBank SLC6,UT,building,30.0,0.08,0.0
+dc_b492591b9a2d,Digital Realty,TX,building,30.0,0.06,0.0
+dc_e0c1cc3cf46a,NTT,TX,building,30.0,0.2,0.0
+dc_97a8471652c2,Aligned  DFW-02,TX,building,30.0,0.02,0.0
+dc_94ad65dfbe69,Verizon,NJ,building,10.0,0.0,0.0
+dc_953d28b6d60c,OVHcloud - Hillsboro,OR,building,30.0,0.0,0.0
+dc_90940e7c3b70,Google Data Center,NC,building,10.0,0.0,0.0
+dc_b1bab62f304f,Liberty Center One,MI,building,10.0,0.0,0.0
+dc_9c866fe205ee,Apple - Maiden Data Center,NC,building,10.0,0.0,0.0
+dc_f4bc8c66c017,HPC,NM,building,10.0,0.0,0.0
+dc_d1aef113ad23,Barclays Datacenter,NJ,building,10.0,0.0,0.0
+dc_935e740f9717,CyberNAP Glen Burnie,MD,building,10.0,0.0,0.0
+dc_82b88a5440d2,Meta Huntsville Data Center,AL,building,30.0,0.0,0.0
+dc_ddf0f305ef19,Dakota Carrier Network,ND,building,30.0,0.02,0.0
+dc_bb1260086ef0,Microsoft Data Center 1,VA,building,30.0,0.0,0.0
+dc_2fb6faada02b,QTS Data Center - Hillsboro 3,OR,building,30.0,0.26,0.0
+dc_781f2b85da3d,EAT14,WA,building,30.0,0.12,0.0
+dc_7daf03548fa7,EAT13,WA,building,30.0,0.0,0.0
+dc_0418bc301d33,EAT12,WA,building,30.0,0.56,0.0
+dc_5a3101d7946e,,VA,building,30.0,0.14,0.0
+dc_e5983c042068,Google datacenter,SC,building,30.0,0.06,0.0
+dc_4c251ee10a95,,SC,building,30.0,0.46,0.0
+dc_f08f429f5b31,AWS IAD-500 and IAD-501,VA,building,30.0,0.0,0.0
+dc_9f6881cb0524,Dorchester County Google Datacenter,SC,building,30.0,0.0,0.0
+dc_f394a25ba7ff,CyrusOne Datacenter,TX,building,30.0,0.66,0.0
+dc_56aaea9dd837,,MS,building,30.0,0.0,0.0
+dc_831ce16615b7,,MS,building,30.0,0.0,0.0
+dc_e43a3cf43272,,MS,building,30.0,0.1,0.0
+dc_3525b583d0e6,,MS,building,30.0,0.02,0.0
+dc_ae738dd582dd,,MS,building,30.0,0.0,0.0
+dc_36754c52f050,"Equinix DC1-DC15,DC21-DC22 - Ashburn",VA,geocoded_address,10.0,0.0,0.0
+dc_9acc15c3d0a9,Digital Realty SFO (200 Paul),CA,geocoded_address,100.0,0.0,0.0
+dc_4cf5e14e6a53,"Equinix SV1/SV5/SV10 - Silicon Valley, San Jose",CA,geocoded_address,10.0,0.0,0.0
+dc_82835681bfc0,Equinix CH1/CH2/CH4 - Chicago,IL,geocoded_address,10.0,0.0,0.0
+dc_7015a8562d9d,Equinix LA1 - Los Angeles,CA,geocoded_address,100.0,0.0,0.0
+dc_34c302840328,"Equinix NY1 - New York, Newark",NJ,geocoded_address,10.0,0.0,0.0
+dc_88450995c8ab,Digital Realty NYC (60 Hudson),NY,geocoded_address,10.0,0.0,0.0
+dc_ac4ba4acc418,Equinix AT2/AT3 - Atlanta,GA,geocoded_address,10.0,0.0,0.0
+dc_faa6dba0bad0,"Equinix MI1 - Miami, NOTA",FL,geocoded_address,10.0,0.0,0.0
+dc_05323da3c824,Digital Realty NYC (111 8th Ave),NY,geocoded_address,10.0,0.0,0.0
+dc_d4fbdd3d160d,CoreSite - San Jose (SV1),CA,geocoded_address,100.0,0.0,0.0
+dc_4fd715d56b5a,FedConnect San Francisco,CA,geocoded_address,10.0,0.0,0.0
+dc_8b1409a7c09c,JMA NAC Los Angeles,CA,geocoded_address,100.0,0.0,0.0
+dc_64ef535e80b4,Digital Realty SFO (365 Main),CA,geocoded_address,100.0,0.0,0.0
+dc_483139dbc068,The Mission Street Center,CA,geocoded_address,100.0,0.0,0.0
+dc_6cd941ab7126,SVTIX San Jose,CA,geocoded_address,10.0,0.0,0.0
+dc_5c289e8fcbb5,"Equinix NY9 - New York, 111 8th Avenue",NY,geocoded_address,10.0,0.0,0.0
+dc_6377f6789f0d,Digital Realty Seattle SEA10,WA,geocoded_address,10.0,0.0,0.0
+dc_95e3409a561c,KDWEB San Jose,CA,geocoded_address,100.0,0.0,0.0
+dc_2c5adc2a0ab8,Equinix SE2/SE3 - Seattle,WA,geocoded_address,10.0,0.0,0.0
+dc_e060f829c242,"Equinix DC7 - Ashburn, Vienna",VA,geocoded_address,10.0,0.0,0.0
+dc_1d517d9c43cf,Equinix LA2 - Los Angeles,CA,geocoded_address,100.0,0.0,0.0
+dc_ed793f68cc82,Digital Realty NYC (32 AofA),NY,geocoded_address,10.0,0.0,0.0
+dc_c34856e581f7,Digital Realty ATL (56 Marietta),GA,geocoded_address,10.0,0.0,0.0
+dc_0cfbf292e004,"Equinix DC8 - Ashburn, Vienna",VA,geocoded_address,100.0,0.0,0.0
+dc_eb804c8b0e43,Equinix PH1 - Philadelphia,PA,geocoded_address,100.0,0.0,0.0
+dc_f8e6324f3558,Evocative San Jose (SV7),CA,geocoded_address,10.0,0.0,0.0
+dc_471ff8a35a44,iM Critical Miami,FL,geocoded_address,10.0,0.0,0.0
+dc_f3ae051ee57a,Digital Realty PHX10 (120 E Van Buren),AZ,geocoded_address,10.0,0.0,0.0
+dc_7c0cbc96d748,Level(3) Sunnyvale,CA,geocoded_address,10.0,0.0,0.0
+dc_cab7dc076637,Printer's Square Chicago (600 S Federal),IL,geocoded_address,10.0,0.0,0.0
+dc_5a3cb29dc9a8,Netrality - Indy Telcom Center - 733 W. Henry,IN,geocoded_address,100.0,0.0,0.0
+dc_0967d5287af9,FiberNet Telecom Group - 60 Hudson St,NY,geocoded_address,10.0,0.0,0.0
+dc_7d8d010f3707,FiberNet Telecom Group New York (111 Eighth Ave),NY,geocoded_address,10.0,0.0,0.0
+dc_970d93b0c688,Level(3) Weehawken,NJ,geocoded_address,10.0,0.0,0.0
+dc_c005344da0ff,Markley Group One Summer Street Boston,MA,geocoded_address,10.0,0.0,0.0
+dc_d53cb59c41ed,Peace Communications  KNX1,TN,geocoded_address,100.0,0.0,0.0
+dc_2839fc2c5212,Looking Glass Networks NYC Node,NY,geocoded_address,100.0,0.0,0.0
+dc_5cdbfb9dbc3c,Level(3) Atlanta (Courtland),GA,geocoded_address,10.0,0.0,0.0
+dc_02182668c9f0,Level(3) Chicago (Canal),IL,geocoded_address,10.0,0.0,0.0
+dc_4cfa0741336f,ServerCondo-219 Albuquerque,NM,geocoded_address,100.0,0.0,0.0
+dc_2d7b8c28a757,Citynet Columbus,OH,geocoded_address,10.0,0.0,0.0
+dc_474103050162,Citynet Pittsburgh,PA,geocoded_address,10.0,0.0,0.0
+dc_07b3382b03ec,Citynet Indianapolis,IN,geocoded_address,10.0,0.0,0.0
+dc_767f1e943a61,PTOR1,OR,geocoded_address,10.0,0.0,0.0
+dc_877f8d001c22,Centersquare New Jersey (EWR5),NJ,geocoded_address,10.0,0.0,0.0
+dc_ef3e0fde0b9d,"Equinix BO1 - Boston, Waltham",MA,geocoded_address,10.0,0.0,0.0
+dc_b2d8b1a270c4,365 Data Centers Chicago (CH6),IL,geocoded_address,10.0,0.0,0.0
+dc_0fddb314e04f,Evocative SJC3,CA,geocoded_address,10.0,0.0,0.0
+dc_dce4e16c83f1,Level(3) Nashville (Sidco Drive),TN,geocoded_address,10.0,0.0,0.0
+dc_13a37eb7f85b,IRIS - Nashville,TN,geocoded_address,10.0,0.0,0.0
+dc_6d10a61e19f2,Cincinnatti Bell - West 7th Street,OH,geocoded_address,100.0,0.0,0.0
+dc_572b91bb7df5,Level(3) Cincinnati,OH,geocoded_address,10.0,0.0,0.0
+dc_4595feafd7e2,Telehouse - Los Angeles,CA,geocoded_address,100.0,0.0,0.0
+dc_f9308489536b,Newport Financial Center,NJ,geocoded_address,100.0,0.0,0.0
+dc_23d4f87a5267,Netrality St. Louis - 900 Walnut,MO,geocoded_address,10.0,0.0,0.0
+dc_eac2b2368edf,"Equinix LA3/LA4 - Los Angeles, El Segundo",CA,geocoded_address,10.0,0.0,0.0
+dc_5a62da9c3162,Level(3) New York,NY,geocoded_address,10.0,0.0,0.0
+dc_1fec2e59960c,165 Halsey Meet-Me Room,NJ,geocoded_address,10.0,0.0,0.0
+dc_f231db004eb1,Crown Castle Brentwood (1650 Islip),NY,geocoded_address,10.0,0.0,0.0
+dc_6c8911ef04ae,710 Tucker St Louis,MO,geocoded_address,10.0,0.0,0.0
+dc_da9d1fb0b335,CoreSite - Los Angeles (LA2),CA,geocoded_address,10.0,0.0,0.0
+dc_db0f207e9b74,XO Nashville,TN,geocoded_address,10.0,0.0,0.0
+dc_93d82a58a852,Network 222,WI,geocoded_address,100.0,0.0,0.0
+dc_f94db4d64ace,OCDC Orange County Datacenter Santa Ana,CA,geocoded_address,100.0,0.0,0.0
+dc_9448c3ccf011,iConnect Billings Fiber Hotel,MT,geocoded_address,100.0,0.0,0.0
+dc_c97738231c91,iConnect Missoula,MT,geocoded_address,10.0,0.0,0.0
+dc_d8cbb9e4b58b,CoreSite - Denver (DE1),CO,geocoded_address,100.0,0.0,0.0
+dc_50e4626e32e8,WOW! Business (Tampa Datacenter),FL,geocoded_address,100.0,0.02,0.0
+dc_2e3dadc752a4,Digital Realty DFW (2323 Bryan St),TX,geocoded_address,100.0,0.0,0.0
+dc_45ec8b20e65d,Digital Realty LAX (600 W 7th),CA,geocoded_address,100.0,0.0,0.0
+dc_559731ec2e30,Digital Realty IAD (44480 Hastings),VA,geocoded_address,10.0,0.0,0.0
+dc_47d937b135c2,Netrality Houston - 1301 Fannin,TX,geocoded_address,100.0,0.0,0.0
+dc_4b5aca5e22a3,190 Park Center Plaza San Jose,CA,geocoded_address,100.0,0.0,0.0
+dc_cda90edc406a,The Franklin Exchange Tampa,FL,geocoded_address,100.0,0.0,0.0
+dc_2e34e7874bca,Level(3) Oakland,CA,geocoded_address,10.0,0.0,0.0
+dc_7fe57b05a442,Netrality Kansas City - 1102 Grand,MO,geocoded_address,100.0,0.0,0.0
+dc_070bebed08d4,Digital Realty CHI (350 E Cermak),IL,geocoded_address,10.0,0.0,0.0
+dc_224c864afb76,Digital Realty OAK (720 2nd St),CA,geocoded_address,10.0,0.0,0.0
+dc_c8a36d575578,Digital Realty SJC (2820 NW Pkwy),CA,geocoded_address,10.0,0.0,0.0
+dc_97a9a746d058,GAP Union Station,IN,geocoded_address,100.0,0.0,0.0
+dc_20dbd0561061,Carolina Internet / CaroNet,NC,geocoded_address,10.0,0.0,0.0
+dc_a15321ccd7ac,TierPoint Spokane,WA,geocoded_address,10.0,0.0,0.0
+dc_6cab86b4b98b,US Bank Building,WA,geocoded_address,100.0,0.0,0.0
+dc_cb6d24a8690a,324 E Wisconsin,WI,geocoded_address,100.0,0.04,0.0
+dc_aa41048d7691,Lumen Boston,MA,geocoded_address,100.0,0.0,0.0
+dc_af88d300efeb,"1101 Stewart Ave, Garden City",NY,geocoded_address,10.0,0.0,0.0
+dc_fd11a1f44708,180 E Broad St.,OH,geocoded_address,100.0,0.0,0.0
+dc_bb7e64ba6a05,Equinix DA4 - Dallas,TX,geocoded_address,100.0,0.0,0.0
+dc_e4de78d83084,"Equinix NY8 - New York, 60 Hudson",NY,geocoded_address,10.0,0.0,0.0
+dc_4f362c566385,SBTC,WA,geocoded_address,10.0,0.0,0.0
+dc_64860b293bb0,"Equinix NY7 - New York, North Bergen",NJ,geocoded_address,10.0,0.4,0.0
+dc_1ba158ee3c5f,3500 Garrott,TX,geocoded_address,10.0,0.0,0.0
+dc_d6ee1c60c7cf,Equinix MI2 - Miami,FL,geocoded_address,100.0,0.0,0.0
+dc_fc171f02d21c,5Nines Data,WI,geocoded_address,100.0,0.0,0.0
+dc_da694d866879,H5 Data Centers Nashville,TN,geocoded_address,10.0,0.0,0.0
+dc_597fa7e4dbb1,Epsilon Global Hubs New York (60 Hudson),NY,geocoded_address,10.0,0.0,0.0
+dc_e58ccf16d115,QTS Santa Clara (SJC1/SJC2),CA,geocoded_address,10.0,0.0,0.0
+dc_a26daee8f0b8,QTS Jersey City (JCY1),NJ,geocoded_address,100.0,0.0,0.0
+dc_e5cafa592f46,QTS Atlanta-Suwanee (SUW1),GA,geocoded_address,10.0,0.0,0.0
+dc_ef06ca20995a,QTS Atlanta-Metro (ATL1),GA,geocoded_address,10.0,0.0,0.0
+dc_b1fceb7d2ac8,QTS Miami (MIA1),FL,geocoded_address,10.0,0.0,0.0
+dc_b2178656f857,1025Connect,NY,geocoded_address,10.0,0.0,0.0
+dc_5f959f8ebedd,Intergate West / Digital.forest / Fortress,WA,geocoded_address,10.0,0.0,0.0
+dc_69889b71d3f5,274 Brannan Street,CA,geocoded_address,10.0,0.0,0.0
+dc_b7447025e854,FiberNet Telecom Group Newark - 165 Halsey,NJ,geocoded_address,10.0,0.0,0.0
+dc_f2547bb7a78e,365 Data Centers Ft. Lauderdale (FLL),FL,geocoded_address,10.0,0.0,0.0
+dc_b4cb8f3be956,"Colo at 55, LLC",GA,geocoded_address,100.0,0.0,0.0
+dc_cc49cc794d73,Telecom Center LA,CA,geocoded_address,100.0,0.0,0.0
+dc_a61f211e8fc1,Colo4Dallas,TX,geocoded_address,10.0,0.0,0.0
+dc_583749301cba,CoreSite - Reston (VA1),VA,geocoded_address,10.0,0.0,0.0
+dc_a19dbeb11233,CoreSite - New York (NY1),NY,geocoded_address,10.0,0.0,0.0
+dc_bed5d7adeebd,ColoHouse Miami,FL,geocoded_address,100.0,0.0,0.0
+dc_555e7f99046e,Equinix DE2 - Denver,CO,geocoded_address,10.0,0.0,0.0
+dc_6073295c9610,Equinix CU1/CU2/CU3/CU4 - Culpeper,VA,geocoded_address,10.0,0.0,0.0
+dc_e3f553271048,Telehouse - Teleport Center (New York),NY,geocoded_address,10.0,0.0,0.0
+dc_682c5aa2595c,Level(3) Jersey City,NJ,geocoded_address,10.0,0.0,0.0
+dc_d8cbe6a83e85,YRIX,MT,geocoded_address,100.0,0.0,0.0
+dc_a5f0be3912b0,"Kanobe, LLC",WA,geocoded_address,10.0,0.0,0.0
+dc_97685944d21e,LightEdge San Diego 1 (SAN1),CA,geocoded_address,10.0,0.0,0.0
+dc_42fe8c21d049,LightEdge San Diego 2 (SAN2),CA,geocoded_address,10.0,0.0,0.0
+dc_2718db0e3e25,Cologix MIN1,MN,geocoded_address,10.0,0.0,0.0
+dc_dc9cfe14a3c1,JSLLC Bozeman,MT,geocoded_address,10.0,0.0,0.0
+dc_1a7218366cda,Level(3) Salt Lake City,UT,geocoded_address,10.0,0.0,0.0
+dc_fd9603176e38,XO Salt Lake City IP PoP,UT,geocoded_address,10.0,0.0,0.0
+dc_84bb862c11a5,NASA Moffet Field,CA,geocoded_address,100.0,0.46,0.0
+dc_ace039d9399a,Quonix Datacenter (2401 Locust St),PA,geocoded_address,10.0,0.0,0.0
+dc_087ab67b867b,Digital Realty EWR (100 Delawanna),NJ,geocoded_address,10.0,0.0,0.0
+dc_b853c136e629,Equinix AT1 - Atlanta,GA,geocoded_address,100.0,0.0,0.0
+dc_8571719d8d4f,Flex Data Center,VA,geocoded_address,10.0,0.0,0.0
+dc_d066029539f1,Netriplex,NC,geocoded_address,10.0,0.04,0.0
+dc_474021bfadb0,800 south hope,CA,geocoded_address,100.0,0.0,0.0
+dc_5cda8a3851c2,Equinix CH3 - Elk Grove,IL,geocoded_address,10.0,0.0,0.0
+dc_4d5eb2ad3758,Login Tucson,AZ,geocoded_address,10.0,0.0,0.0
+dc_0d2326038c4d,QuadraNet DTLA,CA,geocoded_address,100.0,0.0,0.0
+dc_41636269afae,801 Main Street - Lenoir,NC,geocoded_address,10.0,0.0,0.0
+dc_3875880f621c,Tonaquint Data Center - Saint George,UT,geocoded_address,10.0,0.0,0.0
+dc_381edb33d816,XO 818 West 7th,CA,geocoded_address,10.0,0.0,0.0
+dc_9dd5566a71a7,XO 600 West 7th,CA,geocoded_address,100.0,0.0,0.0
+dc_fbb53be5b475,Level(3) Dallas,TX,geocoded_address,100.0,0.0,0.0
+dc_52d8bce06fbc,ixColo,NY,geocoded_address,10.0,0.0,0.0
+dc_4b5f2abb8123,Level(3) Seattle (Denny Way),WA,geocoded_address,10.0,0.0,0.0
+dc_bce2a55a99d1,501 Franklin Ave,NY,geocoded_address,10.0,0.0,0.0
+dc_5ed930ed15c9,Zayo Networks,CO,geocoded_address,10.0,0.0,0.0
+dc_3d8ba6265059,SBA Edge - Jacksonville (JAX),FL,geocoded_address,10.0,0.0,0.0
+dc_bd177f82d3dd,Level(3) Kansas City,MO,geocoded_address,100.0,0.0,0.0
+dc_dad53bb36c30,801 Tenth Street Modesto (Ayera),CA,geocoded_address,10.0,0.0,0.0
+dc_6bd093e936e7,500 Green (AKA VOLICO 2.0),FL,geocoded_address,100.0,0.08,0.0
+dc_6ad7c23dd50f,Level(3) Los Angeles,CA,geocoded_address,10.0,0.0,0.0
+dc_12dcf424978c,Digital Realty SJC (2220 De La Cruz Blvd),CA,geocoded_address,10.0,0.0,0.0
+dc_0bbaee713245,Vantage Data Centers (Santa Clara),CA,geocoded_address,10.0,0.0,0.0
+dc_854cee558167,RagingWire VA1 - NTT,VA,geocoded_address,10.0,0.0,0.0
+dc_5ec81740ac02,"232 20th St NW, East Grand Forks",MN,geocoded_address,100.0,0.24,0.0
+dc_6fac010572d0,IUPUI Informatics & Communications Technology Complex,IN,geocoded_address,10.0,0.0,0.0
+dc_b42e1143db3d,INdigital,IN,geocoded_address,10.0,0.0,0.0
+dc_606ad9c4165a,Syringa Networks Boise,ID,geocoded_address,10.0,0.0,0.0
+dc_fd519f588a3b,SupraNet Communications Madison,WI,geocoded_address,10.0,0.0,0.0
+dc_110d4d59e055,QTS Piscataway (PNJ1),NJ,geocoded_address,100.0,0.14,0.0
+dc_b18c7f03ee5a,I2B SAN02,CA,geocoded_address,10.0,0.0,0.0
+dc_d19c07e250c3,I2B SAN01,CA,geocoded_address,100.0,0.0,0.0
+dc_ee5a10e9cdc7,USNAMES-NET,DE,geocoded_address,10.0,0.0,0.0
+dc_5559c4f443dd,Level(3) Denver,CO,geocoded_address,10.0,0.0,0.0
+dc_57ba990839e2,DataBank Ashburn (IAD1),VA,geocoded_address,10.0,0.0,0.0
+dc_f907a6d7f787,Fireline Data Center,CA,geocoded_address,100.0,0.0,0.0
+dc_c600c3efed73,CoreSite - Denver (DE2),CO,geocoded_address,100.0,0.0,0.0
+dc_3892ecf526a3,321 S Boston Ave,OK,geocoded_address,10.0,0.0,0.0
+dc_4f54bffb8d68,"Equinix MI3 - Miami, Boca Raton",FL,geocoded_address,100.0,0.0,0.0
+dc_71b5b73fcac8,Telehouse - New York Chelsea,NY,geocoded_address,100.0,0.24,0.0
+dc_9ed1aea6df62,INOC Albany (80 State St),NY,geocoded_address,100.0,0.0,0.0
+dc_e81430ad9e71,Colo@34 (Downtown),GA,geocoded_address,100.0,0.0,0.0
+dc_4d6a0bcae658,Level(3) Memphis,TN,geocoded_address,10.0,0.0,0.0
+dc_caf0dd24a4a3,Hivelocity,FL,geocoded_address,10.0,0.0,0.0
+dc_ec064dc4d572,NP Rochester,MN,geocoded_address,100.0,0.0,0.0
+dc_74be05054a07,Duluth Missabe,MN,geocoded_address,10.0,0.0,0.0
+dc_f4381f508e7b,XMission - Salt Lake City - Utah,UT,geocoded_address,100.0,0.0,0.0
+dc_1e56ff5b5b31,EvoSwitch WDC1,VA,geocoded_address,10.0,0.22,0.0
+dc_d51a40e3ebd7,Digital Realty IAD (44521 Hastings),VA,geocoded_address,10.0,0.0,0.0
+dc_002da1390e71,Digital Realty IAD (44461 Chilum),VA,geocoded_address,10.0,0.0,0.0
+dc_1d8cca75d953,Digital Realty DFW (1232 Alma),TX,geocoded_address,100.0,0.0,0.0
+dc_b12f43ed44be,Digital Realty CHI (2200 Busse Rd.),IL,geocoded_address,10.0,0.0,0.0
+dc_131e675b00b7,Rackspace Dallas Grapevine (DFW1),TX,geocoded_address,10.0,0.0,0.0
+dc_272219c4c331,Carolina Internet / CaroNet XB,NC,geocoded_address,10.0,0.04,0.0
+dc_b31752bb43f2,Westelcom Networks Watertown,NY,geocoded_address,10.0,0.0,0.0
+dc_022cedeff92c,Westelcom Networks Plattsburgh,NY,geocoded_address,10.0,0.0,0.0
+dc_f0251b9c4cc6,Fusion - Cleveland,OH,geocoded_address,100.0,0.0,0.004890703946886291
+dc_80a9eb772e82,DataBank New York (LGA1),NY,geocoded_address,10.0,0.0,0.0
+dc_5e87bc712d75,Crown Castle Pittsburgh (Allegheny Center Mall),PA,geocoded_address,10.0,0.0,0.0
+dc_85af46cfd088,1500 Champa,CO,geocoded_address,100.0,0.0,0.0
+dc_a7346f4ae373,ColoCenter.com - Manchester NH,NH,geocoded_address,100.0,0.0,0.0
+dc_298d8384169d,Implex Minneapolis,MN,geocoded_address,10.0,0.0,0.0
+dc_fed2cce6b6c2,IPR Wilmington CCC,DE,geocoded_address,100.0,0.0,0.0
+dc_c076f88bdf99,CyrusOne Cincinnati 7th St,OH,geocoded_address,100.0,0.0,0.0
+dc_a29f6258e847,CyrusOne Lebanon,OH,geocoded_address,100.0,0.58,0.0
+dc_50f553e0c62c,CyrusOne Florence,KY,geocoded_address,100.0,0.02,0.0
+dc_df6acb943b72,CyrusOne Mason,OH,geocoded_address,10.0,0.0,0.0
+dc_5f2a61722af9,CyrusOne Hamilton,OH,geocoded_address,100.0,0.14,0.0
+dc_86334a11f204,Databank Houston Galleria (HOU5),TX,geocoded_address,100.0,0.0,0.0
+dc_664c5d805196,Databank Houston West (HOU1) (HOU2),TX,geocoded_address,10.0,0.02,0.0
+dc_0b2f7896c0d0,CyrusOne Dallas (Lewisville),TX,geocoded_address,10.0,0.0,0.0
+dc_58616fe2297e,CyrusOne Dallas (Carrollton),TX,geocoded_address,100.0,0.0,0.0
+dc_3223faf8d9ac,CyrusOne Chicago (Lombard),IL,geocoded_address,10.0,0.0,0.0
+dc_e22e8d10f87c,200 Quannapowitt Pkwy,MA,geocoded_address,10.0,0.0,0.0
+dc_89d0864db4f2,Bay Area Internet,CA,geocoded_address,10.0,0.0,0.0
+dc_f379e2e3f368,EZ Network Systems,CA,geocoded_address,10.0,0.0,0.0
+dc_db573af22b8c,DataBank Las Vegas (LAS1),NV,geocoded_address,100.0,0.0,0.0
+dc_b5323f8208c8,Level(3) Newark,NJ,geocoded_address,10.0,0.0,0.0
+dc_8ee44a03b9d6,Level(3) Bellevue,NE,geocoded_address,10.0,0.0,0.0
+dc_148aeae62582,Level(3) Hayward,CA,geocoded_address,10.0,0.0,0.0
+dc_82ff6a5c5a0d,OneNet OSU Tulsa,OK,geocoded_address,10.0,0.0,0.0
+dc_b6fbffa58ede,ARE-ON Hope,AR,geocoded_address,10.0,0.0,0.0
+dc_a6d9638415be,ARE-ON Forrest City,AR,geocoded_address,10.0,0.0,0.0
+dc_d64ac7105bee,"375 Pearl, Intergate.Manhattan",NY,geocoded_address,100.0,0.0,0.04515612089123541
+dc_69bfcdca0d0e,Sungard AS Sacramento,CA,geocoded_address,10.0,0.0,0.0
+dc_4b4602a89a86,SITCO Evansville,IN,geocoded_address,100.0,0.06,0.0
+dc_1302d924a662,InfoBunker,IA,geocoded_address,100.0,0.54,0.0
+dc_7d017b08a124,DataBank Miami (MIA1),FL,geocoded_address,100.0,0.0,0.0
+dc_39a8cb17ab9f,Level(3) Austin (Kramer),TX,geocoded_address,100.0,0.02,0.0
+dc_ea8cf986c503,Alpheus Houston (777 Walker Street),TX,geocoded_address,10.0,0.0,0.0
+dc_c8127fd45f74,CLT2,NC,geocoded_address,10.0,0.0,0.0
+dc_178e214f0af3,"SBA Edge, LLC",IL,geocoded_address,10.0,0.0,0.0
+dc_e40e30b5f07d,Level(3) Atlanta (Peachtree),GA,geocoded_address,100.0,0.0,0.0
+dc_864cf68f769a,Level(3) Chicago (Kingsbury),IL,geocoded_address,10.0,0.0,0.0
+dc_b5e8b871ad80,Level(3) Miami (5th St),FL,geocoded_address,100.0,0.0,0.0
+dc_f762d99d6b4e,Level(3) Herndon,VA,geocoded_address,100.0,0.52,0.0
+dc_883d27078b2e,Level(3) McLean,VA,geocoded_address,100.0,0.06,0.0
+dc_ed8005520bf5,DataBank Dallas (DFW6),TX,geocoded_address,10.0,0.0,0.0
+dc_ae465e5fe76f,HSW-DC1RH,SC,geocoded_address,10.0,0.0,0.0
+dc_4e2c0853b3db,Digital Realty Boston BOS16 (closed),MA,geocoded_address,10.0,0.0,0.0
+dc_01f98dd90a2d,LightPoint Corporation,OR,geocoded_address,10.0,0.0,0.0
+dc_ee2dabe2d034,IC2NET Data Center,CA,geocoded_address,100.0,0.0,0.0
+dc_c37802ecd331,Northland Communications - Syracuse,NY,geocoded_address,100.0,0.0,0.0
+dc_d4c3cf951bc7,Northland Communications - Utica,NY,geocoded_address,10.0,0.0,0.0
+dc_fd5d2f4c2f9e,NYI NY1 (100 William Street),NY,geocoded_address,10.0,0.0,0.0
+dc_d26d3b37dc1a,Host Color,NY,geocoded_address,10.0,0.0,0.0
+dc_fa5618a8e380,H5 Data Centers New York,NY,geocoded_address,100.0,0.0,0.0
+dc_f3db3ae251af,DataBank New York (LGA2),NY,geocoded_address,10.0,0.0,0.0
+dc_5f57417784ad,DataBank Newark (EWR1),NJ,geocoded_address,10.0,0.0,0.0
+dc_81bdea6e864f,WOW! Business (Columbus Datacenter),OH,geocoded_address,100.0,0.0,0.0
+dc_9d9fbdb41e19,DC74-CLT1,NC,geocoded_address,10.0,0.0,0.0
+dc_49e0d2491132,DC74-CLT4,NC,geocoded_address,10.0,0.14,0.0
+dc_7d05eaf4ac3e,612 W Main,WI,geocoded_address,10.0,0.0,0.0
+dc_20728e9abe29,Telefonica KeyCenter,FL,geocoded_address,100.0,0.66,0.0
+dc_34886e6cf7de,DataBank Seattle (SEA1),WA,geocoded_address,10.0,0.0,0.0
+dc_aea1cf806ec1,EdgeConneX Denver (EDCDEN01),CO,geocoded_address,100.0,0.0,0.0
+dc_a234b02a6a79,Digital Realty IAD (43940 Digital Loudoun),VA,geocoded_address,10.0,0.0,0.0
+dc_5eaa6dda34c1,QTS Phoenix (PHX1),AZ,geocoded_address,10.0,0.0,0.0
+dc_ffef5b6cf155,Montana Opticom,MT,geocoded_address,100.0,0.02,0.0
+dc_82227ff3b01d,Iron Mountain Data Center - Denver (DEN-1),CO,geocoded_address,10.0,0.0,0.0
+dc_baa87d4e6e61,EdgeConneX Houston (EDCHOU01),TX,geocoded_address,10.0,0.0,0.0
+dc_3383905d0028,NEGMA Datacenter,TX,geocoded_address,10.0,0.0,0.0
+dc_0e570fa9e1ff,EdgeConneX Phoenix (EDCPHX01),AZ,geocoded_address,10.0,0.0,0.0
+dc_dfda7e9a1e03,EdgeConneX Las Vegas (EDCLAS01),NV,geocoded_address,10.0,0.0,0.0
+dc_bceae002eccf,EdgeConneX Norfolk (EDCNOR01),VA,geocoded_address,10.0,0.0,0.0
+dc_ac081552fe1c,EdgeConneX Portland (EDCPOR01),OR,geocoded_address,100.0,0.0,0.0
+dc_32cda6fe8ad6,EdgeConneX Miami (EDCMIA01),FL,geocoded_address,100.0,0.0,0.0
+dc_a013916a228d,EdgeConneX Nashville (EDCNAS01),TN,geocoded_address,10.0,0.0,0.0
+dc_584854729387,EdgeConneX Pittsburgh (EDCPIT01),PA,geocoded_address,10.0,0.4,0.0
+dc_215a200532dc,EdgeConneX Sacramento (EDCSAC01),CA,geocoded_address,10.0,0.0,0.0
+dc_f37586d2198c,EdgeConneX Detroit (EDCDET01),MI,geocoded_address,100.0,0.24,0.0
+dc_9b38c6590761,EdgeConneX San Diego (EDCSDG01),CA,geocoded_address,10.0,0.0,0.0
+dc_6941afa4ec15,EdgeConneX Atlanta (EDCATL01),GA,geocoded_address,10.0,0.0,0.0
+dc_733aea2e5795,EdgeConneX Memphis (EDCMEM01),TN,geocoded_address,10.0,0.0,0.0
+dc_e579a4187175,CME Cermak,IL,geocoded_address,10.0,0.0,0.0
+dc_57ccaad02d2e,Lifeline Eastgate,IN,geocoded_address,10.0,0.0,0.0
+dc_c38d391736df,Digital Realty MIA (36 NE 2nd St),FL,geocoded_address,100.0,0.0,0.0
+dc_5f370fd573c6,Level(3) Boise,ID,geocoded_address,100.0,0.34,0.0
+dc_fdb3d62969dc,South Reach Networks,FL,geocoded_address,100.0,0.0,0.0
+dc_b91b77b57b86,"LogInToUs, Inc.",NY,geocoded_address,100.0,0.5,0.0
+dc_fcd214823e30,MDC McAllen,TX,geocoded_address,10.0,0.0,0.0
+dc_b88a0de9a6f9,Laredo VTX,TX,geocoded_address,10.0,0.0,0.0
+dc_ff894257d489,Netrality St. Louis - 210 N Tucker,MO,geocoded_address,100.0,0.0,0.0
+dc_528e1ba31c73,Level(3) Nashville (9th Ave),TN,geocoded_address,10.0,0.0,0.0
+dc_141a6d343f13,Iron Mountain Data Center - Ohio (OHS-1),OH,geocoded_address,10.0,0.18,0.0
+dc_96c5b654ee78,Iron Mountain Data Center - New Jersey (NJE-1),NJ,geocoded_address,10.0,0.0,0.0
+dc_5a0289a90452,Evocative Emeryville (EM1),CA,geocoded_address,10.0,0.0,0.0
+dc_9e8f44c6161f,365 Data Centers New York (NY10),NY,geocoded_address,10.0,0.0,0.0
+dc_5880d7b58735,365 Data Centers Philadelphia (PH2),PA,geocoded_address,100.0,0.0,0.0
+dc_34f0b7f21dd7,Netrality - Indy Telcom Center - 701 W. Henry,IN,geocoded_address,10.0,0.0,0.0
+dc_c58e13acabfe,365 Data Centers Detroit (DT1),MI,geocoded_address,10.0,0.0,0.0
+dc_3836361e4e37,Wintek Corporation,IN,geocoded_address,10.0,0.0,0.0
+dc_27ae5eaebba0,NETRIX - MTP,IL,geocoded_address,100.0,0.0,0.0
+dc_ad044f529f5f,NETRIX - ALSIP,IL,geocoded_address,10.0,0.0,0.0
+dc_66cc54598f3e,NETRIX - BBN,IL,geocoded_address,10.0,0.0,0.0
+dc_ea75373be693,Pixel Factory Data Center,VA,geocoded_address,10.0,0.0,0.0
+dc_6f387c9933e4,EdgeConneX Boston (EDCBOS01),MA,geocoded_address,10.0,0.0,0.0
+dc_83ffc6452bd2,EdgeConneX Tallahassee (EDCTAL01),FL,geocoded_address,10.0,0.0,0.0
+dc_668e8cfeb9b1,EdgeConneX Richmond (EDCRIC01),VA,geocoded_address,100.0,0.0,0.0
+dc_a4bccfe660c3,EdgeConneX Jacksonville (EDCJAX01),FL,geocoded_address,10.0,0.34,0.0
+dc_4397dcdb97c4,EdgeConneX Salt Lake City (EDCSLC01),UT,geocoded_address,10.0,0.0,0.0
+dc_3e49d7f1ba48,EdgeConneX Seattle (EDCSEA01),WA,geocoded_address,10.0,0.0,0.0
+dc_d766673ffec0,FiberCloud-Westin1809,WA,geocoded_address,10.0,0.0,0.0
+dc_7c4b01474de7,FiberCloud-Westin3205,WA,geocoded_address,10.0,0.0,0.0
+dc_52cd5868f517,123.NET - DC1 - 24700 Northwestern Hwy.,MI,geocoded_address,10.0,0.0,0.0
+dc_e87f67f21f0c,H5 Data Centers Tampa,FL,geocoded_address,100.0,0.0,0.0
+dc_c2f10be9629e,H5 Data Centers Buffalo III,NY,geocoded_address,10.0,0.0,0.0
+dc_ec9f9b87e90e,TierPoint Hawthorne (fka Xand),NY,geocoded_address,100.0,0.0,0.0
+dc_b8a06f212731,Netrality Philadelphia - 401 N Broad,PA,geocoded_address,100.0,0.0,0.0
+dc_09200711b7ac,833 Chestnut Street,PA,geocoded_address,10.0,0.0,0.0
+dc_70fb4023eb68,H5 Data Centers Philadelphia (PA01),PA,geocoded_address,10.0,0.0,0.0
+dc_4aca16af087d,SD Data Center,FL,geocoded_address,10.0,0.0,0.0
+dc_9d25e192f215,Digital Fortress (SEA),WA,geocoded_address,10.0,0.0,0.0
+dc_735d2581baf7,Digital Fortress (TUK),WA,geocoded_address,10.0,0.0,0.0
+dc_9ecc3ad99ee0,TierPoint Omaha - Midlands,NE,geocoded_address,10.0,0.0,0.0
+dc_d0a52d46f2aa,CyrusOne NJ-1,NJ,geocoded_address,10.0,0.0,0.0
+dc_55f5c1098183,CyrusOne NC-1,NC,geocoded_address,100.0,0.2,0.0
+dc_ba58e4ebbda3,Psychz Networks LAX1,CA,geocoded_address,100.0,0.0,0.0
+dc_805c4656a845,230 Congress,MA,geocoded_address,10.0,0.0,0.0
+dc_c781be459e42,DataBank Denver (DEN2),CO,geocoded_address,10.0,0.0,0.0
+dc_8895a8adb317,SoVerNet Burlington,VT,geocoded_address,100.0,0.0,0.0
+dc_86ad0acb41d8,Simply Bits DC1,AZ,geocoded_address,10.0,0.0,0.0
+dc_cd3925d5b7dd,DataBank Boston (BOS1),MA,geocoded_address,10.0,0.0,0.0
+dc_6db2ddc44c26,Digital Realty BOS (128 1st Ave),MA,geocoded_address,10.0,0.0,0.0
+dc_79d256a5f79f,Colo@ (Buckhead),GA,geocoded_address,10.0,0.0,0.0
+dc_3f21446be601,Atlanta Tech Village,GA,geocoded_address,10.0,0.0,0.0
+dc_dd9631825e6b,GIP Plano,TX,geocoded_address,10.0,0.0,0.0
+dc_c2f977e5b859,UFN Kearns,UT,geocoded_address,100.0,0.0,0.0
+dc_755d5a3f3818,CyrusOne Sterling,VA,geocoded_address,10.0,0.0,0.0
+dc_2338d12e367c,RSA Dexter Avenue Datacenter,AL,geocoded_address,10.0,0.0,0.0
+dc_f7435c1bda22,Gafachi 1 West Main Rochester,NY,geocoded_address,100.0,0.0,0.0
+dc_2e566d6574eb,Cologix MIN2,MN,geocoded_address,10.0,0.0,0.0
+dc_2e5749b84fc8,Vaultas,WI,geocoded_address,10.0,0.0,0.0
+dc_49e9f7db52dc,Data Foundry Austin 1,TX,geocoded_address,10.0,0.0,0.0
+dc_3706cdb29bf1,Data Foundry Houston 1,TX,geocoded_address,100.0,0.0,0.0
+dc_94fb239dbf78,Data Foundry Houston 2,TX,geocoded_address,10.0,0.0,0.0
+dc_c958657a0348,TriTech Center,MN,geocoded_address,100.0,0.0,0.0
+dc_a48bd507b5ac,CyrusOne Wappingers Falls,NY,geocoded_address,10.0,0.0,0.0
+dc_80dd96d6f070,CyrusOne Totowa,NJ,geocoded_address,10.0,0.0,0.0
+dc_a1a2d4c9b9b0,CyrusOne Norwalk,CT,geocoded_address,10.0,0.0,0.0
+dc_2600bf81e31a,QTS Richmond (RIC1),VA,geocoded_address,100.0,0.48,0.0
+dc_1633b238c629,Cologix DAL1,TX,geocoded_address,10.0,0.0,0.0
+dc_033df59021e1,Cologix DAL2,TX,geocoded_address,10.0,0.0,0.0
+dc_62b148aaa408,Cologix COL1,OH,geocoded_address,100.0,0.0,0.0
+dc_2c014e46bfd7,Cologix COL2,OH,geocoded_address,100.0,0.0,0.008167390735918847
+dc_8c4c2067351e,Cologix JAX2,FL,geocoded_address,10.0,0.16,0.0
+dc_841c8754ed1b,Cologix LAK1,FL,geocoded_address,10.0,0.0,0.0
+dc_ce8075567251,Flexential - Cincinnati (CIN1/2),OH,geocoded_address,10.0,0.0,0.0
+dc_6452cc5b0c97,Level(3) Charlotte,NC,geocoded_address,10.0,0.0,0.0
+dc_93add6dd1d1d,ERC Broadband,NC,geocoded_address,10.0,0.0,0.0
+dc_90929b3b19a1,Lightboard ★ Massachusetts,MA,geocoded_address,10.0,0.0,0.0
+dc_90c8dcfdda40,Stack Infrastructure Portland PORO2,OR,geocoded_address,10.0,0.0,0.0
+dc_59783b2d12ed,EdgeConneX Santa Clara (EDCSVC01/EDCSVC02),CA,geocoded_address,10.0,0.0,0.0
+dc_23a57bb771d3,"DataSite, Boise",ID,geocoded_address,10.0,0.0,0.0
+dc_7fe3c888b6c0,Lunavi - Westin1809,WA,geocoded_address,10.0,0.0,0.0
+dc_78def80fc2f7,Lunavi - Westin1969,WA,geocoded_address,10.0,0.0,0.0
+dc_12cbbeba293d,Lunavi - Westin3205,WA,geocoded_address,10.0,0.0,0.0
+dc_4b4508a3fbf2,Flexential - Denver/Aurora (DEN03),CO,geocoded_address,10.0,0.0,0.0
+dc_33b0acb3fbfc,Flexential - Denver/Englewood (DEN11),CO,geocoded_address,10.0,0.0,0.0
+dc_a3a8fb84180f,Flexential - Minneapolis/Chaska (MSP01),MN,geocoded_address,10.0,0.04,0.0
+dc_2183463f5e3a,Flexential - Las Vegas/Downtown (LAS03),NV,geocoded_address,10.0,0.0,0.0
+dc_e5ff3c2dc17c,Flexential - Las Vegas/Downtown (LAS05),NV,geocoded_address,10.0,0.0,0.0
+dc_b04abdda0a7c,Flexential - Las Vegas/North (LAS04),NV,geocoded_address,10.0,0.0,0.0
+dc_ce363e3ec754,Flexential - Portland/Hillsboro (PDX01),OR,geocoded_address,10.0,0.0,0.0
+dc_cf7e6e8946c1,Flexential - Portland/Hillsboro 2 (PDX02),OR,geocoded_address,10.0,0.0,0.0
+dc_d966ea3f8e06,Flexential - Denver/Centennial (DEN05),CO,geocoded_address,10.0,0.0,0.0
+dc_55529f8314f5,Flexential - Dallas/Richardson (RCH01),TX,geocoded_address,100.0,0.0,0.0
+dc_dfc785a7c7de,Flexential - Salt Lake City/Cottonwood (SLC05),UT,geocoded_address,100.0,0.0,0.0
+dc_2d61a33ca46b,Flexential - Salt Lake City/South Valley (SLC09),UT,geocoded_address,100.0,0.02,0.0
+dc_c7daef7be339,DataBank Dallas (DFW5),TX,geocoded_address,10.0,0.0,0.0
+dc_c620295c9127,Cologix NNJ2,NJ,geocoded_address,10.0,0.0,0.0
+dc_21bd83254e11,Cologix NNJ3,NJ,geocoded_address,10.0,0.0,0.0
+dc_e398f3978d57,Alpheus Austin (1905 E. 6th Street),TX,geocoded_address,100.0,0.0,0.0
+dc_362d590e4b24,Voonami SLC2,UT,geocoded_address,10.0,0.0,0.0
+dc_6f992d5b84cd,Voonami SLC1,UT,geocoded_address,10.0,0.0,0.0
+dc_180d30e8b4da,ACT Cheyenne,WY,geocoded_address,100.0,0.16,0.0
+dc_2b69bfa841ef,ACT Wheatland,WY,geocoded_address,100.0,0.2,0.0
+dc_0ccbc7a90b2d,ACT Douglas,WY,geocoded_address,100.0,0.66,0.0
+dc_255488578f92,ACT Casper,WY,geocoded_address,100.0,0.0,0.0
+dc_125f47540bac,ACT Riverton,WY,geocoded_address,100.0,0.0,0.0
+dc_58ca51de8887,ACT Gillette,WY,geocoded_address,100.0,0.58,0.0
+dc_7db6a874da87,ACT Buffalo,WY,geocoded_address,100.0,0.0,0.0
+dc_9987086c405c,ACT Sheridan,WY,geocoded_address,100.0,0.0,0.0
+dc_6f74b8c1ecc5,ACT Colstrip,MT,geocoded_address,100.0,0.16,0.0
+dc_4dbc93c49488,Digital Realty SJC (2805 Lafayette),CA,geocoded_address,10.0,0.0,0.0
+dc_e1b88786f3b0,Digital Realty LAX (2260 E El Segundo),CA,geocoded_address,10.0,0.0,0.0
+dc_3dea0a669a7d,325 Delaware Ave,NY,geocoded_address,10.0,0.0,0.0
+dc_59773501dcdd,Forsythe Data Centers,IL,geocoded_address,10.0,0.0,0.0
+dc_dfcc7a22bf0c,Columbia County Community Broadband Utility,GA,geocoded_address,10.0,0.0,0.0
+dc_ee2c4724265a,Equinix DA7 - Dallas,TX,geocoded_address,10.0,0.0,0.0
+dc_3feab9bb27ef,Centersquare Chicago (ORD2),IL,geocoded_address,10.0,0.0,0.0
+dc_95a460858bbe,Centersquare Columbus (CMH1),OH,geocoded_address,10.0,0.0,0.0
+dc_1fd168086757,Centersquare Northern Virginia (IAD1-A/F),VA,geocoded_address,10.0,0.0,0.0
+dc_445dff13f0cb,EdgeConneX Madison (EDCMAD01),WI,geocoded_address,100.0,0.1,0.0
+dc_a57a479290da,EdgeConneX Minneapolis (EDCMSP01),MN,geocoded_address,10.0,0.0,0.0
+dc_528384267832,Centersquare Northern Virginia (IAD1-C/E),VA,geocoded_address,100.0,0.0,0.0
+dc_39d40801f80a,Centersquare Northern Virginia (IAD2),VA,geocoded_address,100.0,0.0,0.0
+dc_fa631ad5684c,Centersquare Northern Virginia (IAD3),VA,geocoded_address,100.0,0.0,0.0
+dc_ff3aba8fa11d,Centersquare Dallas (DFW1),TX,geocoded_address,10.0,0.0,0.0
+dc_837045fc5729,Centersquare Denver (DEN1),CO,geocoded_address,10.0,0.0,0.0
+dc_a8b860d92de2,Centersquare Denver (DEN2),CO,geocoded_address,10.0,0.0,0.0
+dc_ec0b9c36f643,Centersquare Minneapolis (MSP1),MN,geocoded_address,10.0,0.0,0.0
+dc_c1851f9d9727,Centersquare New Jersey (EWR2),NJ,geocoded_address,10.0,0.0,0.0
+dc_c7be2966c16a,Centersquare New Jersey (EWR3),NJ,geocoded_address,10.0,0.0,0.0
+dc_634e7c426abd,Centersquare Los Angeles (LAX3),CA,geocoded_address,10.0,0.0,0.0
+dc_cfd86dec39d0,Centersquare Phoenix (PHX1),AZ,geocoded_address,10.0,0.0,0.0
+dc_9a78859fa7f1,Centersquare Silicon Valley (SFO1),CA,geocoded_address,10.0,0.0,0.0
+dc_d290e4022b32,Centersquare Silicon Valley (SFO2),CA,geocoded_address,10.0,0.0,0.0
+dc_b3f9e624dfec,Centersquare Seattle (SEA1-B),WA,geocoded_address,10.0,0.0,0.0
+dc_90455f1b2274,Centersquare Silicon Valley (SFO3),CA,geocoded_address,10.0,0.0,0.0
+dc_6ab52053e3ec,Centersquare Tampa (TPA1),FL,geocoded_address,10.0,0.0,0.0
+dc_83495392fdac,NP Belle Plaine (MSP1),MN,geocoded_address,10.0,0.0,0.0
+dc_3ef211afc81f,I-Evolve Technology Datacenter Amherst,NY,geocoded_address,10.0,0.0,0.0
+dc_0889bebc1079,Lowest Host/Empire Technology,UT,geocoded_address,100.0,0.0,0.0
+dc_577d0763b239,CoreSite - Reston (VA2),VA,geocoded_address,100.0,0.08,0.0
+dc_77d6c520b74a,Ascent - CH2,IL,geocoded_address,10.0,0.0,0.0
+dc_54191d9d0f70,MultaCom Main,CA,geocoded_address,10.0,0.0,0.0
+dc_815a4077d7c3,SDN Communications Campus Sioux Falls South Dakota,SD,geocoded_address,100.0,0.0,0.0
+dc_a4a29a509851,SDN Communication Mark Shlanta Technology Park,SD,geocoded_address,100.0,0.36,0.0
+dc_a1d2bf1489bd,BESTNAP,TX,geocoded_address,100.0,0.0,0.0
+dc_26db4d08cc6d,Evocative DA4,TX,geocoded_address,10.0,0.0,0.0
+dc_f27036f5aa1b,H5 Data Centers Silicon Valley,CA,geocoded_address,10.0,0.0,0.0
+dc_1582bf9a4bfb,Digital Realty CHI (600-780 S Federal),IL,geocoded_address,10.0,0.0,0.0
+dc_16d1c4c70378,Zayo Pittsburgh - 2500 Allegheny Center Mall,PA,geocoded_address,10.0,0.0,0.0
+dc_fa32d5b574b6,Zayo Nashville - 209 10th Ave. S,TN,geocoded_address,10.0,0.0,0.0
+dc_76ee034b9cda,Zayo Cleveland - 1525 Rockwell Ave,OH,geocoded_address,10.0,0.0,0.0
+dc_6408ea6661a1,Sungard AS Scottsdale,AZ,geocoded_address,10.0,0.0,0.0
+dc_c5961d5d88a0,INAP Houston,TX,geocoded_address,100.0,0.0,0.0
+dc_3ad585b77fab,DataBank Chicago (ORD1),IL,geocoded_address,10.0,0.0,0.0
+dc_bc06006b2111,Zayo Baltimore - 111 Market Pl,MD,geocoded_address,100.0,0.0,0.0
+dc_62a40204a545,DataBank Memphis (MEM1),TN,geocoded_address,10.0,0.0,0.0
+dc_55079160dfd9,Zayo Minneapolis - 10300 6th Ave N,MN,geocoded_address,10.0,0.0,0.0
+dc_03a055ec8a9d,DataBank Chicago (ORD3),IL,geocoded_address,10.0,0.0,0.0
+dc_e4341c36e064,"Roller Network (Reno, NV)",NV,geocoded_address,10.0,0.0,0.0
+dc_53c76c4c9a51,Zayo Washington DC - 2100 M Street NW,DC,geocoded_address,10.0,0.0,0.0
+dc_44e1452bfc28,DataBank Seattle (SEA2),WA,geocoded_address,10.0,0.0,0.0
+dc_c9e0167855d2,1011 San Jacinto,TX,geocoded_address,10.0,0.0,0.0
+dc_939f4f8150c1,H5 Data Centers Cleveland,OH,geocoded_address,10.0,0.0,0.0
+dc_60f5bc675bc3,Digital Realty CLT (125 N Myers St),NC,geocoded_address,100.0,0.0,0.0
+dc_9aa547ca020f,DataBank Denver (DEN1),CO,geocoded_address,100.0,0.0,0.0
+dc_50f300dbed19,Alpheus Fort Worth (307 W 7th St),TX,geocoded_address,100.0,0.0,0.0
+dc_6c5c3de9236e,Digital Realty EWR (3 Corporate Pl),NJ,geocoded_address,10.0,0.0,0.0
+dc_c83ebcd9777a,DataBank Irvine (SNA1),CA,geocoded_address,100.0,0.0,0.0
+dc_7cc4b0b4fc96,Evocative EWR1,NJ,geocoded_address,10.0,0.0,0.0
+dc_9dd5204cf104,TierPoint Chicago - West,IL,geocoded_address,10.0,0.0,0.0
+dc_0e8f573507fc,US Signal - Oak Brook,IL,geocoded_address,10.0,0.0,0.0
+dc_08c02a332e69,Evocative SEA1,WA,geocoded_address,10.0,0.0,0.0
+dc_c81ebd5c76fc,Evocative Virginia (VA1),VA,geocoded_address,10.0,0.0,0.0
+dc_586f965d0e34,Long Lines Data Center,IA,geocoded_address,100.0,0.38,0.0
+dc_202a2991c5a5,UnitedLayer Los Angeles,CA,geocoded_address,100.0,0.0,0.0
+dc_1bdd34364619,TierPoint Philadelphia,PA,geocoded_address,10.0,0.0,0.0
+dc_ddd97248cc7e,TierPoint Chicago - Polk,IL,geocoded_address,10.0,0.0,0.0
+dc_e2cb4bbef84e,H5 Data Centers Denver,CO,geocoded_address,10.0,0.0,0.0
+dc_a99edebba530,H5 Data Centers Seattle,WA,geocoded_address,10.0,0.0,0.0
+dc_1f5c6ef67d69,H5 Data Centers Atlanta,GA,geocoded_address,10.0,0.0,0.0
+dc_50cfa203d920,Amplex DC0,OH,geocoded_address,100.0,0.0,0.0
+dc_8e3b85f052e5,Markley Group Lowell,MA,geocoded_address,10.0,0.0,0.0
+dc_6a78d9936b54,GIP Dallas,TX,geocoded_address,10.0,0.0,0.0
+dc_79dfa0f520ee,Enseva Cedar Rapids,IA,geocoded_address,100.0,0.16,0.0
+dc_1381e04db5f3,Digital Realty SJC (1100 Space Park),CA,geocoded_address,10.0,0.0,0.0
+dc_b5563d708045,CyrusOne Aurora I,IL,geocoded_address,10.0,0.0,0.0
+dc_f41ce391bc3a,Optic Fusion - Perkins Building,WA,geocoded_address,10.0,0.0,0.0
+dc_b7fb6104e55f,Digital Realty HOU (12001 North Freeway),TX,geocoded_address,10.0,0.0,0.0
+dc_3c96251ce435,Tech Vault South Burlington,VT,geocoded_address,10.0,0.42,0.0
+dc_5dcb98d9729e,Digital Realty Portland - PDX10,OR,geocoded_address,10.0,0.0,0.0
+dc_acacfb9245c6,Cologix MIN3,MN,geocoded_address,10.0,0.0,0.0
+dc_7ab474505334,Cologix COL3,OH,geocoded_address,100.0,0.0,0.00989822388954063
+dc_b272dd406678,Consolidated - 811 Louisiana,TX,geocoded_address,10.0,0.0,0.0
+dc_5d9780f4d912,Prov.net PVD1 (1155 Westminster),RI,geocoded_address,10.0,0.0,0.0
+dc_21ebebf3dbbb,Prov.net PVD2 (304 Carpenter),RI,geocoded_address,100.0,0.0,0.0
+dc_02dc64b737be,Prov.net CHF1 (Boston North),MA,geocoded_address,100.0,0.0,0.0
+dc_0ba8bcd18eb0,QTS Princeton (PJC1),NJ,geocoded_address,10.0,0.0,0.0
+dc_347878620932,QTS Chicago (CHI1),IL,geocoded_address,10.0,0.0,0.0
+dc_85cad2201208,QTS Overland Park (OVP1),KS,geocoded_address,10.0,0.0,0.0
+dc_e37781a3945e,US Internet - Minnetonka,MN,geocoded_address,100.0,0.0,0.0
+dc_af69a6e28ad1,Everstream Parma Data Center,OH,geocoded_address,10.0,0.0,0.0
+dc_eca142e41806,LADC2 - 707 Wilshire Blvd,CA,geocoded_address,10.0,0.0,0.0
+dc_7569fa9635bc,LADC3 - 600 W 7th St,CA,geocoded_address,100.0,0.0,0.0
+dc_ac067fc8caa1,LADC4 - 530 W 6th St,CA,geocoded_address,100.0,0.0,0.0
+dc_c7aa0c4fe9d5,LADC5 - 650 S Grand Ave,CA,geocoded_address,100.0,0.0,0.0
+dc_57acf1168596,SFDC1 - 200 Paul Ave,CA,geocoded_address,10.0,0.0,0.0
+dc_be812f833558,NYDC1 - 60 Hudson Street,NY,geocoded_address,10.0,0.0,0.0
+dc_f6923d09cd62,NYDC2 - 111 8th ave,NY,geocoded_address,10.0,0.0,0.0
+dc_3cd8837b3e4f,NYDC3 - 11 skyline dr,NY,geocoded_address,100.0,0.06,0.0
+dc_871585f535e8,NJDC1 - 100 Delawanna ave,NJ,geocoded_address,10.0,0.0,0.0
+dc_df65c9139bfb,NJDC2 - 300 J F Kennedy Blvd,NJ,geocoded_address,10.0,0.0,0.0
+dc_75f15cdb1182,BDC1 - 34 Saint Martin Dr,MA,geocoded_address,10.0,0.0,0.0
+dc_081751389720,PDC1 - 9999 Hamilton blvd,PA,geocoded_address,100.0,0.14,0.0
+dc_c58b1b612021,PDC2 - 1000 Adams ave,PA,geocoded_address,10.0,0.0,0.0
+dc_7efbc943a5b5,PDC3 - 3949 Schelden Cir,PA,geocoded_address,10.0,0.0,0.0
+dc_194539a143f0,CDC1 - 350 E Cermak Rd,IL,geocoded_address,10.0,0.0,0.0
+dc_ad43d4cf1b08,CDC2 - 600 S Federal st,IL,geocoded_address,10.0,0.0,0.0
+dc_037586104f46,CDC3 - 800 E Business Center Dr,IL,geocoded_address,10.0,0.0,0.0
+dc_6fa7f8a2244a,CDC4 - 1808 Swift Dr,IL,geocoded_address,10.0,0.0,0.0
+dc_c160bcff218a,CDC5 - 2200 Busse Rd,IL,geocoded_address,10.0,0.0,0.0
+dc_ec7f3d892327,MDC1 - 36 NE 2nd St,FL,geocoded_address,100.0,0.0,0.0
+dc_41ca0ce0a509,HDC1 - 108 Bank St,CT,geocoded_address,100.0,0.0,0.0
+dc_a9daac2a9bcf,"ColoSpace - Bedford, NH",NH,geocoded_address,10.0,0.28,0.0
+dc_9674a1042873,"ColoSpace - Waltham, MA",MA,geocoded_address,10.0,0.16,0.0
+dc_fe6a5082e1a4,"ColoSpace - Rockland, MA",MA,geocoded_address,10.0,0.0,0.0
+dc_7371f6e88a78,"ColoSpace - Somerville, MA",MA,geocoded_address,10.0,0.0,0.0
+dc_64078778e699,MI Tech - Main Campus,MI,geocoded_address,10.0,0.0,0.0
+dc_57096ce99736,Crown Castle Hartford (960 Main),CT,geocoded_address,10.0,0.0,0.0
+dc_f386ecfb7f09,Crown Castle Boston (1 Summer),MA,geocoded_address,10.0,0.0,0.0
+dc_4de2dac0b961,Crown Castle Springfield (1 Federal),MA,geocoded_address,10.0,0.0,0.0
+dc_c67379e56350,Crown Castle Newark (165 Halsey),NJ,geocoded_address,10.0,0.0,0.0
+dc_0697d50df413,Crown Castle Providence (235 Promenade),RI,geocoded_address,10.0,0.0,0.0
+dc_3b40bd0e28a9,Crown Castle Chicago (725 S Wells),IL,geocoded_address,10.0,0.0,0.0
+dc_64fac6510bfa,Crown Castle Marlboro (34 St Martin),MA,geocoded_address,10.0,0.06,0.0
+dc_e7bcef4e6ef3,Crown Castle Worcester (474 Main),MA,geocoded_address,10.0,0.0,0.0
+dc_f16231684f36,Crown Castle New York (111 8th),NY,geocoded_address,10.0,0.0,0.0
+dc_1976e66defac,Crown Castle Providence (300 Carpenter),RI,geocoded_address,10.0,0.0,0.0
+dc_caa1e331d330,Crown Castle Columbus (101 E Town),OH,geocoded_address,10.0,0.0,0.0
+dc_8a0744087416,ManagedWay TYM1,MI,geocoded_address,10.0,0.0,0.0
+dc_f1924a1f4658,ManagedWay TYM2,MI,geocoded_address,10.0,0.0,0.0
+dc_83e9572d0746,ManagedWay BYK1,MI,geocoded_address,100.0,0.08,0.0
+dc_e69a4d117f8d,ManagedWay SFJ1,MI,geocoded_address,10.0,0.0,0.0
+dc_f9b72dde45d8,ManagedWay SFJ2,MI,geocoded_address,10.0,0.0,0.0
+dc_b24968196134,NWT Data Center,FL,geocoded_address,10.0,0.0,0.0
+dc_9ce7e28cd5d6,IM Datacenter,FL,geocoded_address,10.0,0.0,0.0
+dc_d76a427d377e,Patmos KC1,MO,geocoded_address,10.0,0.0,0.0
+dc_3f97f56200be,CoreSite - Orlando (OR1),FL,geocoded_address,10.0,0.0,0.0
+dc_c31443bd7e5d,"DartPoints Cincinnati, OH - CVG1",OH,geocoded_address,10.0,0.0,0.0
+dc_487092045130,TierPoint Allentown-TekPark,PA,geocoded_address,100.0,0.22,0.0
+dc_5e85cebf311b,TierPoint Lehigh Valley,PA,geocoded_address,10.0,0.0,0.0
+dc_03a4e256150f,"DartPoints Asheville, NC - AVL1",NC,geocoded_address,10.0,0.04,0.0
+dc_5a60b2d9349b,"DartPoints Greenville, SC - GSP1",SC,geocoded_address,10.0,0.0,0.0
+dc_6186c857fc4f,"DartPoints Columbia, SC - CAE1",SC,geocoded_address,10.0,0.0,0.0
+dc_d6d98ef855f4,"DartPoints Charleston, SC - CHS1",SC,geocoded_address,10.0,0.0,0.0
+dc_85dc506fa124,Hosted Backbone Richmond1,VA,geocoded_address,100.0,0.06,0.0
+dc_5410c3966313,T5@Dallas,TX,geocoded_address,10.0,0.0,0.0
+dc_6b2ef030c33c,Digital Realty ATL (250 Williams),GA,geocoded_address,10.0,0.0,0.0
+dc_3c15e6d243fd,Anexio NJ1,NJ,geocoded_address,10.0,0.0,0.0
+dc_2e8f81227e3c,Anexio ACC5,VA,geocoded_address,10.0,0.0,0.0
+dc_d5bc37668c90,Aecero - Orange County (SNA1),CA,geocoded_address,10.0,0.0,0.0
+dc_7259ff26155b,QuadraNet LAX,CA,geocoded_address,100.0,0.0,0.0
+dc_ffd700f6d2ef,DataBank Atlanta (ATL2),GA,geocoded_address,10.0,0.0,0.0
+dc_a8fff910467b,FirstLight Regen Hut,ME,geocoded_address,100.0,0.02,0.0
+dc_2d83d46863fc,Opus Interactive Portland (PDX01),OR,geocoded_address,10.0,0.0,0.0
+dc_58ce7a0aa27d,Opus Interactive Hillsboro (HIO01),OR,geocoded_address,10.0,0.0,0.0
+dc_64a01d02406b,Opus Interactive Dallas (DTX01),TX,geocoded_address,100.0,0.06,0.0
+dc_bb41f7c6272c,Opus Interactive Silicon Valley (SJC01),CA,geocoded_address,10.0,0.0,0.0
+dc_2c9f0fdd6bd5,WhiteLabelITSolutions,NJ,geocoded_address,10.0,0.0,0.0
+dc_5453a4c127bb,Bresco Broadband Data Center,OH,geocoded_address,10.0,0.0,0.0
+dc_ca9d0ab87d83,Continental Plaza,OH,geocoded_address,100.0,0.0,0.0
+dc_7fabd1d8f84d,H5 Data Centers Secaucus (NJ01),NJ,geocoded_address,10.0,0.0,0.0
+dc_8d25991bfa8d,Element Critical  Austin AUS1,TX,geocoded_address,10.0,0.0,0.0
+dc_4c67f29cb099,Tech Mahindra Cleveland,OH,geocoded_address,10.0,0.0,0.0
+dc_2c7c11ab382b,Cologix MIN4,MN,geocoded_address,10.0,0.0,0.0
+dc_1e39597e7669,H5 Data Centers Nashville (TN01),TN,geocoded_address,10.0,0.0,0.0
+dc_667b43557d64,75 Broad Street,NY,geocoded_address,100.0,0.0,0.0
+dc_79d66f4fbbef,H5 Data Centers St. Louis (MO01),MO,geocoded_address,10.0,0.0,0.0
+dc_4485a73fc1d8,vXchnge Raleigh-Durham (NC01),NC,geocoded_address,100.0,0.36,0.0
+dc_67ff6b9472eb,Evocative New York (JFK2),NY,geocoded_address,10.0,0.0,0.0
+dc_3ca280f35beb,H5 Data Centers Pittsburgh (PA02),PA,geocoded_address,10.0,0.0,0.0
+dc_5a561854a759,Verizon Atlanta,GA,geocoded_address,10.0,0.0,0.0
+dc_739935478bcb,Centersquare Albuquerque (ABQ1),NM,geocoded_address,100.0,0.0,0.0
+dc_583b75cdc1d2,Centersquare Atlanta (ATL1-A/B/C),GA,geocoded_address,10.0,0.0,0.0
+dc_e7c1247bfe63,Centersquare Boston (BOS1-A),MA,geocoded_address,10.0,0.0,0.0
+dc_8d868acd51ee,Consolidated - 770 Elm St.,NH,geocoded_address,10.0,0.0,0.0
+dc_4290cc221459,Consolidated - 266 Main St.,VT,geocoded_address,10.0,0.0,0.0
+dc_81e63f1a603e,Consolidated - 45 Forest Ave.,ME,geocoded_address,100.0,0.0,0.0
+dc_713ae9ff9f61,Switch Tahoe Reno,NV,geocoded_address,10.0,0.0,0.0
+dc_7bac40f4748e,Sabey Intergate East Building 4,WA,geocoded_address,10.0,0.0,0.0
+dc_740a1ee8d789,Verus Corportation,MN,geocoded_address,10.0,0.0,0.0
+dc_95ab7384a93f,DataBank Dallas (DFW3),TX,geocoded_address,100.0,0.04,0.0
+dc_e3304d66630f,DataBank Minneapolis (MSP1),MN,geocoded_address,10.0,0.0,0.0
+dc_04ef3d9451a0,DataBank Minneapolis (MSP2),MN,geocoded_address,10.0,0.0,0.0
+dc_80da332f0c37,DataBank Kansas City (MCI2),KS,geocoded_address,10.0,0.0,0.0
+dc_1b4424f5d12f,DataBank Cleveland (CLE1),OH,geocoded_address,100.0,0.0,0.009246493868170025
+dc_c6a7708cb1fd,DataBank Pittsburgh (PIT1),PA,geocoded_address,10.0,0.0,0.0
+dc_f2375e9e8272,DataBank Salt Lake City (SLC1),UT,geocoded_address,100.0,0.0,0.0
+dc_5cb21e4f1f61,DataBank Salt Lake City (SLC2),UT,geocoded_address,10.0,0.0,0.0
+dc_89b2b8fe4327,DataBank Salt Lake City (SLC3),UT,geocoded_address,10.0,0.0,0.0
+dc_a1a5838a60ca,Smartcom Telephone (MCAL2),TX,geocoded_address,10.0,0.0,0.0
+dc_93c731f0d49a,Smartcom Telephone (MCAL1),TX,geocoded_address,10.0,0.0,0.0
+dc_7aae4d4abf47,TierPoint Dallas2 - Allen,TX,geocoded_address,10.0,0.0,0.0
+dc_e815cc10857f,TierPoint Jacksonville,FL,geocoded_address,10.0,0.0,0.0
+dc_165b15e48a25,Equinix DE1 - Denver,CO,geocoded_address,10.0,0.0,0.0
+dc_d62273c68978,EDCDET01,MI,geocoded_address,100.0,0.24,0.0
+dc_e1ff79fe6a61,Fireline Broadband,CA,geocoded_address,10.0,0.0,0.0
+dc_551d1055ddc3,LightEdge Kansas City Subtropolis (KCI1),MO,geocoded_address,100.0,0.58,0.0
+dc_c71975653c6c,LightEdge Omaha (OMA1),NE,geocoded_address,10.0,0.0,0.0
+dc_9b54779dc33d,Quest Roseville,CA,geocoded_address,10.0,0.0,0.0
+dc_7019d4a4257b,MDC Laredo,TX,geocoded_address,10.0,0.0,0.0
+dc_90539e96965d,Cogent New York 1,NY,geocoded_address,100.0,0.0,0.0
+dc_374a8dbdef04,CyrusOne Sterling V,VA,geocoded_address,100.0,0.08,0.0
+dc_1c34e69b8d80,Coloblox Data Centers ATL2,GA,geocoded_address,100.0,0.0,0.0
+dc_5108e71bb3f6,"Equinix BO2 - Boston, Billerica",MA,geocoded_address,100.0,0.2,0.0
+dc_8454f89ad7f5,Digital Realty SJC (3205 Alfred St),CA,geocoded_address,100.0,0.0,0.0
+dc_5901d49adbc4,Digital Realty SJC (3105 Alfred St),CA,geocoded_address,10.0,0.0,0.0
+dc_67ad37b81af1,Digital Realty SJC (3011 Lafayette St),CA,geocoded_address,10.0,0.0,0.0
+dc_ad3f1c9b17f1,Digital Realty SJC (1725 Comstock St),CA,geocoded_address,10.0,0.0,0.0
+dc_d677d70d3c7b,Digital Realty SJC (1525 Comstock St),CA,geocoded_address,10.0,0.0,0.0
+dc_6db1673e46d6,Digital Realty SJC (1500 Space Park Dr),CA,geocoded_address,10.0,0.0,0.0
+dc_e3eb86c1081a,Digital Realty SJC (1201 Comstock St),CA,geocoded_address,10.0,0.0,0.0
+dc_73878c244253,Digital Realty IAD (44100 Digital Loudoun),VA,geocoded_address,10.0,0.0,0.0
+dc_864daa63b839,H5 Data Centers Virginia (4030),VA,geocoded_address,10.0,0.0,0.0
+dc_9b958c018393,43915 Devin Shafron,VA,geocoded_address,10.0,0.0,0.0
+dc_7538b0a42bca,Digital Realty IAD (43881 Devin Shafron),VA,geocoded_address,10.0,0.0,0.0
+dc_54b013b60906,Digital Realty IAD (43791 Devin Shafron),VA,geocoded_address,10.0,0.0,0.0
+dc_64527d47d8c6,Digital Realty IAD (43830 Devin Shafron),VA,geocoded_address,10.0,0.0,0.0
+dc_bdff878de982,Digital Realty IAD (44060 Digital Loudoun),VA,geocoded_address,100.0,0.08,0.00015953491109006436
+dc_33e94a939c1b,Digital Realty IAD (44490 Chilum),VA,geocoded_address,10.0,0.0,0.0
+dc_f2ddfa4dc87b,Digital Realty IAD (44520 Hastings),VA,geocoded_address,10.0,0.0,0.0
+dc_af951740e7e1,Digital Realty IAD (21625 Gresham),VA,geocoded_address,10.0,0.0,0.0
+dc_f173d04f46e2,Digital Realty IAD (21745 Sir Timothy),VA,geocoded_address,100.0,0.0,0.0
+dc_1e1101b5f2d2,Digital Realty IAD (1780 Business Center),VA,geocoded_address,10.0,0.0,0.0
+dc_d0750011f8b2,Digital Realty GNV (8217 Linton Hall),VA,geocoded_address,10.0,0.0,0.0
+dc_7dd700f2302b,Digital Realty CLT (113 N Myers St),NC,geocoded_address,10.0,0.0,0.0
+dc_879b2f39f650,Digital Realty EWR (2 Peekay),NJ,geocoded_address,10.0,0.0,0.0
+dc_7f78d28d21cc,Aphorio Carter Trumbull Data Center,CT,geocoded_address,10.0,0.0,0.0
+dc_46a9ac21e607,Digital Realty Boston BOS13 (closed),MA,geocoded_address,100.0,0.0,0.0
+dc_7a668eda7453,Digital Realty AUS (7500 Metro Center Dr),TX,geocoded_address,10.0,0.0,0.0
+dc_1040e7bc3ee5,Jaguar Communications,MN,geocoded_address,10.0,0.0,0.0
+dc_0f8e04f8093f,Cogent Seattle,WA,geocoded_address,10.0,0.0,0.0
+dc_5dc1ed2d15ae,Cogent Herndon,VA,geocoded_address,10.0,0.0,0.0
+dc_65708f50b372,Burbank Water and Power,CA,geocoded_address,100.0,0.0,0.0
+dc_d6b549083307,Flexential - Atlanta/Alpharetta (ATL3/4),GA,geocoded_address,10.0,0.0,0.0
+dc_f90876e9d8ae,Flexential - Louisville/Downtown (LOU02/03/04),KY,geocoded_address,10.0,0.0,0.0
+dc_2d3d06e9ea7a,Flexential - Louisville/East (LOU5),KY,geocoded_address,100.0,0.1,0.0
+dc_5057b853b06b,Flexential - Nashville/Brentwood (NAS01/04),TN,geocoded_address,10.0,0.0,0.0
+dc_03c1a9199b8c,Flexential - Nashville/Cool Springs (NAS02/03),TN,geocoded_address,10.0,0.0,0.0
+dc_5b48930dcb41,Flexential - Nashville/Franklin (NAS05/06),TN,geocoded_address,10.0,0.1,0.0
+dc_19f4861e9a91,Flexential - Raleigh (RAL01/02/03),NC,geocoded_address,10.0,0.0,0.0
+dc_5998861d7b2d,Flexential - Tampa/West (TPA01/02),FL,geocoded_address,10.0,0.0,0.0
+dc_6cd417b4303c,Flexential - Tampa/North (TPA03),FL,geocoded_address,100.0,0.0,0.0
+dc_70517ce6c585,Colocation Northwest - Tacoma,WA,geocoded_address,10.0,0.0,0.0
+dc_5721d1182d99,"702 Communications - Moorhead, MN",MN,geocoded_address,10.0,0.0,0.0
+dc_c481a23e5621,Data Center West Medford,OR,geocoded_address,10.0,0.0,0.0
+dc_7f5f90e935c4,H5 Data Centers Albuquerque,NM,geocoded_address,100.0,0.0,0.0
+dc_732615ae8393,EdgeConneX Miami (EDCMIA02),FL,geocoded_address,10.0,0.0,0.0
+dc_4ee36820cdbd,QTS Ashburn (ASH1),VA,geocoded_address,10.0,0.0,0.0
+dc_1cab594215d1,WowRack,WA,geocoded_address,10.0,0.0,0.0
+dc_5fef38fd6a16,Digital Realty IAD 39 (44274 Round Table),TX,geocoded_address,10.0,0.0,0.0
+dc_50b6ee35fe1a,CyrusOne Dallas (Allen),TX,geocoded_address,10.0,0.0,0.0
+dc_93e321876bc3,"Lawton Information Services, LLC",FL,geocoded_address,10.0,0.0,0.0
+dc_2dcf536a9c38,CentriLogic Rochester (ROC),NY,geocoded_address,10.0,0.0,0.0
+dc_81488b0d568f,CentriLogic Buffalo (BUF),NY,geocoded_address,10.0,0.0,0.0
+dc_d26ec4045e7e,X2nSat Petaluma,CA,geocoded_address,100.0,0.02,0.0
+dc_ba3321bb1d05,TRG Datacenters Houston (HOU1) (HOU2),TX,geocoded_address,10.0,0.0,0.0
+dc_9bae8815eb40,TierPoint St. Louis - Walnut,MO,geocoded_address,10.0,0.0,0.0
+dc_cd1b4830cc8b,Wave Data Centers San Francisco,CA,geocoded_address,10.0,0.0,0.0
+dc_a0ba79ee7b3b,Equinix HO1 - Houston,TX,geocoded_address,10.0,0.0,0.0
+dc_e2ea0f2d5fa5,TierPoint Baltimore,MD,geocoded_address,10.0,0.0,0.0
+dc_630579405647,Aunalytics Kalamazoo Datacenter,MI,geocoded_address,10.0,0.0,0.0
+dc_bac0d40c168b,Serverfarm ATL1 Atlanta,GA,geocoded_address,10.0,0.0,0.0
+dc_3e26e88eb51b,ScaleMatrix Charlotte Data Center US-East 01,NC,geocoded_address,10.0,0.0,0.0
+dc_3e5cc95a0f6d,Serverfarm TiTAN Moses Lake,WA,geocoded_address,100.0,0.24,0.0
+dc_0a9668a7af4c,Serverfarm CH2 Oak Brook / Chicago,IL,geocoded_address,10.0,0.0,0.0
+dc_37ea6db27be4,ServerFarm SC1,CA,geocoded_address,10.0,0.0,0.0
+dc_bfc2d08370f4,CoreSite - Reston (VA3),VA,geocoded_address,100.0,0.08,0.0
+dc_f8e77a5485b8,Peace Communications NSH2,TN,geocoded_address,100.0,0.1,0.0
+dc_74a33a13576f,INOC Albany (11 North Pearl St),NY,geocoded_address,100.0,0.02,0.0
+dc_257a1a9f40c2,INOC Albany (4 Tower Pl),NY,geocoded_address,10.0,0.58,0.0
+dc_23e3d9344ea5,OzarksGo Fayetteville,AR,geocoded_address,10.0,0.12,0.0
+dc_5801df70eb41,Subrigo LAX11,CA,geocoded_address,100.0,0.0,0.0
+dc_828f6330155e,Subrigo DET11,MI,geocoded_address,10.0,0.0,0.0
+dc_fb7b3b72a5bc,JAX NAP,FL,geocoded_address,10.0,0.0,0.0
+dc_f7c3855e08a9,Simple Helix,AL,geocoded_address,10.0,0.0,0.0
+dc_36a3c1c1f362,RACK59 Data Center,OK,geocoded_address,10.0,0.0,0.0
+dc_b013e69db6d4,IP Pathways DSM1,IA,geocoded_address,10.0,0.0,0.0
+dc_be110fe76f32,TulsaConnect DC3,OK,geocoded_address,10.0,0.0,0.0
+dc_50d4b0564dea,QX.Net Lexington,KY,geocoded_address,100.0,0.0,0.013017902273854133
+dc_81bf17999a6f,Evocative ATL1,GA,geocoded_address,10.0,0.0,0.0
+dc_984b3aec7ac9,NJFX,NJ,geocoded_address,10.0,0.0,0.0
+dc_a0de6177fed5,LightWave Networks,MA,geocoded_address,10.0,0.0,0.0
+dc_d74048d15a6b,LightEdge Austin 2 (AUS2),TX,geocoded_address,10.0,0.0,0.0
+dc_8ce3e4ffe880,Coloblox Data Centers ATL3,GA,geocoded_address,10.0,0.0,0.0
+dc_6450f5a2d7fb,InterConnX Realty,TX,geocoded_address,10.0,0.0,0.0
+dc_9c88fb61b0b7,NYI NY2 (60 Hudson Street),NY,geocoded_address,10.0,0.0,0.0
+dc_398612fa21ca,365 Data Centers Bridgewater (BW1),NJ,geocoded_address,10.0,0.0,0.0
+dc_c2fe624e0003,COPT DC-6,VA,geocoded_address,10.0,0.0,0.0
+dc_b0c57c44b511,Encompass New York 111 8th Ave,NY,geocoded_address,10.0,0.0,0.0
+dc_d4f724bf0b85,Element Critical Northern Virginia VA1,VA,geocoded_address,10.0,0.0,0.0
+dc_f58af64586a4,Cloudpath CT1 (26 Fahey St),CT,geocoded_address,10.0,0.0,0.0
+dc_3afc967d9d1a,365 Data Centers Herndon (VA1),VA,geocoded_address,100.0,0.1,0.0
+dc_6306dacb193a,Iron Mountain Data Center - Boston (BOS-1),MA,geocoded_address,10.0,0.0,0.0
+dc_69e23360ffac,Iron Mountain Data Center - Western Pennsylvania (WPA-1),PA,geocoded_address,100.0,0.06,0.0
+dc_f7e77aebe39c,Iron Mountain Data Center - Kansas City (KCM-1),MO,geocoded_address,10.0,0.0,0.0
+dc_ea29c9c9ca57,Iron Mountain Data Center - Manassas (VA-2),VA,geocoded_address,100.0,0.42,0.0
+dc_5454e38d3adb,SFN MN-Albert Lea,MN,geocoded_address,100.0,0.12,0.0
+dc_b0e5e2338d19,H5 Data Centers Cincinnati,OH,geocoded_address,10.0,0.0,0.0
+dc_6fdf64f1f69a,ColoCrossing BUF1,NY,geocoded_address,10.0,0.0,0.0
+dc_59230c71f261,ColoCrossing SJ1,CA,geocoded_address,100.0,0.0,0.0
+dc_6be6451b0bd2,ColoCrossing SEA1,WA,geocoded_address,10.0,0.0,0.0
+dc_9277151d2171,ColoCrossing NJ1,NJ,geocoded_address,100.0,0.24,0.0
+dc_1419d45e56a4,ColoCrossing LA1,CA,geocoded_address,100.0,0.0,0.0
+dc_e6c4c8934f01,ColoCrossing DFW1,TX,geocoded_address,10.0,0.0,0.0
+dc_c0dc6dafc51e,ColoCrossing CHI1,IL,geocoded_address,10.0,0.0,0.0
+dc_7284cc251f4e,Peer-Point Colocation,FL,geocoded_address,100.0,0.0,0.0
+dc_ddb7e68d3679,Heyburn Building,KY,geocoded_address,100.0,0.0,0.0
+dc_2f27232ab9dd,Lunavi - Cheyenne,WY,geocoded_address,10.0,0.0,0.0
+dc_8ab8ca86bd41,SFN IA-Emery,IA,geocoded_address,10.0,0.1,0.0
+dc_9bfe6733e707,UPX Miami,FL,geocoded_address,100.0,0.44,0.0
+dc_4c9033aaa0e5,AiNET WDC11,MD,geocoded_address,100.0,0.0,0.0
+dc_dd717d06043b,AiNET MD-300L,MD,geocoded_address,10.0,0.0,0.0
+dc_d7293cd91449,AiNET MD-790R,MD,geocoded_address,10.0,0.0,0.0
+dc_857c2235de8a,AiNET DC-900S,DC,geocoded_address,10.0,0.0,0.0
+dc_f34b6043d4fd,RagingWire VA3 - NTT,VA,geocoded_address,100.0,0.02,0.0
+dc_8e268643b2bf,RagingWire VA2 - NTT,VA,geocoded_address,10.0,0.0,0.0
+dc_b9ee518385d3,Colocation Northwest - Bellevue,WA,geocoded_address,10.0,0.0,0.0
+dc_122d26c60fe0,Colocation Northwest - Redmond,WA,geocoded_address,10.0,0.0,0.0
+dc_3dc0f4451cf1,Colocation Northwest - Seattle,WA,geocoded_address,10.0,0.0,0.0
+dc_3c06c3237ab7,Colocation Northwest - South Hill,WA,geocoded_address,10.0,0.0,0.0
+dc_63d292808da8,Digital Realty CHI (505 N Railroad),IL,geocoded_address,10.0,0.0,0.0
+dc_ec4c14283b81,Wnet Telecom USA,NY,geocoded_address,100.0,0.0,0.0
+dc_3b978cea1326,CoreSite - Atlanta (AT2),GA,geocoded_address,10.0,0.0,0.0
+dc_205214f38282,Centersquare Los Angeles (LAX4),CA,geocoded_address,10.0,0.0,0.0
+dc_5155a7762cb7,Centersquare Los Angeles (LAX5),CA,geocoded_address,10.0,0.0,0.0
+dc_14483ad203a0,Centersquare Atlanta (ATL1-D),GA,geocoded_address,100.0,0.18,0.0
+dc_2f5dcb1f11e8,Centersquare Chicago (ORD4),IL,geocoded_address,10.0,0.0,0.0
+dc_5c57ba7c00e3,Centersquare Boston (BOS4-A),MA,geocoded_address,100.0,0.0,0.0
+dc_ca70c0deb389,Centersquare Dallas (DFW2),TX,geocoded_address,100.0,0.0,0.0
+dc_68edd4e8e2ac,Centersquare Dallas (DFW3),TX,geocoded_address,10.0,0.0,0.0
+dc_8a7de1e6b962,Centersquare Northern Virginia (IAD4),VA,geocoded_address,100.0,0.04,0.0
+dc_7aabaf75c3ad,UnReal Servers,MO,geocoded_address,100.0,0.0,0.0
+dc_1d1ff5972873,Level(3) Raleigh,NC,geocoded_address,10.0,0.0,0.0
+dc_b2f8b3f3db48,Border Crossing Pop 1,CA,geocoded_address,100.0,0.08,0.0
+dc_6c109172a8d5,Lincoln Rackhouse Dallas,TX,geocoded_address,10.0,0.0,0.0
+dc_6d88b75bdb12,Lincoln Rackhouse Silver Spring,MD,geocoded_address,10.0,0.0,0.0
+dc_35337c131c2a,Smart City Telecom Maitland Colo,FL,geocoded_address,10.0,0.0,0.0
+dc_2d29a4e427b4,Volt Modesto,CA,geocoded_address,10.0,0.0,0.0
+dc_ebb75c83c360,Lumen Norfolk,VA,geocoded_address,10.0,0.0,0.0
+dc_2457668a558c,Globalinx Virginia Beach CLS,VA,geocoded_address,100.0,0.02,0.0
+dc_38197c1f3767,"Equinix SE4 - Seattle, Kent",WA,geocoded_address,10.0,0.0,0.0
+dc_66e8fa6175af,Evocative DAL6,TX,geocoded_address,10.0,0.0,0.0
+dc_9a635f7f4c1f,WēConnect Westerville,OH,geocoded_address,100.0,0.2,0.0
+dc_1459b4e7eef5,TSR Solutions Data Center,WI,geocoded_address,10.0,0.0,0.0
+dc_9b95847ef56f,DC BLOX HSV1 - DCBLOX Huntsville,AL,geocoded_address,100.0,0.0,0.0
+dc_4d97600c0104,DC BLOX BHM1 - DCBLOX Birmingham,AL,geocoded_address,10.0,0.0,0.0
+dc_faf2065fd962,DC BLOX ATL1 - DCBLOX Atlanta,GA,geocoded_address,100.0,0.0,0.0
+dc_2546bb57a1b3,TurnKey Internet - CA,CA,geocoded_address,100.0,0.0,0.0
+dc_d3a8a17157cf,TurnKey Internet - DR,NY,geocoded_address,100.0,0.0,0.0
+dc_7d3c86a321c9,Cogent Albany,NY,geocoded_address,100.0,0.0,0.0
+dc_b21478932c0d,Lumen New York,NY,geocoded_address,10.0,0.0,0.0
+dc_b630100d026f,TierPoint Omaha - Bellevue,NE,geocoded_address,10.0,0.0,0.0
+dc_cb3651da3ba0,Planet Networks Newton Datacenter,NJ,geocoded_address,10.0,0.0,0.0
+dc_3c91f82abab9,Xfernet LAX01,CA,geocoded_address,100.0,0.0,0.0
+dc_cfa299c09d66,SFN IA-IowaFalls,IA,geocoded_address,10.0,0.0,0.0
+dc_1e995f203458,"702 Communications - Fargo, ND",ND,geocoded_address,10.0,0.0,0.0
+dc_a7acec8d7af4,NYI CH1 (800 Jorie Blvd),IL,geocoded_address,10.0,0.0,0.0
+dc_0378cf1ad710,Neutron - Spokane,WA,geocoded_address,10.0,0.0,0.0
+dc_03a9959da784,EdgeConneX Hillsboro (EDCPOR02),OR,geocoded_address,100.0,0.0,0.0
+dc_924c700670ac,EdgeConneX Atlanta (EDCATL02),GA,geocoded_address,10.0,0.0,0.0
+dc_88c1a3921ea5,Racksquared Data Centers,OH,geocoded_address,100.0,0.0,0.0
+dc_3c5de49118a8,Unwired FAT1 - Fresno Colocation,CA,geocoded_address,100.0,0.38,0.0
+dc_1b48e32e32a9,RagingWire VA4 - NTT,VA,geocoded_address,100.0,0.02,0.0
+dc_63477d7fddc5,SFN IA-Davenport,IA,geocoded_address,100.0,0.12,0.0
+dc_020b4e91299a,SFN IA-Waterloo,IA,geocoded_address,100.0,0.0,0.0
+dc_e0deb5a5797a,"DartPoints Spartanburg, SC - SPA1",SC,geocoded_address,10.0,0.0,0.0
+dc_b0bc13ad8190,"DartPoints Columbus, IN - CLU1",IN,geocoded_address,10.0,0.0,0.0
+dc_90a6d53a922b,Citynet Charleston,WV,geocoded_address,100.0,0.0,0.0
+dc_d1f55f9f8389,Citynet Bridgeport,WV,geocoded_address,10.0,0.0,0.0
+dc_0be54ba06f42,Centersquare Silicon Valley (SFO4-A),CA,geocoded_address,10.0,0.0,0.0
+dc_e8f9e82ff0a7,Aligned Ashburn (IAD-01),VA,geocoded_address,10.0,0.0,0.0
+dc_00764728680d,Aligned Dallas (DFW-01),TX,geocoded_address,10.0,0.0,0.0
+dc_7afb9b268c71,Aligned Phoenix (PHX-01),AZ,geocoded_address,10.0,0.0,0.0
+dc_ffcac70d833e,Aligned Salt Lake (SLC-02),UT,geocoded_address,10.0,0.0,0.0
+dc_41b7b98857a3,Aligned Salt Lake (SLC-01),UT,geocoded_address,10.0,0.0,0.0
+dc_bb6acbbe7a18,QTS Hillsboro (HIL1),OR,geocoded_address,100.0,0.14,0.0
+dc_1c5529fb9a1a,QTS Manassas (MAN1),VA,geocoded_address,100.0,0.24,0.0
+dc_6f3dc8f369c9,QTS Fort Worth (FTW1),TX,geocoded_address,10.0,0.0,0.0
+dc_b3c70d75bf1a,CENTRA CLT01 - Charlotte NC (701 E Trade),NC,geocoded_address,10.0,0.0,0.0
+dc_01f9f53c2eac,Coloblox Data Centers ATL1,GA,geocoded_address,10.0,0.0,0.0
+dc_65462e0cdff1,The Garland Center / West 7 Center,CA,geocoded_address,100.0,0.0,0.0
+dc_ccc53908a275,Bluebird Underground Data Center,MO,geocoded_address,100.0,0.54,0.0
+dc_9d948b20f397,Stream Data Centers - DFW VII,TX,geocoded_address,100.0,0.0,0.0
+dc_64c7a0c8382c,Stream Data Centers - MN I,MN,geocoded_address,10.0,0.0,0.0
+dc_e7e81b57c81b,DQE Communications (Downtown Pittsburgh),PA,geocoded_address,10.0,0.0,0.0
+dc_904d1fe660bd,DQE Communications (Butler),PA,geocoded_address,10.0,0.0,0.0
+dc_9a27ff212d93,DQE Communications (Allegheny Center Mall),PA,geocoded_address,100.0,0.0,0.0
+dc_a6deac218790,Data102 - COS01,CO,geocoded_address,10.0,0.0,0.0
+dc_61349568f7bb,Data102 - COS02,CO,geocoded_address,10.0,0.0,0.0
+dc_307abcbb36ae,Frontier Tampa Main Tandem Office,FL,geocoded_address,100.0,0.0,0.0
+dc_8d1d5560f657,Navégalo Data Center Miami (MI1),FL,geocoded_address,100.0,0.0,0.0
+dc_5682de2fcd5d,Agile Aurora,IL,geocoded_address,10.0,0.08,0.0
+dc_b2ab8aee8632,FIBERTOWN Houston Data Center,TX,geocoded_address,10.0,0.0,0.0
+dc_c81618121941,FIBERTOWN Bryan Data Center,TX,geocoded_address,10.0,0.0,0.0
+dc_0725a2d5f792,Quasar Data Center,TX,geocoded_address,10.0,0.0,0.0
+dc_62d3d21ff61d,"ark data centers - Tucson, AZ",AZ,geocoded_address,10.0,0.0,0.0
+dc_bf71e65b6afd,"ark data centers - Akron,OH",OH,geocoded_address,10.0,0.0,0.0
+dc_9cbf0a55e19a,"ark data centers - Cedar Rapids ,IA",IA,geocoded_address,100.0,0.18,0.0
+dc_868fa144afdf,PhoenixNAP ASHBURN,VA,geocoded_address,10.0,0.0,0.0
+dc_363c889003c4,PhoenixNAP ATLANTA,GA,geocoded_address,10.0,0.0,0.0
+dc_23e2d561cf0c,Cologix DAL3,TX,geocoded_address,10.0,0.0,0.0
+dc_22d8db7b360c,T5@Chicago,IL,geocoded_address,100.0,0.1,0.0
+dc_4b2fdcc8f1c8,Expedient Indianapolis,IN,geocoded_address,10.0,0.0,0.0
+dc_3dc0908f81e0,ORI.NET Noblesville,IN,geocoded_address,100.0,0.0,0.0
+dc_42f11cbcfcbf,Expedient Cleveland - 151 NEO,OH,geocoded_address,10.0,0.0,0.0
+dc_b64820074b60,Expedient Boston,MA,geocoded_address,10.0,0.0,0.0
+dc_ee22854729f6,Expedient Cleveland - 152 NEO,OH,geocoded_address,10.0,0.0,0.0
+dc_db838b27c2aa,Expedient Columbus - Dublin,OH,geocoded_address,100.0,0.38,0.0
+dc_878c140caab9,Expedient Columbus - Upper Arlington,OH,geocoded_address,10.0,0.0,0.0
+dc_f9b2b8a754f1,Expedient Memphis,TN,geocoded_address,10.0,0.0,0.0
+dc_3511a00a4df6,Expedient Phoenix,AZ,geocoded_address,10.0,0.0,0.0
+dc_9d41992d9e6f,Expedient Pittsburgh - Nova Place,PA,geocoded_address,100.0,0.0,0.0
+dc_09dea9d939e5,Databank Atlanta (ATL1),GA,geocoded_address,10.0,0.0,0.0
+dc_8f85055bfe5d,365 Data Centers Commack (CNY),NY,geocoded_address,10.0,0.0,0.0
+dc_41bc53d197ab,FairlawnGig Service Center,OH,geocoded_address,10.0,0.0,0.0
+dc_6c5747e8ee21,Cogent Tampa,FL,geocoded_address,100.0,0.14,0.0
+dc_84946db8ccde,Senawave,UT,geocoded_address,100.0,0.0,0.0
+dc_23f3922163d5,Corepacket PDX-1,OR,geocoded_address,100.0,0.0,0.0
+dc_1a15871c8912,TierPoint Baltimore – BWI,MD,geocoded_address,10.0,0.02,0.0
+dc_cbc49ed43b20,TierPoint Charlotte - North Myers,NC,geocoded_address,10.0,0.0,0.0
+dc_b493d7002b92,TierPoint Tulsa-State Farm,OK,geocoded_address,100.0,0.3,0.0
+dc_2fbb14b41636,TierPoint Oklahoma City,OK,geocoded_address,10.0,0.0,0.0
+dc_6f67b70fb02b,TierPoint Raleigh – RTP,NC,geocoded_address,10.0,0.0,0.0
+dc_e247d5484e1d,TierPoint Seattle,WA,geocoded_address,10.0,0.0,0.0
+dc_ac30ac8e4a4e,TierPoint Sioux Falls - East,SD,geocoded_address,100.0,0.14,0.0
+dc_68d97fc661d5,TierPoint Sioux Falls - West,SD,geocoded_address,100.0,0.48,0.0
+dc_686de1690128,TierPoint Raleigh,NC,geocoded_address,10.0,0.0,0.0
+dc_50e9c91a244c,TierPoint Waterbury,CT,geocoded_address,100.0,0.0,0.0
+dc_b882f44c45b0,BlueBridge Networks | Downtown Cleveland,OH,geocoded_address,100.0,0.0,0.007549730628930014
+dc_5201629a2721,BlueBridge Networks |  Mayfield Heights Data Center,OH,geocoded_address,100.0,0.0,0.0
+dc_63bb73652979,Fortress SF1,CA,geocoded_address,10.0,0.0,0.0
+dc_7f9a84f2ffad,bigbyte.cc,NM,geocoded_address,10.0,0.0,0.0
+dc_0b62aed251e8,InterServer Teb2,NJ,geocoded_address,10.0,0.0,0.0
+dc_ad5acf412ac8,InterServer Teb4,NJ,geocoded_address,10.0,0.0,0.0
+dc_cd5551c92afa,mindSHIFT Ashburn,VA,geocoded_address,100.0,0.0,0.0
+dc_d1996798840c,mindSHIT Commack,NY,geocoded_address,10.0,0.0,0.0
+dc_8e8dd43b1c7e,mindSHIFT Minneapolis,MN,geocoded_address,10.0,0.0,0.0
+dc_92574408e089,Synergy Fiber,MI,geocoded_address,100.0,0.0,0.0
+dc_795295307718,INAP Phoenix,AZ,geocoded_address,100.0,0.0,0.0
+dc_a6a8876c4b50,Evocative LAX14,CA,geocoded_address,10.0,0.0,0.0
+dc_4c0328a22c39,Southwest Cyberport Albuquerque,NM,geocoded_address,100.0,0.0,0.0
+dc_22b86260251c,Digital Realty CHI (2299 Busse Road),IL,geocoded_address,10.0,0.0,0.0
+dc_f66893ce1d98,Digital Realty CHI (1400 East Devon Ave),IL,geocoded_address,100.0,0.0,0.0
+dc_ae8edb4e2092,Digital Realty DFW (4025 Midway Road),TX,geocoded_address,10.0,0.0,0.0
+dc_190020b3e447,Digital Realty DFW (2440 Marsh Lane),TX,geocoded_address,10.0,0.0,0.0
+dc_86494a18d241,"Equinix MI6 - Miami, Doral",FL,geocoded_address,10.0,0.0,0.0
+dc_13696f488c53,Telxius Boca Raton DC,FL,geocoded_address,10.0,0.0,0.0
+dc_67636ae84300,NOLA BROADBAND,LA,geocoded_address,100.0,0.0,0.0
+dc_3d42335bad72,1530 SWIFT - NOCIX,MO,geocoded_address,10.0,0.0,0.0
+dc_94004336071b,NOCIX Clay Facility,MO,geocoded_address,100.0,0.0,0.0
+dc_5fc5932e2fa1,Aunalytics South Bend Datacenter (AUSB),IN,geocoded_address,10.0,0.0,0.0
+dc_a3de0719d6f7,Jackson Technical Datacenter,OK,geocoded_address,100.0,0.0,0.0
+dc_ac3f561a257b,123.NET - DC4 - 400 76th St SW,MI,geocoded_address,100.0,0.1,0.0
+dc_183f43223ec1,123.NET - DC2 - 24275 Northwestern Hwy.,MI,geocoded_address,10.0,0.0,0.0
+dc_7afdfff73d8e,"DartPoints Dublin, OH - CMH1",OH,geocoded_address,10.0,0.0,0.0
+dc_ffc36ba64dc4,TunBroker Baltimore,MD,geocoded_address,100.0,0.62,0.0
+dc_4ca5071fffcd,123.NET - DC3 - 24245 Northwestern Hwy.,MI,geocoded_address,10.0,0.0,0.0
+dc_70f64e34b56c,QTS Ashburn (ASH3),VA,geocoded_address,10.0,0.0,0.0
+dc_cdfdfa748122,Colo Solutions Downtown Orlando,FL,geocoded_address,100.0,0.46,0.0
+dc_becc51ab069d,Evocative BOS1,MA,geocoded_address,10.0,0.0,0.0
+dc_cb5e2d785f37,Neutron - Coeur d'Alene,ID,geocoded_address,10.0,0.0,0.0
+dc_9641538f7308,Prov.net 935,RI,geocoded_address,100.0,0.0,0.0
+dc_cc078a791020,Cogent Atlanta,GA,geocoded_address,100.0,0.0,0.0
+dc_774234c34888,200 South Virginia - Reno,NV,geocoded_address,10.0,0.0,0.0
+dc_810fb2f8aacf,"CoreSite - Washington,DC (DC2)",DC,geocoded_address,10.0,0.0,0.0
+dc_5809c849162d,CoreSite - Los Angeles (LA3),CA,geocoded_address,100.0,0.0,0.0
+dc_6c962e9b59d5,SecureData 365,OH,geocoded_address,10.0,0.08,0.0
+dc_f0eb87bf240c,DNSnetworks IDC4,FL,geocoded_address,100.0,0.0,0.0
+dc_3485d6a6a465,Globenet Boca Raton CLS,FL,geocoded_address,10.0,0.0,0.0
+dc_861ef818508f,AISO Data Center,CA,geocoded_address,10.0,0.0,0.0
+dc_c7c6e35626c1,Connect Des Moines,IA,geocoded_address,100.0,0.0,0.0
+dc_a2905edeca9d,Tonaquint Data Center - Boise ID,ID,geocoded_address,10.0,0.0,0.0
+dc_0f72f668a2e1,T5@Cleveland,OH,geocoded_address,10.0,0.0,0.0
+dc_7085de572f71,T5@Cincinnati,OH,geocoded_address,100.0,0.0,0.0
+dc_88f0f2bd808e,T5@Minneapolis,MN,geocoded_address,10.0,0.0,0.0
+dc_1afe434bec86,AceHost Tampa,FL,geocoded_address,10.0,0.0,0.0
+dc_64fcb38e770e,Alpha Technologies DC1,WV,geocoded_address,10.0,0.0,0.0
+dc_5c4333eac436,Direct LTx Reading,PA,geocoded_address,100.0,0.1,0.0
+dc_45aede10d770,Lincoln Rackhouse Atlanta,GA,geocoded_address,10.0,0.0,0.0
+dc_854a45524688,Victory Technology Center,NY,geocoded_address,10.0,0.0,0.0
+dc_2b2238a314f7,Heartland Technology Data Center,IA,geocoded_address,100.0,0.28,0.0
+dc_7d30ac8ea42e,365 Data Centers New Jersey (NJ1),NJ,geocoded_address,10.0,0.0,0.0
+dc_e1f13594b03c,LCOG Park Place,OR,geocoded_address,10.0,0.0,0.0
+dc_bbc3c38a0286,Amarillo Petroleum Building,TX,geocoded_address,10.0,0.0,0.0
+dc_238636144790,Bluebird Quad Cities Data Center,IA,geocoded_address,10.0,0.0,0.0
+dc_f0164b700441,Beloit-NOC,KS,geocoded_address,10.0,0.0,0.0
+dc_475764483f9f,BendTel,OR,geocoded_address,100.0,0.0,0.0
+dc_40e076b938dd,Cloudpath CT2 (1351 Washington Blvd),CT,geocoded_address,10.0,0.0,0.0
+dc_f0c152473863,Cloudpath CT19 (5 Landmark Sq),CT,geocoded_address,10.0,0.0,0.0
+dc_0ab33847b79e,Cogent Boca Raton,FL,geocoded_address,10.0,0.0,0.0
+dc_4873817267bd,Cogent Boston,MA,geocoded_address,10.0,0.42,0.0
+dc_202e0cae629a,Cogent Chicago 1,IL,geocoded_address,10.0,0.0,0.0
+dc_3bb6faa489b4,Cogent Chicago 2,IL,geocoded_address,100.0,0.3,0.0
+dc_960d4026cc0b,Cogent Cleveland,OH,geocoded_address,100.0,0.0,0.00791179454428904
+dc_a9771e1b4483,Cogent Columbus,OH,geocoded_address,10.0,0.0,0.0
+dc_de24883d5033,Fiber Alley 8915,CA,geocoded_address,10.0,0.0,0.0
+dc_178934ce0e29,Fiber Alley 8917,CA,geocoded_address,100.0,0.04,0.0
+dc_5c2ab3d16b4e,Lincoln Data Centers,NE,geocoded_address,10.0,0.0,0.0
+dc_95c9a70f2492,Binary Net Vault,NE,geocoded_address,100.0,0.0,0.0
+dc_83a22ad07c8d,Digital Realty DFW18 (1210 Integrity Dr),TX,geocoded_address,100.0,0.0,0.0
+dc_40952e73c63b,ColoHouse New York,NY,geocoded_address,10.0,0.04,0.0
+dc_bc98d15f165a,"DartPoints North Liberty, IA",IA,geocoded_address,10.0,0.0,0.0
+dc_e357f9d3e068,Navisite Andover,MA,geocoded_address,10.0,0.0,0.0
+dc_2fcba60acd27,Navisite Santa Clara,CA,geocoded_address,10.0,0.0,0.0
+dc_7f43907e8979,Sungard AS Aurora,CO,geocoded_address,10.0,0.0,0.0
+dc_b46c8dba016d,Sungard AS Carlstadt 777,NJ,geocoded_address,10.0,0.0,0.0
+dc_363733e77dcd,Houston Bunker,TX,geocoded_address,10.0,0.24,0.0
+dc_343ad9c70a6c,DataBank San Diego (SAN1),CA,geocoded_address,10.0,0.0,0.0
+dc_0ef9a41e7d70,DataBank McLean (IAD2),VA,geocoded_address,100.0,0.0,0.0
+dc_b86253ab50d7,DataBank Atlanta (ATL3),GA,geocoded_address,100.0,0.0,0.0
+dc_060cddee4ce7,DataBank Chicago (ORD2),IL,geocoded_address,10.0,0.0,0.0
+dc_caccd08596b9,DataBank Chicago (ORD4),IL,geocoded_address,10.0,0.0,0.0
+dc_bb40d67d2a9d,DataBank Denver (DEN3),CO,geocoded_address,100.0,0.0,0.0
+dc_21da59088359,DataBank Denver (DEN4),CO,geocoded_address,10.0,0.0,0.0
+dc_aeb91bfc3b8f,DataBank Dallas (DFW7),TX,geocoded_address,10.0,0.1,0.0
+dc_517844b7b7df,DataBank Austin (AUS1),TX,geocoded_address,10.0,0.0,0.0
+dc_6303da2ff06f,DataBank Waco (ACT1),TX,geocoded_address,10.0,0.0,0.0
+dc_25e74ffcb872,DataBank Kansas City (MCI3),KS,geocoded_address,100.0,0.04,0.0
+dc_08280b0c240d,DataBank Minneapolis (MSP4),MN,geocoded_address,10.0,0.0,0.0
+dc_aaaa51bde60b,DataBank Indianapolis (IND1),IN,geocoded_address,100.0,0.0,0.0
+dc_1aa9d4da8c08,DataBank Indianapolis (IND2),IN,geocoded_address,10.0,0.0,0.0
+dc_84fb51e4e530,DataBank Irvine (SNA2),CA,geocoded_address,10.0,0.0,0.0
+dc_436d369c718f,DataBank Phoenix (PHX1),AZ,geocoded_address,100.0,0.0,0.0
+dc_6537da35d0c5,DataBank Phoenix (PHX2),AZ,geocoded_address,10.0,0.0,0.0
+dc_d120fdecb5fc,DataBank Phoenix (PHX3),AZ,geocoded_address,10.0,0.22,0.0
+dc_1b3a98a4d46b,DataBank Salt Lake City (SLC4),UT,geocoded_address,10.0,0.0,0.0
+dc_b8718fb1cf84,DataBank Salt Lake City (SLC5),UT,geocoded_address,10.0,0.0,0.0
+dc_7fde5e00e88d,ACW Winter Haven,FL,geocoded_address,10.0,0.0,0.0
+dc_cb548352378e,ScaleMatrix San Diego Data Center US-West 01,CA,geocoded_address,10.0,0.0,0.0
+dc_68e03ee6464c,ScaleMatrix Dallas Data Center US-South 01,TX,geocoded_address,100.0,0.18,0.0
+dc_256bfc3771cd,ScaleMatrix Seattle Data Center US-West 02,WA,geocoded_address,100.0,0.32,0.0
+dc_83a5ba62b6b4,ScaleMatrix Jacksonville Data Center US-South 02,FL,geocoded_address,10.0,0.0,0.0
+dc_5221dcc60ba1,DataBridge Sites Aurora,IL,geocoded_address,10.0,0.16,0.0
+dc_1e07f06c96b1,BluBroadband Shell Ave,FL,geocoded_address,10.0,0.0,0.0
+dc_1f1b1571370c,TierPoint Bethlehem,PA,geocoded_address,10.0,0.0,0.0
+dc_5eb44db8e6ca,TierPoint Boston - Marlborough,MA,geocoded_address,10.0,0.0,0.0
+dc_4b7a393d65ed,TierPoint St. Louis – Millpark,MO,geocoded_address,10.0,0.0,0.0
+dc_b2841d717095,Golden West Rapid City Skyline Facility,SD,geocoded_address,100.0,0.38,0.0
+dc_1e8ff92390a0,CENTRA RNO01 - Reno Nevada (200 S. Virginia),NV,geocoded_address,10.0,0.0,0.0
+dc_19d78aae92b7,LightEdge Kansas City Cavern (KCI2),KS,geocoded_address,100.0,0.22,0.0
+dc_692764cc56b5,Equinix CH7 - Westmont,IL,geocoded_address,10.0,0.0,0.0
+dc_0ae77cd8da7f,H5 Data Centers Cincinnati II,OH,geocoded_address,10.0,0.0,0.0
+dc_5b24108b6e9d,Cologix ASH1,VA,geocoded_address,10.0,0.0,0.0
+dc_29f5ae089013,Peak Internet,OR,geocoded_address,100.0,0.0,0.0
+dc_8d2c754efaf1,Ridgeview Minnetonka,MN,geocoded_address,10.0,0.0,0.0
+dc_fbdab8d6b048,713 Nebraska,IA,geocoded_address,10.0,0.0,0.0
+dc_7c6fefec1f6e,Equinix DA11 - Dallas,TX,geocoded_address,10.0,0.0,0.0
+dc_afab297ce101,EdgeConneX New Orleans (EDCSLI01),LA,geocoded_address,10.0,0.0,0.0
+dc_9449ac8454ad,"CENTRA PWM1 - Portland, Maine (340 Cumberland)",ME,geocoded_address,100.0,0.0,0.0
+dc_43484bcf3562,Sungard AS Thornton,CO,geocoded_address,10.0,0.0,0.0
+dc_f11fcbc90179,MDC Nogales,AZ,geocoded_address,100.0,0.0,0.0
+dc_573a60c3563b,T5@SiliconValley,CA,geocoded_address,10.0,0.0,0.0
+dc_3933c406bf5d,T5@Portland,OR,geocoded_address,100.0,0.02,0.0
+dc_4df3eadcb5ae,T5@Charlotte,NC,geocoded_address,10.0,0.0,0.0
+dc_5ae368e148c6,T5@Atlanta,GA,geocoded_address,100.0,0.66,0.0
+dc_0440ca675a9b,T5@Augusta,GA,geocoded_address,100.0,0.38,0.0
+dc_2664bd7e8ca0,DC Host Sheridan,WY,geocoded_address,10.0,0.0,0.0
+dc_5148f9e54a98,EXA Datacenter New York,NY,geocoded_address,10.0,0.0,0.0
+dc_944ea7a6b67d,Lumen Tulsa 1,OK,geocoded_address,10.0,0.0,0.0
+dc_853509ea17b3,Foremost Dallas,TX,geocoded_address,10.0,0.0,0.0
+dc_f6ebe4e52512,Foremost Corpus Christi,TX,geocoded_address,100.0,0.0,0.0
+dc_8369073e1b95,Foremost San Antonio,TX,geocoded_address,100.0,0.0,0.0
+dc_1621122fb560,Foremost Harlingen,TX,geocoded_address,100.0,0.0,0.0
+dc_53e829a00936,Spin Servers DAL1,TX,geocoded_address,10.0,0.0,0.0
+dc_f5141a487f0e,AUBix Auburn,AL,geocoded_address,10.0,0.0,0.0
+dc_bf02966eb419,RagingWire CH1 - NTT,IL,geocoded_address,100.0,0.04,0.0
+dc_ca7d33cf6c31,Segra Kannapolis,NC,geocoded_address,10.0,0.0,0.0
+dc_e8eb1c059cb6,CENTRA CMH01 - Columbus Ohio (180 E Broad),OH,geocoded_address,100.0,0.0,0.0
+dc_47dd6e6f269c,BluegrassNet Louisville,KY,geocoded_address,10.0,0.0,0.0
+dc_a5c5c40f19a1,"ark data centers - Boise, ID",ID,geocoded_address,10.0,0.0,0.0
+dc_6fa5cb317f61,"ark data centers - Cleveland, OH",OH,geocoded_address,100.0,0.24,0.0
+dc_936035203d1f,421 N 6th Ave East,MN,geocoded_address,100.0,0.0,0.0
+dc_a4e4cd6244d3,"ark data centers - Canton,OH",OH,geocoded_address,10.0,0.08,0.0
+dc_0140af52d0df,"ark data centers - Youngstown, OH",OH,geocoded_address,10.0,0.0,0.0
+dc_3b664e26d6e9,"ark data centers - Pittsburgh, PA",PA,geocoded_address,100.0,0.32,0.0
+dc_e744de60a17b,US Signal MN01 - Minneapolis,MN,geocoded_address,10.0,0.0,0.0
+dc_75d783969484,US Signal WI02 - Madison,WI,geocoded_address,10.0,0.0,0.0
+dc_d647f52dca93,US Signal IA01 - Des Moines,IA,geocoded_address,100.0,0.3,0.0
+dc_8bf50b2ebca9,US Signal AZ01 - Phoenix,AZ,geocoded_address,10.0,0.0,0.0
+dc_4126490726b2,EdgeConneX Chicago (EDCCHI02),IL,geocoded_address,10.0,0.0,0.0
+dc_2ce078333a5c,Cogent New Orleans,LA,geocoded_address,100.0,0.0,0.0
+dc_9edcf95c820e,Digital Realty CHI (9333 Grand Ave),IL,geocoded_address,10.0,0.0,0.0
+dc_4ad3f9c6b136,Digital Realty CHI (9355 Grand Ave),IL,geocoded_address,10.0,0.0,0.0
+dc_7d5258421dfa,Digital Realty CHI (9377 Grand Ave),IL,geocoded_address,10.0,0.0,0.0
+dc_c73e00e9ed81,Equinix AT4 - Atlanta,GA,geocoded_address,10.0,0.0,0.0
+dc_d9001f9c6c9e,EdgeCore Phoenix,AZ,geocoded_address,100.0,0.34,0.0
+dc_3f9dc02dbec2,tzulo Chicago,IL,geocoded_address,10.0,0.0,0.0
+dc_1a05036564f4,SD / Comsat Southbury Ground Station,CT,geocoded_address,10.0,0.0,0.0
+dc_54b3ef0880ca,SD / Comsat Santa Paula Ground Station,CA,geocoded_address,100.0,0.18,0.0
+dc_8dc8a503fc76,HostDime Orlando Tier IV Data Center,FL,geocoded_address,10.0,0.32,0.0
+dc_fc76d047a367,Sunbreak Electronics,OR,geocoded_address,10.0,0.0,0.0
+dc_b90db17c93d0,Scott Data Center Omaha,NE,geocoded_address,10.0,0.0,0.0
+dc_e0c953c40206,Aligned Ashburn (IAD-02),VA,geocoded_address,100.0,0.24,0.0
+dc_ab342699d6b9,Aligned Chicago (ORD-01),IL,geocoded_address,10.0,0.0,0.0
+dc_39ff79a5b283,Aligned Chicago (ORD-02),IL,geocoded_address,10.0,0.0,0.0
+dc_ca6a6b6b42c4,Connect Cedar Valley,IA,geocoded_address,100.0,0.44,0.0
+dc_43204ca86890,Digital Fortress (PNJ),NJ,geocoded_address,10.0,0.0,0.0
+dc_a8a368db33bb,Quad State Internet PAH1 Colocation,KY,geocoded_address,100.0,0.1,0.0
+dc_c04730ac0683,SFN MN-Rochester,MN,geocoded_address,100.0,0.0,0.0
+dc_50c707acf444,SFN IL-Peoria,IL,geocoded_address,10.0,0.0,0.0
+dc_9e16cf902bb8,Aureon Minneapolis,MN,geocoded_address,10.0,0.0,0.0
+dc_61f104ef7e31,Aureon West Des Moines,IA,geocoded_address,10.0,0.0,0.0
+dc_b3248b7dd787,LSVL-CTC1,CO,geocoded_address,10.0,0.0,0.0
+dc_69c4af3b8176,Midco Sioux Falls,SD,geocoded_address,100.0,0.02,0.0
+dc_c3798aab7f27,Midco Yankton,SD,geocoded_address,10.0,0.0,0.0
+dc_0e9430d2bb67,Midco Fargo,ND,geocoded_address,100.0,0.16,0.0
+dc_6396a9188b64,Midco Grand Forks,ND,geocoded_address,100.0,0.18,0.0
+dc_3f21766275d1,Cogent La Mirada,CA,geocoded_address,10.0,0.0,0.0
+dc_fed86730d8eb,Ethoplex Data Center,WI,geocoded_address,10.0,0.0,0.0
+dc_a525f7501d71,DataBank Minneapolis (MSP3),MN,geocoded_address,100.0,0.0,0.0
+dc_144eb7f40153,SFN IA-Urbana,IA,geocoded_address,100.0,0.62,0.0
+dc_f8f4d74a1bbf,Hemlock Plaza,OR,geocoded_address,10.0,0.0,0.0
+dc_357eb5a927a6,STRATA Vernal Data Center,UT,geocoded_address,10.0,0.0,0.0
+dc_12e6a6edf5fb,MDC San Diego,CA,geocoded_address,10.0,0.0,0.0
+dc_1c6b983e109a,Router12 - Brick and Tile,IA,geocoded_address,100.0,0.0,0.0
+dc_1950c37b6b09,Flexential - Atlanta/Douglasville (ATL5),GA,geocoded_address,100.0,0.46,0.0
+dc_5316b4c0a16e,Flexential - Portland/Hillsboro 3 (PDX03),OR,geocoded_address,100.0,0.34,0.0
+dc_25cab7b22101,Flexential - Portland/Hillsboro 4 (PDX04),OR,geocoded_address,100.0,0.0,0.0
+dc_ef12919892c5,Venyu BTR1,LA,geocoded_address,10.0,0.0,0.0
+dc_0d852c0bbe7c,Otava Metro Detroit,MI,geocoded_address,10.0,0.0,0.0
+dc_ece45f669ead,C Spire Mississippi,MS,geocoded_address,10.0,0.0,0.0
+dc_854b5acb373f,Crown Castle Philadelphia (1309 Noble),PA,geocoded_address,10.0,0.0,0.0
+dc_3129f2c900a6,Crown Castle White Plains (360 Hamilton),NY,geocoded_address,100.0,0.0,0.0
+dc_1c50ce7c72a5,EdgeCore Silicon Valley,CA,geocoded_address,100.0,0.0,0.0
+dc_be0ed008ea39,EdgeCore VA1,VA,geocoded_address,10.0,0.0,0.0
+dc_cea813043db3,EdgeCore VA2,VA,geocoded_address,10.0,0.0,0.0
+dc_2a818be79374,EdgeCore Reno 1,NV,geocoded_address,100.0,0.2,0.0
+dc_e529dbcff544,Ethoplex Edge DC - Green Bay,WI,geocoded_address,100.0,0.0,0.0
+dc_9979cc01880f,Ethoplex Edge DC - Fond du Lac,WI,geocoded_address,100.0,0.0,0.0
+dc_12ee8967fb3b,901 Commerce Dr,WI,geocoded_address,10.0,0.0,0.0
+dc_a544254c915e,Lumen Jacksonville,FL,geocoded_address,10.0,0.0,0.0
+dc_598350b62d6f,Lumen Portland,OR,geocoded_address,10.0,0.0,0.0
+dc_f49fd2c20dca,Lumen Pittsburgh,PA,geocoded_address,10.0,0.0,0.0
+dc_a39b4630d4f6,Crown Castle Manchester (1 Sundial Ave),NH,geocoded_address,100.0,0.0,0.0
+dc_29cc8119d959,VELCO Rutland,VT,geocoded_address,10.0,0.0,0.0
+dc_6480c6df7d40,Energynet Datacenter,KY,geocoded_address,10.0,0.0,0.0
+dc_6704477657fe,Lost River Data Center,KY,geocoded_address,10.0,0.0,0.0
+dc_9b2065354392,Atomic Data MSP250,MN,geocoded_address,100.0,0.0,0.0
+dc_a8482afc8543,Russellvile EPB Smartnet,KY,geocoded_address,10.0,0.0,0.0
+dc_ab2a3e5edefd,"DartPoints Baton Rouge, LA - BTR1",LA,geocoded_address,100.0,0.0,0.0
+dc_f800adc8ba21,H5 Data Centers San Luis Obispo,CA,geocoded_address,10.0,0.0,0.0
+dc_0710358899ef,QTS Phoenix (PHX2),AZ,geocoded_address,100.0,0.46,0.0
+dc_028c228e5604,Lumen West Haven,CT,geocoded_address,10.0,0.0,0.0
+dc_0e25227f34f6,Lumen New Haven,CT,geocoded_address,100.0,0.0,0.0
+dc_feec39d1d16e,Lumen Hartford,CT,geocoded_address,10.0,0.0,0.0
+dc_74861ceae290,Lumen Stamford,CT,geocoded_address,10.0,0.0,0.0
+dc_f7aa8ddc2fe1,Lumen New London,CT,geocoded_address,10.0,0.0,0.0
+dc_d17cb43dd5eb,Crown Castle Stamford,CT,geocoded_address,10.0,0.0,0.0
+dc_8cbc3d5fc5e2,Mountain West Technologies - Casper,WY,geocoded_address,10.0,0.0,0.0
+dc_1a41b0f928bf,Mountain West Technologies - Cheyenne,WY,geocoded_address,10.0,0.0,0.0
+dc_88ac7ff70b25,Microtronix Datacenter Ottoville,OH,geocoded_address,10.0,0.4,0.0
+dc_f5cff530e954,SKYLINK DATA CENTERS,FL,geocoded_address,10.0,0.0,0.0
+dc_e0cef7344f80,FIBERSTATE Salt Lake City (SLC1),UT,geocoded_address,100.0,0.08,0.0
+dc_0924876c0c0b,ColoradoColo - Lakewood (LKWD),CO,geocoded_address,10.0,0.0,0.0
+dc_238000347c5c,Peace Communications CHA1,TN,geocoded_address,100.0,0.08,0.0
+dc_aefac21a1874,Peace Communications  HSV1,AL,geocoded_address,10.0,0.0,0.0
+dc_3531ad1a510c,Midwest Energy & Communications,MI,geocoded_address,10.0,0.0,0.0
+dc_e8c73d76dcdd,Mainstream Little Rock,AR,geocoded_address,100.0,0.0,0.0
+dc_e213d4585248,CloudOgre,NC,geocoded_address,10.0,0.0,0.0
+dc_a24c2e20f526,DC BLOX GSP1 - DCBLOX Greenville,SC,geocoded_address,100.0,0.48,0.0
+dc_2e2a707c7ddf,SMRWORXA - Somerset West Central Office,OR,geocoded_address,10.0,0.0,0.0
+dc_6b5eadf13d33,HLBOORXH - Hawthorne Central Office,OR,geocoded_address,10.0,0.0,0.0
+dc_0829ecd70434,BVTNORXB - Beaverton Central Office,OR,geocoded_address,10.0,0.0,0.0
+dc_92b8c227e4e0,GRHMORXB - Gresham Central Office,OR,geocoded_address,100.0,0.0,0.0
+dc_3b69dbc4e5a5,TGRDORXA - Tigard Central Office,OR,geocoded_address,100.0,0.0,0.0
+dc_4ff73b39cdde,KNWCWAXA - Kennewick Central Office,WA,geocoded_address,10.0,0.0,0.0
+dc_7293ff46ee7f,EVRTWAXA - Everett Primary Central Office,WA,geocoded_address,10.0,0.0,0.0
+dc_6986fb479925,BOTHWAXB - Bothell Central Office,WA,geocoded_address,10.0,0.0,0.0
+dc_d0390cf0ea12,CRALIDXX - Coeur d'Alene Central Office,ID,geocoded_address,100.0,0.0,0.0
+dc_ee9c5e566c3c,Data Holdings Milwaukee,WI,geocoded_address,10.0,0.0,0.0
+dc_8164f23d355e,CoreSite - Miami (MI2),FL,geocoded_address,10.0,0.0,0.0
+dc_fb81ab777b05,DC BLOX MYR1 - DCBLOX Myrtle Beach,SC,geocoded_address,100.0,0.6,0.0
+dc_a9fcf2df567d,GigeNET CHI3,IL,geocoded_address,10.0,0.0,0.0
+dc_ee959c9118c2,Bonnie Lane,NC,geocoded_address,10.0,0.0,0.0
+dc_72f573fd7650,ProRacks Datacenter- Kansas City,MO,geocoded_address,10.0,0.0,0.0
+dc_909716436a45,"aspStation, Inc.",PA,geocoded_address,10.0,0.0,0.0
+dc_afc2c4cb9950,TierPoint Dallas Forth Worth,TX,geocoded_address,10.0,0.0,0.0
+dc_22c92b609884,SecureNet DC1,WV,geocoded_address,100.0,0.0,0.0
+dc_613b9e440a52,Cologix COL4,OH,geocoded_address,100.0,0.0,0.02146571587227194
+dc_882a55829541,Lightboard ★ Vermont,VT,geocoded_address,10.0,0.0,0.0
+dc_770feb7b2cec,Carrier Core - Tampa,FL,geocoded_address,100.0,0.0,0.0
+dc_c312286353c3,Midcon Recovery Solutions B3 Data Center,OK,geocoded_address,10.0,0.0,0.0
+dc_09baa6be34aa,US Signal - Grand Rapids South,MI,geocoded_address,100.0,0.06,0.0
+dc_668ad699c3a5,Raeden Michigan 1,MI,geocoded_address,10.0,0.0,0.0
+dc_ed562b27f502,RC Solutions,VA,geocoded_address,100.0,0.06,0.0
+dc_347a9c97b46e,Encore Technologies NOR1,OH,geocoded_address,10.0,0.0,0.0
+dc_0be7ca6fbfc0,Encore Technologies BLU1,OH,geocoded_address,10.0,0.0,0.0
+dc_97babf80923b,Encore Technologies MSB1,OH,geocoded_address,10.0,0.0,0.0
+dc_8a72989b8621,ELN02,ND,geocoded_address,100.0,0.08,0.0
+dc_dfa68b7343d1,RC-Facility,VA,geocoded_address,100.0,0.0,0.0
+dc_518cb525fd88,Cologix DSM2,IA,geocoded_address,100.0,0.58,0.0
+dc_a79d487eebc7,Cologix DSM1,IA,geocoded_address,100.0,0.0,0.0
+dc_1bb1bc07eea0,Cologix MIN5,MN,geocoded_address,10.0,0.0,0.0
+dc_63db379fd314,Netrality Kansas City Metro – KC2 | 7801 Nieman,KS,geocoded_address,10.0,0.0,0.0
+dc_cebfa79ec447,South Spencer Aureon hut,IA,geocoded_address,10.0,0.0,0.0
+dc_80a8e001435c,CoreSite - Santa Clara (SV9),CA,geocoded_address,10.0,0.0,0.0
+dc_927b5df60a78,Lightboard ★ New England,MA,geocoded_address,100.0,0.0,0.0
+dc_e9670855b833,EXA CLS Lynn,MA,geocoded_address,10.0,0.0,0.0
+dc_cdd309693dd3,Dataverge Jersey City,NJ,geocoded_address,10.0,0.0,0.0
+dc_dae84e0a643c,Lake Region Technology & Communications,OK,geocoded_address,10.0,0.0,0.0
+dc_edee31226499,Metanet New York Data Center CHELSEA,NY,geocoded_address,100.0,0.14,0.0
+dc_19e8b4001ea2,Metanet New York Data Center Staten Island,NY,geocoded_address,10.0,0.0,0.0
+dc_afb5c6969c03,Metanet New York Data Center GOOGLEPLEX,NY,geocoded_address,10.0,0.0,0.0
+dc_f30128395268,Interphase Data Center New York I,NY,geocoded_address,10.0,0.0,0.0
+dc_267ac84b2d36,"ark data centers - Green Bay, WI",WI,geocoded_address,100.0,0.38,0.0
+dc_e8fdaabd81bd,Interphase Data Center New York II,NY,geocoded_address,10.0,0.0,0.0
+dc_ce0c5992cc9b,3HCloud - MIA-1,FL,geocoded_address,100.0,0.0,0.0
+dc_2847d8aab868,3HCloud - MIA-2,FL,geocoded_address,10.0,0.0,0.0
+dc_83b36b26af37,3HCloud - DFW-1,TX,geocoded_address,10.0,0.0,0.0
+dc_b8be2b6536e3,3HCloud - SFO-1,CA,geocoded_address,100.0,0.04,0.0
+dc_3dc2a5cbe072,LSTI 401 Market,OH,geocoded_address,10.0,0.0,0.0
+dc_de01c95e56de,TierPoint St. Louis - Locust,MO,geocoded_address,10.0,0.0,0.0
+dc_097651479686,LightSpeed Hosting - Medina,OH,geocoded_address,10.0,0.0,0.0
+dc_02b8cb392dd2,Lumen Kansas City,MO,geocoded_address,10.0,0.0,0.0
+dc_c07d6b78aa3d,Lumen San Antonio 1,TX,geocoded_address,10.0,0.0,0.0
+dc_8f0aa85ad64d,Cogent Detroit,MI,geocoded_address,10.0,0.0,0.0
+dc_2b8c784a19e7,Apotech,IL,geocoded_address,10.0,0.0,0.0
+dc_a189b6ecc607,"Atlantech Online - Rockville, MD",MD,geocoded_address,10.0,0.0,0.0
+dc_f462f5b23353,"Atlantech Online - Silver Spring, MD",MD,geocoded_address,100.0,0.0,0.0
+dc_a288f31a82ee,East Kentucky Network Data Center,KY,geocoded_address,10.0,0.0,0.0
+dc_d988206c842d,365 Data Centers Carlstadt (NJ3),NJ,geocoded_address,10.0,0.0,0.0
+dc_2c733095b6bd,Element Critical Houston HOU1,TX,geocoded_address,10.0,0.0,0.0
+dc_a2e7abda96a4,Clackamas ESD Datacenter,OR,geocoded_address,100.0,0.2,0.0
+dc_b15cee237812,"DartPoints Baton Rouge, LA - BTR2",LA,geocoded_address,100.0,0.0,0.0
+dc_ada9efdb9033,Southern Telecom,GA,geocoded_address,100.0,0.0,0.0
+dc_8f5936e41883,70 Henry St,NY,geocoded_address,10.0,0.0,0.0
+dc_d66268183bda,"DartPoints Shreveport, LA - SHV1",LA,geocoded_address,100.0,0.0,0.0
+dc_cc2a38263c7a,American Tower RA1,NC,geocoded_address,10.0,0.0,0.0
+dc_98b518cb96d4,USSHC,IA,geocoded_address,10.0,0.0,0.0
+dc_6875118f0a7f,H5 Data Centers Quincy 2/3,WA,geocoded_address,10.0,0.0,0.0
+dc_be781da0ac27,H5 Data Centers Omaha,NE,geocoded_address,10.0,0.22,0.0
+dc_763d1075346e,H5 Data Centers Buffalo I,NY,geocoded_address,10.0,0.0,0.0
+dc_f52600c4827b,H5 Data Centers Buffalo II,NY,geocoded_address,10.0,0.0,0.0
+dc_d86fdc4e8f2f,Lightboard ★ Western NY,NY,geocoded_address,100.0,0.0,0.0
+dc_9d03f9d03002,BLDR-1919,CO,geocoded_address,100.0,0.0,0.0
+dc_e61bb2d7e36b,365 Data Centers Buffalo (PA1),PA,geocoded_address,10.0,0.0,0.0
+dc_ac85fb243e38,365 Data Centers Alpharetta (GA1),GA,geocoded_address,10.0,0.0,0.0
+dc_af4daeefc3e5,365 Data Centers Aurora (CO1),CO,geocoded_address,10.0,0.0,0.0
+dc_3cd6e70ce3be,365 Data Centers Marlboro (MA1),MA,geocoded_address,10.0,0.0,0.0
+dc_526d50fec2b4,365 Data Centers Rancho Cordova (CA1),CA,geocoded_address,10.0,0.0,0.0
+dc_2146da00a164,365 Data Centers Richardson (TX1),TX,geocoded_address,10.0,0.0,0.0
+dc_541552635281,365 Data Centers Smyrna (GA2),GA,geocoded_address,10.0,0.0,0.0
+dc_6868e3ad619f,Hurricane Electric San Jose 1,CA,geocoded_address,100.0,0.0,0.0
+dc_d7f54557743c,Cogent Springfield MA,MA,geocoded_address,10.0,0.0,0.0
+dc_e4340826cfb0,WANSEC DC16,KS,geocoded_address,10.0,0.0,0.0
+dc_5af66ce7d4ef,YAKMWAFP - Wholesail Yakima,WA,geocoded_address,10.0,0.0,0.0
+dc_5374f5d1551e,DCN Dakota Carrier Networks,ND,geocoded_address,10.0,0.24,0.0
+dc_9c6d4cad3022,DCN Dakota Carrier Networks Bismarck,ND,geocoded_address,10.0,0.0,0.0
+dc_ecf9c3a425ee,Cogent St Louis,MO,geocoded_address,10.0,0.0,0.0
+dc_1e15142da89c,Cogent Houston,TX,geocoded_address,10.0,0.0,0.0
+dc_ed440e2ff94b,Cogent Akron,OH,geocoded_address,10.0,0.0,0.0
+dc_c4bceff97da5,Cogent Atlanta 2,GA,geocoded_address,10.0,0.0,0.0
+dc_d0177d80704c,Cogent Austin,TX,geocoded_address,10.0,0.0,0.0
+dc_ccac73fc88ed,Cogent Elkridge,MD,geocoded_address,10.0,0.0,0.0
+dc_42b486a76993,Cogent Billings,MT,geocoded_address,100.0,0.24,0.0
+dc_f60ee055de0c,Cogent Buffalo,NY,geocoded_address,10.0,0.0,0.0
+dc_d42b2dbe3bc5,Cogent Charlotte,NC,geocoded_address,100.0,0.0,0.0
+dc_9c3dfd2fd93c,Cogent Charlotte 2,NC,geocoded_address,10.0,0.0,0.0
+dc_06e384882ecc,Cogent Cheyenne,WY,geocoded_address,10.0,0.0,0.0
+dc_67de210cb17a,Cogent Chicago 3,IL,geocoded_address,10.0,0.0,0.0
+dc_445b318d96ef,Cogent Cleveland 2,OH,geocoded_address,10.0,0.0,0.0
+dc_6ae6c7cea56c,Cogent Columbus 2,OH,geocoded_address,10.0,0.0,0.0
+dc_3a88e754c921,QTS Charlotte (CTL1),SC,geocoded_address,100.0,0.3,0.0
+dc_80b3c168cede,QTS Richmond - (RIC5),VA,geocoded_address,100.0,0.12,0.00491785432825677
+dc_9a32e70d572f,Databank Orangeburg (LGA3),NY,geocoded_address,10.0,0.0,0.0
+dc_51c0ad902c40,Databank Houston West (HOU3),TX,geocoded_address,10.0,0.0,0.0
+dc_c673c48513b5,Rochester Colo,NY,geocoded_address,10.0,0.0,0.0
+dc_b71e10f0b551,AceHost Durham,NC,geocoded_address,100.0,0.32,0.0
+dc_db4d5ab5de2e,QTD2 - 60 Hudson Street 1602,NY,geocoded_address,10.0,0.0,0.0
+dc_25599351716f,QTD1 - 60 Hudson Street 1510,NY,geocoded_address,10.0,0.0,0.0
+dc_3c4b4aee9b7e,QTD3 - 60 Hudson Street 1901,NY,geocoded_address,10.0,0.0,0.0
+dc_948284a799d6,Cogent Fairfax,SC,geocoded_address,10.0,0.0,0.0
+dc_079b9dd52c7e,CyberLynk MKE1,WI,geocoded_address,10.0,0.0,0.0
+dc_0bc4b8b71abf,Quad State Internet METRO1 Colocation,IL,geocoded_address,100.0,0.0,0.0
+dc_df9ba61f4853,Hub Express System,MA,geocoded_address,100.0,0.0,0.0
+dc_818cc8a2f8fc,"Equinix NY3 - New York, Secaucus",NJ,geocoded_address,100.0,0.0,0.0
+dc_64ee76a3c9a6,1GServers Data Center,AZ,geocoded_address,10.0,0.0,0.02294840907958508
+dc_32982197477b,Ligonier CO,IN,geocoded_address,10.0,0.0,0.0
+dc_806246663f94,Lagrange CO,IN,geocoded_address,100.0,0.5,0.0
+dc_dffc745c288e,MCTX1,TX,geocoded_address,10.0,0.0,0.0
+dc_b7238ef1801a,Omega CT1,CT,geocoded_address,10.0,0.0,0.0
+dc_d263fd05759c,Omega PA1,PA,geocoded_address,10.0,0.0,0.0
+dc_a110d272ec8d,Rochelle Technology Center,IL,geocoded_address,10.0,0.0,0.0
+dc_3fa98b8aaba6,Lifeline Ft Wayne,IN,geocoded_address,10.0,0.0,0.0
+dc_0c28c42b4cce,LCUB Data Center,TN,geocoded_address,10.0,0.0,0.0
+dc_058f35b988cf,375 Pearl Street,NY,unknown,10.0,0.0,0.0
+dc_b035b25ea4f6,Pittsburgh Supercomputing Center,PA,unknown,10.0,0.0,0.0
+dc_ac781566b7d6,Utah Data Center,UT,unknown,500.0,0.54,0.0
+dc_485eed312522,Bryant Building,MO,unknown,500.0,0.02,0.0
+dc_6089ed0d5f26,San Diego Supercomputer Center,CA,unknown,10.0,0.0,0.0
+dc_a33abfa67825,Computational Center for Nanotechnology Innovations,NY,unknown,10.0,0.0,0.0
+dc_25ebcc8c51a4,Massachusetts Green High Performance Computing Center,MA,unknown,10.0,0.0,0.0
+dc_58f71a0cfadd,Hyperion,LA,unknown,500.0,0.54,0.0

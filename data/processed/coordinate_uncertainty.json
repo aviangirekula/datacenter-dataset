@@ -1,0 +1,42 @@
+{
+  "draws": 50,
+  "seed": 20260731,
+  "sigma_m_by_tier": {
+    "building": 10.0,
+    "verified": 30.0,
+    "geocoded_address": 100.0,
+    "campus_centroid": 250.0,
+    "unknown": 500.0
+  },
+  "wildfire": {
+    "mean_class_change_prob": 0.03235905044510386,
+    "facilities_over_25pct_change": 139,
+    "facilities_stable": 2367
+  },
+  "lightning": {
+    "median_relative_sd": 0.0,
+    "note": "near zero confirms a ~50 km grid is insensitive to coordinate error of this magnitude"
+  },
+  "by_tier": {
+    "sigma_10m": {
+      "n": 1681,
+      "mean_whp_change_prob": 0.010838786436644854
+    },
+    "sigma_30m": {
+      "n": 631,
+      "mean_whp_change_prob": 0.05242472266244057
+    },
+    "sigma_100m": {
+      "n": 361,
+      "mean_whp_change_prob": 0.08121883656509696
+    },
+    "sigma_250m": {
+      "n": 20,
+      "mean_whp_change_prob": 0.276
+    },
+    "sigma_500m": {
+      "n": 3,
+      "mean_whp_change_prob": 0.3666666666666667
+    }
+  }
+}
