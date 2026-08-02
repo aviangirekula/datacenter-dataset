@@ -34,7 +34,13 @@ import pandas as pd
 REPO = Path(__file__).resolve().parents[1]
 DC_CSV = REPO / "data" / "processed" / "datacenters_final.csv"
 CACHE = REPO / "data" / "raw" / "buildings"
-STRUCT_JSONL = CACHE / "usa_structures.jsonl"
+def struct_cache(radius_m: float) -> Path:
+    """Cache path keyed by radius. Keying on facility_id alone would
+    silently reuse a narrower search when the radius is widened."""
+    return CACHE / f"usa_structures_r{int(radius_m)}.jsonl"
+
+
+STRUCT_JSONL = CACHE / "usa_structures.jsonl"  # legacy 200 m cache
 FLOOD_JSONL = CACHE / "fema_flood_zones.jsonl"
 
 STRUCT_URL = ("https://services2.arcgis.com/FiaPA4ga0iQKduv3/arcgis/rest/services/"
@@ -64,17 +70,19 @@ def _get(url: str, params: dict) -> dict:
     return {"error": {"message": f"{type(last).__name__}: {last}"}}
 
 
-def fetch_structure(fid: str, lon: float, lat: float) -> dict:
+def fetch_structure(fid: str, lon: float, lat: float,
+                    radius_m: float = SEARCH_M) -> dict:
     res = _get(STRUCT_URL, {
         "geometry": json.dumps({"x": lon, "y": lat,
                                 "spatialReference": {"wkid": 4326}}),
         "geometryType": "esriGeometryPoint", "inSR": "4326",
-        "distance": str(SEARCH_M), "units": "esriSRUnit_Meter",
+        "distance": str(radius_m), "units": "esriSRUnit_Meter",
         "spatialRel": "esriSpatialRelIntersects",
         "outFields": "BUILD_ID,OCC_CLS,PRIM_OCC,PROP_ADDR,HEIGHT,SQFEET,SQMETERS,IMAGE_DATE",
         "returnGeometry": "true", "outSR": "4326",
     })
-    return {"facility_id": fid, "lon": lon, "lat": lat,
+    return {"facility_id": fid, "lon": lon, "lat": lat, "radius_m": radius_m,
+            "exceeded_limit": bool(res.get("exceededTransferLimit")),
             "error": res.get("error"), "features": res.get("features", [])}
 
 
@@ -127,17 +135,26 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0, help="smoke-test N facilities")
     ap.add_argument("--only", choices=["structures", "flood"], help="one source only")
+    ap.add_argument("--radius", type=float, default=SEARCH_M,
+                    help="search radius in metres (cache is keyed by it)")
+    ap.add_argument("--ids-file", help="restrict to facility_ids listed one per line")
     args = ap.parse_args()
 
     dc = pd.read_csv(DC_CSV, low_memory=False)
     rows = [(str(r.facility_id), float(r.longitude), float(r.latitude))
             for r in dc.itertuples()]
+    if args.ids_file:
+        keep = {l.strip() for l in open(args.ids_file) if l.strip()}
+        rows = [r for r in rows if r[0] in keep]
     if args.limit:
         rows = rows[: args.limit]
-    print(f"facilities: {len(rows)}")
+    print(f"facilities: {len(rows)}  radius: {args.radius:.0f} m")
 
     if args.only != "flood":
-        run("structures", fetch_structure, STRUCT_JSONL, rows)
+        path = (STRUCT_JSONL if args.radius == SEARCH_M
+                else struct_cache(args.radius))
+        run("structures", lambda f, lo, la: fetch_structure(f, lo, la, args.radius),
+            path, rows)
     if args.only != "structures":
         run("flood", fetch_flood, FLOOD_JSONL, rows)
 

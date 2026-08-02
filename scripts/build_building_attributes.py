@@ -31,13 +31,23 @@ from shapely.ops import nearest_points, unary_union
 
 REPO = Path(__file__).resolve().parents[1]
 DC_CSV = REPO / "data" / "processed" / "datacenters_final.csv"
-STRUCT = REPO / "data" / "raw" / "buildings" / "usa_structures.jsonl"
+# Caches at increasing radii. The narrow one is authoritative where it already
+# resolved a containment; the wider one only rescues facilities it could not.
+STRUCT_CACHES = [
+    REPO / "data" / "raw" / "buildings" / "usa_structures.jsonl",       # 200 m
+    REPO / "data" / "raw" / "buildings" / "usa_structures_r800.jsonl",  # 800 m
+]
+STRUCT = STRUCT_CACHES[0]
 FLOOD = REPO / "data" / "raw" / "buildings" / "fema_flood_zones.jsonl"
 OUT = REPO / "data" / "processed" / "building_attributes.csv"
 OUT_JSON = REPO / "data" / "processed" / "building_attributes_coverage.json"
 
 GEOD = Geod(ellps="WGS84")
-NEAR_M = 200.0
+NEAR_M = 800.0
+# Beyond this, a "nearest building" is too far to be confidently the facility.
+# Matches past it are kept but flagged, because the alternative is dropping the
+# largest campuses, whose recorded coordinate is often a gate or site centroid.
+NEAR_CONFIDENT_M = 200.0
 # Height at or above which a structure is treated as multi-storey. Data halls
 # have tall clear heights, so a domestic two-storey threshold would misclassify
 # single-storey data centers. Stated here so it can be revised in one place and
@@ -107,62 +117,94 @@ def _dist_m(lon1, lat1, lon2, lat2) -> float:
     return d
 
 
+def _parse_struct_line(line: str):
+    """Return (facility_id, record) for one cached response, or None."""
+    try:
+        r = json.loads(line)
+    except Exception:  # noqa: BLE001
+        return None
+    fid, lon, lat = r["facility_id"], r["lon"], r["lat"]
+    if r.get("error"):
+        return fid, {"building_match": "fetch_error"}
+    pt = Point(lon, lat)
+    best, best_kind, nd = None, "none", np.inf
+    containing, nearest = [], None
+    # A hyperscale campus coordinate often sits at a gate, where the NEAREST
+    # structure is a guardhouse and the data hall is the large box behind it.
+    # Track the largest candidate separately so that case is representable
+    # instead of being forced into a single wrong choice.
+    largest, largest_area, largest_d = None, -1.0, np.nan
+
+    for f in r.get("features", []):
+        poly = _poly(f)
+        if poly is None:
+            continue
+        a = f["attributes"]
+        area = _area_sqft(poly)
+        q, _ = nearest_points(poly.boundary, pt)
+        d = 0.0 if poly.contains(pt) else _dist_m(lon, lat, q.x, q.y)
+        if area > largest_area:
+            largest, largest_area, largest_d = a, area, d
+        if poly.contains(pt):
+            containing.append((poly, a))
+        elif d < nd:
+            nd, nearest = d, (poly, a)
+
+    if containing:
+        poly, a = max(containing, key=lambda t: _area_sqft(t[0]))
+        best, best_kind, best_dist = (poly, a), "contains", 0.0
+    elif nearest is not None and nd <= NEAR_M:
+        best, best_kind, best_dist = nearest, "nearest", nd
+    else:
+        best_dist = np.nan
+
+    rec = {"building_match": best_kind, "building_dist_m": best_dist,
+           "search_radius_m": r.get("radius_m", 200),
+           "n_buildings_in_radius": len(r.get("features", [])),
+           "largest_nearby_sqft": round(largest_area, 1) if largest_area > 0 else np.nan,
+           "largest_nearby_dist_m": largest_d,
+           "largest_nearby_height_m": (float(largest["HEIGHT"])
+                                       if largest and largest.get("HEIGHT") not in (None, "")
+                                       else np.nan)}
+    if best is not None:
+        poly, a = best
+        h = a.get("HEIGHT")
+        rec.update({
+            "build_id": a.get("BUILD_ID"),
+            "footprint_sqft": round(_area_sqft(poly), 1),
+            "source_sqft": a.get("SQFEET"),
+            "height_m": float(h) if h not in (None, "") else np.nan,
+            "occupancy_class": a.get("OCC_CLS"),
+            "building_address": a.get("PROP_ADDR"),
+            "imagery_date": a.get("IMAGE_DATE"),
+        })
+    return fid, rec
+
+
+_RANK = {"contains": 3, "nearest": 2, "none": 1, "fetch_error": 0}
+
+
 def load_structures() -> dict:
-    out = {}
-    if not STRUCT.exists():
-        return out
-    with open(STRUCT) as fh:
-        for line in fh:
-            try:
-                r = json.loads(line)
-            except Exception:  # noqa: BLE001
-                continue
-            fid, lon, lat = r["facility_id"], r["lon"], r["lat"]
-            if r.get("error"):
-                out[fid] = {"building_match": "fetch_error"}
-                continue
-            pt = Point(lon, lat)
-            best, best_kind, best_dist = None, "none", np.nan
-            containing, nearest, nd = [], None, np.inf
-
-            for f in r.get("features", []):
-                poly = _poly(f)
-                if poly is None:
+    """Merge every radius cache, keeping the strongest match per facility."""
+    out: dict = {}
+    for path in STRUCT_CACHES:
+        if not path.exists():
+            continue
+        with open(path) as fh:
+            for line in fh:
+                parsed = _parse_struct_line(line)
+                if parsed is None:
                     continue
-                a = f["attributes"]
-                if poly.contains(pt):
-                    containing.append((poly, a))
-                else:
-                    # Distance to the nearest EDGE. Using the centroid ranks a
-                    # small shed above the large hall a facility actually sits
-                    # beside, and inflates the recorded distance.
-                    q, _ = nearest_points(poly.boundary, pt)
-                    d = _dist_m(lon, lat, q.x, q.y)
-                    if d < nd:
-                        nd, nearest = d, (poly, a)
-
-            if containing:
-                poly, a = max(containing, key=lambda t: _area_sqft(t[0]))
-                best, best_kind, best_dist = (poly, a), "contains", 0.0
-            elif nearest is not None and nd <= NEAR_M:
-                best, best_kind, best_dist = nearest, "nearest", nd
-
-            rec = {"building_match": best_kind,
-                   "building_dist_m": best_dist,
-                   "n_buildings_200m": len(r.get("features", []))}
-            if best is not None:
-                poly, a = best
-                h = a.get("HEIGHT")
-                rec.update({
-                    "build_id": a.get("BUILD_ID"),
-                    "footprint_sqft": round(_area_sqft(poly), 1),
-                    "source_sqft": a.get("SQFEET"),
-                    "height_m": float(h) if h not in (None, "") else np.nan,
-                    "occupancy_class": a.get("OCC_CLS"),
-                    "building_address": a.get("PROP_ADDR"),
-                    "imagery_date": a.get("IMAGE_DATE"),
-                })
-            out[fid] = rec
+                fid, rec = parsed
+                prev = out.get(fid)
+                if prev is None:
+                    out[fid] = rec
+                    continue
+                a, b = _RANK.get(rec["building_match"], 0), _RANK.get(prev["building_match"], 0)
+                if a > b or (a == b and rec["building_match"] == "nearest"
+                             and rec.get("building_dist_m", np.inf)
+                             < prev.get("building_dist_m", np.inf)):
+                    out[fid] = rec
     return out
 
 
@@ -222,6 +264,16 @@ def main() -> None:
         rows.append(rec)
     out = pd.DataFrame(rows)
 
+    # Distance-based confidence, so a rescue at 600 m is visibly weaker than a
+    # containment. Downstream analysis can require "high".
+    def _conf(r):
+        if r["building_match"] == "contains":
+            return "high"
+        if r["building_match"] == "nearest":
+            return "high" if r["building_dist_m"] <= NEAR_CONFIDENT_M else "low"
+        return None
+    out["building_match_confidence"] = out.apply(_conf, axis=1)
+
     if "height_m" in out:
         out["multi_storey"] = np.where(
             out["height_m"].notna(), out["height_m"] >= MULTI_STOREY_M, None)
@@ -233,12 +285,16 @@ def main() -> None:
         "building_match": {str(k): int(v) for k, v in mm.items()},
         "height_measured": int(out["height_m"].notna().sum()) if "height_m" in out else 0,
         "height_threshold_m": MULTI_STOREY_M,
+        "match_confidence": {str(k): int(v) for k, v in
+                             out["building_match_confidence"].value_counts(dropna=False).items()},
+        "near_confident_m": NEAR_CONFIDENT_M,
         "flood_mapped": int((out["flood_mapped"] == True).sum()),  # noqa: E712
         "flood_in_sfha": int((out["flood_sfha"] == True).sum()),   # noqa: E712
-        "search_radius_m": NEAR_M,
+        "max_search_radius_m": NEAR_M,
     }
     print("\n=== coverage ===")
     print("building match:", cov["building_match"])
+    print("match confidence:", cov["match_confidence"])
     print(f"height measured: {cov['height_measured']}/{n} "
           f"({100*cov['height_measured']/n:.1f}%)")
     print(f"flood mapped   : {cov['flood_mapped']}/{n}")

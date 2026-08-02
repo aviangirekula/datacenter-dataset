@@ -110,6 +110,33 @@ These are stated plainly because they bound what the data can support.
    A quantitative check against an independent point source, with bias and RMSE
    over a random sample, is still required.
 
+## Building attributes and flood
+
+`scripts/fetch_building_attributes.py` + `build_building_attributes.py` produce
+`data/processed/building_attributes.csv`.
+
+| Field | Meaning |
+|---|---|
+| `building_match` | `contains` (coordinate inside a building polygon), `nearest`, or `none` |
+| `building_match_confidence` | `high` if contained or within 200 m, `low` beyond that |
+| `footprint_sqft`, `height_m` | of the matched building, geodesic area with holes subtracted |
+| `largest_nearby_sqft`, `largest_nearby_dist_m`, `largest_nearby_height_m` | the **largest** building in the search radius |
+| `flood_zone`, `flood_sfha`, `flood_mapped` | FEMA NFHL layer 28, using FEMA's own `SFHA_TF` flag |
+
+Results: 1,681 coordinates fall inside a building, 993 match a nearest building
+within 800 m, 22 have no match. Height is measured for 1,327 facilities (49%).
+FEMA maps 2,624 of them, of which **71 lie inside a Special Flood Hazard Area**
+(the regulatory 1% annual chance floodplain).
+
+**Why two building columns.** At a hyperscale campus the recorded coordinate is
+often a gate, so the *nearest* structure is a guardhouse while the data hall is
+the large box behind it. For the 234 low-confidence matches the nearest building
+has a median footprint of 1,978 sqft while the largest within the radius has a
+median of 50,029 sqft, and 84 of them exceed 100,000 sqft. Forcing a single
+choice would be wrong either way, so both are recorded and the analysis picks.
+Widening the search from 200 m to 800 m cut misses from 256 to 22 and did not
+change any containment result, which is the expected self-consistency check.
+
 ## Not yet included
 
 - **Flood.** The most consequential hazard for this asset class, and absent. The
