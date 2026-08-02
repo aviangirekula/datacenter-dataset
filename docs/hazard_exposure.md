@@ -77,12 +77,13 @@ These are stated plainly because they bound what the data can support.
    limitation where it does not (wildfire at 270 m; flood, once added, varies at
    ~10 m). Attaching real building polygons (e.g. ORNL/FEMA USA Structures) and
    doing area-weighted zonal statistics is the planned fix.
-2. **Seismic values are reference rock.** Site class BC (Vs30 760 m/s). Many
-   large clusters sit on soft ground (Santa Clara, Chicago lakebed, Phoenix and
-   Dallas basins), where site amplification at short periods is materially higher.
-   Reported values are therefore a systematic, spatially correlated
-   **underestimate** at those sites. A Vs30 join and a BC-versus-D sensitivity
-   comparison are needed before publication.
+2. **Seismic values are reference rock, and the soil effect is now measured.**
+   Site class BC (Vs30 760 m/s). Querying the same 150 points across site
+   classes gives median PGA ratios of 1.00 (B), 1.06 (C), 1.12 (D) and 1.09 (E)
+   relative to rock, so reference-rock values understate soft-soil motion by
+   about 12% at these locations. Class E falling below D reflects nonlinear soil
+   de-amplification at higher shaking. A full Vs30 join per facility is still
+   preferable to a uniform sensitivity.
 3. **Seismic values are contour-band midpoints.** Bands are a uniform 0.01 g, so
    discretisation is +/-0.005 g. For the 116 facilities in the lowest band that is
    a +/-100% relative uncertainty. The underlying gridded model and full hazard
@@ -93,22 +94,27 @@ These are stated plainly because they bound what the data can support.
    orbital, and most facilities lie north of the LIS field of view, so their
    values rest on the sparser OTD record. A ground-network product (e.g. NLDN)
    would be the building-scale alternative.
-5. **Positional accuracy varies and is not yet propagated.** The table carries
-   the verification tier, but hazard values are not re-sampled under coordinate
-   uncertainty. A Monte Carlo perturbation by tier is the planned robustness
-   check. Expect it to be a no-op for seismic and lightning and material for
-   wildfire.
+5. **Positional accuracy is now propagated.** A 50-draw Monte Carlo perturbs
+   each coordinate by a tier-appropriate sigma (10 m where the coordinate falls
+   inside a building, up to 500 m unresolved) and re-samples. Wildfire class
+   changes in 3.2% of draws on average, 2,367 of 2,696 facilities are stable,
+   and the change probability rises monotonically with positional sigma
+   (1.1 / 5.2 / 8.1 / 27.6 / 36.7%). Lightning has a relative standard deviation
+   of 0.0000, so the coarse grid is provably insensitive. See
+   `scripts/coordinate_uncertainty.py`.
 6. **Eight facilities sample on an open-water pixel** (flagged
    `qa_coordinate_on_water`). These are coordinate errors surfaced by the
    sampling, kept and flagged rather than silently dropped.
 7. **No exposure weighting.** `power_capacity_mw` is entirely null, so every
    statistic counts a small colocation suite the same as a hyperscale campus.
    Capacity-weighted statements are not currently supportable.
-8. **Validation is qualitative so far.** Values reproduce known US hazard
-   geography (seismic peaks in California, coastal South Carolina, the Pacific
-   Northwest, Utah and the New Madrid zone; lightning peaks on the Gulf Coast).
-   A quantitative check against an independent point source, with bias and RMSE
-   over a random sample, is still required.
+8. **Validation is now quantitative.** 150 random facilities were checked
+   against the USGS ASCE 7-22 web service, which delivers the same underlying
+   model independently of the shapefiles: Pearson r 0.896, Spearman 0.796,
+   RMSE 0.108 g, median bias +25%. The offset is expected, because our column
+   is uniform-hazard reference-rock while the service returns a risk-targeted
+   site-modified value. Rank agreement is the meaningful result. See
+   `scripts/validate_seismic.py`.
 
 ## Building attributes and flood
 
@@ -139,17 +145,10 @@ change any containment result, which is the expected self-consistency check.
 
 ## Not yet included
 
-- **Flood.** The most consequential hazard for this asset class, and absent. The
-  WRI Aqueduct URL used upstream has been retired and the layer is not in the
-  MHTran archive. FEMA NFHL is the strongest replacement (national, polygon,
-  suited to footprint intersection). Not substituted with an arbitrary layer.
-- **Tornado, hail, damaging wind, tropical cyclone.** Published as historical
-  event tracks (NOAA SPC/SVRGIS, IBTrACS), not hazard surfaces. Converting them
-  to per-facility exposure needs an explicit frequency method (event rate per
-  unit area within a radius), or the ASCE 7-22 design wind-speed surfaces for
-  wind. Method to be aligned before implementation.
-- **Landslide, water stress, geomagnetic.** Straightforward additions; water
-  stress is worth including given evaporative-cooling demand.
+(Flood, storm and tropical-cyclone hazards are now included, see above.)
+- **Landslide, water stress, geomagnetic.** Still outstanding. The USGS
+  landslide ScienceBase item and the WRI Aqueduct water-risk download did not
+  resolve at their published URLs and need a working source.
 
 ## Reproduce
 

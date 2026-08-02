@@ -1,0 +1,31 @@
+{
+  "n_sampled": 150,
+  "n_compared": 150,
+  "seed": 20260731,
+  "our_column": "haz_seismic_pga_g_2475yr (uniform-hazard 2% in 50 yr, site class BC)",
+  "reference": "USGS ASCE 7-22 pgam (risk-targeted MCEg, site-modified)",
+  "pearson_r": 0.8964314516671337,
+  "spearman_r": 0.7956156120365288,
+  "median_bias_g": 0.024999999999999994,
+  "median_relative_bias_pct": 25.000000000000004,
+  "rmse_g": 0.1080468416937765,
+  "interpretation": "The two are related but distinct quantities (uniform-hazard reference-rock versus risk-targeted site-modified), so a strong rank correlation with a systematic offset is the expected result. Rank agreement is the meaningful validation.",
+  "soil_sensitivity": {
+    "B": {
+      "median_pgam_g": 0.09,
+      "median_ratio_to_B": 1.0
+    },
+    "C": {
+      "median_pgam_g": 0.095,
+      "median_ratio_to_B": 1.0558676654182273
+    },
+    "D": {
+      "median_pgam_g": 0.11,
+      "median_ratio_to_B": 1.118421052631579
+    },
+    "E": {
+      "median_pgam_g": 0.11,
+      "median_ratio_to_B": 1.091507177033493
+    }
+  }
+}
