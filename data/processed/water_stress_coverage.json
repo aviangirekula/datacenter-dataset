@@ -1,0 +1,16 @@
+{
+  "n_facilities": 2696,
+  "matched_to_basin": 2696,
+  "source": "WRI Aqueduct 4.0 baseline annual (files.wri.org)",
+  "indicator": "bws = baseline water stress, withdrawals / available supply",
+  "note": "Water stress is a resource-availability constraint relevant to evaporative cooling, not a natural hazard. It is reported separately and should not be combined into a hazard index. Category -1 means arid with low water use, a distinct condition rather than a low score.",
+  "class_counts": {
+    "low": 852,
+    "high": 598,
+    "medium_to_high": 451,
+    "low_to_medium": 439,
+    "extremely_high": 354,
+    "arid_and_low_water_use": 2
+  },
+  "facilities_high_or_extreme": 952
+}

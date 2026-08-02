@@ -26,3 +26,5 @@ data/hazards/
 
 # Cached ArcGIS responses for building/flood attributes (regenerable)
 data/raw/buildings/
+
+data/hazards/water/
