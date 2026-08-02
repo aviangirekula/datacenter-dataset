@@ -1,32 +1,47 @@
-"""Per-facility severe-storm exposure from NOAA SPC event tracks.
+"""Per-facility severe-storm exposure from NOAA SPC event records.
 
-Tornado, hail and damaging-wind hazards are published as historical event
-records rather than hazard surfaces, so exposure is expressed as a **Poisson
-event rate**: the number of recorded events whose track passes within a radius
-of the facility, divided by the length of the record.
+Tornado, hail and damaging wind are published as historical event reports rather
+than hazard surfaces, so exposure has to be estimated. Three quantities are
+produced, and it matters which one is used for what.
 
-    rate (events/yr) = events within R km / record length in years
+**1. Areal event-day density** (``*_density_per_10k_km2_yr``). Event-days within
+a radius, divided by the disc area and the record length. This is a *regional
+climatological density*, not a facility-specific quantity: a 40 km disc puts 44%
+of its area in the outer 30-40 km annulus, so the value describes the region
+around the facility rather than the site. Reported with exact Poisson 95%
+intervals because the underlying counts are small.
 
-Two decisions carry the methodological weight, and both are stated rather than
-buried:
+**2. Tornado point-strike probability** (``tornado_strike_prob_per_yr``). Sum of
+damage-path areas (length x width) of tornado tracks intersecting the disc,
+divided by the disc area and the record length. This is the classical
+Thom/Schaefer path-area estimator and is the defensible *site* quantity. It is
+roughly three orders of magnitude smaller than the disc count, which is the
+point: a disc count of 0.19/yr does not mean a tornado hits the site every five
+years.
 
-**1. Reporting bias.** SPC records are *reports*, not a complete census. Report
-density rises with population and with detection capability, and tornado and
-hail counts increase sharply through the record as radar coverage improved.
-Counting every report would therefore measure observer density as much as
-hazard. Two mitigations are applied and reported side by side:
+**3. Event-days, not reports.** A single storm day contributes ~2.8 hail or wind
+reports, and that multiplier tracks spotter density rather than weather. Counting
+distinct dates removes most of it.
 
-- a **significant-event** threshold, which is far less sensitive to reporting
-  practice (EF2+ tornado, hail 2 inches or larger, wind 65 knots or more), and
-- a **modern-era** window for the all-event rates.
+REPORTING BIAS IS NOT FULLY CONTROLLED, and this is stated rather than claimed
+away. Testing the record directly: significant hail reports rose 24% per decade
+and significant wind 26% per decade even within 1996-2024, so a
+significant-event threshold does **not** make the series stationary. Only EF2+
+tornado is approximately stationary. Mitigations actually applied:
 
-Both the all-event and significant-event rates are written out. The
-significant-event rate is the defensible one for comparison across regions.
+- a single modern window (2000-2024) for every hazard, so no two columns carry
+  different denominators,
+- event-days rather than raw reports,
+- explicit removal of magnitude sentinels (wind ``mag == 0`` is a missing-value
+  code covering 21% of the full record and 60-72% of pre-2000 decades, not a
+  calm-wind observation),
+- per-facility Poisson confidence intervals so thinly-sampled sites are visibly
+  uncertain.
 
-**2. Radius.** A 40 km radius (about 25 miles) is a common convention in
-tornado climatology and is wide enough that a single facility's rate is not
-dominated by whether one track happened to clip it. The radius is a parameter,
-and the sensitivity to it should be reported.
+Residual bias remains correlated with population density. Cross-region
+comparisons should be read with that caveat, and a radar-derived product
+(MESH for hail) or a published smoothed climatology is the better long-term
+source.
 
     ./.venv/bin/python scripts/build_storm_exposure.py
 """
@@ -38,6 +53,7 @@ from pathlib import Path
 import geopandas as gpd
 import numpy as np
 import pandas as pd
+from scipy.stats import chi2
 
 REPO = Path(__file__).resolve().parents[1]
 DC_CSV = REPO / "data" / "processed" / "datacenters_final.csv"
@@ -47,109 +63,137 @@ OUT_JSON = REPO / "data" / "processed" / "storm_exposure_coverage.json"
 
 EQUAL_AREA = "EPSG:5070"
 RADIUS_M = 40_000.0
-# Reporting practice stabilised for hail/wind after the mid-1990s.
-MODERN_FROM = 1996
+DISC_KM2 = np.pi * (RADIUS_M / 1000.0) ** 2
+
+# One window for every hazard. 2000 clears the worst of the wind magnitude
+# sentinel era and sits after the 1990s radar rollout.
+YEAR_FROM, YEAR_TO = 2000, 2024
+YEARS = YEAR_TO - YEAR_FROM + 1
+
+MI_M, YD_M = 1609.344, 0.9144
 
 DATASETS = {
-    "tornado": {
-        "dir": "1950-2024-torn-aspath",
-        "first_year": 1950,
-        # F/EF scale. EF2+ is the standard "significant tornado" threshold.
-        "sig": lambda g: g["mag"] >= 2,
-        "sig_label": "EF2 or greater",
-    },
-    "hail": {
-        "dir": "1955-2024-hail-aspath",
-        "first_year": 1955,
-        # Diameter in inches. 2 inches is the SPC "significant hail" threshold.
-        "sig": lambda g: g["mag"] >= 2.0,
-        "sig_label": "2 inch diameter or greater",
-    },
-    "wind": {
-        "dir": "1955-2024-wind-aspath",
-        "first_year": 1955,
-        # Knots. 65 kt (about 75 mph) is the SPC "significant wind" threshold.
-        "sig": lambda g: g["mag"] >= 65,
-        "sig_label": "65 knots or greater",
-    },
+    "tornado": {"dir": "1950-2024-torn-aspath",
+                "sig": lambda g: g["mag"] >= 2, "sig_label": "EF2+",
+                # -9 marks an unrated tornado, not an F0.
+                "valid_mag": lambda g: g["mag"] >= 0},
+    "hail": {"dir": "1955-2024-hail-aspath",
+             "sig": lambda g: g["mag"] >= 2.0, "sig_label": "2.00 in or larger",
+             "valid_mag": lambda g: g["mag"] > 0},
+    "wind": {"dir": "1955-2024-wind-aspath",
+             "sig": lambda g: g["mag"] >= 65, "sig_label": "65 kt or greater",
+             # mag == 0 is a missing-value sentinel, not a calm observation.
+             "valid_mag": lambda g: g["mag"] > 0},
 }
-LAST_YEAR = 2024
 
 
-def _rate(counts: np.ndarray, years: int) -> np.ndarray:
-    return counts / float(years)
+def poisson_ci(k: np.ndarray, exposure: float) -> tuple[np.ndarray, np.ndarray]:
+    """Exact (Garwood) Poisson 95% interval for a count, per unit exposure."""
+    k = np.asarray(k, dtype=float)
+    lo = np.where(k > 0, chi2.ppf(0.025, 2 * k) / 2.0, 0.0)
+    hi = chi2.ppf(0.975, 2 * (k + 1)) / 2.0
+    return lo / exposure, hi / exposure
 
 
 def main() -> None:
     dc = pd.read_csv(DC_CSV, low_memory=False)
+    n = len(dc)
     pts = gpd.GeoDataFrame(
-        {"facility_id": dc["facility_id"].astype(str)},
+        {"_i": np.arange(n)},
         geometry=gpd.points_from_xy(dc["longitude"], dc["latitude"]),
         crs="EPSG:4326").to_crs(EQUAL_AREA)
-    pts["_i"] = np.arange(len(pts))
     buf = pts.copy()
     buf["geometry"] = buf.geometry.buffer(RADIUS_M)
 
     out = dc[["facility_id", "name", "state", "latitude", "longitude"]].copy()
     meta: dict[str, dict] = {}
-    n = len(dc)
 
     for key, cfg in DATASETS.items():
         shp = STORM_DIR / cfg["dir"] / f"{cfg['dir']}.shp"
         if not shp.exists():
-            print(f"  [skip] {key}: {shp.name} missing")
+            print(f"  [skip] {key}: missing")
             continue
-        print(f"\n{key}: reading {shp.name} ...")
+        print(f"\n{key}: reading ...")
         g = gpd.read_file(shp)
         g = g[g.geometry.notna() & ~g.geometry.is_empty]
         if g.crs is None:
             g = g.set_crs("EPSG:4326")
-        g = g.to_crs(EQUAL_AREA)
         g["mag"] = pd.to_numeric(g["mag"], errors="coerce")
         g["yr"] = pd.to_numeric(g["yr"], errors="coerce")
 
-        full_years = LAST_YEAR - cfg["first_year"] + 1
-        modern_years = LAST_YEAR - MODERN_FROM + 1
+        n_raw = len(g)
+        g = g[(g["yr"] >= YEAR_FROM) & (g["yr"] <= YEAR_TO)]
+        n_window = len(g)
+        g = g[cfg["valid_mag"](g)]
+        n_valid = len(g)
+        sig = g[cfg["sig"](g)].to_crs(EQUAL_AREA)
+        print(f"  {n_raw:,} raw -> {n_window:,} in {YEAR_FROM}-{YEAR_TO} "
+              f"-> {n_valid:,} with usable magnitude -> {len(sig):,} significant")
 
-        subsets = {
-            # All events, modern era only, to limit the detection-era trend.
-            f"{key}_all_rate_per_yr": (g[g["yr"] >= MODERN_FROM], modern_years),
-            # Significant events over the full record. Least biased.
-            f"{key}_sig_rate_per_yr": (g[cfg["sig"](g)], full_years),
-        }
+        if len(sig) == 0:
+            continue
+        sig = sig.reset_index(drop=True)
+        sig["_date"] = pd.to_datetime(sig["date"], errors="coerce").dt.date
 
-        for col, (sub, years) in subsets.items():
-            if len(sub) == 0:
-                out[col] = 0.0
-                continue
-            j = gpd.sjoin(buf[["_i", "geometry"]], sub[["geometry"]],
-                          how="inner", predicate="intersects")
-            counts = j.groupby("_i").size().reindex(range(n), fill_value=0).to_numpy()
-            out[col] = _rate(counts, years)
-            print(f"  {col}: median {np.median(out[col]):.3f}/yr  "
-                  f"max {out[col].max():.3f}/yr  (n_events={len(sub):,}, {years} yr)")
+        j = gpd.sjoin(buf[["_i", "geometry"]], sig[["geometry", "_date"]],
+                      how="inner", predicate="intersects")
+        # Event-DAYS, not reports: one storm day yields multiple reports and the
+        # multiplier tracks observer density.
+        days = j.groupby("_i")["_date"].nunique().reindex(range(n), fill_value=0)
+        k = days.to_numpy()
+
+        dens = k / (DISC_KM2 * YEARS) * 1e4
+        lo, hi = poisson_ci(k, DISC_KM2 * YEARS / 1e4)
+        out[f"{key}_event_days"] = k
+        out[f"{key}_density_per_10k_km2_yr"] = dens
+        out[f"{key}_density_lo95"] = lo
+        out[f"{key}_density_hi95"] = hi
+        print(f"  density median {np.median(dens):.3f} per 10k km2/yr | "
+              f"zero-count facilities {int((k == 0).sum())}")
 
         meta[key] = {
-            "record": f"{cfg['first_year']}-{LAST_YEAR}",
-            "modern_window": f"{MODERN_FROM}-{LAST_YEAR}",
+            "window": f"{YEAR_FROM}-{YEAR_TO}", "years": YEARS,
             "significant_threshold": cfg["sig_label"],
-            "n_events_total": int(len(g)),
-            "n_events_significant": int(cfg["sig"](g).sum()),
-            "radius_m": RADIUS_M,
+            "n_significant_events": int(len(sig)),
+            "facilities_with_zero_events": int((k == 0).sum()),
+            "median_density_per_10k_km2_yr": float(np.median(dens)),
         }
+
+        # Tornado only: the path-area point-strike estimator.
+        if key == "tornado":
+            s = sig.copy()
+            s["_area_m2"] = (pd.to_numeric(s["len"], errors="coerce").fillna(0) * MI_M
+                             * pd.to_numeric(s["wid"], errors="coerce").fillna(0) * YD_M)
+            j2 = gpd.sjoin(buf[["_i", "geometry"]], s[["geometry", "_area_m2"]],
+                           how="inner", predicate="intersects")
+            swept = j2.groupby("_i")["_area_m2"].sum().reindex(range(n), fill_value=0.0)
+            prob = swept.to_numpy() / (DISC_KM2 * 1e6) / YEARS
+            out["tornado_strike_prob_per_yr"] = prob
+            with np.errstate(divide="ignore"):
+                rp = np.where(prob > 0, 1.0 / prob, np.nan)
+            out["tornado_strike_return_yr"] = rp
+            print(f"  path-area strike prob: median {np.nanmedian(prob):.2e}/yr "
+                  f"(return period ~{np.nanmedian(rp):,.0f} yr)")
+            meta["tornado"]["strike_estimator"] = (
+                "path-area (Thom/Schaefer): sum of track length x width "
+                "intersecting the disc, divided by disc area and years")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(OUT, index=False)
     OUT_JSON.write_text(json.dumps({
-        "n_facilities": n,
-        "radius_m": RADIUS_M,
-        "method": "Poisson event rate: events intersecting a radius buffer "
-                  "divided by record length in years",
-        "caveat": "SPC records are reports, not a complete census. Report "
-                  "density correlates with population and detection capability. "
-                  "Significant-event rates are the defensible cross-region "
-                  "comparison; all-event rates are restricted to the modern era "
-                  "and still carry population bias.",
+        "n_facilities": n, "radius_m": RADIUS_M, "disc_km2": DISC_KM2,
+        "window": f"{YEAR_FROM}-{YEAR_TO}",
+        "units": {
+            "density_per_10k_km2_yr": "regional event-day density, NOT a "
+                                      "facility-specific strike rate",
+            "tornado_strike_prob_per_yr": "annual probability the facility "
+                                          "point is inside a tornado damage path",
+        },
+        "reporting_bias": "NOT fully controlled. Significant hail and wind "
+                          "report counts rise ~24-26% per decade even within "
+                          "the modern era, and residual bias correlates with "
+                          "population density. Only EF2+ tornado is "
+                          "approximately stationary.",
         "datasets": meta,
     }, indent=2) + "\n")
     print(f"\nWrote {OUT.relative_to(REPO)} ({len(out)} rows, {len(out.columns)} cols)")

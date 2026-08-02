@@ -1,11 +1,11 @@
 {
   "n_facilities": 2696,
   "building_match": {
-    "contains": 1687,
-    "nearest": 728,
-    "none": 281
+    "contains": 1681,
+    "nearest": 759,
+    "none": 256
   },
-  "height_measured": 1257,
+  "height_measured": 1298,
   "height_threshold_m": 12.0,
   "flood_mapped": 2624,
   "flood_in_sfha": 71,

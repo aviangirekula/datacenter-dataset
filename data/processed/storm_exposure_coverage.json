@@ -1,32 +1,38 @@
 {
   "n_facilities": 2696,
   "radius_m": 40000.0,
-  "method": "Poisson event rate: events intersecting a radius buffer divided by record length in years",
-  "caveat": "SPC records are reports, not a complete census. Report density correlates with population and detection capability. Significant-event rates are the defensible cross-region comparison; all-event rates are restricted to the modern era and still carry population bias.",
+  "disc_km2": 5026.548245743669,
+  "window": "2000-2024",
+  "units": {
+    "density_per_10k_km2_yr": "regional event-day density, NOT a facility-specific strike rate",
+    "tornado_strike_prob_per_yr": "annual probability the facility point is inside a tornado damage path"
+  },
+  "reporting_bias": "NOT fully controlled. Significant hail and wind report counts rise ~24-26% per decade even within the modern era, and residual bias correlates with population density. Only EF2+ tornado is approximately stationary.",
   "datasets": {
     "tornado": {
-      "record": "1950-2024",
-      "modern_window": "1996-2024",
-      "significant_threshold": "EF2 or greater",
-      "n_events_total": 71813,
-      "n_events_significant": 13182,
-      "radius_m": 40000.0
+      "window": "2000-2024",
+      "years": 25,
+      "significant_threshold": "EF2+",
+      "n_significant_events": 3317,
+      "facilities_with_zero_events": 768,
+      "median_density_per_10k_km2_yr": 0.15915494309189535,
+      "strike_estimator": "path-area (Thom/Schaefer): sum of track length x width intersecting the disc, divided by disc area and years"
     },
     "hail": {
-      "record": "1955-2024",
-      "modern_window": "1996-2024",
-      "significant_threshold": "2 inch diameter or greater",
-      "n_events_total": 404910,
-      "n_events_significant": 28794,
-      "radius_m": 40000.0
+      "window": "2000-2024",
+      "years": 25,
+      "significant_threshold": "2.00 in or larger",
+      "n_significant_events": 17493,
+      "facilities_with_zero_events": 543,
+      "median_density_per_10k_km2_yr": 0.5570423008216338
     },
     "wind": {
-      "record": "1955-2024",
-      "modern_window": "1996-2024",
-      "significant_threshold": "65 knots or greater",
-      "n_events_total": 536782,
-      "n_events_significant": 35676,
-      "radius_m": 40000.0
+      "window": "2000-2024",
+      "years": 25,
+      "significant_threshold": "65 kt or greater",
+      "n_significant_events": 26735,
+      "facilities_with_zero_events": 193,
+      "median_density_per_10k_km2_yr": 1.3528170162811104
     }
   }
 }

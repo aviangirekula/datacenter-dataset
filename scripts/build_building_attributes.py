@@ -27,6 +27,7 @@ import numpy as np
 import pandas as pd
 from pyproj import Geod
 from shapely.geometry import Point, Polygon
+from shapely.ops import nearest_points, unary_union
 
 REPO = Path(__file__).resolve().parents[1]
 DC_CSV = REPO / "data" / "processed" / "datacenters_final.csv"
@@ -48,21 +49,57 @@ MULTI_STOREY_M = 12.0
 SFHA_PREFIXES = ("A", "V")
 
 
-def _poly(feat) -> Polygon | None:
+def _ring_area(ring) -> float:
+    """Signed shoelace area. ArcGIS: clockwise = exterior, counter-clockwise = hole."""
+    a = 0.0
+    for (x1, y1), (x2, y2) in zip(ring, ring[1:] + ring[:1]):
+        a += x1 * y2 - x2 * y1
+    return a / 2.0
+
+
+def _poly(feat):
+    """Build the full geometry from ALL rings, honouring holes and multipart.
+
+    Using only rings[0] drops interior courtyards (inflating area by up to 45%
+    on real records) and drops secondary parts, which can flip a containment
+    test. Ring orientation carries the exterior/hole distinction in the ArcGIS
+    JSON format.
+    """
     rings = (feat.get("geometry") or {}).get("rings") or []
-    if not rings or len(rings[0]) < 4:
+    rings = [r for r in rings if r and len(r) >= 4]
+    if not rings:
         return None
     try:
-        p = Polygon(rings[0])
-        return p if p.is_valid else p.buffer(0)
+        outers = [r for r in rings if _ring_area(r) < 0]   # clockwise in screen coords
+        holes = [r for r in rings if _ring_area(r) >= 0]
+        if not outers:                                     # orientation unreliable
+            outers, holes = [max(rings, key=lambda r: abs(_ring_area(r)))], []
+            holes = [r for r in rings if r is not outers[0]]
+        parts = []
+        for o in outers:
+            shell = Polygon(o)
+            mine = [h for h in holes if shell.contains(Polygon(h).representative_point())]
+            p = Polygon(o, mine)
+            parts.append(p if p.is_valid else p.buffer(0))
+        geom = parts[0] if len(parts) == 1 else unary_union(parts)
+        return geom if not geom.is_empty else None
     except Exception:  # noqa: BLE001
         return None
 
 
-def _area_sqft(poly: Polygon) -> float:
-    lon, lat = poly.exterior.coords.xy
-    area_m2, _ = GEOD.polygon_area_perimeter(list(lon), list(lat))
-    return abs(area_m2) * 10.76391
+def _area_sqft(geom) -> float:
+    """Geodesic area in sqft, subtracting holes and summing multipart pieces."""
+    polys = list(geom.geoms) if geom.geom_type == "MultiPolygon" else [geom]
+    total = 0.0
+    for p in polys:
+        lon, lat = p.exterior.coords.xy
+        a, _ = GEOD.polygon_area_perimeter(list(lon), list(lat))
+        total += abs(a)
+        for ring in p.interiors:
+            lon, lat = ring.coords.xy
+            a, _ = GEOD.polygon_area_perimeter(list(lon), list(lat))
+            total -= abs(a)
+    return max(total, 0.0) * 10.76391
 
 
 def _dist_m(lon1, lat1, lon2, lat2) -> float:
@@ -81,6 +118,9 @@ def load_structures() -> dict:
             except Exception:  # noqa: BLE001
                 continue
             fid, lon, lat = r["facility_id"], r["lon"], r["lat"]
+            if r.get("error"):
+                out[fid] = {"building_match": "fetch_error"}
+                continue
             pt = Point(lon, lat)
             best, best_kind, best_dist = None, "none", np.nan
             containing, nearest, nd = [], None, np.inf
@@ -93,8 +133,11 @@ def load_structures() -> dict:
                 if poly.contains(pt):
                     containing.append((poly, a))
                 else:
-                    c = poly.centroid
-                    d = _dist_m(lon, lat, c.x, c.y)
+                    # Distance to the nearest EDGE. Using the centroid ranks a
+                    # small shed above the large hall a facility actually sits
+                    # beside, and inflates the recorded distance.
+                    q, _ = nearest_points(poly.boundary, pt)
+                    d = _dist_m(lon, lat, q.x, q.y)
                     if d < nd:
                         nd, nearest = d, (poly, a)
 
@@ -133,6 +176,10 @@ def load_flood() -> dict:
                 r = json.loads(line)
             except Exception:  # noqa: BLE001
                 continue
+            if r.get("error"):
+                out[r["facility_id"]] = {"flood_zone": None, "flood_mapped": None,
+                                         "flood_sfha": np.nan}
+                continue
             feats = r.get("features", [])
             if not feats:
                 # No polygon here means the location is outside FEMA's mapped
@@ -140,17 +187,22 @@ def load_flood() -> dict:
                 out[r["facility_id"]] = {"flood_zone": None, "flood_mapped": False,
                                          "flood_sfha": np.nan}
                 continue
-            zones = [f["attributes"].get("FLD_ZONE") for f in feats]
-            zones = [z for z in zones if z]
-            # Most hazardous wins if a point sits on a boundary.
-            sfha = any(str(z).upper().startswith(SFHA_PREFIXES) for z in zones)
-            pick = next((z for z in zones
-                         if str(z).upper().startswith(SFHA_PREFIXES)), zones[0] if zones else None)
+            # FEMA publishes an authoritative SFHA flag; the A/V prefix rule is a
+            # heuristic that disagrees with it on real zone/flag combinations
+            # (AE/F, X/T, OPEN WATER/T), so use the field itself.
+            attrs = [f["attributes"] for f in feats]
+            flags = [str(a.get("SFHA_TF", "")).upper() for a in attrs]
+            zones = [a.get("FLD_ZONE") for a in attrs if a.get("FLD_ZONE")]
+            sfha = any(t == "T" for t in flags)
+            sfha_idx = next((i for i, t in enumerate(flags) if t == "T"), None)
+            pick = (attrs[sfha_idx].get("FLD_ZONE") if sfha_idx is not None
+                    else (zones[0] if zones else None))
+            sub_src = attrs[sfha_idx] if sfha_idx is not None else attrs[0]
             out[r["facility_id"]] = {
                 "flood_zone": pick,
                 "flood_mapped": True,
                 "flood_sfha": bool(sfha),
-                "flood_subtype": feats[0]["attributes"].get("ZONE_SUBTY"),
+                "flood_subtype": sub_src.get("ZONE_SUBTY"),
             }
     return out
 
