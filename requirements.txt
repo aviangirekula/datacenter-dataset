@@ -4,6 +4,8 @@ geopandas>=1.0
 shapely>=2.0
 pyproj>=3.6
 rasterio>=1.3          # hazard-layer raster sampling (dcdata.hazards)
+scipy>=1.11            # Poisson intervals, Mann-Whitney (scripts/build_storm_exposure, build_footprint_hazard)
+pyogrio>=0.7           # GeoPackage / FileGDB IO used by geopandas
 
 # Schema validation
 pydantic>=2.7
