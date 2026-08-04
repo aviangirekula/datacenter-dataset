@@ -398,8 +398,8 @@ def main() -> None:
     slide.shapes.add_picture(str(FIGS / "fig2_states.png"), Inches(rx),
                              Inches(y), width=Inches(rw))
     y += fig_height("fig2_states", rw) + 0.06
-    cap = ("Fig 2. Every state with 20 or more facilities. Most sit near 0% or "
-           "near 100%, and colour shows which hazard drives each one.")
+    cap = ("Fig 2. Every state with 20 or more facilities. 25 of 32 sit below "
+           "10% or above 60%, and colour shows which hazard drives each one.")
     new_text(slide, rx, y, rw, fit_height(cap, 22, rw), cap, 22, bold=True)
 
     # ---- column 3: Conclusions, then the null results and the QA figure ----
