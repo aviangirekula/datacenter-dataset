@@ -414,7 +414,8 @@ def main() -> None:
     slide.shapes.add_picture(str(FIGS / "fig2_states.png"), Inches(rx),
                              Inches(y), width=Inches(rw))
     y += fig_height("fig2_states", rw) + 0.06
-    cap = "Fig 2. All 32 states with 20 or more sites, coloured by dominant hazard."
+    cap = ("Fig 2. The fleet piles up at both ends. Colour shows which hazard "
+           "drives each state.")
     new_text(slide, rx, y, rw, fit_height(cap, 22, rw), cap, 22, bold=True)
 
     # ---- column 3: Conclusions, then the null results and the QA figure ----

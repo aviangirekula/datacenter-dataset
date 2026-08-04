@@ -168,122 +168,80 @@ def fig_map(d: pd.DataFrame) -> None:
 # --- Figure 2: state bars ------------------------------------------------------
 
 def fig_states(d: pd.DataFrame) -> None:
-    """Every state with 20 or more facilities, on one axis.
+    """How the fleet distributes across state exposure rates.
 
-    An earlier version plotted only the 7 lowest and 7 highest of 32 states and
-    then annotated the empty middle. That deleted Texas (n=230, larger than
-    California) along with 43% of the fleet, and it asserted the gap rather than
-    showing it. Plotting all 32 lets the reader see the shape and check it.
+    Two earlier versions failed. The first plotted only the 7 lowest and 7
+    highest of 32 states, which deleted Texas and 43% of the fleet and asserted
+    a gap it had created. The second was a dot plot, but five states sit at
+    exactly 0% and two at exactly 100%, so avoiding overlap meant stacking dots
+    vertically, and that height encoded nothing while looking like it did.
+
+    A histogram has no such problem: height is facilities, width is an exposure
+    band, and nothing can occlude anything.
     """
     g = d.groupby("state").agg(
         n=("facility_id", "size"),
         pct=("n_haz", lambda s: 100 * (s >= 1).mean()),
         fire=("f_fire", "mean"), flood=("f_flood", "mean"),
-        quake=("f_quake", "mean")).query("n >= 20").sort_values("pct")
+        quake=("f_quake", "mean")).query("n >= 20")
     n_all, N = len(g), len(d)
     mid = (g["pct"] >= 10) & (g["pct"] <= 60)
     mid_n, mid_share = int(mid.sum()), 100 * g.loc[mid, "n"].sum() / N
 
-    # Geometry is fixed up front because the packing below has to be done in
-    # POINTS, not data units. The axes are ~740 pt wide across 112 percentage
-    # points but only ~150 pt tall across the y range, so a data unit is worth
-    # roughly seven times more vertically than horizontally. An earlier version
-    # compared both against the same fudge factor and left dots overlapping.
-    FIG_W, FIG_H = 10.70, 3.15
-    L, R, B, T = 0.03, 0.995, 0.26, 0.85
-    AX_W_PT = (R - L) * FIG_W * 72.0
-    AX_H_PT = (T - B) * FIG_H * 72.0
-    X0, X1 = -6.0, 106.0
-
-    fig, ax = plt.subplots(figsize=(FIG_W, FIG_H))
-    # Colour by which hazard drives the state, because "100%" means wildfire in
-    # New Jersey and earthquake in California, and the poster should say so.
+    # For a state at 0.7% exposed, "dominant hazard" is the argmax of three
+    # near-zero numbers, so Virginia's 409 facilities were being coloured
+    # flood-driven. States under 1% get their own category instead.
     drivers = g[["fire", "flood", "quake"]].idxmax(axis=1)
-    cmap = {"fire": ORANGE, "flood": PURPLE, "quake": TEAL}
+    drivers[g["pct"] < 1] = "none"
+    edges = np.arange(0, 101, 10)
+    keys = ["none", "fire", "quake", "flood"]
+    cmap = {"none": GREY_MAP, "fire": ORANGE, "quake": TEAL, "flood": PURPLE}
+    names = {"none": "Under 1% exposed", "fire": "Wildfire-driven",
+             "quake": "Earthquake-driven", "flood": "Flood-driven"}
 
-    # Five states sit at exactly 0.00% exposed and two at exactly 100%, so on a
-    # single row their marks are perfectly coincident: the larger dot shows
-    # around the smaller one and reads as a ring in a second colour, encoding
-    # nothing. Circles are packed largest-first, each dropped to the lowest free
-    # height, with the test done as a true circle-to-circle distance in points.
-    area = g["n"].to_numpy() * 0.80
-    dia = np.sqrt(area)                              # marker diameter, points
-    xs = g["pct"].to_numpy()
-    x_pt = (xs - X0) / (X1 - X0) * AX_W_PT
-    step = 3.0                                       # search granularity, points
-    y_pt = np.zeros(n_all)
-    placed: list[tuple[float, float, float]] = []
-    for i in np.argsort(-area):                      # biggest settle first
-        lvl = dia[i] / 2.0                           # sit on the baseline
-        while any((x_pt[i] - qx) ** 2 + (lvl - qy) ** 2
-                  < ((dia[i] + qd) / 2.0 + 1.5) ** 2 for qx, qy, qd in placed):
-            lvl += step
-        y_pt[i] = lvl
-        placed.append((x_pt[i], lvl, dia[i]))
+    stacks = {k: [] for k in keys}
+    for lo, hi in zip(edges[:-1], edges[1:]):
+        sel = (g["pct"] >= lo) & ((g["pct"] < hi) if hi < 100 else (g["pct"] <= 100))
+        for k in keys:
+            stacks[k].append(int(g.loc[sel & (drivers == k), "n"].sum()))
 
-    # Labels are placed ABOVE every packed dot, in two staggered bands, so a
-    # leader line never crosses a mark. Fixed pixel offsets put them inside the
-    # stacks once packing began lifting dots off the baseline.
-    stack_top_pt = max(y_pt[i] + dia[i] / 2.0 for i in range(n_all))
-    band = (stack_top_pt + 12.0, stack_top_pt + 42.0)
-    top_pt = band[1] + 21.0
-    Y1 = max(top_pt / AX_H_PT, 0.30)
-    ys = y_pt / AX_H_PT
-    ax.scatter(xs, ys, s=area, zorder=3,
-               color=[GREY_MAP if p < 1 else cmap[k] for p, k in zip(g["pct"], drivers)],
-               edgecolor="white", linewidth=1.4)
-    g = g.assign(_row=ys)
+    fig, ax = plt.subplots(figsize=(10.70, 3.55))
+    x = edges[:-1] + 5
+    bottom = np.zeros(len(x))
+    for k in keys:
+        v = np.array(stacks[k], dtype=float)
+        ax.bar(x, v, bottom=bottom, width=9.2, color=cmap[k], zorder=3,
+               edgecolor="white", linewidth=1.0, label=names[k])
+        bottom += v
 
-    # Labels sit in two staggered rows ABOVE the axis only. Placing some below
-    # pushed them into the x-axis title, and a single row collided wherever two
-    # states sat close together (OH 0.0% vs VA 0.7%, AZ 98.8% vs CA 100%).
-    label = sorted(["VA", "TX", "FL", "NV", "WA", "OR", "AZ", "CA"],
-                   key=lambda s: g.loc[s, "pct"])
-    for i, st in enumerate(label):
-        # A label centred on its dot spans far enough to be crossed by the
-        # neighbouring band's leader line. Where two labelled states sit close
-        # together, the lower one is pushed away from the upper one.
-        x = g.loc[st, "pct"]
-        nb = [g.loc[o, "pct"] for j, o in enumerate(label)
-              if j != i and abs(j - i) == 1 and abs(g.loc[o, "pct"] - x) < 14]
-        shift = 0.0
-        if nb and i % 2 == 0:
-            shift = -9.0 if nb[0] > x else 9.0
-        ax.annotate(f"{st}  n={int(g.loc[st, 'n'])}",
-                    (x, g.loc[st, "_row"]),
-                    xytext=(x + shift, band[i % 2] / AX_H_PT),
-                    textcoords="data", fontsize=20, color=INK,
-                    ha="center", va="bottom",
-                    arrowprops=dict(arrowstyle="-", color="#c9c9c9", lw=1.1,
-                                    shrinkA=1, shrinkB=7))
+    for xi, tot in zip(x, bottom):
+        if tot:
+            ax.text(xi, tot + 22, f"{int(tot):,}", ha="center", fontsize=20,
+                    color=INK, fontweight="bold")
 
-    ax.set_xlim(X0, X1)
-    ax.set_ylim(-0.06 * Y1, Y1)
-    ax.get_yaxis().set_visible(False)
-    ax.set_xticks([0, 25, 50, 75, 100])
-    ax.set_xticklabels(["0%", "25%", "50%", "75%", "100%"])
+    ax.set_xlim(-2, 102)
+    ax.set_ylim(0, bottom.max() * 1.30)
+    ax.set_xticks(edges)
+    ax.set_xticklabels([f"{e}%" for e in edges], fontsize=20)
     ax.tick_params(axis="x", labelsize=20, colors=INK2)
-    ax.set_xlabel("Facilities facing at least one mapped hazard (%)",
+    ax.get_yaxis().set_visible(False)
+    ax.set_xlabel("Share of a state's facilities facing at least one mapped hazard",
                   fontsize=21, color=INK2, labelpad=10)
-    for s in ("top", "right", "left"):
-        ax.spines[s].set_visible(False)
+    for sp in ("top", "right", "left"):
+        ax.spines[sp].set_visible(False)
     ax.spines["bottom"].set_color("#cccccc")
 
-    ax.set_title(f"All {n_all} states with 20 or more facilities. Dot size = "
-                 f"facility count.\nOnly {mid_n} sit between 10% and 60%, "
-                 f"holding {mid_share:.0f}% of all facilities.",
-                 fontsize=20, color=INK, loc="left", pad=16, linespacing=1.4)
-    handles = [Line2D([0], [0], marker="o", linestyle="none", markersize=11,
-                      markerfacecolor=c, markeredgecolor="none", label=lab)
-               for c, lab in ((ORANGE, "Wildfire-driven"), (TEAL, "Earthquake-driven"),
-                              (PURPLE, "Flood-driven"), (GREY_MAP, "Under 1% exposed"))]
-    leg = ax.legend(handles=handles, loc="upper center", ncol=4, frameon=False,
-                    fontsize=20, bbox_to_anchor=(0.5, -0.42), handletextpad=0.6,
-                    columnspacing=1.9)
+    ax.set_title(f"Facilities by their state's exposure rate, all {n_all} states "
+                 f"with 20 or more.\nOnly {mid_n} states fall between 10% and 60%, "
+                 f"holding {mid_share:.0f}% of the fleet.",
+                 fontsize=21, color=INK, loc="left", pad=14, linespacing=1.4)
+    leg = ax.legend(loc="upper center", ncol=4, frameon=False, fontsize=20,
+                    bbox_to_anchor=(0.5, -0.42), handletextpad=0.8,
+                    columnspacing=1.8)
     for t in leg.get_texts():
         t.set_color(INK2)
 
-    fig.subplots_adjust(left=L, right=R, top=T, bottom=B)
+    fig.subplots_adjust(left=0.015, right=0.99, top=0.80, bottom=0.34)
     save_at(fig, "fig2_states", 11.79)
     plt.close(fig)
     print(f"  fig2_states.png  all {n_all} states, {mid_n} in the middle band")
