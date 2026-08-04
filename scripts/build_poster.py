@@ -41,77 +41,82 @@ DGREY = RGBColor(0x33, 0x33, 0x33)
 BODY_PT = 26          # the template's own body size
 BOTTOM = 26.54        # where the template's own content boxes end
 
-TITLE = "Two Americas of Data Center Hazard: 2,696 US Facilities Mapped"
+TITLE = "A Multi-Hazard Assessment of 2,696 US Data Centers"
 AUTHORS = "Avilash Angirekula¹, Dennies Bor¹, Edward J. Oughton¹"
 AFFIL = ("¹Department of Geography and Geoinformation Sciences, "
          "College of Science, George Mason University")
 
 BACKGROUND = (
-    "AI and cloud computing have concentrated enormous computing capacity into "
-    "a small number of US locations. Those buildings face earthquakes, wildfire "
-    "and flooding, but no open dataset records where they stand.\n"
-    "Existing sources are proprietary, aggregated above the building level, or "
-    "unverified. Without building-level locations, no one can measure what US "
-    "computing infrastructure is exposed to.\n"
-    "These are EXPOSURE values, not risk. No vulnerability term is applied, so "
-    "nothing here is a damage or loss estimate."
+    "•  AI and cloud computing have concentrated US computing capacity into a "
+    "few hundred sites.\n"
+    "•  Those sites face earthquakes, wildfire and flooding, but no open "
+    "dataset records where they physically stand.\n"
+    "•  Existing sources are proprietary, aggregated above the building level, "
+    "or unverified.\n"
+    "•  We measured exposure: whether a facility sits in a hazard zone. We did "
+    "not model damage, so nothing here is a loss estimate."
 )
 BOUNDS = (
     "Bounds on these results\n"
-    "•  Hail and wind rates track observer density (+0.39, +0.34 within "
-    "state) and are excluded from every result shown.\n"
-    "•  Power capacity is unrecorded for all 2,696, so every statistic is a "
-    "facility count, not a capacity share.\n"
-    "•  234 coordinates match a building only beyond 200 m. Under 500-draw "
-    "positional error, 2,067 facilities never change class."
+    "•  Coverage is incomplete. Open sources list 2,696 US facilities where "
+    "commercial directories list several thousand, and mapping density "
+    "varies by state.\n"
+    "•  Hail and wind reports rise with observer density (Spearman 0.39 and "
+    "0.34 within state), so we excluded both.\n"
+    "•  Power capacity is unrecorded, so we count facilities, never megawatts.\n"
+    "•  48 facilities shown as facing no hazard sit outside FEMA's mapped "
+    "extent, so 35% is a floor.\n"
+    "•  Across 500 relocations, 1,681 sites never changed wildfire class."
 )
 METHODS = (
-    "A reproducible Python pipeline merges OpenStreetMap, PeeringDB and "
-    "Wikidata, removes duplicate records, and grades every coordinate against "
-    "an independent building-footprint dataset.\n"
-    "Hazards are then read at each facility from official sources:"
+    "We merged OpenStreetMap, PeeringDB and Wikidata into one row per site. "
+    "Records within 60 m with matching fuzzy names are unioned, campus siblings "
+    "are kept apart, and every merge is logged.\n"
+    "We then graded each coordinate against FEMA USA Structures building "
+    "footprints and sampled hazards in an equal-area projection:"
 )
 METHODS_TABLE = [
-    ("Earthquake", "USGS ASCE 7-22 point service"),
-    ("Wildfire", "USFS Hazard Potential, 270 m"),
-    ("Flood", "FEMA National Flood Hazard Layer"),
-    ("Water stress", "WRI Aqueduct 4.0"),
+    ("Earthquake", "USGS ASCE 7-22, MCE_G PGA, site class BC"),
+    ("Wildfire", "USFS Hazard Potential 270 m, max in 2.4 km"),
+    ("Flood", "FEMA NFHL layer 28, SFHA flag"),
+    ("Water stress", "WRI Aqueduct 4.0 (a resource limit, not a hazard)"),
+    ("Uncertainty", "500 draws, sigma 10-500 m by coordinate tier"),
 ]
 METHODS_TAIL = (
-    "Missing data is recorded as unknown, never as zero. A facility counts as "
-    "exposed if it is within 2.4 km of land rated High or Very High for "
-    "wildfire, inside a FEMA floodplain, or at peak ground acceleration of "
-    "0.30 g or more."
+    "A facility counts as exposed if it lies within 2.4 km of land rated High "
+    "or Very High for wildfire, inside a FEMA Special Flood Hazard Area, or at "
+    "peak ground acceleration of 0.30 g or above (2% chance in 50 years). "
+    "Where a hazard layer has no value we record it as unknown rather than "
+    "counting the site as safe."
 )
 
-STATS = [("2,696", "facilities mapped"), ("1,681", "on a building footprint"),
-         ("35%", "face a mapped hazard"), ("0.7%", "of Virginia's 409")]
-RESULTS_LEAD = ("Hazard exposure is bimodal. It is decided by which cluster a "
-                "facility sits in, not by anything about data centers.")
+STATS = [("65%", "face no mapped hazard"), ("15", "states below 10% exposed"),
+         ("10", "states above 60%"), ("2,696", "facilities mapped")]
+RESULTS_LEAD = ("Where a facility sits predicts its hazard exposure far better "
+                "than anything about the facility itself.")
 RESULTS_BODY = (
-    "Of 2,696 facilities, 1,742 face no mapped hazard and 205 face two or more. "
-    "Among the 32 states holding 20 or more, 15 sit below 10% exposed and 10 "
-    "sit above 60%. Only 7 lie in between, holding 12% of all facilities.\n"
-    "Virginia, the largest concentration on Earth, is 0.7% exposed. California "
-    "and New Jersey are 100%.\n"
-    "Water stress is the exception that reaches Virginia: 31% of its facilities "
-    "sit in high or extremely-high stress basins, against 0.7% for mapped "
-    "hazards. Nationally 952 do."
+    "Which hazard dominates changes by region. New Jersey reaches 100% entirely "
+    "through wildfire and 0% through earthquake. California is 96% earthquake. "
+    "Nationally wildfire drives 646 facilities, earthquake 448, flood only 71.\n"
+    "Water stress is the one hazard that reaches Virginia. 31% of its "
+    "facilities sit in high-stress basins, against 0.7% for mapped hazards.\n"
+    "At a 5 km wildfire buffer the national count rises to 953, more than one "
+    "third of the fleet."
 )
 CONCLUSIONS = (
-    "•  A national average describes no real facility. Exposure is "
-    "concentrated in a nameable minority of places.\n"
-    "•  The industry has clustered in the low-exposure half of the "
-    "country. That is a finding about siting.\n"
-    "•  Next: fragility curves for server and cooling equipment, to turn "
-    "exposure into estimated loss."
+    "•  The national 35% figure describes no real state.\n"
+    "•  Most sit in low-exposure regions, but we did not test why. Power price "
+    "and fiber routes are likelier drivers than hazard avoidance.\n"
+    "•  Two states can both read 100% and face different hazards, so a "
+    "combined index must keep them separate.\n"
+    "•  Next: fragility curves to turn exposure into estimated loss."
 )
 NULLS = (
-    "Two things we expected and did not find\n"
-    "Measuring hazard across the whole building footprint rather than at one "
-    "point changed the answer for only 8.9% of facilities. Building height "
-    "showed no association with exposure once state was controlled, a median "
-    "difference of 0.0 across 23 states."
+    "Two checks that came back negative\n"
+    "Measuring hazard across the whole footprint rather than at one point "
+    "changed the answer for 29 of the 326 facilities where the two could be "
+    "compared. Building height showed no association with exposure once state "
+    "was held constant."
 )
 CITATIONS = (
     "Dillon, G.K. (2023) Wildfire Hazard Potential for the United States, "
@@ -122,13 +127,13 @@ CITATIONS = (
     "Oughton, E.J. and Weigel, R. (2026) A Comparative Multi-Hazard Risk "
     "Assessment of the US High-Voltage Transmission Network. Zenodo. "
     "doi:10.5281/zenodo.20331026 (CC BY 4.0)\n"
+    "FEMA and ORNL (2024) USA Structures. gis.fema.gov\n"
     "WRI (2023) Aqueduct 4.0 Water Risk Atlas."
 )
 ACK = (
     "This research was made possible through the support of George Mason "
-    "University's College of Science, which supports the ASSIP Program. Thanks "
-    "to Prof. Edward Oughton for supervision and to Dennies Bor for the "
-    "multi-hazard layers.\n"
+    "University's College of Science, which supports the ASSIP Program, and by "
+    "the NCAR multi-hazards project.\n"
     "Data and code: github.com/aviangirekula/datacenter-dataset"
 )
 
@@ -240,6 +245,8 @@ def set_text(shape, txt: str, size_pt: float, bold=False, colour=BLACK,
     """Replace a template shape's text, leaving the shape itself alone."""
     tf = shape.text_frame
     tf.word_wrap = True
+    tf.margin_left = tf.margin_right = Inches(TB_MARGIN_IN)
+    tf.margin_top = tf.margin_bottom = Inches(0.05)
     try:
         tf.auto_size = None            # never let PowerPoint silently shrink
     except Exception:  # noqa: BLE001 - older template parts lack the element
@@ -328,13 +335,13 @@ def main() -> None:
     set_text(bg, BACKGROUND, BODY_PT)
     bg.height = Inches(bh)
 
-    nh = fit_height(BOUNDS, 22, bw - 0.45)
+    nh = fit_height(BOUNDS, 25, bw - 0.45)
     # The Materials and Methods bar is fixed by the template at 15.72, so the
     # leftover space is split evenly rather than pooled into one dead gap.
     slack = (15.72 - 0.30) - (by + bh) - (nh + 0.16)
     py = by + bh + max(0.26, slack / 2)
     panel(slide, bx, py, bw, nh + 0.16, accent=GOLD)
-    new_text(slide, bx + 0.26, py + 0.08, bw - 0.45, nh, BOUNDS, 21,
+    new_text(slide, bx + 0.26, py + 0.08, bw - 0.45, nh, BOUNDS, 24,
              head_bold=True)
 
     # ---- column 1: Materials and Methods ----
@@ -366,9 +373,9 @@ def main() -> None:
         x = rx + 0.05 + i * (sw + 0.08)
         new_text(slide, x, y, sw, 0.98, num, 48, bold=True,
                  colour=GREEN, align=PP_ALIGN.CENTER)
-        new_text(slide, x, y + 0.92, sw, 0.62, lab, 19, colour=DGREY,
+        new_text(slide, x, y + 0.92, sw, 0.86, lab, 20, colour=DGREY,
                  align=PP_ALIGN.CENTER)
-    y += 1.62
+    y += 1.86
 
     lh = fit_height(RESULTS_LEAD, 29, rw)
     set_text(re_, RESULTS_LEAD, 29, bold=True)
@@ -378,8 +385,8 @@ def main() -> None:
     slide.shapes.add_picture(str(FIGS / "fig1_map.png"), Inches(rx), Inches(y),
                              width=Inches(rw))
     y += fig_height("fig1_map", rw) + 0.08
-    cap = ("Fig 1. Two thirds of US data centers face no mapped hazard. "
-           "Exposure is regional, not universal.")
+    cap = ("Fig 1. Two thirds of US data centers face no mapped hazard. The "
+           "exposed ones cluster in the West and the Northeast.")
     ch = fit_height(cap, 22, rw)
     new_text(slide, rx, y, rw, ch, cap, 22, bold=True)
     y += ch + 0.10
@@ -391,8 +398,8 @@ def main() -> None:
     slide.shapes.add_picture(str(FIGS / "fig2_states.png"), Inches(rx),
                              Inches(y), width=Inches(rw))
     y += fig_height("fig2_states", rw) + 0.06
-    cap = ("Fig 2. The least and most exposed states. The middle of the "
-           "range is sparsely occupied, not empty.")
+    cap = ("Fig 2. Every state with 20 or more facilities. Most sit near 0% or "
+           "near 100%, and colour shows which hazard drives each one.")
     new_text(slide, rx, y, rw, fit_height(cap, 22, rw), cap, 22, bold=True)
 
     # ---- column 3: Conclusions, then the null results and the QA figure ----
@@ -403,18 +410,17 @@ def main() -> None:
     co.height = Inches(cch)
     y = cy + cch + 0.20
 
-    nh3 = fit_height(NULLS, 22, cw - 0.45)
+    nh3 = fit_height(NULLS, 25, cw - 0.45)
     panel(slide, cx, y, cw, nh3 + 0.16, accent=GOLD)
-    new_text(slide, cx + 0.26, y + 0.08, cw - 0.45, nh3, NULLS, 21,
+    new_text(slide, cx + 0.26, y + 0.08, cw - 0.45, nh3, NULLS, 24,
              head_bold=True)
     y += nh3 + 0.30
 
     slide.shapes.add_picture(str(FIGS / "fig3_confidence.png"), Inches(cx),
                              Inches(y), width=Inches(cw))
     y += fig_height("fig3_confidence", cw) + 0.04
-    cap = ("Fig 3. Coordinate quality was measured, not assumed. Results stay "
-           "stable under realistic positional error.")
-    new_text(slide, cx, y, cw, fit_height(cap, 21, cw), cap, 21, bold=True)
+    cap = "Fig 3. We re-ran the analysis with simulated location error."
+    new_text(slide, cx, y, cw, fit_height(cap, 22, cw), cap, 22, bold=True)
 
     # ---- column 3: citations and acknowledgements, edited in place ----
     ci = find(slide, "Enter citations here")

@@ -27,7 +27,10 @@ from matplotlib.lines import Line2D
 REPO = Path(__file__).resolve().parents[1]
 P = REPO / "data" / "processed"
 OUT = REPO / "figures" / "poster"
-DPI = 300
+# 340, not 300: bbox_inches='tight' trims to the drawn extent, so the saved
+# width is a little under figsize and the placed resolution lands just below
+# 300 dpi at the column width the template gives us.
+DPI = 340
 
 # Okabe-Ito, chosen for colourblind safety and kept deliberately distinct from
 # the fixed template palette so a reader never confuses data with page chrome.
@@ -55,6 +58,11 @@ def load() -> pd.DataFrame:
     d["f_flood"] = (d["flood_sfha"] == True)          # noqa: E712 - NaN is not True
     d["f_quake"] = (d["haz_seismic_pga_g_2475yr_usgs"] >= 0.3).fillna(False)
     d["n_haz"] = d[["f_fire", "f_flood", "f_quake"]].sum(axis=1)
+    # FEMA does not map every county and a few buffers return no wildfire value.
+    # Those facilities fall into n_haz == 0 by construction, so track them and
+    # say so rather than letting them read as verified-clear.
+    d["unmapped_input"] = (d["flood_sfha"].isna()
+                           | d["haz_wildfire_max_severity_2400m"].isna())
     return d
 
 
@@ -70,7 +78,7 @@ def basemap():
 # --- Figure 1: the map ---------------------------------------------------------
 
 def fig_map(d: pd.DataFrame) -> None:
-    fig, ax = plt.subplots(figsize=(10.70, 6.00))
+    fig, ax = plt.subplots(figsize=(10.70, 6.30))
     base = basemap()
     if base is not None:
         base.plot(ax=ax, color="#f4f4f2", edgecolor="white", linewidth=0.8, zorder=1)
@@ -80,9 +88,13 @@ def fig_map(d: pd.DataFrame) -> None:
         crs="EPSG:4326").to_crs("EPSG:5070")
 
     # Least-exposed drawn first so the signal sits on top.
-    spec = [(0, GREY, 9, "No mapped hazard"),
-            (1, ORANGE, 16, "One hazard"),
-            (2, VERM, 30, "Two or more")]
+    # markersize is AREA in pt^2, so these are diameters of 6.0, 8.0 and 11.0 pt.
+    # The previous 9/16/30 printed at 1.1-1.9 mm, below hue discrimination at
+    # poster distance. ORANGE became BLUE: orange and vermillion are the closest
+    # pair in Okabe-Ito and converge further for red-green colour vision.
+    spec = [(0, "#9E9E9E", 49, "No mapped hazard"),
+            (1, BLUE, 64, "One hazard"),
+            (2, VERM, 121, "Two or more")]
     for n, colour, size, _ in spec:
         sel = pts[pts["n_haz"] == n] if n < 2 else pts[pts["n_haz"] >= 2]
         sel.plot(ax=ax, color=colour, markersize=size, zorder=2 + n,
@@ -92,13 +104,19 @@ def fig_map(d: pd.DataFrame) -> None:
 
     counts = [int((d["n_haz"] == 0).sum()), int((d["n_haz"] == 1).sum()),
               int((d["n_haz"] >= 2).sum())]
+    # Reported in the poster's limitations panel rather than crammed into the
+    # legend, where it read as qualifying the wrong category.
+    print(f"    {int((d['unmapped_input'] & (d['n_haz'] == 0)).sum())} of the "
+          f"no-hazard facilities have an unmapped input")
     handles = [Line2D([0], [0], marker="o", linestyle="none", markerfacecolor=c,
-                      markeredgecolor="none", markersize=m,
+                      markeredgecolor="none", markersize=np.sqrt(size),
                       label=f"{lab}  ({n:,})")
-               for (_, c, _, lab), m, n in zip(spec, [8, 10, 13], counts)]
-    leg = ax.legend(handles=handles, loc="lower left", frameon=True, fontsize=20,
-                    borderpad=0.7, labelspacing=0.5, handletextpad=0.8)
-    leg.get_frame().set_edgecolor("#dddddd")
+               for (_, c, size, lab), n in zip(spec, counts)]  # sqrt: area -> dia
+
+    leg = ax.legend(handles=handles, loc="upper center", ncol=3, frameon=False,
+                    bbox_to_anchor=(0.5, 0.045), fontsize=20,
+                    handletextpad=0.9, columnspacing=3.0)
+    leg.set_zorder(20)
     for t in leg.get_texts():
         t.set_color(INK2)
 
@@ -120,7 +138,7 @@ def fig_map(d: pd.DataFrame) -> None:
                     linespacing=1.35,
                     arrowprops=dict(arrowstyle="-", color=VERM, lw=1.6))
 
-    fig.tight_layout(pad=0.4)
+    fig.subplots_adjust(left=0.01, right=0.99, top=0.99, bottom=0.09)
     fig.savefig(OUT / "fig1_map.png", dpi=DPI, bbox_inches="tight")
     plt.close(fig)
     print(f"  fig1_map.png  {counts}")
@@ -129,133 +147,135 @@ def fig_map(d: pd.DataFrame) -> None:
 # --- Figure 2: state bars ------------------------------------------------------
 
 def fig_states(d: pd.DataFrame) -> None:
-    g = d.groupby("state").agg(n=("facility_id", "size"),
-                               pct=("n_haz", lambda s: 100 * (s >= 1).mean()))
-    g = g[g["n"] >= 20].sort_values("pct")
-    # Only the extremes are plotted, because 32 bars cannot be drawn legibly in
-    # the space available. That makes the chart a SAMPLE, so the annotation must
-    # report the full distribution rather than describing the visible gap: 17 of
-    # these 32 states do sit between the lowest and highest bars shown.
-    show = pd.concat([g.head(7), g.tail(7)])
-    n_all = len(g)
-    mid_n = int(((g["pct"] >= 10) & (g["pct"] <= 60)).sum())
-    mid_share = 100 * g.loc[(g["pct"] >= 10) & (g["pct"] <= 60), "n"].sum() / 2696
+    """Every state with 20 or more facilities, on one axis.
 
-    fig, ax = plt.subplots(figsize=(10.70, 4.85))
-    y = np.arange(len(show))
-    colours = [VERM if p > 60 else ORANGE if p > 10 else GREY for p in show["pct"]]
-    ax.barh(y, show["pct"], height=0.72, color=colours, zorder=3)
+    An earlier version plotted only the 7 lowest and 7 highest of 32 states and
+    then annotated the empty middle. That deleted Texas (n=230, larger than
+    California) along with 43% of the fleet, and it asserted the gap rather than
+    showing it. Plotting all 32 lets the reader see the shape and check it.
+    """
+    g = d.groupby("state").agg(
+        n=("facility_id", "size"),
+        pct=("n_haz", lambda s: 100 * (s >= 1).mean()),
+        fire=("f_fire", "mean"), flood=("f_flood", "mean"),
+        quake=("f_quake", "mean")).query("n >= 20").sort_values("pct")
+    n_all, N = len(g), len(d)
+    mid = (g["pct"] >= 10) & (g["pct"] <= 60)
+    mid_n, mid_share = int(mid.sum()), 100 * g.loc[mid, "n"].sum() / N
 
-    for i, (st, row) in enumerate(show.iterrows()):
-        # One decimal below 10% so Virginia reads 0.7, matching the headline.
-        pct = row["pct"]
-        lab = f"{pct:.0f}%" if pct >= 10 else f"{pct:.1f}%"
-        ax.text(pct + 1.8, i, lab, va="center",
-                fontsize=19, color=INK, fontweight="bold")
-        ax.text(-2.0, i, f"{st}", va="center", ha="right", fontsize=20, color=INK2)
-        ax.text(-9.5, i, f"n={int(row['n'])}", va="center", ha="right",
-                fontsize=17, color=INK3)
+    fig, ax = plt.subplots(figsize=(10.70, 4.30))
+    # Colour by which hazard drives the state, because "100%" means wildfire in
+    # New Jersey and earthquake in California, and the poster should say so.
+    drivers = g[["fire", "flood", "quake"]].idxmax(axis=1)
+    cmap = {"fire": ORANGE, "flood": BLUE, "quake": TEAL}
+    ax.scatter(g["pct"], np.zeros(n_all), s=g["n"] * 1.9, zorder=3, alpha=0.80,
+               color=[GREY if p < 1 else cmap[k] for p, k in zip(g["pct"], drivers)],
+               edgecolor="white", linewidth=1.2)
 
-    ax.set_yticks([])
-    ax.set_xlim(0, 118)
+    # Labels sit in two staggered rows ABOVE the axis only. Placing some below
+    # pushed them into the x-axis title, and a single row collided wherever two
+    # states sat close together (OH 0.0% vs VA 0.7%, AZ 98.8% vs CA 100%).
+    label = ["VA", "TX", "FL", "NV", "WA", "OR", "AZ", "CA"]
+    for i, st in enumerate(sorted(label, key=lambda s: g.loc[s, "pct"])):
+        ax.annotate(f"{st}  n={int(g.loc[st, 'n'])}", (g.loc[st, "pct"], 0),
+                    xytext=(0, 82 if i % 2 == 0 else 38),
+                    textcoords="offset points", fontsize=19, color=INK,
+                    ha="center", va="bottom",
+                    arrowprops=dict(arrowstyle="-", color="#c9c9c9", lw=1.1,
+                                    shrinkA=1, shrinkB=8))
+
+    ax.set_xlim(-6, 106)
+    ax.set_ylim(-0.42, 1.58)
+    ax.get_yaxis().set_visible(False)
+    ax.set_xticks([0, 25, 50, 75, 100])
+    ax.set_xticklabels(["0%", "25%", "50%", "75%", "100%"])
+    ax.tick_params(axis="x", labelsize=19, colors=INK2)
     ax.set_xlabel("Facilities facing at least one mapped hazard (%)",
                   fontsize=21, color=INK2, labelpad=10)
-    ax.tick_params(axis="x", labelsize=19, colors=INK2)
-    ax.set_ylim(-0.9, len(show) - 0.1)
     for s in ("top", "right", "left"):
         ax.spines[s].set_visible(False)
     ax.spines["bottom"].set_color("#cccccc")
-    ax.set_xticks([0, 25, 50, 75, 100])
 
-    n_show = len(show)
-    mid = n_show / 2 - 0.5
-    ax.axhline(mid, color="#bbbbbb", lw=1.4, ls=(0, (5, 4)), zorder=1)
+    ax.set_title(f"All {n_all} states with 20 or more facilities. Dot size = "
+                 f"facility count.\nOnly {mid_n} sit between 10% and 60%, "
+                 f"holding {mid_share:.0f}% of all facilities.",
+                 fontsize=20, color=INK, loc="left", pad=16, linespacing=1.4)
+    handles = [Line2D([0], [0], marker="o", linestyle="none", markersize=11,
+                      markerfacecolor=c, markeredgecolor="none", label=lab)
+               for c, lab in ((ORANGE, "Wildfire-driven"), (TEAL, "Earthquake-driven"),
+                              (BLUE, "Flood-driven"), (GREY, "No mapped hazard"))]
+    leg = ax.legend(handles=handles, loc="upper center", ncol=4, frameon=False,
+                    fontsize=19, bbox_to_anchor=(0.5, -0.42), handletextpad=0.6,
+                    columnspacing=1.9)
+    for t in leg.get_texts():
+        t.set_color(INK2)
 
-    ax.text(50, mid - 1.15,
-            f"Only {mid_n} of {n_all} states sit between 10% and 60%",
-            va="center", ha="left", fontsize=20, color=INK, fontweight="bold")
-    ax.text(50, mid - 2.30,
-            f"Those {mid_n} hold {mid_share:.0f}% of all facilities.\n"
-            "Virginia alone holds 409, 15% of the US total.",
-            va="top", ha="left", fontsize=18, color=INK2, linespacing=1.4)
-    ax.text(0, n_show - 0.05,
-            f"7 lowest and 7 highest of {n_all} states with 20+ facilities",
-            va="bottom", ha="left", fontsize=17, color=INK3, style="italic")
-    fig.subplots_adjust(left=0.16, right=0.98, top=0.97, bottom=0.16)
+    fig.subplots_adjust(left=0.03, right=0.99, top=0.82, bottom=0.30)
     fig.savefig(OUT / "fig2_states.png", dpi=DPI, bbox_inches="tight")
     plt.close(fig)
-    print(f"  fig2_states.png  {len(show)} states shown")
+    print(f"  fig2_states.png  all {n_all} states, {mid_n} in the middle band")
 
 
 # --- Figure 3: coordinate confidence + stability -------------------------------
 
 def fig_confidence(d: pd.DataFrame) -> None:
-    b = pd.read_csv(P / "building_attributes.csv", low_memory=False)
+    """How far wildfire class moves under each tier's own positional error.
+
+    Three deliberate changes from the earlier version:
+    - the stacked "how each coordinate resolved" panel is gone. It drew three
+      integers, one of which is already a 48 pt headline statistic, and its
+      0.8% "no match" sliver was too small to label honestly.
+    - x is metres, a continuous quantity, so this is a line on a log axis. Drawn
+      as equal-width bars, the 250 m and 500 m steps looked like the 10 m step
+      and manufactured a plateau.
+    - the per-tier n is back. The two rightmost points rest on 29 and 8
+      facilities, which is the only thing that decides whether they mean
+      anything, and it had been dropped for looking untidy.
+    """
     unc = json.load(open(P / "coordinate_uncertainty.json"))
-    fig, axes = plt.subplots(1, 2, figsize=(10.70, 4.20),
-                             gridspec_kw={"width_ratios": [1.05, 1]})
-
-    # Left: how coordinates resolved. Direct-labelled rather than using a
-    # legend, which previously overlapped the bar itself.
-    ax = axes[0]
-    vc = b["building_match"].value_counts()
-    labels = ["Inside a building", "Nearest building", "No match"]
-    vals = [int(vc.get("contains", 0)), int(vc.get("nearest", 0)),
-            int(vc.get("none", 0))]
-    cols = [TEAL, BLUE, GREY]
-    total = sum(vals)
-    left = 0
-    for v, c, lab in zip(vals, cols, labels):
-        ax.barh(0, v, left=left, color=c, height=0.42, zorder=3)
-        if v > 400:
-            ax.text(left + v / 2, 0, f"{v:,}", ha="center", va="center",
-                    color="white", fontsize=23, fontweight="bold")
-            ax.text(left + v / 2, -0.36, lab, ha="center", va="top",
-                    fontsize=18, color=INK2)
-        left += v
-    # The 22 unmatched are too small to label in place.
-    ax.annotate(f"No match ({vals[2]})", xy=(total - vals[2] / 2, 0.22),
-                xytext=(total * 0.90, 0.62), fontsize=17, color=INK3,
-                ha="center", arrowprops=dict(arrowstyle="-", color="#bbbbbb", lw=1.2))
-    ax.set_xlim(0, total)
-    ax.set_ylim(-0.85, 0.85)
-    ax.axis("off")
-    ax.set_title("How each coordinate resolved", fontsize=21, color=INK2,
-                 loc="left", pad=14)
-
-    # Right: stability under positional error
-    ax2 = axes[1]
     tiers = unc["by_tier"]
     xs = [int(k.split("_")[1].replace("m", "")) for k in tiers]
     ys = [100 * v["mean_whp_change_prob"] for v in tiers.values()]
     ns = [v["n"] for v in tiers.values()]
     order = np.argsort(xs)
-    xs = [xs[i] for i in order]
-    ys = [ys[i] for i in order]
-    ns = [ns[i] for i in order]
-    ax2.bar(range(len(xs)), ys, width=0.62, color=BLUE, zorder=3)
-    for i, v in enumerate(ys):
-        # n dropped: it collided with the tick labels and adds nothing the
-        # reader needs at poster distance.
-        ax2.text(i, v + 0.9, f"{v:.0f}%", ha="center", fontsize=19,
-                 color=INK, fontweight="bold")
-    ax2.set_xticks(range(len(xs)))
-    ax2.set_xticklabels([f"{x} m" for x in xs], fontsize=18, color=INK2)
-    ax2.set_ylabel("Hazard class changes (%)", fontsize=19, color=INK2)
-    ax2.set_xlabel("Coordinate uncertainty", fontsize=19, color=INK2, labelpad=10)
-    ax2.tick_params(axis="y", labelsize=17, colors=INK2)
-    ax2.set_ylim(0, max(ys) * 1.28)
-    for s in ("top", "right"):
-        ax2.spines[s].set_visible(False)
-    for s in ("left", "bottom"):
-        ax2.spines[s].set_color("#cccccc")
-    ax2.set_title("Result stability under coordinate error", fontsize=21,
-                  color=INK2, loc="left", pad=12)
+    xs, ys, ns = ([v[i] for i in order] for v in (xs, ys, ns))
+    solid = [n >= 100 for n in ns]
 
-    fig.tight_layout(pad=1.0)
+    fig, ax = plt.subplots(figsize=(10.70, 3.40))
+    ax.plot(xs, ys, lw=2.6, color=ORANGE, zorder=3, solid_capstyle="round")
+    ax.scatter(xs, ys, s=[150 if s else 90 for s in solid], zorder=4,
+               color=[ORANGE if s else "white" for s in solid],
+               edgecolor=ORANGE, linewidth=2.4)
+
+    for x, v, n, s in zip(xs, ys, ns, solid):
+        ax.annotate(f"{v:.0f}%\nn={n:,}", (x, v), xytext=(0, 20),
+                    textcoords="offset points", ha="center", fontsize=19,
+                    color=INK if s else INK3, fontweight="bold",
+                    linespacing=1.25)
+
+    ax.set_xscale("log")
+    ax.set_xticks(xs)
+    ax.set_xticklabels([f"{x} m" for x in xs], fontsize=19)
+    ax.tick_params(axis="both", labelsize=19, colors=INK2, which="both")
+    ax.minorticks_off()
+    ax.set_xlim(8, 640)
+    ax.set_ylim(0, max(ys) * 1.42)
+    ax.set_ylabel("Wildfire class changes (%)", fontsize=20, color=INK2)
+    ax.set_xlabel("Positional uncertainty of the coordinate",
+                  fontsize=20, color=INK2, labelpad=10)
+    for s in ("top", "right"):
+        ax.spines[s].set_visible(False)
+    for s in ("left", "bottom"):
+        ax.spines[s].set_color("#cccccc")
+    ax.set_title("Wildfire class rarely moves for the 2,659 well-located "
+                 "facilities.\nHollow points rest on under 100 facilities and "
+                 "carry wide error.",
+                 fontsize=20, color=INK, loc="left", pad=16, linespacing=1.4)
+
+    fig.subplots_adjust(left=0.10, right=0.98, top=0.76, bottom=0.20)
     fig.savefig(OUT / "fig3_confidence.png", dpi=DPI, bbox_inches="tight")
     plt.close(fig)
-    print(f"  fig3_confidence.png  {vals}")
+    print(f"  fig3_confidence.png  n per tier {ns}")
 
 
 def main() -> None:
