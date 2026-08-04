@@ -32,6 +32,8 @@ COL_R = [11.66, 23.78, 35.55]
 CONTENT_BOTTOM = 26.54
 MIN_PT = 19          # absolute floor anywhere on the poster
 MIN_BODY_PT = 26     # program guidance; we target 28
+HEADINGS = {"Background", "Materials and Methods", "Results", "Conclusions",
+            "Major Citations", "Acknowledgements"}
 
 
 def inches(v) -> float:
@@ -156,8 +158,9 @@ def main() -> None:
             bx0, by0, bx1, by1 = rect(b)
             ox = min(ax1, bx1) - max(ax0, bx0)
             oy = min(ay1, by1) - max(ay0, by0)
-            if ox > 0.25 and oy > 0.25:
-                warnings.append(
+            bar = a["txt"].strip() in HEADINGS or b["txt"].strip() in HEADINGS
+            if ox > 0.5 and oy > (0.01 if bar else 0.25):
+                (problems if bar else warnings).append(
                     f"overlap {ox:.2f}x{oy:.2f} in: '{a['txt'][:24]}' / '{b['txt'][:24]}'")
 
     # 5. word budget

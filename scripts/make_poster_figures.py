@@ -1,9 +1,10 @@
 """Build the poster figures at exact printed size.
 
 Each figure is created at the physical dimensions it will occupy on a 36 x 27
-inch poster and exported at 300 dpi, so a 20 pt label in this code is genuinely
-20 pt on the printed sheet. Exporting small and stretching in PowerPoint would
-shrink every font relative to the page.
+inch poster. Export trims to the ink, so each figure lands at its own scale on
+the sheet and a nominal point size is not the printed size. Nominal sizes here
+are set so the measured printed size clears the template's 20 pt floor; see the
+check at the end of main(), which fails the build if any figure drops below it.
 
 Hazard flags, all source-anchored rather than quantile-defined:
 - wildfire: USFS WHP class 4 or 5 (High / Very High) within 2.4 km
@@ -39,6 +40,8 @@ ORANGE = "#E69F00"
 VERM = "#D55E00"
 BLUE = "#0072B2"
 TEAL = "#009E73"
+PURPLE = "#CC79A7"      # Okabe-Ito, unused by fig 1
+GREY_MAP = "#9E9E9E"    # same grey fig 1 uses for the same meaning
 INK, INK2, INK3 = "#1a1a1a", "#4a4a4a", "#6e6e6e"
 
 mpl.rcParams.update({
@@ -47,6 +50,24 @@ mpl.rcParams.update({
     "figure.facecolor": "white", "axes.facecolor": "white",
     "savefig.facecolor": "white",
 })
+
+
+def save_at(fig, name: str, placed_w_in: float) -> None:
+    """Save trimmed, then resample so the placed scale is exactly 1.0.
+
+    bbox_inches="tight" is required (otherwise titles and legends outside the
+    axes are clipped), but it trims to the ink so the saved width varies per
+    figure. Forcing the width to DPI * placed_w_in makes nominal point sizes
+    equal printed point sizes, and keeps every figure at exactly DPI.
+    """
+    from PIL import Image
+    path = OUT / f"{name}.png"
+    fig.savefig(path, dpi=DPI, bbox_inches="tight", pad_inches=0.14)
+    target = int(round(DPI * placed_w_in))
+    with Image.open(path) as im:
+        if im.size[0] != target:
+            h = int(round(im.size[1] * target / im.size[0]))
+            im.resize((target, h), Image.LANCZOS).save(path)
 
 
 def load() -> pd.DataFrame:
@@ -78,7 +99,7 @@ def basemap():
 # --- Figure 1: the map ---------------------------------------------------------
 
 def fig_map(d: pd.DataFrame) -> None:
-    fig, ax = plt.subplots(figsize=(10.70, 6.30))
+    fig, ax = plt.subplots(figsize=(10.70, 6.00))
     base = basemap()
     if base is not None:
         base.plot(ax=ax, color="#f4f4f2", edgecolor="white", linewidth=0.8, zorder=1)
@@ -126,7 +147,7 @@ def fig_map(d: pd.DataFrame) -> None:
         x, y = va.geometry.x.median(), va.geometry.y.median()
         ax.annotate("Virginia\n409 facilities (15% of US)\n0.7% exposed",
                     xy=(x, y), xytext=(x + 5.2e5, y - 6.5e5),
-                    fontsize=19, color=INK, fontweight="bold", ha="left",
+                    fontsize=20, color=INK, fontweight="bold", ha="left",
                     linespacing=1.35,
                     arrowprops=dict(arrowstyle="-", color=INK2, lw=1.6))
     ca = pts[pts["state"] == "CA"]
@@ -134,12 +155,12 @@ def fig_map(d: pd.DataFrame) -> None:
         x, y = ca.geometry.x.median(), ca.geometry.y.median()
         ax.annotate("California\n223 facilities\n100% exposed",
                     xy=(x, y), xytext=(x - 2.0e5, y + 7.2e5),
-                    fontsize=19, color=VERM, fontweight="bold", ha="right",
+                    fontsize=20, color=VERM, fontweight="bold", ha="right",
                     linespacing=1.35,
                     arrowprops=dict(arrowstyle="-", color=VERM, lw=1.6))
 
     fig.subplots_adjust(left=0.01, right=0.99, top=0.99, bottom=0.09)
-    fig.savefig(OUT / "fig1_map.png", dpi=DPI, bbox_inches="tight")
+    save_at(fig, "fig1_map", 11.79)
     plt.close(fig)
     print(f"  fig1_map.png  {counts}")
 
@@ -163,13 +184,13 @@ def fig_states(d: pd.DataFrame) -> None:
     mid = (g["pct"] >= 10) & (g["pct"] <= 60)
     mid_n, mid_share = int(mid.sum()), 100 * g.loc[mid, "n"].sum() / N
 
-    fig, ax = plt.subplots(figsize=(10.70, 4.05))
+    fig, ax = plt.subplots(figsize=(10.70, 3.15))
     # Colour by which hazard drives the state, because "100%" means wildfire in
     # New Jersey and earthquake in California, and the poster should say so.
     drivers = g[["fire", "flood", "quake"]].idxmax(axis=1)
-    cmap = {"fire": ORANGE, "flood": BLUE, "quake": TEAL}
+    cmap = {"fire": ORANGE, "flood": PURPLE, "quake": TEAL}
     ax.scatter(g["pct"], np.zeros(n_all), s=g["n"] * 1.9, zorder=3, alpha=0.80,
-               color=[GREY if p < 1 else cmap[k] for p, k in zip(g["pct"], drivers)],
+               color=[GREY_MAP if p < 1 else cmap[k] for p, k in zip(g["pct"], drivers)],
                edgecolor="white", linewidth=1.2)
 
     # Labels sit in two staggered rows ABOVE the axis only. Placing some below
@@ -179,7 +200,7 @@ def fig_states(d: pd.DataFrame) -> None:
     for i, st in enumerate(sorted(label, key=lambda s: g.loc[s, "pct"])):
         ax.annotate(f"{st}  n={int(g.loc[st, 'n'])}", (g.loc[st, "pct"], 0),
                     xytext=(0, 82 if i % 2 == 0 else 38),
-                    textcoords="offset points", fontsize=19, color=INK,
+                    textcoords="offset points", fontsize=20, color=INK,
                     ha="center", va="bottom",
                     arrowprops=dict(arrowstyle="-", color="#c9c9c9", lw=1.1,
                                     shrinkA=1, shrinkB=8))
@@ -189,7 +210,7 @@ def fig_states(d: pd.DataFrame) -> None:
     ax.get_yaxis().set_visible(False)
     ax.set_xticks([0, 25, 50, 75, 100])
     ax.set_xticklabels(["0%", "25%", "50%", "75%", "100%"])
-    ax.tick_params(axis="x", labelsize=19, colors=INK2)
+    ax.tick_params(axis="x", labelsize=20, colors=INK2)
     ax.set_xlabel("Facilities facing at least one mapped hazard (%)",
                   fontsize=21, color=INK2, labelpad=10)
     for s in ("top", "right", "left"):
@@ -203,15 +224,15 @@ def fig_states(d: pd.DataFrame) -> None:
     handles = [Line2D([0], [0], marker="o", linestyle="none", markersize=11,
                       markerfacecolor=c, markeredgecolor="none", label=lab)
                for c, lab in ((ORANGE, "Wildfire-driven"), (TEAL, "Earthquake-driven"),
-                              (BLUE, "Flood-driven"), (GREY, "Under 1% exposed"))]
+                              (PURPLE, "Flood-driven"), (GREY_MAP, "Under 1% exposed"))]
     leg = ax.legend(handles=handles, loc="upper center", ncol=4, frameon=False,
-                    fontsize=19, bbox_to_anchor=(0.5, -0.42), handletextpad=0.6,
+                    fontsize=20, bbox_to_anchor=(0.5, -0.42), handletextpad=0.6,
                     columnspacing=1.9)
     for t in leg.get_texts():
         t.set_color(INK2)
 
     fig.subplots_adjust(left=0.03, right=0.99, top=0.82, bottom=0.30)
-    fig.savefig(OUT / "fig2_states.png", dpi=DPI, bbox_inches="tight")
+    save_at(fig, "fig2_states", 11.79)
     plt.close(fig)
     print(f"  fig2_states.png  all {n_all} states, {mid_n} in the middle band")
 
@@ -241,7 +262,7 @@ def fig_confidence(d: pd.DataFrame) -> None:
     xs, ys, ns = ([v[i] for i in order] for v in (xs, ys, ns))
     solid = [n >= 100 for n in ns]
 
-    fig, ax = plt.subplots(figsize=(10.70, 2.80))
+    fig, ax = plt.subplots(figsize=(10.70, 2.55))
     ax.plot(xs, ys, lw=2.6, color=ORANGE, zorder=3, solid_capstyle="round")
     ax.scatter(xs, ys, s=[150 if s else 90 for s in solid], zorder=4,
                color=[ORANGE if s else "white" for s in solid],
@@ -249,30 +270,30 @@ def fig_confidence(d: pd.DataFrame) -> None:
 
     for x, v, n, s in zip(xs, ys, ns, solid):
         ax.annotate(f"{v:.0f}%\nn={n:,}", (x, v), xytext=(0, 20),
-                    textcoords="offset points", ha="center", fontsize=19,
+                    textcoords="offset points", ha="center", fontsize=20,
                     color=INK if s else INK3, fontweight="bold",
                     linespacing=1.25)
 
     ax.set_xscale("log")
     ax.set_xticks(xs)
-    ax.set_xticklabels([f"{x} m" for x in xs], fontsize=19)
-    ax.tick_params(axis="both", labelsize=19, colors=INK2, which="both")
+    ax.set_xticklabels([f"{x} m" for x in xs], fontsize=20)
+    ax.tick_params(axis="both", labelsize=20, colors=INK2, which="both")
     ax.minorticks_off()
     ax.set_xlim(8, 640)
     ax.set_ylim(0, max(ys) * 1.95)
-    ax.set_ylabel("Sites changing class (%)", fontsize=19, color=INK2)
+    ax.set_ylabel("Sites changing class (%)", fontsize=20, color=INK2)
     ax.set_xlabel("Positional uncertainty (log scale)",
                   fontsize=20, color=INK2, labelpad=10)
     for s in ("top", "right"):
         ax.spines[s].set_visible(False)
     for s in ("left", "bottom"):
         ax.spines[s].set_color("#cccccc")
-    ax.set_title("Wildfire class changes for 1-9% of sites located to 100 m or "
-                 "better.\nHollow points rest on under 100 sites.",
+    ax.set_title("Chance that one relocation flips a site's wildfire class.\n"
+                 "Hollow points rest on under 100 sites.",
                  fontsize=20, color=INK, loc="left", pad=16, linespacing=1.4)
 
     fig.subplots_adjust(left=0.115, right=0.985, top=0.74, bottom=0.22)
-    fig.savefig(OUT / "fig3_confidence.png", dpi=DPI, bbox_inches="tight")
+    save_at(fig, "fig3_confidence", 11.37)
     plt.close(fig)
     print(f"  fig3_confidence.png  n per tier {ns}")
 

@@ -62,10 +62,10 @@ BOUNDS = (
     "against 48% of our California ones, so part of the gap between states "
     "reflects who did the mapping.\n"
     "•  Hail and wind come from eyewitness reports, so within a state their "
-    "rates track how built-up the surroundings are (rank correlation 0.39 and "
+    "rates track the number of other sites within 40 km (Spearman 0.39 and "
     "0.34). We left both out, along with lightning, tornado and hurricane.\n"
-    "•  No public source lists power capacity, so a single server room counts "
-    "the same as a 100 MW campus.\n"
+    "•  No public source lists power capacity, so a server room counts the "
+    "same as a 100 MW campus.\n"
     "•  40 sites shown as clear sit outside FEMA's mapped extent and 8 outside "
     "the wildfire raster, so 35% is a floor."
 )
@@ -83,48 +83,52 @@ METHODS = (
 METHODS_TABLE = [
     ("Earthquake", "USGS ASCE 7-22 shaking, 2% chance in 50 yr"),
     ("Wildfire", "USFS Hazard Potential 270 m, max in 2.4 km"),
-    ("Flood", "FEMA NFHL layer 28, SFHA flag"),
-    ("Water stress", "WRI Aqueduct 4.0 (a supply limit, reported apart)"),
+    ("Flood", "FEMA flood layer, 1-in-100-year floodplain"),
+    ("Water stress", "WRI Aqueduct 4.0, river-basin scale"),
     ("Uncertainty", "500 relocations per site, 10-500 m by precision"),
 ]
 METHODS_TAIL = (
     "A site counts as exposed if it lies within 2.4 km of land rated High or "
     "Very High for wildfire, inside a FEMA Special Flood Hazard Area, or at "
-    "peak ground acceleration of 0.30 g or above. Wildfire is buffered "
-    "because 2,284 sites sit on land the wildfire map classes as developed, "
-    "so the pixel under the building says nothing."
+    "peak ground acceleration of 0.30 g or above. Wildfire is buffered because "
+    "2,284 sites sit on non-burnable land, where the pixel under the building "
+    "says nothing."
 )
 
 STATS = [("2,696", "facilities located"), ("954", "face a mapped hazard"),
          ("952", "in a high water-stress basin"), ("563", "water-stressed only")]
-RESULTS_LEAD = ("The hazard map and the water map barely overlap. Counting "
-                "water stress takes the fleet from 35% to 56% constrained.")
+RESULTS_LEAD = ("Hazard and water stress pick out largely different buildings. "
+                "Counting both raises the share under a physical constraint "
+                "from 35% to 56%.")
 RESULTS_BODY = (
     "952 sites lie in a high or extremely-high water-stress basin, almost "
     "exactly the 954 facing a mapped hazard, but only 389 are the same sites. "
-    "Water stress lands hardest where the hazard map says clear: Virginia is "
-    "0.7% hazard-exposed and 31% water-stressed, Illinois 2.7% and 95%.\n"
+    "Some of the largest clusters are stressed while their hazard maps read "
+    "clear: Virginia is 0.7% hazard-exposed and 31% water-stressed, Illinois "
+    "2.7% and 95%.\n"
     "Which hazard dominates depends on the region. New Jersey reaches 100% "
     "through wildfire alone and 0% through earthquake, California 96% "
     "earthquake. Nationally 646 sites are exposed to wildfire, 448 to "
-    "earthquake and 71 to flood, and 205 face more than one.\n"
-    "Widening the buffer to 5 km takes that count to 953, a 48% jump."
+    "earthquake and 71 to flood.\n"
+    "Widening the wildfire buffer from 2.4 km to 5 km takes the wildfire count "
+    "from 646 to 953, so that result is a statement about the buffer as much "
+    "as about the site."
 )
 CONCLUSIONS = (
-    "•  The 35% headline is the least useful number here. Only 7 of 32 states "
+    "•  A single national rate is close to meaningless. Only 7 of 32 states "
     "with 20 or more sites fall between 10% and 60% exposed.\n"
-    "•  Water stress is not a natural hazard, but it constrains the same "
-    "buildings, and it is high where the hazard map says clear.\n"
+    "•  We did not measure any site's water use, but the basins under the "
+    "largest clusters are already over-drawn, and a hazard screen misses "
+    "them.\n"
     "•  New Jersey and California are both 100% exposed for opposite reasons, "
-    "so one national score would hide what a site faces.\n"
+    "so one score hides what a site faces.\n"
     "•  Next: fragility curves, to turn exposure into loss."
 )
 NULLS = (
-    "Two checks on our choices\n"
-    "Sampling across a building's whole footprint instead of its centre changed "
-    "the answer for 29 of the 326 sites where both could be compared. Taller "
-    "buildings looked more exposed nationally, but that vanished within states, "
-    "so it was geography and not height."
+    "Two robustness checks\n"
+    "Sampling across a whole footprint instead of its centre changed the "
+    "answer for 29 of 326 comparable sites. Taller buildings looked more "
+    "exposed nationally, but that vanished within states."
 )
 CITATIONS = (
     "Dillon, G.K. (2023) Wildfire Hazard Potential for the United States, "
@@ -350,6 +354,7 @@ def main() -> None:
     # leftover space is split evenly rather than pooled into one dead gap.
     slack = (15.72 - 0.30) - (by + bh) - (nh + 0.16)
     py = by + bh + max(0.26, slack / 2)
+    nh = min(nh, (15.72 - 0.10) - py - 0.16)   # never touch the Methods bar
     panel(slide, bx, py, bw, nh + 0.16, accent=GOLD)
     new_text(slide, bx + 0.26, py + 0.08, bw - 0.45, nh, BOUNDS, 22,
              head_bold=True)
@@ -363,12 +368,12 @@ def main() -> None:
 
     ty = my + mh + 0.10
     for name, src in METHODS_TABLE:
-        panel(slide, mx + 0.05, ty, mw - 0.10, 0.64)
-        new_text(slide, mx + 0.20, ty + 0.01, 3.20, 0.62, name, 23, bold=True,
+        panel(slide, mx + 0.05, ty, mw - 0.10, 0.60)
+        new_text(slide, mx + 0.20, ty + 0.00, 3.20, 0.60, name, 22, bold=True,
                  anchor=MSO_ANCHOR.MIDDLE)
-        new_text(slide, mx + 3.45, ty + 0.01, mw - 3.70, 0.62, src, 21,
+        new_text(slide, mx + 3.45, ty + 0.00, mw - 3.70, 0.60, src, 21,
                  colour=DGREY, anchor=MSO_ANCHOR.MIDDLE)
-        ty += 0.69
+        ty += 0.60
     new_text(slide, mx, ty + 0.10, mw, fit_height(METHODS_TAIL, BODY_PT, mw),
              METHODS_TAIL, BODY_PT)
 
@@ -429,8 +434,7 @@ def main() -> None:
     slide.shapes.add_picture(str(FIGS / "fig3_confidence.png"), Inches(cx),
                              Inches(y), width=Inches(cw))
     y += fig_height("fig3_confidence", cw) + 0.04
-    cap = ("Fig 3. Moving each coordinate 500 times flips the wildfire class "
-           "for at most 9% of sites placed within 100 m.")
+    cap = "Fig 3. Wildfire class under coordinate error."
     new_text(slide, cx, y, cw, fit_height(cap, 22, cw), cap, 22, bold=True)
 
     # ---- column 3: citations and acknowledgements, edited in place ----
