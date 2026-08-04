@@ -90,8 +90,9 @@ METHODS_TABLE = [
 METHODS_TAIL = (
     "A site counts as exposed if it lies within 2.4 km of land rated High or "
     "Very High for wildfire, inside a FEMA Special Flood Hazard Area, or at "
-    "peak ground acceleration of 0.30 g or above. The 2.4 km radius is the "
-    "1.5 mile ember-cast distance."
+    "peak ground acceleration of 0.30 g or above. Wildfire is buffered "
+    "because 2,284 sites sit on land the wildfire map classes as developed, "
+    "so the pixel under the building says nothing."
 )
 
 STATS = [("2,696", "facilities located"), ("954", "face a mapped hazard"),
@@ -107,8 +108,7 @@ RESULTS_BODY = (
     "through wildfire alone and 0% through earthquake, California 96% "
     "earthquake. Nationally 646 sites are exposed to wildfire, 448 to "
     "earthquake and 71 to flood, and 205 face more than one.\n"
-    "Widening the wildfire buffer to 5 km takes that count from 646 to 953, "
-    "a 48% jump."
+    "Widening the buffer to 5 km takes that count to 953, a 48% jump."
 )
 CONCLUSIONS = (
     "•  The 35% headline is the least useful number here. Only 7 of 32 states "
