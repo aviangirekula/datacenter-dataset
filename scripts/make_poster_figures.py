@@ -132,8 +132,14 @@ def fig_states(d: pd.DataFrame) -> None:
     g = d.groupby("state").agg(n=("facility_id", "size"),
                                pct=("n_haz", lambda s: 100 * (s >= 1).mean()))
     g = g[g["n"] >= 20].sort_values("pct")
-    # Show the extremes, which is where the story is.
+    # Only the extremes are plotted, because 32 bars cannot be drawn legibly in
+    # the space available. That makes the chart a SAMPLE, so the annotation must
+    # report the full distribution rather than describing the visible gap: 17 of
+    # these 32 states do sit between the lowest and highest bars shown.
     show = pd.concat([g.head(7), g.tail(7)])
+    n_all = len(g)
+    mid_n = int(((g["pct"] >= 10) & (g["pct"] <= 60)).sum())
+    mid_share = 100 * g.loc[(g["pct"] >= 10) & (g["pct"] <= 60), "n"].sum() / 2696
 
     fig, ax = plt.subplots(figsize=(10.70, 4.85))
     y = np.arange(len(show))
@@ -161,18 +167,20 @@ def fig_states(d: pd.DataFrame) -> None:
     ax.spines["bottom"].set_color("#cccccc")
     ax.set_xticks([0, 25, 50, 75, 100])
 
-    # The gap between the two groups IS the finding. Arrows collided with the
-    # bar labels, so the callouts are placed in the empty space instead.
     n_show = len(show)
     mid = n_show / 2 - 0.5
     ax.axhline(mid, color="#bbbbbb", lw=1.4, ls=(0, (5, 4)), zorder=1)
 
-    ax.text(50, mid - 1.15, "No state sits between 3% and 75%",
+    ax.text(50, mid - 1.15,
+            f"Only {mid_n} of {n_all} states sit between 10% and 60%",
             va="center", ha="left", fontsize=20, color=INK, fontweight="bold")
-    ax.text(50, mid - 2.15,
-            "Virginia alone holds 409 facilities,\n"
-            "15% of every data center in the US",
+    ax.text(50, mid - 2.30,
+            f"Those {mid_n} hold {mid_share:.0f}% of all facilities.\n"
+            "Virginia alone holds 409, 15% of the US total.",
             va="top", ha="left", fontsize=18, color=INK2, linespacing=1.4)
+    ax.text(0, n_show - 0.05,
+            f"7 lowest and 7 highest of {n_all} states with 20+ facilities",
+            va="bottom", ha="left", fontsize=17, color=INK3, style="italic")
     fig.subplots_adjust(left=0.16, right=0.98, top=0.97, bottom=0.16)
     fig.savefig(OUT / "fig2_states.png", dpi=DPI, bbox_inches="tight")
     plt.close(fig)

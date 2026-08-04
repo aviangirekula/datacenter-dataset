@@ -38,6 +38,57 @@ def inches(v) -> float:
     return Emu(v).inches if v is not None else 0.0
 
 
+# Deliberately measured a second time, more conservatively than the builder
+# does, and with its own font metrics. If this shared the builder's estimator a
+# bug in that estimator would hide itself, which is exactly what happened when
+# the Conclusions bullet was clipped and this file reported no problems.
+ARIAL = "/System/Library/Fonts/Supplemental/Arial.ttf"
+ARIAL_BOLD = "/System/Library/Fonts/Supplemental/Arial Bold.ttf"
+LINE_FACTOR = 1.20          # builder assumes 1.15; check against a stricter one
+_F: dict = {}
+
+
+def _measure(text: str, pt: float, bold: bool, width_in: float) -> int:
+    from PIL import ImageFont
+    key = (round(pt, 1), bold)
+    if key not in _F:
+        _F[key] = ImageFont.truetype(ARIAL_BOLD if bold else ARIAL,
+                                     int(round(pt * 4)))
+    f = _F[key]
+    words = text.split()
+    if not words:
+        return 1
+    limit = width_in * 72.0
+    lines, cur = 1, ""
+    for w in words:
+        trial = w if not cur else f"{cur} {w}"
+        if f.getlength(trial) / 4.0 <= limit:
+            cur = trial
+        else:
+            lines, cur = lines + 1, w
+    return lines
+
+
+def overflow(shape) -> float:
+    """Inches by which a shape's text exceeds its box. Negative means it fits."""
+    tf = shape.text_frame
+    if not tf.text.strip():
+        return -99.0
+    usable = inches(shape.width) - 0.20
+    need = 0.10
+    for p in tf.paragraphs:
+        runs = [r for r in p.runs if r.text]
+        if not runs:
+            continue
+        pt = max((r.font.size.pt for r in runs if r.font.size), default=18.0)
+        bold = any(r.font.bold for r in runs)
+        sp = p.line_spacing if isinstance(p.line_spacing, float) else 1.0
+        n = _measure("".join(r.text for r in runs), pt, bold, usable)
+        need += n * pt * LINE_FACTOR * sp / 72.0
+        need += (p.space_after.pt if p.space_after else 0.0) / 72.0
+    return need - inches(shape.height)
+
+
 def main() -> None:
     prs = Presentation(str(PPTX))
     slide = prs.slides[0]
@@ -71,7 +122,14 @@ def main() -> None:
             problems.append(
                 f"past the {CONTENT_BOTTOM} in content bottom: '{txt[:30]}' ends {y + h:.2f}")
 
-        # 3. type floor
+        # 3. text must actually fit inside its own box
+        if shp.has_text_frame:
+            over = overflow(shp)
+            if over > 0.02:
+                problems.append(
+                    f"text overflows its box by {over:.2f} in: '{txt[:34]}'")
+
+        # 4. type floor
         for s in sizes:
             if s < MIN_PT:
                 problems.append(f"{s:.0f}pt below the {MIN_PT}pt floor: '{txt[:34]}'")
