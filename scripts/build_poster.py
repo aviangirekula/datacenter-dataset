@@ -40,9 +40,16 @@ CW = 11.30
 BODY_TOP = 4.95
 BODY_BOT = 26.50
 BAR_H = 0.95
-# Placed heights at CW wide, from the actual exported image aspect ratios.
-# Guessing these is what pushed two columns off the bottom of the page.
-FIG_H = {"fig1_map": 4.71, "fig2_states": 6.01, "fig3_confidence": 4.24}
+def fig_height(name: str, width_in: float = 11.30) -> float:
+    """Placed height for a figure, read from the image's real aspect ratio.
+
+    Hardcoding these is what pushed two columns off the bottom of the page in an
+    earlier build, and it silently goes stale whenever a figure is regenerated.
+    """
+    from PIL import Image
+    with Image.open(FIGS / f"{name}.png") as im:
+        w, h = im.size
+    return width_in * h / w
 
 TITLE = "Two Americas of Data Center Hazard: 2,696 US Facilities Mapped"
 AUTHORS = "Avilash Angirekula¹, Dennies Bor¹, Edward J. Oughton¹"
@@ -89,14 +96,12 @@ RESULTS_LEAD = (
 )
 RESULTS_BODY = (
     "Of 2,696 facilities, 1,742 face no mapped hazard and 205 face two or "
-    "more. Eighteen states holding half the national fleet sit below 10% "
-    "exposed, while ten states holding a third sit above 60%. Almost nothing "
-    "falls in between.\n\n"
-    "Virginia, the largest concentration on Earth with 409 facilities, is 0.7% "
-    "exposed. California and New Jersey are 100%.\n\n"
-    "Water stress is the exception that does reach Virginia: 952 facilities "
-    "nationally sit in high or extremely-high stress basins, a binding "
-    "constraint for evaporative cooling."
+    "more. Eighteen states holding half the fleet sit below 10% exposed. Ten "
+    "states holding a third sit above 60%.\n\n"
+    "Virginia, the largest concentration on Earth, is 0.7% exposed. "
+    "California and New Jersey are 100%.\n\n"
+    "Water stress is the exception that reaches Virginia. 952 facilities "
+    "nationally sit in high or extremely-high stress basins."
 )
 NULLS = (
     "Two things we expected and did not find\n"
@@ -143,6 +148,24 @@ ACK = (
     "supervision and Dennies Bor for the multi-hazard layers.\n\n"
     "Data and code: github.com/aviangirekula/datacenter-dataset"
 )
+
+
+def fit_height(txt: str, size_pt: float, width_in: float,
+               spacing: float = 0.95, space_after_pt: float = 10.0) -> float:
+    """Height a text block actually needs, in inches.
+
+    Sizing these by eye is what clipped five blocks in an earlier build: with
+    autofit deliberately off, PowerPoint does not shrink to compensate, it just
+    cuts the text off. Arial mixed case averages about 0.52 em per character.
+    """
+    usable = width_in - 0.20                      # left + right internal margin
+    chars_per_line = max(int(usable / (0.52 * size_pt / 72.0)), 10)
+    line_h = size_pt * spacing / 72.0
+    total = 0.0
+    for para in txt.split("\n"):
+        n_lines = max(1, -(-len(para) // chars_per_line))
+        total += n_lines * line_h + space_after_pt / 72.0
+    return total + 0.12                            # top + bottom padding
 
 
 def clear_slide(slide):
@@ -230,10 +253,12 @@ def main() -> None:
 
     # ---- column 1: Background, Methods ----
     y = heading(slide, COL[0], BODY_TOP, "Background")
-    text(slide, COL[0], y, CW, 6.20, BACKGROUND, size=28)
+    bh = fit_height(BACKGROUND, 28, CW)
+    text(slide, COL[0], y, CW, bh, BACKGROUND, size=28)
     y = heading(slide, COL[0], 12.85, "Materials and Methods")
-    text(slide, COL[0], y, CW, 3.15, METHODS, size=28)
-    ty = y + 3.05
+    mh = fit_height(METHODS, 28, CW)
+    text(slide, COL[0], y, CW, mh, METHODS, size=28)
+    ty = y + mh
     for name, src in METHODS_TABLE:
         box(slide, COL[0] + 0.10, ty, CW - 0.20, 0.78, fill=LGREY,
             line=RGBColor(0xA5, 0xA5, 0xA5))
@@ -242,14 +267,16 @@ def main() -> None:
         text(slide, COL[0] + 3.55, ty + 0.06, CW - 3.85, 0.66, src, size=24,
              colour=RGBColor(0x33, 0x33, 0x33), anchor=MSO_ANCHOR.MIDDLE)
         ty += 0.90
-    text(slide, COL[0], ty + 0.10, CW, 3.40, METHODS_TAIL, size=28)
+    th = fit_height(METHODS_TAIL, 28, CW)
+    text(slide, COL[0], ty + 0.10, CW, th, METHODS_TAIL, size=28)
 
     # Limitations sit at the foot of Methods rather than in Conclusions, so the
     # poster does not end on a caveat and column 3 stays on the page.
-    by = ty + 3.65
-    box(slide, COL[0], by, CW, 2.30, fill=LGREY, line=RGBColor(0xA5, 0xA5, 0xA5))
-    box(slide, COL[0], by, 0.14, 2.30, fill=GOLD)
-    text(slide, COL[0] + 0.25, by + 0.06, CW - 0.45, 2.18, BOUNDS, size=20)
+    bnh = fit_height(BOUNDS, 20, CW - 0.45)
+    by = ty + th + 0.35
+    box(slide, COL[0], by, CW, bnh + 0.14, fill=LGREY, line=RGBColor(0xA5, 0xA5, 0xA5))
+    box(slide, COL[0], by, 0.14, bnh + 0.14, fill=GOLD)
+    text(slide, COL[0] + 0.25, by + 0.06, CW - 0.45, bnh, BOUNDS, size=20)
 
     # ---- column 2: Results ----
     y = heading(slide, COL[1], BODY_TOP, "Results")
@@ -262,53 +289,58 @@ def main() -> None:
              align=PP_ALIGN.CENTER, colour=GREEN)
         text(slide, x, y + 0.82, sw, 0.75, lab, size=19,
              colour=RGBColor(0x44, 0x44, 0x44), align=PP_ALIGN.CENTER)
-    y += 1.70
+    y += 1.58
 
-    text(slide, COL[1], y, CW, 1.20, RESULTS_LEAD, size=31, bold=True)
-    y += 1.30
+    lh = fit_height(RESULTS_LEAD, 31, CW)
+    text(slide, COL[1], y, CW, lh, RESULTS_LEAD, size=31, bold=True)
+    y += lh + 0.12
     slide.shapes.add_picture(str(FIGS / "fig1_map.png"), Inches(COL[1]),
                              Inches(y), width=Inches(CW))
-    y += FIG_H["fig1_map"] + 0.15
-    text(slide, COL[1], y, CW, 1.05,
-         "Fig 1. Two thirds of US data centers face no mapped hazard. "
-         "Exposure is regional, not universal.", size=24, bold=True)
-    y += 1.10
-    text(slide, COL[1], y, CW, 4.20, RESULTS_BODY, size=28)
-    y += 4.30
+    y += fig_height("fig1_map") + 0.15
+    cap = ("Fig 1. Two thirds of US data centers face no mapped hazard. "
+           "Exposure is regional, not universal.")
+    chh = fit_height(cap, 24, CW)
+    text(slide, COL[1], y, CW, chh, cap, size=24, bold=True)
+    y += chh + 0.10
+    rh = fit_height(RESULTS_BODY, 28, CW)
+    text(slide, COL[1], y, CW, rh, RESULTS_BODY, size=28)
+    y += rh + 0.12
     slide.shapes.add_picture(str(FIGS / "fig2_states.png"), Inches(COL[1]),
                              Inches(y), width=Inches(CW))
-    y += FIG_H["fig2_states"] + 0.15
-    text(slide, COL[1], y, CW, 0.95,
-         "Fig 2. States split into two groups with almost nothing between them.",
-         size=24, bold=True)
+    y += fig_height("fig2_states") + 0.15
+    cap = "Fig 2. States split into two groups with almost nothing between them."
+    text(slide, COL[1], y, CW, fit_height(cap, 24, CW), cap, size=24, bold=True)
 
     # ---- column 3: Conclusions, Citations, Acknowledgements ----
     # A heading must be followed by its own content. An earlier version put the
     # coordinate-quality figure directly under "Conclusions", which read as if
     # the figure were a conclusion.
     y = heading(slide, COL[2], BODY_TOP, "Conclusions")
-    text(slide, COL[2], y, CW, 4.35, CONCLUSIONS, size=27)
-    y += 4.45
+    ch = fit_height(CONCLUSIONS, 27, CW)
+    text(slide, COL[2], y, CW, ch, CONCLUSIONS, size=27)
+    y += ch + 0.12
 
-    box(slide, COL[2], y, CW, 2.45, fill=LGREY, line=RGBColor(0xA5, 0xA5, 0xA5))
-    box(slide, COL[2], y, 0.14, 2.45, fill=GOLD)
-    text(slide, COL[2] + 0.25, y + 0.08, CW - 0.45, 2.29, NULLS, size=23)
-    y += 2.60
+    nh = fit_height(NULLS, 23, CW - 0.45)
+    box(slide, COL[2], y, CW, nh + 0.16, fill=LGREY, line=RGBColor(0xA5, 0xA5, 0xA5))
+    box(slide, COL[2], y, 0.14, nh + 0.16, fill=GOLD)
+    text(slide, COL[2] + 0.25, y + 0.08, CW - 0.45, nh, NULLS, size=23)
+    y += nh + 0.30
 
     slide.shapes.add_picture(str(FIGS / "fig3_confidence.png"), Inches(COL[2]),
                              Inches(y), width=Inches(CW))
-    y += FIG_H["fig3_confidence"] + 0.12
-    text(slide, COL[2], y, CW, 1.05,
-         "Fig 3. Coordinate quality was measured, not assumed. Results stay "
-         "stable under realistic positional error.", size=24, bold=True)
-    y += 1.15
+    y += fig_height("fig3_confidence") + 0.12
+    cap = ("Fig 3. Coordinate quality was measured, not assumed. Results stay "
+           "stable under realistic positional error.")
+    text(slide, COL[2], y, CW, fit_height(cap, 24, CW), cap, size=24, bold=True)
 
     y = heading(slide, COL[2], y, "Major Citations")
-    text(slide, COL[2], y, CW, 2.55, CITATIONS, size=19,
+    cth = fit_height(CITATIONS, 19, CW, spacing=0.90)
+    text(slide, COL[2], y, CW, cth, CITATIONS, size=19,
          colour=RGBColor(0x33, 0x33, 0x33), spacing=0.90)
-    y += 2.62
+    y += cth + 0.12
     y = heading(slide, COL[2], y, "Acknowledgements")
-    text(slide, COL[2], y, CW, 1.85, ACK, size=21,
+    ah = fit_height(ACK, 21, CW)
+    text(slide, COL[2], y, CW, ah, ACK, size=21,
          colour=RGBColor(0x33, 0x33, 0x33))
 
     OUT.parent.mkdir(parents=True, exist_ok=True)

@@ -135,7 +135,7 @@ def fig_states(d: pd.DataFrame) -> None:
     # Show the extremes, which is where the story is.
     show = pd.concat([g.head(7), g.tail(7)])
 
-    fig, ax = plt.subplots(figsize=(10.70, 5.60))
+    fig, ax = plt.subplots(figsize=(10.70, 4.85))
     y = np.arange(len(show))
     colours = [VERM if p > 60 else ORANGE if p > 10 else GREY for p in show["pct"]]
     ax.barh(y, show["pct"], height=0.72, color=colours, zorder=3)
