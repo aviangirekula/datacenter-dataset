@@ -233,9 +233,9 @@ def main() -> None:
         # and they are spectral accelerations rather than PGA.
         for lvl, rp in (("bse_2e", 975), ("bse_1e", 225)):
             out[f"haz_seismic_sa_02s_g_{rp}yr"] = fid.map(
-                lambda f, l=lvl: recs.get(f, {}).get(f"{l}_ss"))
+                lambda f, lv=lvl: recs.get(f, {}).get(f"{lv}_ss"))
             out[f"haz_seismic_sa_1s_g_{rp}yr"] = fid.map(
-                lambda f, l=lvl: recs.get(f, {}).get(f"{l}_s1"))
+                lambda f, lv=lvl: recs.get(f, {}).get(f"{lv}_s1"))
         out["haz_seismic_source"] = np.where(
             out["haz_seismic_pga_g_2475yr_usgs"].notna(),
             "USGS ASCE 7-22 point service (site class BC)", "contour sample")

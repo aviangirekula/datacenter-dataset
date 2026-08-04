@@ -2,7 +2,9 @@
 footprints (Overture -> Microsoft ML / Google / Esri). Writes
 data/processed/independent_verification.csv with one row per facility.
 Optional arg: max number of cells (for testing)."""
-import json, subprocess, sys
+import json
+import subprocess
+import sys
 import pandas as pd
 from shapely.geometry import shape, Point
 from shapely.strtree import STRtree
@@ -36,7 +38,8 @@ for i, ((cx, cy), sub) in enumerate(groups, 1):
         tree = STRtree(geoms) if geoms else None
         for _, r in sub.iterrows():
             if tree is None:
-                results[r.facility_id] = False; continue
+                results[r.facility_id] = False
+                continue
             p = Point(r.longitude, r.latitude).buffer(BUF_PT)
             results[r.facility_id] = bool(any(geoms[k].intersects(p) for k in tree.query(p)))
     except Exception:
@@ -48,6 +51,10 @@ for i, ((cx, cy), sub) in enumerate(groups, 1):
 
 out = pd.DataFrame([{"facility_id": k, "independent_building_verified": v} for k, v in results.items()])
 out.to_csv("data/processed/independent_verification.csv", index=False)
-tot = len(out); conf = int((out.independent_building_verified == True).sum())
-no = int((out.independent_building_verified == False).sum()); err = int(out.independent_building_verified.isna().sum())
+tot = len(out)
+# Explicit comparisons: the column holds NaN for checks that failed, and NaN
+# is truthy, so bare truthiness would count failures as confirmations.
+conf = int((out.independent_building_verified == True).sum())  # noqa: E712
+no = int((out.independent_building_verified == False).sum())  # noqa: E712
+err = int(out.independent_building_verified.isna().sum())
 print(f"DONE. total {tot} | independently confirmed {conf} ({round(100*conf/max(tot,1))}%) | not-on-independent {no} | check-failed {err}")

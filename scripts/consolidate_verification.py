@@ -12,12 +12,12 @@ m = df.merge(v, on="facility_id", how="left").merge(
     on="facility_id", how="left")
 
 def status(r):
-    if r["independent_building_verified"] == True:
+    if r["independent_building_verified"] == True:  # noqa: E712 - NaN must not read as True
         return "independently_confirmed_on_building"   # strongest (two datasets agree)
     if r["coordinate_precision"] == "building":
         return "on_osm_building_single_source"          # building-accurate, one source
     if str(r.get("note")) == "SUGGESTION - confirm on Google Earth":
-        return "ambiguous_candidate" if r.get("ambiguous") == True else "candidate_building_suggested"
+        return "ambiguous_candidate" if r.get("ambiguous") == True else "candidate_building_suggested"  # noqa: E712 - NaN must not read as True
     return "no_building_found_manual"
 
 m["coordinate_status"] = m.apply(status, axis=1)

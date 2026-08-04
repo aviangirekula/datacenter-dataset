@@ -1,7 +1,8 @@
 """Retry independent verification for facilities the first pass couldn't check
 (blank/None). Re-downloads their areas (smaller per-cell bbox, longer timeout)
 and updates data/processed/independent_verification.csv in place."""
-import json, subprocess
+import json
+import subprocess
 import pandas as pd
 from shapely.geometry import shape, Point
 from shapely.strtree import STRtree
@@ -13,7 +14,8 @@ ver = pd.read_csv("data/processed/independent_verification.csv")
 df = pd.read_csv("data/processed/datacenters_conus.csv")
 failed_ids = set(ver[ver["independent_building_verified"].isna()]["facility_id"])
 if not failed_ids:
-    print("nothing to retry"); raise SystemExit
+    print("nothing to retry")
+    raise SystemExit
 sub_all = df[df["facility_id"].isin(failed_ids)].copy()
 sub_all["cx"] = (sub_all.longitude / GRID).round().astype(int)
 sub_all["cy"] = (sub_all.latitude / GRID).round().astype(int)
@@ -37,7 +39,8 @@ for i, (_, sub) in enumerate(groups, 1):
         tree = STRtree(geoms) if geoms else None
         for _, r in sub.iterrows():
             if tree is None:
-                fixed[r.facility_id] = False; continue
+                fixed[r.facility_id] = False
+                continue
             p = Point(r.longitude, r.latitude).buffer(BUF_PT)
             fixed[r.facility_id] = bool(any(geoms[k].intersects(p) for k in tree.query(p)))
     except Exception:

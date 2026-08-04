@@ -3,7 +3,8 @@ nearest INDEPENDENT (non-OSM) building and propose a SUGGESTED corrected
 coordinate to speed the human Google Earth pass. Suggestions are NOT verified
 truth -- each must be confirmed visually. Flags ambiguous cases (many buildings
 nearby). Writes data/processed/corrections_suggested.csv."""
-import json, subprocess
+import json
+import subprocess
 import pandas as pd
 from shapely.geometry import shape, Point
 from shapely.strtree import STRtree
@@ -16,7 +17,7 @@ TMP = "/tmp/_ov_fix.geojson"
 df = pd.read_csv("data/processed/datacenters_conus.csv")
 v = pd.read_csv("data/processed/independent_verification.csv")
 m = df.merge(v, on="facility_id", how="left")
-m["verified"] = m["independent_building_verified"] == True
+m["verified"] = m["independent_building_verified"] == True  # noqa: E712 - NaN must not read as True
 target = m[(~m["verified"]) & (m["coordinate_precision"] != "building")].copy()  # the 462
 target["cx"] = (target.longitude / GRID).round().astype(int)
 target["cy"] = (target.latitude / GRID).round().astype(int)
@@ -55,7 +56,8 @@ for i, (_, sub) in enumerate(groups, 1):
             near = 0
             for cc in cents:
                 _, _, d2 = GEOD.inv(r.longitude, r.latitude, cc.x, cc.y)
-                if d2 <= 60: near += 1
+                if d2 <= 60:
+                    near += 1
             rec.update(suggested_lat=round(c.y, 6), suggested_lon=round(c.x, 6),
                        dist_m=round(dist, 1), n_buildings_within_60m=near,
                        ambiguous=(near > 1),
@@ -72,6 +74,6 @@ out["google_earth"] = out.apply(
     lambda r: f"https://earth.google.com/web/@{r.orig_lat},{r.orig_lon},0a,150d,35y", axis=1)
 out.to_csv("data/processed/corrections_suggested.csv", index=False)
 snap = int((out["note"] == "SUGGESTION - confirm on Google Earth").sum())
-amb = int((out["ambiguous"] == True).sum())
+amb = int((out["ambiguous"] == True).sum())  # noqa: E712 - NaN must not read as True
 print(f"DONE. {len(out)} uncertain | {snap} have a nearby-building suggestion "
       f"({amb} ambiguous) | {len(out)-snap} no clear building -> manual")

@@ -1,7 +1,7 @@
 from datetime import date
 
 import geopandas as gpd
-from shapely.geometry import Point, Polygon
+from shapely.geometry import Polygon
 
 from dcdata.geocode.reverse import STATEFP_TO_USPS, TigerReverseGeocoder
 from dcdata.schema import Confidence, Facility, FacilitySource

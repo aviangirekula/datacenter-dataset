@@ -155,7 +155,7 @@ def main() -> None:
     print("\n  by positional sigma:")
     for k, v in stats["by_tier"].items():
         print(f"    {k:>12s}: n={v['n']:5d}  mean change prob {v['mean_whp_change_prob']:.3f}")
-    print(f"\n=== lightning ===")
+    print("\n=== lightning ===")
     print(f"  facilities whose value moved at all: "
           f"{stats['lightning']['facilities_that_moved_at_all']} of {n}")
     print(f"  max relative SD: {stats['lightning']['max_relative_sd']:.4f}")

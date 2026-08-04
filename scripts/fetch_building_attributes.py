@@ -144,7 +144,7 @@ def main() -> None:
     rows = [(str(r.facility_id), float(r.longitude), float(r.latitude))
             for r in dc.itertuples()]
     if args.ids_file:
-        keep = {l.strip() for l in open(args.ids_file) if l.strip()}
+        keep = {line.strip() for line in open(args.ids_file) if line.strip()}
         rows = [r for r in rows if r[0] in keep]
     if args.limit:
         rows = rows[: args.limit]

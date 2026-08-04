@@ -1,6 +1,6 @@
 from datetime import date
 
-from dcdata.resolve.dedup import haversine_m, is_match, name_similarity, resolve_entities
+from dcdata.resolve.dedup import haversine_m, name_similarity, resolve_entities
 from dcdata.schema import Confidence, Facility, FacilitySource, GeocodePrecision
 
 

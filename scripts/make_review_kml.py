@@ -1,7 +1,6 @@
 """Build a Google Earth KML (+ tracking CSV) of ONLY the facilities that need a
 manual look: independent_building_verified is False (not on an independent
 building) or blank (check failed). Targets the manual pass instead of all rows."""
-import csv
 import pandas as pd
 
 df = pd.read_csv("data/processed/datacenters_conus.csv")
@@ -9,7 +8,7 @@ ver = pd.read_csv("data/processed/independent_verification.csv")
 m = df.merge(ver, on="facility_id", how="left")
 
 # ⚠️ pile = not independently confirmed (False) or could-not-check (blank/NaN)
-need = m[m["independent_building_verified"] != True].copy()
+need = m[m["independent_building_verified"] != True].copy()  # noqa: E712 - NaN must not read as True
 
 def esc(s):
     s = "" if pd.isna(s) else str(s)
@@ -49,6 +48,6 @@ for c in ["verified", "corrected_lat", "corrected_lon", "reviewer_notes"]:
 t.to_csv("data/processed/needs_review_tracking.csv", index=False)
 
 print(f"needs review: {len(need)} of {len(m)}")
-print("  not-on-independent-building:", int((need['independent_building_verified'] == False).sum()))
+print("  not-on-independent-building:", int((need['independent_building_verified'] == False).sum()))  # noqa: E712 - NaN must not read as True
 print("  check-failed:", int(need['independent_building_verified'].isna().sum()))
 print("wrote data/processed/needs_review.kml + needs_review_tracking.csv")
