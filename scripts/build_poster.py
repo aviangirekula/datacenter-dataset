@@ -47,76 +47,78 @@ AFFIL = ("¹Department of Geography and Geoinformation Sciences, "
          "College of Science, George Mason University")
 
 BACKGROUND = (
-    "•  AI and cloud computing have concentrated US computing capacity into a "
-    "few hundred sites.\n"
-    "•  Those sites face earthquakes, wildfire and flooding, but no open "
-    "dataset records where they physically stand.\n"
-    "•  Existing sources are proprietary, aggregated above the building level, "
-    "or unverified.\n"
-    "•  We measured exposure: whether a facility sits in a hazard zone. We did "
-    "not model damage, so nothing here is a loss estimate."
+    "•  AI and cloud demand has concentrated US computing into a few dozen "
+    "metro clusters that face earthquakes, wildfire and flooding.\n"
+    "•  Existing sources are proprietary, or give city-level coordinates never "
+    "checked against a building.\n"
+    "•  We built an open, building-level inventory of the contiguous US, with "
+    "positional uncertainty carried through the hazard sampling.\n"
+    "•  We measured exposure, meaning whether a site lies in a hazard zone. We "
+    "did not model damage, so nothing here is a loss estimate."
 )
 BOUNDS = (
-    "Bounds on these results\n"
-    "•  Coverage is incomplete. Open sources list 2,696 US facilities where "
-    "commercial directories list several thousand, and mapping density "
-    "varies by state.\n"
-    "•  Hail and wind reports rise with observer density (Spearman 0.39 and "
+    "Limitations\n"
+    "•  Coverage is uneven. OpenStreetMap supplies 83% of Virginia's records "
+    "but 48% of California's, so state contrasts partly reflect who mapped "
+    "them.\n"
+    "•  Hail and wind reports rise with population density (Spearman 0.39 and "
     "0.34 within state), so we excluded both.\n"
-    "•  Power capacity is unrecorded, so we count facilities, never megawatts.\n"
-    "•  48 facilities shown as facing no hazard sit outside FEMA's mapped "
-    "extent, so 35% is a floor.\n"
-    "•  Across 500 relocations, 1,681 sites never changed wildfire class."
+    "•  No open source lists power capacity, so a small suite counts the same "
+    "as a large campus.\n"
+    "•  40 sites shown as clear sit outside FEMA's mapped extent and 8 outside "
+    "the wildfire raster, so 35% is a floor."
 )
 METHODS = (
-    "We merged OpenStreetMap, PeeringDB and Wikidata into one row per site. "
-    "Records within 60 m with matching fuzzy names are unioned, campus siblings "
-    "are kept apart, and every merge is logged.\n"
-    "We then graded each coordinate against FEMA USA Structures building "
-    "footprints and sampled hazards in an equal-area projection:"
+    "We merged OpenStreetMap, PeeringDB and Wikidata into one row per site "
+    "across the contiguous US, logging all 194 merges with their evidence.\n"
+    "Every coordinate was checked against FEMA USA Structures footprints. "
+    "1,681 fall inside a building, 993 match the nearest, 22 have no match. "
+    "Wildfire buffers use an equal-area projection, the rest are point queries:"
 )
 METHODS_TABLE = [
     ("Earthquake", "USGS ASCE 7-22, MCE_G PGA, site class BC"),
     ("Wildfire", "USFS Hazard Potential 270 m, max in 2.4 km"),
     ("Flood", "FEMA NFHL layer 28, SFHA flag"),
-    ("Water stress", "WRI Aqueduct 4.0 (a resource limit, not a hazard)"),
-    ("Uncertainty", "500 draws, sigma 10-500 m by coordinate tier"),
+    ("Water stress", "WRI Aqueduct 4.0 (a supply limit, reported apart)"),
+    ("Uncertainty", "500 relocations per site, 10-500 m by precision"),
 ]
 METHODS_TAIL = (
-    "A facility counts as exposed if it lies within 2.4 km of land rated High "
-    "or Very High for wildfire, inside a FEMA Special Flood Hazard Area, or at "
-    "peak ground acceleration of 0.30 g or above (2% chance in 50 years). "
-    "Where a hazard layer has no value we record it as unknown rather than "
-    "counting the site as safe."
+    "A site counts as exposed if it lies within 2.4 km of land rated High or "
+    "Very High for wildfire, inside a FEMA Special Flood Hazard Area, or at "
+    "MCE_G peak ground acceleration of 0.30 g or above. Where a layer has no "
+    "value there, the site is recorded as unknown, not as safe."
 )
 
-STATS = [("65%", "face no mapped hazard"), ("15", "states below 10% exposed"),
-         ("10", "states above 60%"), ("2,696", "facilities mapped")]
-RESULTS_LEAD = ("Where a facility sits predicts its hazard exposure far better "
-                "than anything about the facility itself.")
+STATS = [("2,696", "facilities mapped"), ("35%", "face a mapped hazard"),
+         ("0.7%", "of Virginia's 409"), ("100%", "of California's 223")]
+RESULTS_LEAD = ("Exposure is set by geography. Virginia's 409 sites are 0.7% "
+                "exposed. California's 223 are 100%.")
 RESULTS_BODY = (
-    "Which hazard dominates changes by region. New Jersey reaches 100% entirely "
-    "through wildfire and 0% through earthquake. California is 96% earthquake. "
-    "Nationally wildfire drives 646 facilities, earthquake 448, flood only 71.\n"
-    "Water stress is the one hazard that reaches Virginia. 31% of its "
-    "facilities sit in high-stress basins, against 0.7% for mapped hazards.\n"
-    "At a 5 km wildfire buffer the national count rises to 953, more than one "
-    "third of the fleet."
+    "Which hazard dominates depends on the region. New Jersey reaches 100% "
+    "through wildfire alone (the Pine Barrens rate High or Very High) and 0% "
+    "through earthquake. California is 96% earthquake.\n"
+    "Nationally 646 sites are exposed to wildfire, 448 to earthquake and 71 to "
+    "flood. 205 face more than one, so these overlap.\n"
+    "Virginia avoids the mapped hazards but not water. 31% of its 409 sites lie "
+    "in high water-stress basins, against 0.7% for the three hazards.\n"
+    "Widening the wildfire buffer from 2.4 km to 5 km takes that count from 646 "
+    "to 953, so the threshold moves the answer by half."
 )
 CONCLUSIONS = (
-    "•  The national 35% figure describes no real state.\n"
-    "•  Most sit in low-exposure regions, but we did not test why. Power price "
-    "and fiber routes are likelier drivers than hazard avoidance.\n"
-    "•  Two states can both read 100% and face different hazards, so a "
-    "combined index must keep them separate.\n"
+    "•  A national average hides the pattern. Only 7 of the 32 states with 20 "
+    "or more sites fall between 10% and 60% exposed.\n"
+    "•  Most sites sit in low-exposure regions, but we cannot say whether "
+    "hazard influenced siting.\n"
+    "•  New Jersey and California are both 100% exposed for opposite reasons, "
+    "so a national index must report hazards separately.\n"
     "•  Next: fragility curves to turn exposure into estimated loss."
 )
 NULLS = (
     "Two checks that came back negative\n"
-    "Measuring hazard across the whole footprint rather than at one point "
-    "changed the answer for 29 of the 326 facilities where the two could be "
-    "compared. Building height showed no association with exposure once state "
-    "was held constant."
+    "Sampling hazard across a building's whole footprint instead of its centre "
+    "changed the answer for 29 of the 326 sites where both could be compared. "
+    "Building height showed no association with exposure once state was held "
+    "constant."
 )
 CITATIONS = (
     "Dillon, G.K. (2023) Wildfire Hazard Potential for the United States, "
@@ -353,12 +355,12 @@ def main() -> None:
 
     ty = my + mh + 0.10
     for name, src in METHODS_TABLE:
-        panel(slide, mx + 0.05, ty, mw - 0.10, 0.74)
-        new_text(slide, mx + 0.20, ty + 0.04, 3.20, 0.66, name, 24, bold=True,
+        panel(slide, mx + 0.05, ty, mw - 0.10, 0.68)
+        new_text(slide, mx + 0.20, ty + 0.02, 3.20, 0.64, name, 24, bold=True,
                  anchor=MSO_ANCHOR.MIDDLE)
-        new_text(slide, mx + 3.45, ty + 0.04, mw - 3.70, 0.66, src, 22,
+        new_text(slide, mx + 3.45, ty + 0.02, mw - 3.70, 0.64, src, 22,
                  colour=DGREY, anchor=MSO_ANCHOR.MIDDLE)
-        ty += 0.84
+        ty += 0.77
     new_text(slide, mx, ty + 0.10, mw, fit_height(METHODS_TAIL, BODY_PT, mw),
              METHODS_TAIL, BODY_PT)
 
@@ -385,8 +387,9 @@ def main() -> None:
     slide.shapes.add_picture(str(FIGS / "fig1_map.png"), Inches(rx), Inches(y),
                              width=Inches(rw))
     y += fig_height("fig1_map", rw) + 0.08
-    cap = ("Fig 1. Two thirds of US data centers face no mapped hazard. The "
-           "exposed ones cluster in the West and the Northeast.")
+    cap = ("Fig 1. One third of US data centers face a mapped hazard. Sites "
+           "facing two or more (orange) concentrate in California and the "
+           "Northeast.")
     ch = fit_height(cap, 22, rw)
     new_text(slide, rx, y, rw, ch, cap, 22, bold=True)
     y += ch + 0.10

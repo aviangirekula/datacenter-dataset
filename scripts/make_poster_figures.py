@@ -241,7 +241,7 @@ def fig_confidence(d: pd.DataFrame) -> None:
     xs, ys, ns = ([v[i] for i in order] for v in (xs, ys, ns))
     solid = [n >= 100 for n in ns]
 
-    fig, ax = plt.subplots(figsize=(10.70, 3.40))
+    fig, ax = plt.subplots(figsize=(10.70, 3.10))
     ax.plot(xs, ys, lw=2.6, color=ORANGE, zorder=3, solid_capstyle="round")
     ax.scatter(xs, ys, s=[150 if s else 90 for s in solid], zorder=4,
                color=[ORANGE if s else "white" for s in solid],
@@ -259,20 +259,19 @@ def fig_confidence(d: pd.DataFrame) -> None:
     ax.tick_params(axis="both", labelsize=19, colors=INK2, which="both")
     ax.minorticks_off()
     ax.set_xlim(8, 640)
-    ax.set_ylim(0, max(ys) * 1.42)
-    ax.set_ylabel("Wildfire class changes (%)", fontsize=20, color=INK2)
-    ax.set_xlabel("Positional uncertainty of the coordinate",
+    ax.set_ylim(0, max(ys) * 1.95)
+    ax.set_ylabel("Sites changing class (%)", fontsize=19, color=INK2)
+    ax.set_xlabel("Positional uncertainty (log scale)",
                   fontsize=20, color=INK2, labelpad=10)
     for s in ("top", "right"):
         ax.spines[s].set_visible(False)
     for s in ("left", "bottom"):
         ax.spines[s].set_color("#cccccc")
-    ax.set_title("Wildfire class rarely moves for the 2,659 well-located "
-                 "facilities.\nHollow points rest on under 100 facilities and "
-                 "carry wide error.",
+    ax.set_title("Wildfire class changes for 1-9% of sites located to 100 m or "
+                 "better.\nHollow points rest on under 100 sites.",
                  fontsize=20, color=INK, loc="left", pad=16, linespacing=1.4)
 
-    fig.subplots_adjust(left=0.10, right=0.98, top=0.76, bottom=0.20)
+    fig.subplots_adjust(left=0.115, right=0.985, top=0.74, bottom=0.22)
     fig.savefig(OUT / "fig3_confidence.png", dpi=DPI, bbox_inches="tight")
     plt.close(fig)
     print(f"  fig3_confidence.png  n per tier {ns}")
