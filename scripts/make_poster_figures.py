@@ -163,7 +163,7 @@ def fig_states(d: pd.DataFrame) -> None:
     mid = (g["pct"] >= 10) & (g["pct"] <= 60)
     mid_n, mid_share = int(mid.sum()), 100 * g.loc[mid, "n"].sum() / N
 
-    fig, ax = plt.subplots(figsize=(10.70, 4.30))
+    fig, ax = plt.subplots(figsize=(10.70, 4.05))
     # Colour by which hazard drives the state, because "100%" means wildfire in
     # New Jersey and earthquake in California, and the poster should say so.
     drivers = g[["fire", "flood", "quake"]].idxmax(axis=1)
@@ -203,7 +203,7 @@ def fig_states(d: pd.DataFrame) -> None:
     handles = [Line2D([0], [0], marker="o", linestyle="none", markersize=11,
                       markerfacecolor=c, markeredgecolor="none", label=lab)
                for c, lab in ((ORANGE, "Wildfire-driven"), (TEAL, "Earthquake-driven"),
-                              (BLUE, "Flood-driven"), (GREY, "No mapped hazard"))]
+                              (BLUE, "Flood-driven"), (GREY, "Under 1% exposed"))]
     leg = ax.legend(handles=handles, loc="upper center", ncol=4, frameon=False,
                     fontsize=19, bbox_to_anchor=(0.5, -0.42), handletextpad=0.6,
                     columnspacing=1.9)
@@ -241,7 +241,7 @@ def fig_confidence(d: pd.DataFrame) -> None:
     xs, ys, ns = ([v[i] for i in order] for v in (xs, ys, ns))
     solid = [n >= 100 for n in ns]
 
-    fig, ax = plt.subplots(figsize=(10.70, 3.10))
+    fig, ax = plt.subplots(figsize=(10.70, 2.80))
     ax.plot(xs, ys, lw=2.6, color=ORANGE, zorder=3, solid_capstyle="round")
     ax.scatter(xs, ys, s=[150 if s else 90 for s in solid], zorder=4,
                color=[ORANGE if s else "white" for s in solid],

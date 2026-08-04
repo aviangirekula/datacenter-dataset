@@ -51,35 +51,37 @@ BACKGROUND = (
     "metro clusters that face earthquakes, wildfire and flooding.\n"
     "•  Existing sources are proprietary, or give city-level coordinates never "
     "checked against a building.\n"
-    "•  We built an open, building-level inventory of the contiguous US, with "
-    "positional uncertainty carried through the hazard sampling.\n"
+    "•  We built a free, public, building-level inventory of the contiguous US, "
+    "and tested how much the answer moves when a coordinate is wrong.\n"
     "•  We measured exposure, meaning whether a site lies in a hazard zone. We "
     "did not model damage, so nothing here is a loss estimate."
 )
 BOUNDS = (
     "Limitations\n"
-    "•  Coverage is uneven. OpenStreetMap supplies 83% of Virginia's records "
-    "against 48% of California's, so state contrasts partly reflect who "
-    "mapped them.\n"
-    "•  Hail and wind reports rise with population density (Spearman 0.39 and "
-    "0.34), so we excluded both. Lightning, tornado and cyclone rates are "
-    "computed but not folded in.\n"
-    "•  No open source lists power capacity, so a small suite counts the same "
-    "as a large campus.\n"
+    "•  Coverage is uneven. 83% of our Virginia sites come from OpenStreetMap "
+    "against 48% of our California ones, so part of the gap between states "
+    "reflects who did the mapping.\n"
+    "•  Hail and wind come from eyewitness reports, so within a state their "
+    "rates track how built-up the surroundings are (rank correlation 0.39 and "
+    "0.34). We left both out, along with lightning, tornado and hurricane.\n"
+    "•  No public source lists power capacity, so a single server room counts "
+    "the same as a 100 MW campus.\n"
     "•  40 sites shown as clear sit outside FEMA's mapped extent and 8 outside "
     "the wildfire raster, so 35% is a floor."
 )
 METHODS = (
-    "We merged OpenStreetMap, PeeringDB and Wikidata into one row per site "
-    "across the contiguous US, logging all 194 merges with their evidence.\n"
-    "Every coordinate was checked against FEMA USA Structures footprints. "
-    "1,681 fall inside a building, 993 match the nearest, 22 have no match, and "
-    "we reviewed 1,150 against satellite imagery by hand.\n"
-    "Our first seismic layer failed validation (22 of 150 test sites within "
-    "10%, median bias +32%), so we replaced it with per-facility queries:"
+    "We merged OpenStreetMap, PeeringDB and Wikidata into one record per site "
+    "across the contiguous US, matching on name and distance, with written "
+    "evidence kept for all 194 merges.\n"
+    "Against FEMA USA Structures footprints, 1,681 coordinates fall inside a "
+    "building, 993 match the nearest and 22 have no match. A second non-OSM "
+    "source confirmed 1,546, and we re-checked the 1,150 least certain with an "
+    "AI-assisted pipeline we then reviewed.\n"
+    "Our first seismic layer failed validation against USGS reference values "
+    "(22 of 150 sites within 10%), so we replaced it:"
 )
 METHODS_TABLE = [
-    ("Earthquake", "USGS ASCE 7-22, MCE_G PGA, site class BC"),
+    ("Earthquake", "USGS ASCE 7-22 shaking, 2% chance in 50 yr"),
     ("Wildfire", "USFS Hazard Potential 270 m, max in 2.4 km"),
     ("Flood", "FEMA NFHL layer 28, SFHA flag"),
     ("Water stress", "WRI Aqueduct 4.0 (a supply limit, reported apart)"),
@@ -88,46 +90,47 @@ METHODS_TABLE = [
 METHODS_TAIL = (
     "A site counts as exposed if it lies within 2.4 km of land rated High or "
     "Very High for wildfire, inside a FEMA Special Flood Hazard Area, or at "
-    "MCE_G peak ground acceleration of 0.30 g or above. A missing value is "
-    "recorded as unknown, not safe."
+    "peak ground acceleration of 0.30 g or above. The 2.4 km radius is the "
+    "1.5 mile ember-cast distance."
 )
 
-STATS = [("2,696", "facilities mapped"), ("35%", "face a mapped hazard"),
-         ("0.7%", "of Virginia's 409"), ("100%", "of California's 223")]
-RESULTS_LEAD = ("Exposure is set by geography. Virginia's 409 sites are 0.7% "
-                "exposed. California's 223 are 100%.")
+STATS = [("2,696", "facilities located"), ("954", "face a mapped hazard"),
+         ("952", "in a high water-stress basin"), ("563", "water-stressed only")]
+RESULTS_LEAD = ("The hazard map and the water map barely overlap. Counting "
+                "water stress takes the fleet from 35% to 56% constrained.")
 RESULTS_BODY = (
+    "952 sites lie in a high or extremely-high water-stress basin, almost "
+    "exactly the 954 facing a mapped hazard, but only 389 are the same sites. "
+    "Water stress lands hardest where the hazard map says clear: Virginia is "
+    "0.7% hazard-exposed and 31% water-stressed, Illinois 2.7% and 95%.\n"
     "Which hazard dominates depends on the region. New Jersey reaches 100% "
-    "through wildfire alone (the Pine Barrens rate High or Very High) and 0% "
-    "through earthquake. California is 96% earthquake.\n"
-    "Nationally 646 sites are exposed to wildfire, 448 to earthquake and 71 to "
-    "flood. 205 face more than one, so these overlap.\n"
-    "Virginia avoids the mapped hazards but not water. 31% of its 409 sites lie "
-    "in high water-stress basins, against 0.7% for the three hazards.\n"
-    "Widening the wildfire buffer from 2.4 km to 5 km takes that count from 646 "
-    "to 953, so the threshold moves the answer by half."
+    "through wildfire alone and 0% through earthquake, California 96% "
+    "earthquake. Nationally 646 sites are exposed to wildfire, 448 to "
+    "earthquake and 71 to flood, and 205 face more than one.\n"
+    "Widening the wildfire buffer to 5 km takes that count from 646 to 953, "
+    "a 48% jump."
 )
 CONCLUSIONS = (
-    "•  A national average hides the pattern. Only 7 of the 32 states with 20 "
-    "or more sites fall between 10% and 60% exposed.\n"
-    "•  Most sites sit in low-exposure regions, but we cannot say whether "
-    "hazard influenced siting.\n"
+    "•  The 35% headline is the least useful number here. Only 7 of 32 states "
+    "with 20 or more sites fall between 10% and 60% exposed.\n"
+    "•  Water stress is not a natural hazard, but it constrains the same "
+    "buildings, and it is high where the hazard map says clear.\n"
     "•  New Jersey and California are both 100% exposed for opposite reasons, "
-    "so a national index must report hazards separately.\n"
-    "•  Next: fragility curves to turn exposure into estimated loss."
+    "so one national score would hide what a site faces.\n"
+    "•  Next: fragility curves, to turn exposure into loss."
 )
 NULLS = (
-    "Two checks that came back negative\n"
-    "Sampling hazard across a building's whole footprint instead of its centre "
-    "changed the answer for 29 of the 326 sites where both could be compared. "
-    "Building height showed no association with exposure once state was held "
-    "constant."
+    "Two checks on our choices\n"
+    "Sampling across a building's whole footprint instead of its centre changed "
+    "the answer for 29 of the 326 sites where both could be compared. Taller "
+    "buildings looked more exposed nationally, but that vanished within states, "
+    "so it was geography and not height."
 )
 CITATIONS = (
     "Dillon, G.K. (2023) Wildfire Hazard Potential for the United States, "
     "270-m, v2023. USDA Forest Service. doi:10.2737/RDS-2015-0047-4\n"
-    "Petersen, M.D. et al. (2023) 2023 US National Seismic Hazard Model. USGS. "
-    "doi:10.5066/P9GNPCOD\n"
+    "USGS (2026) ASCE 7-22 Seismic Design Maps web service. "
+    "earthquake.usgs.gov/ws/designmaps\n"
     "FEMA (2026) National Flood Hazard Layer. hazards.fema.gov\n"
     "Oughton, E.J. and Weigel, R. (2026) A Comparative Multi-Hazard Risk "
     "Assessment of the US High-Voltage Transmission Network. Zenodo. "
@@ -342,13 +345,13 @@ def main() -> None:
     set_text(bg, BACKGROUND, BODY_PT)
     bg.height = Inches(bh)
 
-    nh = fit_height(BOUNDS, 25, bw - 0.45)
+    nh = fit_height(BOUNDS, 23, bw - 0.45)
     # The Materials and Methods bar is fixed by the template at 15.72, so the
     # leftover space is split evenly rather than pooled into one dead gap.
     slack = (15.72 - 0.30) - (by + bh) - (nh + 0.16)
     py = by + bh + max(0.26, slack / 2)
     panel(slide, bx, py, bw, nh + 0.16, accent=GOLD)
-    new_text(slide, bx + 0.26, py + 0.08, bw - 0.45, nh, BOUNDS, 24,
+    new_text(slide, bx + 0.26, py + 0.08, bw - 0.45, nh, BOUNDS, 22,
              head_bold=True)
 
     # ---- column 1: Materials and Methods ----
@@ -365,7 +368,7 @@ def main() -> None:
                  anchor=MSO_ANCHOR.MIDDLE)
         new_text(slide, mx + 3.45, ty + 0.01, mw - 3.70, 0.62, src, 21,
                  colour=DGREY, anchor=MSO_ANCHOR.MIDDLE)
-        ty += 0.72
+        ty += 0.69
     new_text(slide, mx, ty + 0.10, mw, fit_height(METHODS_TAIL, BODY_PT, mw),
              METHODS_TAIL, BODY_PT)
 
@@ -392,9 +395,9 @@ def main() -> None:
     slide.shapes.add_picture(str(FIGS / "fig1_map.png"), Inches(rx), Inches(y),
                              width=Inches(rw))
     y += fig_height("fig1_map", rw) + 0.08
-    cap = ("Fig 1. One third of US data centers face a mapped hazard. Sites "
-           "facing two or more (orange) concentrate in California and the "
-           "Northeast.")
+    cap = ("Fig 1. One third of US data centers face a mapped hazard. Of the 205 "
+           "facing two or more (orange), California holds 119, with smaller "
+           "clusters in Utah, Nevada and New Jersey.")
     ch = fit_height(cap, 22, rw)
     new_text(slide, rx, y, rw, ch, cap, 22, bold=True)
     y += ch + 0.10
@@ -406,8 +409,7 @@ def main() -> None:
     slide.shapes.add_picture(str(FIGS / "fig2_states.png"), Inches(rx),
                              Inches(y), width=Inches(rw))
     y += fig_height("fig2_states", rw) + 0.06
-    cap = ("Fig 2. Every state with 20 or more facilities. 25 of 32 sit below "
-           "10% or above 60%, and colour shows which hazard drives each one.")
+    cap = "Fig 2. All 32 states with 20 or more sites, coloured by dominant hazard."
     new_text(slide, rx, y, rw, fit_height(cap, 22, rw), cap, 22, bold=True)
 
     # ---- column 3: Conclusions, then the null results and the QA figure ----
@@ -427,7 +429,8 @@ def main() -> None:
     slide.shapes.add_picture(str(FIGS / "fig3_confidence.png"), Inches(cx),
                              Inches(y), width=Inches(cw))
     y += fig_height("fig3_confidence", cw) + 0.04
-    cap = "Fig 3. We re-ran the analysis with simulated location error."
+    cap = ("Fig 3. Moving each coordinate 500 times flips the wildfire class "
+           "for at most 9% of sites placed within 100 m.")
     new_text(slide, cx, y, cw, fit_height(cap, 22, cw), cap, 22, bold=True)
 
     # ---- column 3: citations and acknowledgements, edited in place ----
