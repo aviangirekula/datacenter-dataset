@@ -25,8 +25,11 @@ PPTX = REPO / "figures" / "Oughton_Avilash_Angirekula_2026ASSIP_Poster.pptx"
 PREVIEW = REPO / "figures" / "poster_preview.png"
 
 W, H = 36.0, 27.0
-COL_X = [0.50, 12.35, 24.20]
-COL_R = [11.80, 23.65, 35.50]
+# The template's own column geometry, read back from the shipped file. These are
+# not ours to choose: the poster size and layout are fixed by the program.
+COL_X = [0.41, 11.99, 24.13]
+COL_R = [11.66, 23.78, 35.55]
+CONTENT_BOTTOM = 26.54
 MIN_PT = 19          # absolute floor anywhere on the poster
 MIN_BODY_PT = 26     # program guidance; we target 28
 
@@ -63,15 +66,22 @@ def main() -> None:
             problems.append(
                 f"off-page: '{txt[:34]}' at ({x:.2f},{y:.2f}) {w:.2f}x{h:.2f}")
 
-        # 2. type floor
+        # 2. nothing may run past where the template's own boxes end
+        if y > 4.7 and y + h > CONTENT_BOTTOM + 0.01 and txt.strip():
+            problems.append(
+                f"past the {CONTENT_BOTTOM} in content bottom: '{txt[:30]}' ends {y + h:.2f}")
+
+        # 3. type floor
         for s in sizes:
             if s < MIN_PT:
                 problems.append(f"{s:.0f}pt below the {MIN_PT}pt floor: '{txt[:34]}'")
 
     # 3. column alignment for body shapes
     for s in shapes:
-        if s["y"] < 4.9:
+        if s["y"] < 4.9 or not s["txt"].strip():
             continue                      # header band is its own geometry
+        if s["w"] < 8.0:
+            continue                      # sub-elements sit indented on purpose
         near_l = min(abs(s["x"] - c) for c in COL_X)
         if near_l > 0.30:
             warnings.append(
