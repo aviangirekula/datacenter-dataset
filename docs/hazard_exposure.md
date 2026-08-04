@@ -118,7 +118,23 @@ These are stated plainly because they bound what the data can support.
    so they keep the caveat below. Spectral accelerations `haz_seismic_sa_02s_g`
    and `haz_seismic_sa_1s_g` are also now available for all facilities, and
    Sa(1 s) rather than PGA is the demand parameter that distinguishes a tall
-   building from a low one. Original finding follows.
+   building from a low one.
+
+   **Authoritative values below 2,475 years.** No public point service returns
+   PGA at 475 or 975 years. The ASCE 41-17 service does return spectral
+   acceleration at its own hazard levels, so those are captured instead:
+   `haz_seismic_sa_{02s,1s}_g_975yr` (BSE-2E, 5% in 50 yr) and
+   `..._225yr` (BSE-1E, 20% in 50 yr). Use these rather than the contour PGA
+   columns wherever a sub-MCE level is needed.
+
+   **A deliberate inversion.** The 225-year value never exceeds the 975-year one
+   (2,691 of 2,691). The 2,475-year column falls *below* the 975-year one for
+   106 facilities, **all in California at high hazard** (median 975 yr Ss of
+   1.658 against 0.090 elsewhere). That is correct ASCE 7 behaviour, not an
+   error: MCE_R is the lesser of the probabilistic risk-targeted value and a
+   deterministic cap, and in high-seismicity California the cap binds, whereas
+   the ASCE 41 value is purely probabilistic. A test bounds this and asserts it
+   stays confined to the high-hazard regime. Original finding follows.
 
    *(historical)* 150 random facilities were
    checked against the USGS ASCE 7-22 service at the same site class (BC).

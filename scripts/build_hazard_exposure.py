@@ -39,7 +39,7 @@ DC_CSV = REPO / "data" / "processed" / "datacenters_final.csv"
 OUT_CSV = REPO / "data" / "processed" / "hazard_exposure.csv"
 OUT_JSON = REPO / "data" / "processed" / "hazard_exposure_coverage.json"
 # Authoritative per-point seismic values from the USGS ASCE 7-22 service.
-SEISMIC_POINTS = REPO / "data" / "raw" / "seismic_points.jsonl"
+SEISMIC_POINTS = REPO / "data" / "raw" / "seismic_points_multilevel.jsonl"
 
 # Positional-accuracy fields carried into the exposure table. Hazard values are
 # only as good as the coordinate they were sampled at.
@@ -227,6 +227,15 @@ def main() -> None:
         # distinguishes a tall building from a low one, unlike PGA.
         out["haz_seismic_sa_02s_g"] = fid.map(lambda f: recs.get(f, {}).get("ss"))
         out["haz_seismic_sa_1s_g"] = fid.map(lambda f: recs.get(f, {}).get("s1"))
+        # ASCE 41-17 hazard levels. BSE-2E is 5% in 50 yr (about 975 yr) and
+        # BSE-1E is 20% in 50 yr (about 225 yr). These are the only authoritative
+        # values available below the 2,475 yr level from a public point service,
+        # and they are spectral accelerations rather than PGA.
+        for lvl, rp in (("bse_2e", 975), ("bse_1e", 225)):
+            out[f"haz_seismic_sa_02s_g_{rp}yr"] = fid.map(
+                lambda f, l=lvl: recs.get(f, {}).get(f"{l}_ss"))
+            out[f"haz_seismic_sa_1s_g_{rp}yr"] = fid.map(
+                lambda f, l=lvl: recs.get(f, {}).get(f"{l}_s1"))
         out["haz_seismic_source"] = np.where(
             out["haz_seismic_pga_g_2475yr_usgs"].notna(),
             "USGS ASCE 7-22 point service (site class BC)", "contour sample")
@@ -235,10 +244,17 @@ def main() -> None:
             "column": "haz_seismic_pga_g_2475yr_usgs",
             "measured": k, "total": n,
             "source": "USGS ASCE 7-22 web service, siteClass=BC (Vs30 760 m/s)",
-            "note": "Authoritative for the 2% in 50 yr (~2475 yr) level. The 475 "
-                    "and 975 yr columns have no equivalent point service and "
-                    "remain contour-derived, so they keep the 0.01 g band "
-                    "discretisation caveat and are approximate.",
+            "asce41_levels": {
+                "bse_2e": "5% in 50 yr (~975 yr), spectral acceleration only",
+                "bse_1e": "20% in 50 yr (~225 yr), spectral acceleration only"},
+            "note": "Authoritative PGA is available only at the 2% in 50 yr "
+                    "(~2475 yr) level. No public point service returns PGA at "
+                    "475 or 975 yr, so those two columns remain contour-derived "
+                    "and are APPROXIMATE: across all 2,696 facilities the "
+                    "contour method agreed with the authoritative value within "
+                    "10% for only 425 (16%). ASCE 41 spectral accelerations at "
+                    "~975 yr and ~225 yr are provided as the authoritative "
+                    "multi-level alternative.",
         }
         print(f"  [ok]   seismic USGS point service  measured {k}/{n} "
               f"(replaces contour magnitudes at 2475 yr)")

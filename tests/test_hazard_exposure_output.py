@@ -98,3 +98,34 @@ def test_no_hazard_column_is_silently_zero_filled(haz):
     """Guards against nodata being written as 0 rather than null."""
     lightning = haz["haz_lightning_flash_per_km2_yr"]
     assert (lightning.dropna() > 0).all(), "flash rate of exactly 0 suggests nodata fill"
+
+
+def test_seismic_levels_increase_with_rarity(haz):
+    """A rarer event cannot shake less, except where ASCE 7's cap binds.
+
+    225 yr must never exceed 975 yr. The 2,475 yr column may fall below 975 yr
+    in high-seismicity California, because ASCE 7 MCE_R is the lesser of the
+    probabilistic risk-targeted value and a deterministic cap, while the ASCE 41
+    BSE-2E value is purely probabilistic. That is real code behaviour, so it is
+    allowed but bounded and confined to high-hazard sites.
+    """
+    a = haz.get("haz_seismic_sa_02s_g_225yr")
+    b = haz.get("haz_seismic_sa_02s_g_975yr")
+    c = haz.get("haz_seismic_sa_02s_g")
+    if a is None or b is None or c is None:
+        pytest.skip("multi-level seismic columns not present")
+    ok = a.notna() & b.notna() & c.notna()
+    assert (b[ok] >= a[ok] - 1e-9).all(), "225 yr exceeded 975 yr"
+
+    inverted = ok & (c < b - 1e-9)
+    # Bounded in count and confined to genuinely high-hazard sites.
+    assert inverted.sum() / ok.sum() < 0.10
+    assert b[inverted].min() > 0.5, "inversion outside the high-hazard regime"
+
+
+def test_authoritative_seismic_present_and_positive(haz):
+    col = haz.get("haz_seismic_pga_g_2475yr_usgs")
+    if col is None:
+        pytest.skip("authoritative seismic column not present")
+    assert col.notna().all(), "every facility must carry an authoritative value"
+    assert (col.dropna() > 0).all()

@@ -39,8 +39,13 @@ import pandas as pd
 
 REPO = Path(__file__).resolve().parents[1]
 DC_CSV = REPO / "data" / "processed" / "datacenters_final.csv"
-CACHE = REPO / "data" / "raw" / "seismic_points.jsonl"
+CACHE = REPO / "data" / "raw" / "seismic_points_multilevel.jsonl"
 URL = "https://earthquake.usgs.gov/ws/designmaps/asce7-22.json"
+# ASCE 41-17 reports several hazard levels in one call, which ASCE 7 does not.
+# BSE-2E is 5% in 50 years (about 975 yr) and BSE-1E is 20% in 50 years (about
+# 225 yr). Only spectral accelerations are returned, not PGA, but these are the
+# only authoritative multi-level values available from a public point service.
+URL41 = "https://earthquake.usgs.gov/ws/designmaps/asce41-17.json"
 UA = {"User-Agent": "datacenter-dataset/0.1 (academic research; GMU GeoAI)"}
 SITE_CLASS = "BC"
 WORKERS = 5
@@ -59,13 +64,15 @@ def fetch(fid: str, lat: float, lon: float) -> dict:
                 d = json.loads(r.read().decode("utf8"))
             data = d.get("response", {}).get("data", {}) or {}
             meta = d.get("response", {}).get("metadata", {}) or {}
-            return {"facility_id": fid, "lat": lat, "lon": lon,
-                    "site_class": SITE_CLASS, "error": None,
-                    "pgam": data.get("pgam"), "ss": data.get("ss"),
-                    "s1": data.get("s1"), "sds": data.get("sds"),
-                    "sd1": data.get("sd1"), "sdc": data.get("sdc"),
-                    "vs30": meta.get("vs30"),
-                    "model_version": meta.get("modelVersion")}
+            rec = {"facility_id": fid, "lat": lat, "lon": lon,
+                   "site_class": SITE_CLASS, "error": None,
+                   "pgam": data.get("pgam"), "ss": data.get("ss"),
+                   "s1": data.get("s1"), "sds": data.get("sds"),
+                   "sd1": data.get("sd1"), "sdc": data.get("sdc"),
+                   "vs30": meta.get("vs30"),
+                   "model_version": meta.get("modelVersion")}
+            rec.update(fetch_asce41(lat, lon))
+            return rec
         except Exception as e:  # noqa: BLE001
             last = e
             time.sleep(1.0 * (attempt + 1))
@@ -73,7 +80,38 @@ def fetch(fid: str, lat: float, lon: float) -> dict:
             "error": f"{type(last).__name__}: {last}"}
 
 
+def fetch_asce41(lat: float, lon: float) -> dict:
+    """Spectral accelerations at the ASCE 41 hazard levels.
+
+    Returns empty values rather than failing the whole record, since the ASCE 7
+    value is the primary quantity and these are supplementary.
+    """
+    q = urllib.parse.urlencode({"latitude": lat, "longitude": lon,
+                                "siteClass": SITE_CLASS, "title": "dc"})
+    out: dict = {}
+    try:
+        req = urllib.request.Request(f"{URL41}?{q}", headers=UA)
+        with urllib.request.urlopen(req, timeout=60) as r:
+            d = json.loads(r.read().decode("utf8"))
+        for entry in d.get("response", {}).get("data", []) or []:
+            lvl = entry.get("hazardLevel")
+            if lvl in ("BSE-2E", "BSE-1E", "BSE-2N"):
+                key = lvl.lower().replace("-", "_")
+                out[f"{key}_ss"] = entry.get("ss")
+                out[f"{key}_s1"] = entry.get("s1")
+    except Exception:  # noqa: BLE001 - supplementary, never fatal
+        pass
+    return out
+
+
 def done_ids() -> set[str]:
+    """Facility ids already cached without error.
+
+    NOTE: this file is append-only and there is no lock. Running two copies of
+    this script at once makes both compute the same todo list and append the
+    same records, which is how an earlier run produced 2,992 duplicate rows.
+    Run one at a time. Readers de-duplicate defensively.
+    """
     if not CACHE.exists():
         return set()
     ids = set()

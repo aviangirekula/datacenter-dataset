@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-02",
-  "git_commit": "b50abc2-dirty",
+  "generated": "2026-08-03",
+  "git_commit": "89f4425-dirty",
   "n_facilities": 2696,
   "source_table": "data/processed/datacenters_final.csv",
   "hazards": {
@@ -61,7 +61,11 @@
       "measured": 2696,
       "total": 2696,
       "source": "USGS ASCE 7-22 web service, siteClass=BC (Vs30 760 m/s)",
-      "note": "Authoritative for the 2% in 50 yr (~2475 yr) level. The 475 and 975 yr columns have no equivalent point service and remain contour-derived, so they keep the 0.01 g band discretisation caveat and are approximate."
+      "asce41_levels": {
+        "bse_2e": "5% in 50 yr (~975 yr), spectral acceleration only",
+        "bse_1e": "20% in 50 yr (~225 yr), spectral acceleration only"
+      },
+      "note": "Authoritative PGA is available only at the 2% in 50 yr (~2475 yr) level. No public point service returns PGA at 475 or 975 yr, so those two columns remain contour-derived and are APPROXIMATE: across all 2,696 facilities the contour method agreed with the authoritative value within 10% for only 425 (16%). ASCE 41 spectral accelerations at ~975 yr and ~225 yr are provided as the authoritative multi-level alternative."
     }
   },
   "skipped_layers": [],

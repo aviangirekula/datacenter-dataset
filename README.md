@@ -7,10 +7,29 @@ building-level coordinates, status, descriptive attributes, and full provenance.
 The dataset is designed to join cleanly against power-grid and natural-hazard
 geospatial layers for a multi-hazard risk assessment of US data centers.
 
-> **Status: v0.1 scaffold.** Schema, config, validation, and the OpenStreetMap
-> base layer (1,592 CONUS facilities, cached) are in place. The end-to-end
-> collector→geocode→resolve→validate→export pipeline is being built one source at
-> a time, starting with OpenStreetMap.
+> **Status: dataset complete, hazard exposure attached, risk step outstanding.**
+> 2,696 analysis-ready facilities across CONUS, each with a coordinate-confidence
+> tier and nine natural-hazard exposure measures. 92 tests pass. Everything here
+> is **exposure**, meaning what each site is subject to. No vulnerability or
+> damage term is applied, so nothing in this repository is a risk or loss
+> estimate. See [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md) for the current
+> state and [docs/hazard_exposure.md](docs/hazard_exposure.md) for method and
+> limitations.
+
+## What is in the dataset
+
+| | |
+|---|---|
+| Facilities | 2,696, contiguous US |
+| Coordinates inside a building polygon | 1,681 |
+| Building heights measured | 1,327 |
+| In a FEMA Special Flood Hazard Area | 71 |
+| Within 1 km of High/Very-High wildfire land | 342 (953 within 5 km) |
+| In a high or extremely-high water-stress basin | 952 |
+| Largest concentration | Virginia, 409 facilities (15%) |
+
+Hazards attached per facility: earthquake, lightning, wildfire, flood, tornado,
+hail, damaging wind, tropical cyclone, and water stress.
 
 ## Project layout
 
@@ -27,25 +46,44 @@ config/            settings.yaml (no secrets) + sources.yaml (source registry)
 data/raw/          cached source responses (gitignored, reproducible)
 data/interim/      per-collector normalized output
 data/processed/    final CSV + GeoPackage + data-quality report
-docs/              data_dictionary.md
-tests/             parsing + dedup + schema unit tests
+  hazards/         raster and polygon sampling used by the hazard scripts
+scripts/           standalone entry points: fetch_* then build_*
+docs/              data_dictionary.md, hazard_exposure.md, PROJECT_STATE.md
+tests/             92 tests: parsing, dedup, schema, hazard sampling, script logic
 SOURCES.md         prioritized source list with access + licensing notes
 ```
 
 ## Setup
 
 ```bash
-python3.11 -m venv .venv && source .venv/bin/activate
+python3 -m venv .venv && source .venv/bin/activate   # tested on 3.13
 pip install -r requirements.txt          # geopandas pulls GDAL; may take a minute
 cp .env.example .env                      # optional; no key needed for defaults
 pytest                                    # run unit tests
 ```
 
-## How to run (as the pipeline lands)
+## How to run
 
 ```bash
-python -m dcdata.pipeline                 # full run: collect -> ... -> export
+python -m dcdata.pipeline                 # rebuild the facility dataset
+
+# hazard layers: download with checksums, then sample
+python scripts/fetch_hazard_data.py
+python scripts/fetch_hazard_data.py --verify
+python scripts/build_hazard_exposure.py
+
+# buildings, flood, storms, water, and the analyses
+python scripts/fetch_building_attributes.py
+python scripts/build_building_attributes.py
+python scripts/build_footprint_hazard.py
+python scripts/build_storm_exposure.py
+python scripts/build_water_stress.py
+PYTHONPATH=src python scripts/coordinate_uncertainty.py --draws 500
+python scripts/validate_seismic.py --n 150
 ```
+
+Raw hazard inputs are gitignored (about 4.4 GB). A fresh clone must run the
+`fetch_*` scripts first. `zstd` is required on PATH.
 
 ## Inclusion criteria
 
