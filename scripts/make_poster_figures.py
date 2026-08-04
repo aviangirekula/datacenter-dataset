@@ -184,21 +184,39 @@ def fig_states(d: pd.DataFrame) -> None:
     mid = (g["pct"] >= 10) & (g["pct"] <= 60)
     mid_n, mid_share = int(mid.sum()), 100 * g.loc[mid, "n"].sum() / N
 
-    fig, ax = plt.subplots(figsize=(10.70, 3.15))
+    fig, ax = plt.subplots(figsize=(10.70, 3.25))
     # Colour by which hazard drives the state, because "100%" means wildfire in
     # New Jersey and earthquake in California, and the poster should say so.
     drivers = g[["fire", "flood", "quake"]].idxmax(axis=1)
     cmap = {"fire": ORANGE, "flood": PURPLE, "quake": TEAL}
-    ax.scatter(g["pct"], np.zeros(n_all), s=g["n"] * 1.9, zorder=3, alpha=0.80,
+    # Five states sit at exactly 0.00% and two at exactly 100%, so a single row
+    # stacks them: the larger dot shows around the smaller one and reads as a
+    # coloured ring that encodes nothing. Coincident points are offset upward in
+    # a beeswarm so every state is its own mark, largest at the baseline.
+    order = np.argsort(-g["n"].to_numpy())          # big dots settle first
+    xs = g["pct"].to_numpy()
+    dia = np.sqrt(g["n"].to_numpy() * 1.9)          # marker diameter in points
+    rows = np.zeros(n_all)
+    placed: list[tuple[float, float, float]] = []
+    for i in order:
+        lvl = 0.0
+        while any(abs(xs[i] - px) < (dia[i] + pd) * 0.052 and abs(lvl - py) < 0.26
+                  for px, py, pd in placed):
+            lvl += 0.26
+        rows[i] = lvl
+        placed.append((xs[i], lvl, dia[i]))
+    ax.scatter(xs, rows, s=g["n"] * 1.9, zorder=3,
                color=[GREY_MAP if p < 1 else cmap[k] for p, k in zip(g["pct"], drivers)],
-               edgecolor="white", linewidth=1.2)
+               edgecolor="white", linewidth=1.4)
+    g = g.assign(_row=rows)
 
     # Labels sit in two staggered rows ABOVE the axis only. Placing some below
     # pushed them into the x-axis title, and a single row collided wherever two
     # states sat close together (OH 0.0% vs VA 0.7%, AZ 98.8% vs CA 100%).
     label = ["VA", "TX", "FL", "NV", "WA", "OR", "AZ", "CA"]
     for i, st in enumerate(sorted(label, key=lambda s: g.loc[s, "pct"])):
-        ax.annotate(f"{st}  n={int(g.loc[st, 'n'])}", (g.loc[st, "pct"], 0),
+        ax.annotate(f"{st}  n={int(g.loc[st, 'n'])}",
+                    (g.loc[st, "pct"], g.loc[st, "_row"]),
                     xytext=(0, 82 if i % 2 == 0 else 38),
                     textcoords="offset points", fontsize=20, color=INK,
                     ha="center", va="bottom",
@@ -206,7 +224,7 @@ def fig_states(d: pd.DataFrame) -> None:
                                     shrinkA=1, shrinkB=8))
 
     ax.set_xlim(-6, 106)
-    ax.set_ylim(-0.42, 1.58)
+    ax.set_ylim(-0.40, 2.30)
     ax.get_yaxis().set_visible(False)
     ax.set_xticks([0, 25, 50, 75, 100])
     ax.set_xticklabels(["0%", "25%", "50%", "75%", "100%"])
