@@ -59,10 +59,11 @@ BACKGROUND = (
 BOUNDS = (
     "Limitations\n"
     "•  Coverage is uneven. OpenStreetMap supplies 83% of Virginia's records "
-    "but 48% of California's, so state contrasts partly reflect who mapped "
-    "them.\n"
+    "against 48% of California's, so state contrasts partly reflect who "
+    "mapped them.\n"
     "•  Hail and wind reports rise with population density (Spearman 0.39 and "
-    "0.34 within state), so we excluded both.\n"
+    "0.34), so we excluded both. Lightning, tornado and cyclone rates are "
+    "computed but not folded in.\n"
     "•  No open source lists power capacity, so a small suite counts the same "
     "as a large campus.\n"
     "•  40 sites shown as clear sit outside FEMA's mapped extent and 8 outside "
@@ -72,8 +73,10 @@ METHODS = (
     "We merged OpenStreetMap, PeeringDB and Wikidata into one row per site "
     "across the contiguous US, logging all 194 merges with their evidence.\n"
     "Every coordinate was checked against FEMA USA Structures footprints. "
-    "1,681 fall inside a building, 993 match the nearest, 22 have no match. "
-    "Wildfire buffers use an equal-area projection, the rest are point queries:"
+    "1,681 fall inside a building, 993 match the nearest, 22 have no match, and "
+    "we reviewed 1,150 against satellite imagery by hand.\n"
+    "Our first seismic layer failed validation (22 of 150 test sites within "
+    "10%, median bias +32%), so we replaced it with per-facility queries:"
 )
 METHODS_TABLE = [
     ("Earthquake", "USGS ASCE 7-22, MCE_G PGA, site class BC"),
@@ -85,8 +88,8 @@ METHODS_TABLE = [
 METHODS_TAIL = (
     "A site counts as exposed if it lies within 2.4 km of land rated High or "
     "Very High for wildfire, inside a FEMA Special Flood Hazard Area, or at "
-    "MCE_G peak ground acceleration of 0.30 g or above. Where a layer has no "
-    "value there, the site is recorded as unknown, not as safe."
+    "MCE_G peak ground acceleration of 0.30 g or above. A missing value is "
+    "recorded as unknown, not safe."
 )
 
 STATS = [("2,696", "facilities mapped"), ("35%", "face a mapped hazard"),
@@ -357,12 +360,12 @@ def main() -> None:
 
     ty = my + mh + 0.10
     for name, src in METHODS_TABLE:
-        panel(slide, mx + 0.05, ty, mw - 0.10, 0.68)
-        new_text(slide, mx + 0.20, ty + 0.02, 3.20, 0.64, name, 24, bold=True,
+        panel(slide, mx + 0.05, ty, mw - 0.10, 0.64)
+        new_text(slide, mx + 0.20, ty + 0.01, 3.20, 0.62, name, 23, bold=True,
                  anchor=MSO_ANCHOR.MIDDLE)
-        new_text(slide, mx + 3.45, ty + 0.02, mw - 3.70, 0.64, src, 22,
+        new_text(slide, mx + 3.45, ty + 0.01, mw - 3.70, 0.62, src, 21,
                  colour=DGREY, anchor=MSO_ANCHOR.MIDDLE)
-        ty += 0.77
+        ty += 0.72
     new_text(slide, mx, ty + 0.10, mw, fit_height(METHODS_TAIL, BODY_PT, mw),
              METHODS_TAIL, BODY_PT)
 
