@@ -184,47 +184,81 @@ def fig_states(d: pd.DataFrame) -> None:
     mid = (g["pct"] >= 10) & (g["pct"] <= 60)
     mid_n, mid_share = int(mid.sum()), 100 * g.loc[mid, "n"].sum() / N
 
-    fig, ax = plt.subplots(figsize=(10.70, 3.25))
+    # Geometry is fixed up front because the packing below has to be done in
+    # POINTS, not data units. The axes are ~740 pt wide across 112 percentage
+    # points but only ~150 pt tall across the y range, so a data unit is worth
+    # roughly seven times more vertically than horizontally. An earlier version
+    # compared both against the same fudge factor and left dots overlapping.
+    FIG_W, FIG_H = 10.70, 3.15
+    L, R, B, T = 0.03, 0.995, 0.26, 0.85
+    AX_W_PT = (R - L) * FIG_W * 72.0
+    AX_H_PT = (T - B) * FIG_H * 72.0
+    X0, X1 = -6.0, 106.0
+
+    fig, ax = plt.subplots(figsize=(FIG_W, FIG_H))
     # Colour by which hazard drives the state, because "100%" means wildfire in
     # New Jersey and earthquake in California, and the poster should say so.
     drivers = g[["fire", "flood", "quake"]].idxmax(axis=1)
     cmap = {"fire": ORANGE, "flood": PURPLE, "quake": TEAL}
-    # Five states sit at exactly 0.00% and two at exactly 100%, so a single row
-    # stacks them: the larger dot shows around the smaller one and reads as a
-    # coloured ring that encodes nothing. Coincident points are offset upward in
-    # a beeswarm so every state is its own mark, largest at the baseline.
-    order = np.argsort(-g["n"].to_numpy())          # big dots settle first
+
+    # Five states sit at exactly 0.00% exposed and two at exactly 100%, so on a
+    # single row their marks are perfectly coincident: the larger dot shows
+    # around the smaller one and reads as a ring in a second colour, encoding
+    # nothing. Circles are packed largest-first, each dropped to the lowest free
+    # height, with the test done as a true circle-to-circle distance in points.
+    area = g["n"].to_numpy() * 0.80
+    dia = np.sqrt(area)                              # marker diameter, points
     xs = g["pct"].to_numpy()
-    dia = np.sqrt(g["n"].to_numpy() * 1.9)          # marker diameter in points
-    rows = np.zeros(n_all)
+    x_pt = (xs - X0) / (X1 - X0) * AX_W_PT
+    step = 3.0                                       # search granularity, points
+    y_pt = np.zeros(n_all)
     placed: list[tuple[float, float, float]] = []
-    for i in order:
-        lvl = 0.0
-        while any(abs(xs[i] - px) < (dia[i] + pd) * 0.052 and abs(lvl - py) < 0.26
-                  for px, py, pd in placed):
-            lvl += 0.26
-        rows[i] = lvl
-        placed.append((xs[i], lvl, dia[i]))
-    ax.scatter(xs, rows, s=g["n"] * 1.9, zorder=3,
+    for i in np.argsort(-area):                      # biggest settle first
+        lvl = dia[i] / 2.0                           # sit on the baseline
+        while any((x_pt[i] - qx) ** 2 + (lvl - qy) ** 2
+                  < ((dia[i] + qd) / 2.0 + 1.5) ** 2 for qx, qy, qd in placed):
+            lvl += step
+        y_pt[i] = lvl
+        placed.append((x_pt[i], lvl, dia[i]))
+
+    # Labels are placed ABOVE every packed dot, in two staggered bands, so a
+    # leader line never crosses a mark. Fixed pixel offsets put them inside the
+    # stacks once packing began lifting dots off the baseline.
+    stack_top_pt = max(y_pt[i] + dia[i] / 2.0 for i in range(n_all))
+    band = (stack_top_pt + 12.0, stack_top_pt + 42.0)
+    top_pt = band[1] + 21.0
+    Y1 = max(top_pt / AX_H_PT, 0.30)
+    ys = y_pt / AX_H_PT
+    ax.scatter(xs, ys, s=area, zorder=3,
                color=[GREY_MAP if p < 1 else cmap[k] for p, k in zip(g["pct"], drivers)],
                edgecolor="white", linewidth=1.4)
-    g = g.assign(_row=rows)
+    g = g.assign(_row=ys)
 
     # Labels sit in two staggered rows ABOVE the axis only. Placing some below
     # pushed them into the x-axis title, and a single row collided wherever two
     # states sat close together (OH 0.0% vs VA 0.7%, AZ 98.8% vs CA 100%).
-    label = ["VA", "TX", "FL", "NV", "WA", "OR", "AZ", "CA"]
-    for i, st in enumerate(sorted(label, key=lambda s: g.loc[s, "pct"])):
+    label = sorted(["VA", "TX", "FL", "NV", "WA", "OR", "AZ", "CA"],
+                   key=lambda s: g.loc[s, "pct"])
+    for i, st in enumerate(label):
+        # A label centred on its dot spans far enough to be crossed by the
+        # neighbouring band's leader line. Where two labelled states sit close
+        # together, the lower one is pushed away from the upper one.
+        x = g.loc[st, "pct"]
+        nb = [g.loc[o, "pct"] for j, o in enumerate(label)
+              if j != i and abs(j - i) == 1 and abs(g.loc[o, "pct"] - x) < 14]
+        shift = 0.0
+        if nb and i % 2 == 0:
+            shift = -9.0 if nb[0] > x else 9.0
         ax.annotate(f"{st}  n={int(g.loc[st, 'n'])}",
-                    (g.loc[st, "pct"], g.loc[st, "_row"]),
-                    xytext=(0, 82 if i % 2 == 0 else 38),
-                    textcoords="offset points", fontsize=20, color=INK,
+                    (x, g.loc[st, "_row"]),
+                    xytext=(x + shift, band[i % 2] / AX_H_PT),
+                    textcoords="data", fontsize=20, color=INK,
                     ha="center", va="bottom",
                     arrowprops=dict(arrowstyle="-", color="#c9c9c9", lw=1.1,
-                                    shrinkA=1, shrinkB=8))
+                                    shrinkA=1, shrinkB=7))
 
-    ax.set_xlim(-6, 106)
-    ax.set_ylim(-0.40, 2.30)
+    ax.set_xlim(X0, X1)
+    ax.set_ylim(-0.06 * Y1, Y1)
     ax.get_yaxis().set_visible(False)
     ax.set_xticks([0, 25, 50, 75, 100])
     ax.set_xticklabels(["0%", "25%", "50%", "75%", "100%"])
@@ -249,7 +283,7 @@ def fig_states(d: pd.DataFrame) -> None:
     for t in leg.get_texts():
         t.set_color(INK2)
 
-    fig.subplots_adjust(left=0.03, right=0.99, top=0.82, bottom=0.30)
+    fig.subplots_adjust(left=L, right=R, top=T, bottom=B)
     save_at(fig, "fig2_states", 11.79)
     plt.close(fig)
     print(f"  fig2_states.png  all {n_all} states, {mid_n} in the middle band")
