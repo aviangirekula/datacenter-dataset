@@ -135,8 +135,7 @@ CITATIONS = (
 ACK = (
     "This research was made possible through the support of George Mason "
     "University's College of Science, which supports the ASSIP Program, and by "
-    "the NCAR multi-hazards project.\n"
-    "Data and code: github.com/aviangirekula/datacenter-dataset"
+    "the NCAR multi-hazards project."
 )
 
 
