@@ -191,7 +191,10 @@ def fit_height(txt: str, size_pt: float, width_in: float,
     """
     total = 0.0
     for para in txt.split("\n"):
-        n = wrapped_lines(para, size_pt, width_in - 2 * TB_MARGIN_IN, bold=bold)
+        usable = width_in - 2 * TB_MARGIN_IN
+        if para.lstrip().startswith("\u2022"):
+            usable -= size_pt * 1.05 / 72.0     # hanging indent set by _bullet()
+        n = wrapped_lines(para, size_pt, usable, bold=bold)
         total += n * size_pt * ARIAL_LINE * spacing / 72.0 + space_after_pt / 72.0
     return total + 2 * 0.05 + 0.18          # frame margins, then a little slack
 
