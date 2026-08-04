@@ -222,7 +222,9 @@ def fig_confidence(d: pd.DataFrame) -> None:
     ys = [100 * v["mean_whp_change_prob"] for v in tiers.values()]
     ns = [v["n"] for v in tiers.values()]
     order = np.argsort(xs)
-    xs = [xs[i] for i in order]; ys = [ys[i] for i in order]; ns = [ns[i] for i in order]
+    xs = [xs[i] for i in order]
+    ys = [ys[i] for i in order]
+    ns = [ns[i] for i in order]
     ax2.bar(range(len(xs)), ys, width=0.62, color=BLUE, zorder=3)
     for i, v in enumerate(ys):
         # n dropped: it collided with the tick labels and adds nothing the
