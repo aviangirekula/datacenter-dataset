@@ -200,6 +200,29 @@ choice would be wrong either way, so both are recorded and the analysis picks.
 Widening the search from 200 m to 800 m cut misses from 256 to 22 and did not
 change any containment result, which is the expected self-consistency check.
 
+## Storm reporting bias, measured
+
+`scripts/storm_bias_diagnostic.py` quantifies how much each storm rate tracks
+observer density rather than weather, using the count of other data centers
+within 40 km as a population proxy and de-meaning both variables by state median
+so regional climatology is held roughly constant.
+
+| Hazard | Within-state association | Verdict |
+|---|---|---|
+| Tornado | +0.086 | weak, the rate is usable |
+| Hail | **+0.388** | **contaminated** |
+| Wind | **+0.340** | **contaminated** |
+
+So the significant-tornado rate is defensible for cross-region comparison, and
+the hail and wind rates are not: a meaningful share of their variation is where
+people live rather than where storms occur. State-level or national aggregates
+of hail and wind should carry that caveat explicitly, and facility-to-facility
+comparison of those two should be avoided.
+
+Fixing this needs a radar-derived gridded product such as a MESH hail
+climatology. It is not reachable from the NCEI point service: a 25-year
+per-facility climatology would take roughly 800,000 queries.
+
 ## Not yet included
 
 (Flood, storm and tropical-cyclone hazards are now included, see above.)

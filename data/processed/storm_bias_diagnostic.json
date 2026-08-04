@@ -1,0 +1,27 @@
+{
+  "proxy": "count of other data centers within 40 km, standing in for population and observer density",
+  "method": "Spearman correlation between storm rate and the proxy, both de-meaned by state median, so regional climatology is held roughly constant",
+  "n_facilities": 2696,
+  "hazards": {
+    "tornado": {
+      "column": "tornado_density_per_10k_km2_yr",
+      "spearman_raw": -0.085,
+      "spearman_within_state": 0.086,
+      "p_within_state": 8.2501325868434e-06
+    },
+    "hail": {
+      "column": "hail_density_per_10k_km2_yr",
+      "spearman_raw": 0.062,
+      "spearman_within_state": 0.388,
+      "p_within_state": 1.325908240988097e-97
+    },
+    "wind": {
+      "column": "wind_density_per_10k_km2_yr",
+      "spearman_raw": 0.232,
+      "spearman_within_state": 0.34,
+      "p_within_state": 4.633421764723552e-74
+    }
+  },
+  "conclusion": "Strongest within-state association is +0.388 for hail_density_per_10k_km2_yr. Values above about 0.3 mean the rate is partly measuring where people live rather than where storms occur, so cross-region comparisons of that hazard should be avoided or explicitly caveated.",
+  "fix_requires": "A radar-derived gridded product (e.g. MESH-based hail climatology). Not reachable via the NCEI SWDI point service: a 25-year per-facility climatology would need roughly 800,000 queries."
+}
