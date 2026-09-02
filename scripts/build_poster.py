@@ -42,7 +42,7 @@ BODY_PT = 26          # the template's own body size
 BOTTOM = 26.54        # where the template's own content boxes end
 
 TITLE = "A Multi-Hazard Assessment of 2,696 US Data Centers"
-AUTHORS = "Avilash Angirekula¹, Dennies Bor¹, Edward J. Oughton¹"
+AUTHORS = "Avilash Angirekula¹, Dennies Bor¹, Alice Fox¹, Edward J. Oughton¹"
 AFFIL = ("¹Department of Geography and Geoinformation Sciences, "
          "College of Science, George Mason University")
 
@@ -140,12 +140,20 @@ CITATIONS = (
     "Assessment of the US High-Voltage Transmission Network. Zenodo. "
     "doi:10.5281/zenodo.20331026 (CC BY 4.0)\n"
     "FEMA and ORNL (2024) USA Structures. gis.fema.gov\n"
-    "WRI (2023) Aqueduct 4.0 Water Risk Atlas."
+    "WRI (2023) Aqueduct 4.0 Water Risk Atlas.\n"
+    # Required credit for the Fig 1 tiles, in Esri's own wording.
+    "Fig 1 basemap: Esri Light Gray Canvas. Tiles © Esri, DeLorme, NAVTEQ."
 )
 ACK = (
     "This research was made possible through the support of George Mason "
-    "University's College of Science, which supports the ASSIP Program, and by "
-    "the NCAR multi-hazards project."
+    "University's College of Science, which supports the ASSIP Program.\n"
+    # Wording supplied verbatim by E. Oughton, 2026-08-04. Do not paraphrase.
+    # It replaces the old trailing "and by the NCAR multi-hazards project",
+    # which named the same grant vaguely.
+    "DB and EO were supported by the National Science Foundation National "
+    "Center for Atmospheric Research (NCAR) Innovator Supplemental Funding "
+    "grant entitled “A Multi-Hazard, Multi-Infrastructure Vulnerability "
+    "Assessment for the Continental United States (CONUS)”"
 )
 
 
@@ -403,7 +411,10 @@ def main() -> None:
     cap = ("Fig 1. One third of US data centers face a mapped hazard. Of the 205 "
            "facing two or more (orange), California holds 119, with smaller "
            "clusters in Utah, Nevada and New Jersey.")
-    ch = fit_height(cap, 22, rw)
+    # bold=True matters: bold Arial is wider, so measuring the regular face sizes
+    # the box for one line fewer than the caption actually takes. That is what
+    # spilled the Fig 2 caption out of its box.
+    ch = fit_height(cap, 22, rw, bold=True)
     new_text(slide, rx, y, rw, ch, cap, 22, bold=True)
     y += ch + 0.10
 
@@ -416,7 +427,8 @@ def main() -> None:
     y += fig_height("fig2_states", rw) + 0.06
     cap = ("Fig 2. The fleet piles up at both ends. Colour shows which hazard "
            "drives each state.")
-    new_text(slide, rx, y, rw, fit_height(cap, 22, rw), cap, 22, bold=True)
+    new_text(slide, rx, y, rw, fit_height(cap, 22, rw, bold=True), cap, 22,
+             bold=True)
 
     # ---- column 3: Conclusions, then the null results and the QA figure ----
     co = find(slide, "Describe the key conclusions")
@@ -436,7 +448,8 @@ def main() -> None:
                              Inches(y), width=Inches(cw))
     y += fig_height("fig3_confidence", cw) + 0.04
     cap = "Fig 3. Wildfire class under coordinate error."
-    new_text(slide, cx, y, cw, fit_height(cap, 22, cw), cap, 22, bold=True)
+    new_text(slide, cx, y, cw, fit_height(cap, 22, cw, bold=True), cap, 22,
+             bold=True)
 
     # ---- column 3: citations and acknowledgements, edited in place ----
     ci = find(slide, "Enter citations here")

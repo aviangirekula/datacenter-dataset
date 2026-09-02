@@ -2,9 +2,12 @@
 
 Each figure is created at the physical dimensions it will occupy on a 36 x 27
 inch poster. Export trims to the ink, so each figure lands at its own scale on
-the sheet and a nominal point size is not the printed size. Nominal sizes here
-are set so the measured printed size clears the template's 20 pt floor; see the
-check at the end of main(), which fails the build if any figure drops below it.
+the sheet and a nominal point size is not the printed size. save_at() resamples
+every figure to its exact placed width, which makes nominal pt equal printed pt,
+so keeping every label at 20 pt or above here clears the template's 20 pt floor.
+
+Figure 1 sits on CARTO Positron tiles, fetched once and cached under
+data/hazards/basemap/. See basemap_tiles() for why that source and not Esri.
 
 Hazard flags, all source-anchored rather than quantile-defined:
 - wildfire: USFS WHP class 4 or 5 (High / Very High) within 2.4 km
@@ -87,7 +90,13 @@ def load() -> pd.DataFrame:
     return d
 
 
-def basemap():
+def state_lines():
+    """State outlines, dissolved from TIGER counties.
+
+    Drawn over the tiles rather than instead of them. Positron carries its own
+    state boundaries but they are close to invisible at three feet, which is the
+    distance this poster is read from.
+    """
     county = REPO / "data" / "raw" / "tiger" / "tl_2024_us_county.shp"
     if not county.exists():
         return None
@@ -96,13 +105,67 @@ def basemap():
     return g.dissolve(by="STATEFP").to_crs("EPSG:5070")
 
 
+# Fetched once and cached, so a figure rebuild needs no network and the poster
+# stays reproducible offline. Delete the .tif to refetch.
+BASEMAP_TIF = REPO / "data" / "hazards" / "basemap" / "conus_esri_gray_z7_5070.tif"
+# Deliberately wider than CONUS. warp_tiles turns the Web Mercator square into a
+# curved quadrilateral in Albers, so a tight fetch leaves blank corners inside
+# the axes.
+BASEMAP_BOUNDS = (-128.0, 21.0, -63.0, 52.5)
+BASEMAP_ZOOM = 7
+# Esri's own attribution string for this service, as xyzservices carries it.
+BASEMAP_CREDIT = "Basemap: Esri Light Gray Canvas. Tiles (C) Esri, DeLorme, NAVTEQ"
+
+
+def basemap_tiles():
+    """Return (rgb_array, extent) for the CONUS basemap in EPSG:5070.
+
+    Esri Light Gray Canvas, the same World_Light_Gray_Base service the ArcGIS
+    Basemap gallery serves, because the poster is read by GIS people who will
+    recognise it. Its one cost is that state names are baked into the tiles well
+    below the template's 20 pt floor and cannot be switched off. CARTO Positron
+    no-labels is the alternative if that ever becomes a problem.
+    """
+    import rasterio
+    from rasterio.transform import from_bounds
+
+    if BASEMAP_TIF.exists():
+        with rasterio.open(BASEMAP_TIF) as src:
+            b = src.bounds
+            return np.dstack(src.read([1, 2, 3])), (b.left, b.right, b.bottom, b.top)
+
+    import contextily as cx
+    import xyzservices.providers as xyz
+
+    w, s, e, n = BASEMAP_BOUNDS
+    img, ext = cx.bounds2img(w, s, e, n, zoom=BASEMAP_ZOOM,
+                             source=xyz.Esri.WorldGrayCanvas, ll=True)
+    img, ext = cx.warp_tiles(img, ext, t_crs="EPSG:5070")
+    rgb = img[:, :, :3]
+    BASEMAP_TIF.parent.mkdir(parents=True, exist_ok=True)
+    with rasterio.open(
+        BASEMAP_TIF, "w", driver="GTiff", height=rgb.shape[0], width=rgb.shape[1],
+        count=3, dtype="uint8", crs="EPSG:5070", compress="deflate",
+        transform=from_bounds(ext[0], ext[2], ext[1], ext[3],
+                              rgb.shape[1], rgb.shape[0]),
+    ) as dst:
+        for i in range(3):
+            dst.write(rgb[:, :, i], i + 1)
+    print(f"    fetched basemap -> {BASEMAP_TIF.relative_to(REPO)} "
+          f"({rgb.shape[1]}x{rgb.shape[0]} px)")
+    return rgb, ext
+
+
 # --- Figure 1: the map ---------------------------------------------------------
 
 def fig_map(d: pd.DataFrame) -> None:
     fig, ax = plt.subplots(figsize=(10.70, 6.00))
-    base = basemap()
+    tiles, extent = basemap_tiles()
+    ax.imshow(tiles, extent=extent, zorder=1, interpolation="bilinear")
+    base = state_lines()
     if base is not None:
-        base.plot(ax=ax, color="#f4f4f2", edgecolor="white", linewidth=0.8, zorder=1)
+        base.plot(ax=ax, facecolor="none", edgecolor="#8d9298", linewidth=0.9,
+                  zorder=1.5)
 
     pts = gpd.GeoDataFrame(
         d, geometry=gpd.points_from_xy(d["longitude"], d["latitude"]),
@@ -121,6 +184,14 @@ def fig_map(d: pd.DataFrame) -> None:
         sel.plot(ax=ax, color=colour, markersize=size, zorder=2 + n,
                  linewidth=0.5 if n == 2 else 0,
                  edgecolor="white" if n == 2 else "none")
+
+    # The tile mosaic is deliberately wider than CONUS, so the frame has to be
+    # set from the land rather than left to the image extent.
+    if base is not None:
+        xmin, ymin, xmax, ymax = base.total_bounds
+        padx, pady = 0.02 * (xmax - xmin), 0.03 * (ymax - ymin)
+        ax.set_xlim(xmin - padx, xmax + padx)
+        ax.set_ylim(ymin - pady, ymax + pady)
     ax.set_axis_off()
 
     counts = [int((d["n_haz"] == 0).sum()), int((d["n_haz"] == 1).sum()),
@@ -205,7 +276,11 @@ def fig_states(d: pd.DataFrame) -> None:
         for k in keys:
             stacks[k].append(int(g.loc[sel & (drivers == k), "n"].sum()))
 
-    fig, ax = plt.subplots(figsize=(10.70, 3.55))
+    # 3.20, not 3.55: the Fig 2 caption takes two bold lines, and at 3.55 the
+    # second one ran past the template's 26.54 in content bottom. Height is the
+    # only lever here that costs no words and no font size, because save_at
+    # normalises on width, so the printed point size is unchanged by this.
+    fig, ax = plt.subplots(figsize=(10.70, 3.20))
     x = edges[:-1] + 5
     bottom = np.zeros(len(x))
     for k in keys:

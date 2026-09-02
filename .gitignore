@@ -28,3 +28,7 @@ data/hazards/
 data/raw/buildings/
 
 data/hazards/water/
+
+# Manuscript draft. Kept local and shared directly with co-authors rather than
+# published in the repo, so an unfinished draft is not public.
+/paper/
