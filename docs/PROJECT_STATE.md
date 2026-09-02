@@ -68,6 +68,11 @@ pip install -r requirements.txt
 # lint (configured in pyproject.toml, line-length 100)
 ./.venv/bin/python -m ruff check src/ scripts/ tests/
 
+# everything below, in dependency order, resumable
+./run_all.sh
+./run_all.sh --verify        # inputs present and checksummed, then stop
+./run_all.sh --no-poster     # data and analysis only
+
 # hazard layers: download with checksum verification, then build
 ./.venv/bin/python scripts/fetch_hazard_data.py
 ./.venv/bin/python scripts/fetch_hazard_data.py --verify
@@ -80,6 +85,10 @@ pip install -r requirements.txt
 
 # authoritative seismic (USGS ASCE 7-22, one call per facility, resumable)
 ./.venv/bin/python scripts/fetch_seismic_authoritative.py
+
+# NSHM hazard curves -> PGA at 475 / 975 / 2475 yr (resumable, paced at 1.1 s
+# per request because the service caps at 300 requests per 5 minutes)
+./.venv/bin/python scripts/fetch_seismic_nshm.py
 
 # analyses
 ./.venv/bin/python scripts/build_footprint_hazard.py
@@ -116,6 +125,8 @@ collector degrades gracefully without it.
 - `scripts/fetch_hazard_data.py` — hazard layers with URLs, byte sizes, MD5s, DOIs, licences; `--verify`
 - `scripts/fetch_building_attributes.py` — USA Structures + FEMA NFHL per facility, cached JSONL keyed by radius
 - `scripts/fetch_seismic_authoritative.py` — USGS ASCE 7-22 per facility, cached JSONL
+- `scripts/fetch_seismic_nshm.py` — USGS NSHM static hazard curves per facility, log-log
+  interpolated to the 475 / 975 / 2475 yr levels, cached JSONL
 
 **Builders / analyses**
 - `scripts/build_hazard_exposure.py` — seismic, lightning, wildfire + WUI buffers, authoritative seismic merge

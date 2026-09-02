@@ -21,6 +21,12 @@ python-dotenv>=1.0
 # Entity resolution (fuzzy name matching)
 rapidfuzz>=3.9
 
+# Poster figures
+matplotlib>=3.8
+Pillow>=10.0           # Arial glyph metrics for poster box fitting (scripts/build_poster)
+python-pptx>=0.6.23
+contextily>=1.6        # Figure 1 basemap tiles, fetched once then cached as GeoTIFF
+
 # Dev / quality
 pytest>=8.0
 ruff>=0.5

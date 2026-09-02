@@ -57,12 +57,41 @@ SOURCES.md         prioritized source list with access + licensing notes
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate   # tested on 3.13
+
+# reproducing published numbers: exact pins
+pip install -r requirements-lock.txt
+
+# developing: loose ranges
 pip install -r requirements.txt          # geopandas pulls GDAL; may take a minute
+
 cp .env.example .env                      # optional; no key needed for defaults
 pytest                                    # run unit tests
 ```
 
+`requirements-lock.txt` is a `pip freeze` of the environment every number in
+`data/processed/` was computed with. Use it when the goal is to reproduce
+results rather than to develop.
+
 ## How to run
+
+Everything, in dependency order:
+
+```bash
+./run_all.sh
+```
+
+```bash
+./run_all.sh --verify      # check inputs are present and checksummed, then stop
+./run_all.sh --no-poster   # data and analysis only
+```
+
+Allow several hours cold. Almost all of it is network: two of the steps make one
+request per facility for 2,696 facilities, and the USGS hazard-curve service
+caps at 300 requests per 5 minutes. Every fetch step is resumable, so an
+interrupted run can be restarted with the same command. Do not run two copies at
+once, since the caches are append-only and unlocked.
+
+The individual steps, if you want to run one on its own:
 
 ```bash
 python -m dcdata.pipeline                 # rebuild the facility dataset
@@ -72,12 +101,17 @@ python scripts/fetch_hazard_data.py
 python scripts/fetch_hazard_data.py --verify
 python scripts/build_hazard_exposure.py
 
+# per-facility seismic services (both resumable)
+python scripts/fetch_seismic_authoritative.py   # ASCE 7-22, 2,475 yr
+python scripts/fetch_seismic_nshm.py            # NSHM curves, 475/975/2,475 yr
+
 # buildings, flood, storms, water, and the analyses
 python scripts/fetch_building_attributes.py
 python scripts/build_building_attributes.py
 python scripts/build_footprint_hazard.py
 python scripts/build_storm_exposure.py
 python scripts/build_water_stress.py
+python scripts/storm_bias_diagnostic.py
 PYTHONPATH=src python scripts/coordinate_uncertainty.py --draws 500
 python scripts/validate_seismic.py --n 150
 ```

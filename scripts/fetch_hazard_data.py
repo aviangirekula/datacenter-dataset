@@ -89,6 +89,31 @@ LAYERS = [
                       / "whp2023_cls_conus.tif",
         "note": "Source filename RDS-2015-0047-4_Data.zip.",
     },
+    {
+        "key": "water_stress_aqueduct",
+        "title": "WRI Aqueduct 4.0 Water Risk Atlas, baseline annual "
+                 "indicators on hydrological basin polygons",
+        "citation": "Kuzma, S., Bierkens, M. F. P., Lakshman, S., Luo, T., "
+                    "Saccoccia, L., Sutanudjaja, E. H., & Van Beek, R. (2023). "
+                    "Aqueduct 4.0: Updated Decision-Relevant Global Water Risk "
+                    "Indicators. World Resources Institute technical note.",
+        "doi": "10.46830/writn.23.00061",
+        "licence": "CC BY 4.0",
+        "url": "https://files.wri.org/aqueduct/aqueduct-4-0-water-risk-data.zip",
+        "archive": DEST / "water" / "aqueduct40.zip",
+        "bytes": 261_527_511,
+        "md5": "8ec90bb20de66437ee03b9ac50ea5984",
+        "extract": ["unzip", "-o", "-q"],
+        "extract_into": DEST / "water",
+        "check_path": DEST / "water"
+                      / "Aqueduct40_waterrisk_download_Y2023M07D05" / "GDB"
+                      / "Aq40_Y2023D07M05.gdb",
+        "note": "build_water_stress.py globs data/hazards/water for *.gdb and "
+                "reads the baseline_annual layer. The DOI is the methodology "
+                "technical note, since the data release itself carries none. "
+                "Global coverage, so the archive is large relative to the one "
+                "layer used.",
+    },
 ]
 
 
