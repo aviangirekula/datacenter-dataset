@@ -40,6 +40,7 @@ OUT_CSV = REPO / "data" / "processed" / "hazard_exposure.csv"
 OUT_JSON = REPO / "data" / "processed" / "hazard_exposure_coverage.json"
 # Authoritative per-point seismic values from the USGS ASCE 7-22 service.
 SEISMIC_POINTS = REPO / "data" / "raw" / "seismic_points_multilevel.jsonl"
+SEISMIC_NSHM = REPO / "data" / "raw" / "seismic_nshm_curves.jsonl"
 
 # Positional-accuracy fields carried into the exposure table. Hazard values are
 # only as good as the coordinate they were sampled at.
@@ -258,6 +259,68 @@ def main() -> None:
         }
         print(f"  [ok]   seismic USGS point service  measured {k}/{n} "
               f"(replaces contour magnitudes at 2475 yr)")
+
+    # --- NSHM hazard curves, replacing the contour-sampled 475 and 975 yr -------
+    # The ASCE 7-22 service above reports one hazard level, so 475 and 975 yr
+    # stayed contour-derived and approximate. These come off the NSHM's own PGA
+    # hazard curve at each facility, interpolated to 1/475 and 1/975 annual
+    # exceedance. All three NSHM levels come from one curve, so unlike the
+    # previous mix they are internally consistent with each other.
+    if SEISMIC_NSHM.exists():
+        lv: dict[str, dict] = {}
+        with open(SEISMIC_NSHM) as fh:
+            for line in fh:
+                try:
+                    r = json.loads(line)
+                except Exception:  # noqa: BLE001
+                    continue
+                if not r.get("error"):
+                    lv[str(r["facility_id"])] = r      # last good row wins
+        fid = out["facility_id"].astype(str)
+        for rp in (475, 975, 2475):
+            out[f"haz_seismic_pga_g_{rp}yr_nshm"] = fid.map(
+                lambda f, p=rp: lv.get(f, {}).get(f"pga_g_{p}yr"))
+        k475 = int(out["haz_seismic_pga_g_475yr_nshm"].notna().sum())
+        k975 = int(out["haz_seismic_pga_g_975yr_nshm"].notna().sum())
+
+        # Agreement between the NSHM's own 2,475 yr level and the ASCE 7-22
+        # value. These are not required to match: ASCE 7-22 is a design-code
+        # product built on an earlier model revision. Recording the spread makes
+        # the vintage difference measurable instead of hidden.
+        cmp_note = None
+        if "haz_seismic_pga_g_2475yr_usgs" in out:
+            a = pd.to_numeric(out["haz_seismic_pga_g_2475yr_usgs"], errors="coerce")
+            b = pd.to_numeric(out["haz_seismic_pga_g_2475yr_nshm"], errors="coerce")
+            both = a.notna() & b.notna() & (a > 0)
+            if int(both.sum()):
+                rel = ((b[both] - a[both]) / a[both] * 100)
+                cmp_note = {
+                    "n_compared": int(both.sum()),
+                    "median_rel_diff_pct": round(float(rel.median()), 2),
+                    "within_10pct": int((rel.abs() <= 10).sum()),
+                    "within_25pct": int((rel.abs() <= 25).sum()),
+                }
+        cov["seismic_nshm"] = {
+            "columns": [f"haz_seismic_pga_g_{rp}yr_nshm" for rp in (475, 975, 2475)],
+            "measured_475": k475, "measured_975": k975, "total": n,
+            "source": "USGS NSHM conus-2023.R2 static hazard curves, "
+                      "NEHRP site class BC, log-log interpolated to 1/N",
+            "supersedes": ["haz_seismic_pga_g_475yr", "haz_seismic_pga_g_975yr"],
+            "nshm_vs_asce7_at_2475yr": cmp_note,
+            "note": "The plain haz_seismic_pga_g_475yr / _975yr columns are the "
+                    "old contour samples and are kept only for comparison. Use "
+                    "the _nshm columns. A null means the return period fell "
+                    "outside the tabulated curve at that site, which is not the "
+                    "same as zero hazard.",
+        }
+        print(f"  [ok]   seismic NSHM curves  475yr {k475}/{n}, 975yr {k975}/{n}"
+              + (f"  |  vs ASCE 7-22 at 2475yr: median "
+                 f"{cmp_note['median_rel_diff_pct']:+.1f}%, "
+                 f"{cmp_note['within_25pct']}/{cmp_note['n_compared']} within 25%"
+                 if cmp_note else ""))
+    else:
+        skipped.append("seismic_nshm")
+        print("  [skip] seismic NSHM  cache missing, run fetch_seismic_nshm.py")
 
     # --- QA flag: coordinates that landed on water ------------------------------
     if "haz_wildfire_whp_code" in out:

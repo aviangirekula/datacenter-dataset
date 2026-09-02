@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-03",
-  "git_commit": "89f4425-dirty",
+  "generated": "2026-08-06",
+  "git_commit": "2d95897-dirty",
   "n_facilities": 2696,
   "source_table": "data/processed/datacenters_final.csv",
   "hazards": {
@@ -66,6 +66,28 @@
         "bse_1e": "20% in 50 yr (~225 yr), spectral acceleration only"
       },
       "note": "Authoritative PGA is available only at the 2% in 50 yr (~2475 yr) level. No public point service returns PGA at 475 or 975 yr, so those two columns remain contour-derived and are APPROXIMATE: across all 2,696 facilities the contour method agreed with the authoritative value within 10% for only 425 (16%). ASCE 41 spectral accelerations at ~975 yr and ~225 yr are provided as the authoritative multi-level alternative."
+    },
+    "seismic_nshm": {
+      "columns": [
+        "haz_seismic_pga_g_475yr_nshm",
+        "haz_seismic_pga_g_975yr_nshm",
+        "haz_seismic_pga_g_2475yr_nshm"
+      ],
+      "measured_475": 2696,
+      "measured_975": 2696,
+      "total": 2696,
+      "source": "USGS NSHM conus-2023.R2 static hazard curves, NEHRP site class BC, log-log interpolated to 1/N",
+      "supersedes": [
+        "haz_seismic_pga_g_475yr",
+        "haz_seismic_pga_g_975yr"
+      ],
+      "nshm_vs_asce7_at_2475yr": {
+        "n_compared": 2696,
+        "median_rel_diff_pct": 29.74,
+        "within_10pct": 311,
+        "within_25pct": 1098
+      },
+      "note": "The plain haz_seismic_pga_g_475yr / _975yr columns are the old contour samples and are kept only for comparison. Use the _nshm columns. A null means the return period fell outside the tabulated curve at that site, which is not the same as zero hazard."
     }
   },
   "skipped_layers": [],

@@ -207,3 +207,89 @@ def test_footprint_burnable_codes_exclude_nominal_classes():
     assert set(fp.WHP_BURNABLE) == {1, 2, 3, 4, 5}
     assert 6 not in fp.WHP_BURNABLE  # developed
     assert 7 not in fp.WHP_BURNABLE  # open water
+
+
+# --- NSHM hazard-curve interpolation -------------------------------------------
+
+def _nshm():
+    return _load("fetch_seismic_nshm")
+
+
+def _synthetic_curve():
+    """A power-law hazard curve, so the exact answer is known analytically.
+
+    With y = 1e-3 * x**-2, the ground motion at annual frequency y is
+    x = (y / 1e-3) ** (-1/2). Log-log interpolation is exact on a power law,
+    which is precisely why hazard curves are read this way.
+    """
+    xs = [0.01 * 1.5 ** i for i in range(20)]
+    ys = [1e-3 * x ** -2 for x in xs]
+    return xs, ys
+
+
+def test_levels_from_curve_matches_power_law_closed_form():
+    m = _nshm()
+    xs, ys = _synthetic_curve()
+    got = m.levels_from_curve(xs, ys)
+    for rp in (475, 975, 2475):
+        expected = ((1.0 / rp) / 1e-3) ** (-0.5)
+        assert got[f"pga_g_{rp}yr"] == pytest.approx(expected, rel=1e-6)
+
+
+def test_levels_from_curve_is_monotonic_in_return_period():
+    """A rarer level can never be weaker. This ordering is the whole point."""
+    m = _nshm()
+    xs, ys = _synthetic_curve()
+    got = m.levels_from_curve(xs, ys)
+    assert got["pga_g_475yr"] < got["pga_g_975yr"] < got["pga_g_2475yr"]
+
+
+def test_levels_from_curve_returns_none_outside_the_curve():
+    """Off the end of the curve the honest answer is unknown, not extrapolated.
+
+    A curve that never gets rarer than 1/100 per year carries no information
+    about the 475 year level, and inventing one by running off the end of a
+    log-log fit would fabricate a number.
+    """
+    m = _nshm()
+    xs = [0.01, 0.02, 0.04]
+    ys = [5e-1, 2e-1, 1e-2]          # min exceedance 1e-2, i.e. 100 yr
+    got = m.levels_from_curve(xs, ys)
+    assert got["pga_g_475yr"] is None
+    assert got["pga_g_2475yr"] is None
+
+
+def test_levels_from_curve_drops_zero_exceedance_points():
+    """Trailing zeros are common on real curves and log(0) is undefined."""
+    m = _nshm()
+    xs, ys = _synthetic_curve()
+    got_clean = m.levels_from_curve(xs, ys)
+    got_zeroed = m.levels_from_curve(xs + [10.0, 20.0], ys + [0.0, 0.0])
+    assert got_zeroed["pga_g_2475yr"] == pytest.approx(
+        got_clean["pga_g_2475yr"], rel=1e-9)
+
+
+def test_parse_surfaces_the_service_message_on_a_throttled_response():
+    """A 429 body has ``response`` as a string, not a list of curves.
+
+    Reading it as a list produced a batch of bare AttributeErrors that said
+    nothing about the cause, which is what this locks against.
+    """
+    m = _nshm()
+    body = {"status": "error",
+            "response": "Too many requests, limit is 300 requests per 5 minute window."}
+    with pytest.raises(ValueError, match="Too many requests"):
+        m.parse(body)
+
+
+def test_parse_reads_the_pga_curve_and_ignores_other_imts():
+    m = _nshm()
+    xs, ys = _synthetic_curve()
+    body = {"status": "success", "response": [
+        {"metadata": {"imt": {"value": "PGV"}}, "data": {"xs": [1.0], "ys": [1.0]}},
+        {"metadata": {"imt": {"value": "PGA"}}, "data": {"xs": xs, "ys": ys}},
+        {"metadata": {"imt": {"value": "SA1P0"}}, "data": {"xs": [1.0], "ys": [1.0]}},
+    ]}
+    got = m.parse(body)
+    assert got["xs"] == xs
+    assert got["pga_g_475yr"] == pytest.approx((1.0 / 475 / 1e-3) ** -0.5, rel=1e-6)
