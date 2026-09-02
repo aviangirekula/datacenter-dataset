@@ -21,6 +21,7 @@ so the assumption is visible and changeable in one place.
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 import numpy as np
@@ -184,6 +185,45 @@ def _parse_struct_line(line: str):
 _RANK = {"contains": 3, "nearest": 2, "none": 1, "fetch_error": 0}
 
 
+OSM_CACHE = REPO / "data" / "raw" / "osm" / "osm_datacenters.json"
+
+
+def osm_heights() -> dict:
+    """Building heights tagged directly in OpenStreetMap, keyed by facility_id.
+
+    USA Structures carries a height for only about half the buildings it
+    matches, so this recovers the handful of cases where an OSM mapper recorded
+    one and USA Structures did not. It is a measured tag, not an estimate, and
+    it is never used to overwrite a USA Structures value.
+
+    Only a bare number optionally followed by "m" is accepted. Tags such as
+    "12-15" or "40 ft" are skipped rather than guessed at.
+    """
+    if not OSM_CACHE.exists() or not DC_CSV.exists():
+        return {}
+    with open(OSM_CACHE) as fh:
+        elements = json.load(fh).get("elements", [])
+    by_osm_id = {}
+    for e in elements:
+        raw = (e.get("tags") or {}).get("height")
+        if not raw:
+            continue
+        m = re.match(r"^\s*([0-9]+(?:\.[0-9]+)?)\s*(?:m|meters?)?\s*$", str(raw))
+        if m:
+            by_osm_id[f"{e['type']}/{e['id']}"] = float(m.group(1))
+    if not by_osm_id:
+        return {}
+    dc = pd.read_csv(DC_CSV, low_memory=False)
+    out = {}
+    for fid, url in zip(dc["facility_id"], dc["source_url"]):
+        m = re.search(r"openstreetmap\.org/(node|way|relation)/(\d+)", str(url))
+        if m:
+            h = by_osm_id.get(f"{m.group(1)}/{m.group(2)}")
+            if h is not None:
+                out[str(fid)] = h
+    return out
+
+
 def load_structures() -> dict:
     """Merge every radius cache, keeping the strongest match per facility."""
     out: dict = {}
@@ -277,6 +317,17 @@ def main() -> None:
             return "high" if r["building_dist_m"] <= NEAR_CONFIDENT_M else "low"
         return None
     out["building_match_confidence"] = out.apply(_conf, axis=1)
+
+    # Fill height only where USA Structures has none. Provenance is recorded so a
+    # reader can tell the two apart rather than seeing one undifferentiated column.
+    osm_h = osm_heights()
+    if "height_m" in out and osm_h:
+        fid = out["facility_id"].astype(str)
+        out["height_source"] = np.where(out["height_m"].notna(), "usa_structures", None)
+        gap = out["height_m"].isna() & fid.isin(osm_h)
+        out.loc[gap, "height_m"] = fid[gap].map(osm_h)
+        out.loc[gap, "height_source"] = "openstreetmap_tag"
+        print(f"  [osm]  filled {int(gap.sum())} heights from OpenStreetMap tags")
 
     if "height_m" in out:
         out["multi_storey"] = np.where(
