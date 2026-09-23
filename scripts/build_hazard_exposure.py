@@ -41,6 +41,12 @@ OUT_JSON = REPO / "data" / "processed" / "hazard_exposure_coverage.json"
 # Authoritative per-point seismic values from the USGS ASCE 7-22 service.
 SEISMIC_POINTS = REPO / "data" / "raw" / "seismic_points_multilevel.jsonl"
 SEISMIC_NSHM = REPO / "data" / "raw" / "seismic_nshm_curves.jsonl"
+# 100 yr matches the FEMA flood layer's 1%-annual-chance basis, which is what
+# makes the two hazards comparable. The rest are the conventional design levels.
+NSHM_RETURN_PERIODS = (100, 200, 475, 975, 2475)
+# USFS annual burn probability, sampled on the same 2.4 km buffer as the WHP
+# criterion so the index and the probability are directly comparable.
+BURN_PROB = REPO / "data" / "raw" / "burn_probability" / "burn_probability.jsonl"
 
 # Positional-accuracy fields carried into the exposure table. Hazard values are
 # only as good as the coordinate they were sampled at.
@@ -276,10 +282,29 @@ def main() -> None:
                     continue
                 if not r.get("error"):
                     lv[str(r["facility_id"])] = r      # last good row wins
+        # The cache stores the whole curve, so any return period inside the
+        # tabulated range comes out of it without refetching. 100 yr is here so
+        # earthquake can be compared against the FEMA flood layer, which is a
+        # 1%-annual-chance event, on the same probability basis.
+        def level(rec: dict, rp: int):
+            xs, ys = rec.get("xs"), rec.get("ys")
+            if not xs or not ys:
+                return rec.get(f"pga_g_{rp}yr")     # pre-curve cache rows
+            x = np.asarray(xs, dtype=float)
+            y = np.asarray(ys, dtype=float)
+            keep = y > 0
+            x, y = x[keep], y[keep]
+            target = 1.0 / rp
+            if len(x) < 2 or target > y.max() or target < y.min():
+                return None                          # outside the curve, not zero
+            return float(np.exp(np.interp(np.log(target),
+                                          np.log(y)[::-1], np.log(x)[::-1])))
+
         fid = out["facility_id"].astype(str)
-        for rp in (475, 975, 2475):
+        for rp in NSHM_RETURN_PERIODS:
             out[f"haz_seismic_pga_g_{rp}yr_nshm"] = fid.map(
-                lambda f, p=rp: lv.get(f, {}).get(f"pga_g_{p}yr"))
+                lambda f, p=rp: level(lv.get(f, {}), p) if f in lv else None)
+        k100 = int(out["haz_seismic_pga_g_100yr_nshm"].notna().sum())
         k475 = int(out["haz_seismic_pga_g_475yr_nshm"].notna().sum())
         k975 = int(out["haz_seismic_pga_g_975yr_nshm"].notna().sum())
 
@@ -301,7 +326,9 @@ def main() -> None:
                     "within_25pct": int((rel.abs() <= 25).sum()),
                 }
         cov["seismic_nshm"] = {
-            "columns": [f"haz_seismic_pga_g_{rp}yr_nshm" for rp in (475, 975, 2475)],
+            "columns": [f"haz_seismic_pga_g_{rp}yr_nshm"
+                        for rp in NSHM_RETURN_PERIODS],
+            "measured_100": k100,
             "measured_475": k475, "measured_975": k975, "total": n,
             "source": "USGS NSHM conus-2023.R2 static hazard curves, "
                       "NEHRP site class BC, log-log interpolated to 1/N",
@@ -313,7 +340,8 @@ def main() -> None:
                     "outside the tabulated curve at that site, which is not the "
                     "same as zero hazard.",
         }
-        print(f"  [ok]   seismic NSHM curves  475yr {k475}/{n}, 975yr {k975}/{n}"
+        print(f"  [ok]   seismic NSHM curves  100yr {k100}/{n}, 475yr {k475}/{n}, "
+              f"975yr {k975}/{n}"
               + (f"  |  vs ASCE 7-22 at 2475yr: median "
                  f"{cmp_note['median_rel_diff_pct']:+.1f}%, "
                  f"{cmp_note['within_25pct']}/{cmp_note['n_compared']} within 25%"
@@ -321,6 +349,57 @@ def main() -> None:
     else:
         skipped.append("seismic_nshm")
         print("  [skip] seismic NSHM  cache missing, run fetch_seismic_nshm.py")
+
+    # --- Wildfire annual burn probability ---------------------------------------
+    # WHP is an ordinal index with no return period, so wildfire cannot be put on
+    # the same probability basis as flood (1% annual) or earthquake (2% in 50 yr).
+    # Burn probability is an annual probability, so return period = 1 / BP.
+    if BURN_PROB.exists():
+        bp: dict[str, dict] = {}
+        with open(BURN_PROB) as fh:
+            for line in fh:
+                try:
+                    r = json.loads(line)
+                except Exception:  # noqa: BLE001
+                    continue
+                if not r.get("error"):
+                    bp[str(r["facility_id"])] = r
+        fid = out["facility_id"].astype(str)
+        for col in ("bp_max_2400m", "bp_mean_2400m", "bp_return_period_yr"):
+            out[f"haz_wildfire_{col}"] = fid.map(
+                lambda f, c=col: bp.get(f, {}).get(c))
+        k = int(out["haz_wildfire_bp_max_2400m"].notna().sum())
+        exposed = out.get("haz_wildfire_max_severity_2400m")
+        note = None
+        if exposed is not None:
+            hi = (exposed >= 4).fillna(False)
+            rp = pd.to_numeric(out["haz_wildfire_bp_return_period_yr"],
+                               errors="coerce")
+            note = {
+                "median_return_period_yr_whp_exposed": (
+                    None if not hi.any() else round(float(rp[hi].median()), 1)),
+                "median_return_period_yr_not_whp_exposed": (
+                    None if hi.all() else round(float(rp[~hi].median()), 1)),
+            }
+        cov["wildfire_burn_probability"] = {
+            "columns": ["haz_wildfire_bp_max_2400m", "haz_wildfire_bp_mean_2400m",
+                        "haz_wildfire_bp_return_period_yr"],
+            "measured": k, "total": n,
+            "source": "USFS Wildfire Risk to Communities 2024, BP_CONUS 30 m, "
+                      "sampled via ArcGIS ImageServer over the 2.4 km buffer",
+            "units": "annual probability; return period is 1/BP in years",
+            "whp_vs_probability": note,
+            "note": "WHP measures hazard potential given a fire, burn probability "
+                    "measures how often fire occurs. They are not "
+                    "interchangeable and the states they rank highest differ.",
+        }
+        print(f"  [ok]   wildfire burn probability  measured {k}/{n}"
+              + (f"  |  median return period: WHP-exposed "
+                 f"{note['median_return_period_yr_whp_exposed']:,.0f} yr, "
+                 f"others {note['median_return_period_yr_not_whp_exposed']:,.0f} yr"
+                 if note and note['median_return_period_yr_whp_exposed'] else ""))
+    else:
+        skipped.append("wildfire_burn_probability")
 
     # --- QA flag: coordinates that landed on water ------------------------------
     if "haz_wildfire_whp_code" in out:

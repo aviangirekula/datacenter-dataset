@@ -316,7 +316,40 @@ def main() -> None:
         if r["building_match"] == "nearest":
             return "high" if r["building_dist_m"] <= NEAR_CONFIDENT_M else "low"
         return None
+    # A data center is not a house, a school or a barn. USA Structures gives an
+    # occupancy class for nearly every matched building, and where that class is
+    # implausible it is evidence the matcher grabbed the wrong structure. The
+    # distances bear this out: among nearest-matches, implausible classes sit at a
+    # median 175 m from the coordinate against 19 m for commercial and industrial.
+    #
+    # This flags every such case but only downgrades confidence for a nearest
+    # match, where the occupancy mismatch corroborates a guess that was already
+    # uncertain. A "contains" match puts the coordinate inside that polygon, which
+    # is stronger evidence than a class label, so those stay high and are flagged
+    # for review instead.
+    # An independent third check, from Microsoft's TEMPO building-density model.
+    # Where that model sees no building at all in its ~76 m pixel, the coordinate
+    # is very unlikely to be on a data center. It agrees with the evidence we
+    # already have: those facilities sit a median 192 m from their matched
+    # building against 0 m for the rest. Kept as a flag, not a deletion, and it
+    # is only loaded if the sampler has been run.
+    tempo_path = REPO / "data" / "processed" / "tempo_building_density.csv"
+    if tempo_path.exists():
+        tp = pd.read_csv(tempo_path)[["facility_id", "tempo_building_density"]]
+        out = out.merge(tp, on="facility_id", how="left")
+        out["qa_tempo_no_buildings"] = out["tempo_building_density"] == 0
+        print(f"  [qa]   {int(out['qa_tempo_no_buildings'].sum())} facilities where "
+              f"the TEMPO model sees no building in the pixel")
+
+    IMPLAUSIBLE_OCCUPANCY = {"Residential", "Education", "Agriculture"}
+    out["qa_occupancy_implausible"] = out["occupancy_class"].isin(
+        IMPLAUSIBLE_OCCUPANCY)
     out["building_match_confidence"] = out.apply(_conf, axis=1)
+    downgrade = out["qa_occupancy_implausible"] & (out["building_match"] == "nearest")
+    out.loc[downgrade, "building_match_confidence"] = "low"
+    print(f"  [qa]   {int(out['qa_occupancy_implausible'].sum())} matched to an "
+          f"implausible building type; {int(downgrade.sum())} nearest-matches "
+          f"downgraded to low confidence")
 
     # Fill height only where USA Structures has none. Provenance is recorded so a
     # reader can tell the two apart rather than seeing one undifferentiated column.

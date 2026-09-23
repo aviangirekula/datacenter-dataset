@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-06",
-  "git_commit": "2d95897-dirty",
+  "generated": "2026-09-23",
+  "git_commit": "9931a82-dirty",
   "n_facilities": 2696,
   "source_table": "data/processed/datacenters_final.csv",
   "hazards": {
@@ -69,10 +69,13 @@
     },
     "seismic_nshm": {
       "columns": [
+        "haz_seismic_pga_g_100yr_nshm",
+        "haz_seismic_pga_g_200yr_nshm",
         "haz_seismic_pga_g_475yr_nshm",
         "haz_seismic_pga_g_975yr_nshm",
         "haz_seismic_pga_g_2475yr_nshm"
       ],
+      "measured_100": 2601,
       "measured_475": 2696,
       "measured_975": 2696,
       "total": 2696,
@@ -88,6 +91,22 @@
         "within_25pct": 1098
       },
       "note": "The plain haz_seismic_pga_g_475yr / _975yr columns are the old contour samples and are kept only for comparison. Use the _nshm columns. A null means the return period fell outside the tabulated curve at that site, which is not the same as zero hazard."
+    },
+    "wildfire_burn_probability": {
+      "columns": [
+        "haz_wildfire_bp_max_2400m",
+        "haz_wildfire_bp_mean_2400m",
+        "haz_wildfire_bp_return_period_yr"
+      ],
+      "measured": 2630,
+      "total": 2696,
+      "source": "USFS Wildfire Risk to Communities 2024, BP_CONUS 30 m, sampled via ArcGIS ImageServer over the 2.4 km buffer",
+      "units": "annual probability; return period is 1/BP in years",
+      "whp_vs_probability": {
+        "median_return_period_yr_whp_exposed": 1428.6,
+        "median_return_period_yr_not_whp_exposed": 5000.0
+      },
+      "note": "WHP measures hazard potential given a fire, burn probability measures how often fire occurs. They are not interchangeable and the states they rank highest differ."
     }
   },
   "skipped_layers": [],

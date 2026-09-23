@@ -32,3 +32,10 @@ data/hazards/water/
 # Manuscript draft. Kept local and shared directly with co-authors rather than
 # published in the repo, so an unfinished draft is not public.
 /paper/
+
+# Large regenerable index downloads. Both are fetched by their own scripts and
+# are far too big to version: the TEMPO tile index is ~369 MB and the 3DEP EPT
+# boundary file ~8 MB. The small per-facility result caches they produce ARE
+# tracked, since those are the expensive part to recreate.
+data/raw/tempo/tile_index.gpkg
+data/raw/lidar/3dep_ept_boundaries.geojson

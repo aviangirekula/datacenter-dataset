@@ -8,8 +8,8 @@
   "height_measured": 1344,
   "height_threshold_m": 12.0,
   "match_confidence": {
-    "high": 2440,
-    "low": 234,
+    "high": 2299,
+    "low": 375,
     "nan": 22
   },
   "near_confident_m": 200.0,

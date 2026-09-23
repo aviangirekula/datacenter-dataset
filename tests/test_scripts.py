@@ -293,3 +293,58 @@ def test_parse_reads_the_pga_curve_and_ignores_other_imts():
     got = m.parse(body)
     assert got["xs"] == xs
     assert got["pga_g_475yr"] == pytest.approx((1.0 / 475 / 1e-3) ** -0.5, rel=1e-6)
+
+
+# --- burn probability scaling --------------------------------------------------
+
+def test_burn_probability_scale_matches_the_published_range():
+    """The service stores BP as U16 integers and documents a 0-0.14 CONUS range.
+
+    Its reported maximum is 1352. Only a scale of 10,000 puts that inside the
+    published range, so this locks the constant against a plausible-looking but
+    wrong power of ten.
+    """
+    bp = _load("fetch_burn_probability")
+    assert bp.BP_SCALE == 10_000.0
+    service_max = 1352
+    assert 0.10 < service_max / bp.BP_SCALE <= 0.14
+
+
+def test_burn_probability_buffer_matches_the_wildfire_criterion():
+    """Comparing BP against WHP exposure is only valid on the same geometry."""
+    bp = _load("fetch_burn_probability")
+    hz = _load("build_hazard_exposure")
+    assert bp.BUFFER_M == 2_400
+    assert bp.BUFFER_M in hz.WHP_RADII_M
+
+
+def test_burn_probability_buffer_ring_is_closed_and_roughly_right_size():
+    """The ring is built in Albers then handed to the service in Web Mercator.
+
+    Web Mercator inflates distance by about 1/cos(latitude), so the returned ring
+    is deliberately NOT 2.4 km in its own units. What must hold is that the ring
+    closes and is a plausible projected size.
+    """
+    bp = _load("fetch_burn_probability")
+    rings = bp.buffer_rings(-122.05, 38.95)
+    ring = rings[0]
+    assert ring[0] == ring[-1], "ring must be closed"
+    xs = [p[0] for p in ring]
+    width = max(xs) - min(xs)
+    assert 4_000 < width < 12_000, width
+
+
+# --- coordinate QA flags -------------------------------------------------------
+
+def test_implausible_occupancy_classes_are_the_documented_three():
+    """A data center is not a house, a school or a barn.
+
+    Locking the set matters because widening it silently would downgrade
+    confidence on facilities nobody reviewed.
+    """
+    import re
+    src = (SCRIPTS / "build_building_attributes.py").read_text()
+    m = re.search(r"IMPLAUSIBLE_OCCUPANCY = \{([^}]*)\}", src)
+    assert m, "IMPLAUSIBLE_OCCUPANCY not found"
+    found = {s.strip().strip('"\'') for s in m.group(1).split(",") if s.strip()}
+    assert found == {"Residential", "Education", "Agriculture"}
