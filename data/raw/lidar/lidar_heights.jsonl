@@ -1895,3 +1895,360 @@
 {"facility_id": "dc_91f5a2b35cfd", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
 {"facility_id": "dc_221b5b4e4cbe", "project": "WA_NorthCentral_1_2021", "known_height_m": null, "error": "ground points 0"}
 {"facility_id": "dc_9f26b8e594c9", "project": "KY_FullState", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_433c57ca1a5b", "project": "NV_USFSR4_2_D23", "known_height_m": null, "error": "no overlapping nodes"}
+{"facility_id": "dc_34f9f44aa908", "project": "NV_USFSR4_2_D23", "known_height_m": null, "error": "no overlapping nodes"}
+{"facility_id": "dc_c52613c23f50", "project": "PA_3_County_South_Central_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_ed91aed5b37e", "project": "OH_Statewide_Phase2_4_2020", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_89ac9b873c30", "project": "WA_EasternCascades_1_2019", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_d5be93382554", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 3"}
+{"facility_id": "dc_ca4ce1d1a929", "project": "TN_Nashville_2011", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_c123c483cf92", "project": "TN_Nashville_2011", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_eff2b6ea88b4", "project": "TN_Nashville_2011", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_91374edadfb6", "project": "IA_FullState", "known_height_m": null, "error": "roof points 3"}
+{"facility_id": "dc_e3eea2ec5e00", "project": "KY_FullState", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_a2db55d0efea", "project": "USGS_LPC_NC_Phase4_Mecklenburg_2016_LAS_2019", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_00a02e9b7cf8", "project": "TN_Nashville_2011", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_16409bb98d9c", "project": "NV_USFSR4_2_D23", "known_height_m": null, "error": "no overlapping nodes"}
+{"facility_id": "dc_08e7c19da1a8", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_81f8dd3b6f39", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_510cff48ca13", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_186227436fd6", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_3d475b731d7a", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_757f768eba9e", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_5270a2cc2b71", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_db49eaafdae8", "project": "OH_Statewide_Phase2_4_2020", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_f16da2318b3f", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_e4f0ffd292d9", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_90a5aa0e6a9f", "project": "IA_FullState", "known_height_m": null, "error": "roof points 3"}
+{"facility_id": "dc_ec0baf9bd582", "project": "IA_FullState", "known_height_m": null, "height_m": 0.5779999999999745, "n_roof": 22003, "n_ground": 61452, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_7fe16fd74581", "project": "USGS_LPC_TX_Central_B2_2017_LAS_2019", "known_height_m": null, "error": "roof points 0"}
+{"facility_id": "dc_2143f8b4a2a6", "project": "KY_FullState", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_f1fa89442e45", "project": "IL_MidNorth_4_D22", "known_height_m": null, "error": "roof points 13"}
+{"facility_id": "dc_02a45ce844d8", "project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_82df444c36ba", "project": "TN_Nashville_2011", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_7b586018e4c3", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_7af833dd4dce", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_0df484691fd4", "project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_e5ee534a8f75", "project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_abb797b53b98", "project": "OH_Statewide_Phase2_4_2020", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_cd7f2ff1bb19", "project": "NE_Statewide_1_D23", "known_height_m": null, "error": "no overlapping nodes"}
+{"facility_id": "dc_0d412ec4abac", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_d89bd2b62165", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 3"}
+{"facility_id": "dc_0d3e2978537f", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_c5abef17961c", "project": "USGS_LPC_TX_Central_B2_2017_LAS_2019", "known_height_m": null, "error": "roof points 12"}
+{"facility_id": "dc_d8f1873aaf3c", "project": "IA_FullState", "known_height_m": null, "error": "roof points 16"}
+{"facility_id": "dc_e63c56f58572", "project": "NM_Albuquerque_2010", "known_height_m": null, "error": "roof points 27"}
+{"facility_id": "dc_1b52528a2400", "project": "ARRA-CA_SanFranCoast_2010", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_ac16fc556bbf", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_a824cf17055c", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_3220818536c7", "project": "OR_WWildfires_1_A22", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_21b4adeddde5", "project": "IL_MidNorth_4_D22", "known_height_m": null, "error": "roof points 9"}
+{"facility_id": "dc_bcd0a6c2165d", "project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015", "known_height_m": null, "error": "roof points 6"}
+{"facility_id": "dc_1491711e475b", "project": "OH_Statewide_Phase2_4_2020", "known_height_m": null, "error": "roof points 19"}
+{"facility_id": "dc_990f669f9ec2", "project": "USGS_LPC_TX_Central_B2_2017_LAS_2019", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_9b9f99566927", "project": "USGS_LPC_TX_Central_B2_2017_LAS_2019", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_45594dea9379", "project": "VA_LoudounCo_2012", "known_height_m": null, "error": "roof points 2"}
+{"facility_id": "dc_0888941918ee", "project": "USGS_LPC_TX_Central_B2_2017_LAS_2019", "known_height_m": null, "error": "roof points 11"}
+{"facility_id": "dc_d1e1933ac3d8", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_5e1d8fbc3e75", "project": "NV_USFSR4_2_D23", "known_height_m": null, "error": "no overlapping nodes"}
+{"facility_id": "dc_94ad65dfbe69", "project": "NJ_NW6Co_2017", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_97685944d21e", "project": "CA_SanDiegoQL2_2014", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_5ec81740ac02", "project": "MN_FullState", "known_height_m": null, "error": "roof points 16"}
+{"facility_id": "dc_b18c7f03ee5a", "project": "CA_SanDiegoQL2_2014", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_d19c07e250c3", "project": "CA_SanDiegoQL2_2014", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_e22e8d10f87c", "project": "ARRA-LFTNE_Massachusetts_2011", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_9b38c6590761", "project": "CA_SanDiegoQL2_2014", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_4aca16af087d", "project": "FL_Peninsular_FDEM_Brevard_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_8895a8adb317", "project": "VT_Statewide_1_A23", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_3c96251ce435", "project": "USGS_LPC_VT_EasternVermont_L1_2014_LAS_2017", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_02dc64b737be", "project": "ARRA-LFTNE_Massachusetts_2011", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_081751389720", "project": "PA_3_County_South_Central_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_8a0744087416", "project": "ARRA-MI_4SECounties_2010", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_487092045130", "project": "PA_3_County_South_Central_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_d6d98ef855f4", "project": "SC_BerkeleyCo_2009", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_4290cc221459", "project": "VT_Statewide_1_A23", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_5cb21e4f1f61", "project": "NV_USFSR4_2_D23", "known_height_m": null, "error": "no overlapping nodes"}
+{"facility_id": "dc_89b2b8fe4327", "project": "NV_USFSR4_2_D23", "known_height_m": null, "error": "no overlapping nodes"}
+{"facility_id": "dc_5057b853b06b", "project": "TN_Nashville_2011", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_03c1a9199b8c", "project": "TN_Nashville_2011", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_5b48930dcb41", "project": "TN_Nashville_2011", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_b9ee518385d3", "project": "WA_KingCo_1_2021", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_1a15871c8912", "project": "VA_UpperMiddleNeckQL2_B2_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_ffc36ba64dc4", "project": "VA_UpperMiddleNeckQL2_B2_2018", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_de24883d5033", "project": "CA_SanDiegoQL2_2014", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_178934ce0e29", "project": "CA_SanDiegoQL2_2014", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_1b3a98a4d46b", "project": "NV_USFSR4_2_D23", "known_height_m": null, "error": "no overlapping nodes"}
+{"facility_id": "dc_b8718fb1cf84", "project": "NV_USFSR4_2_D23", "known_height_m": null, "error": "no overlapping nodes"}
+{"facility_id": "dc_cb548352378e", "project": "CA_SanDiegoQL2_2014", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_3b664e26d6e9", "project": "PA_WesternPA_1_2019", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_43204ca86890", "project": "NJ_NW6Co_2017", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_0e9430d2bb67", "project": "MN_FullState", "known_height_m": null, "error": "roof points 3"}
+{"facility_id": "dc_6396a9188b64", "project": "MN_FullState", "known_height_m": null, "error": "roof points 28"}
+{"facility_id": "dc_ee959c9118c2", "project": "NC_Phase5_Jackson_2017", "known_height_m": null, "error": "roof points 8"}
+{"facility_id": "dc_d1ab1505b7c8", "project": "OH_StatewideP3_3_B21", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_7d1001e2c4ce", "project": "OH_StatewideP3_3_B21", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_af3b818f5474", "project": "IA_FullState", "known_height_m": null, "error": "roof points 3"}
+{"facility_id": "dc_3b086a495bdc", "project": "IA_FullState", "known_height_m": null, "error": "roof points 3"}
+{"facility_id": "dc_5df588dae044", "project": "USGS_LPC_WI_Kenosha_2017_LAS_2019", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_3bcbc5a11a48", "project": "AZ_MaricopaPinal_1_2020", "known_height_m": null, "error": "roof points 19"}
+{"facility_id": "dc_624a20da991b", "project": "NE_Rainwater-2_2009", "known_height_m": null, "error": "roof points 17"}
+{"facility_id": "dc_40e30e32f22b", "project": "OH_StatewideP3_3_B21", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_a5676724cc7b", "project": "OH_StatewideP3_3_B21", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_8af951b34bae", "project": "OH_StatewideP3_3_B21", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_a01ca4642c9f", "project": "AL_19Co_1_B24", "known_height_m": null, "error": "roof points 5"}
+{"facility_id": "dc_bbb7c9a29c06", "project": "OR_NRCSUSGS_3_2019", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_2603730d0b62", "project": "IA_FullState", "known_height_m": null, "error": "roof points 3"}
+{"facility_id": "dc_553e538d8ae8", "project": "IA_FullState", "known_height_m": null, "error": "roof points 10"}
+{"facility_id": "dc_384a3561c678", "project": "OR_NRCSUSGS_3_2019", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_f138bbd8bc1d", "project": "OR_NRCSUSGS_3_2019", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_5f6e752e8332", "project": "ND_3DEPProcessing_1_D22", "known_height_m": null, "error": "roof points 0"}
+{"facility_id": "dc_c6bcbe1b8a1f", "project": "ND_3DEPProcessing_1_D22", "known_height_m": null, "error": "roof points 0"}
+{"facility_id": "dc_059baa53ed1a", "project": "ND_3DEPProcessing_1_D22", "known_height_m": null, "error": "roof points 0"}
+{"facility_id": "dc_cc1a5c76c102", "project": "OH_Statewide_Phase2_4_2020", "known_height_m": null, "error": "roof points 18"}
+{"facility_id": "dc_2c541c5c30d6", "project": "OH_Statewide_Phase2_4_2020", "known_height_m": null, "error": "roof points 18"}
+{"facility_id": "dc_a20930b79289", "project": "OH_Statewide_Phase2_4_2020", "known_height_m": null, "error": "roof points 24"}
+{"facility_id": "dc_f568eee20c17", "project": "OH_Statewide_Phase2_4_2020", "known_height_m": null, "error": "roof points 19"}
+{"facility_id": "dc_080f1a37f4e4", "project": "USGS_LPC_TX_Central_B2_2017_LAS_2019", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_204d8cf6c427", "project": "AZ_MaricopaPinal_1_2020", "known_height_m": null, "error": "roof points 2"}
+{"facility_id": "dc_145f8eb38f08", "project": "USGS_LPC_TN_NRCS_L2_2011_12_LAS_2017", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_5275a77e506f", "project": "IN_Statewide-StJosephCo_2011", "known_height_m": null, "error": "roof points 0"}
+{"facility_id": "dc_951ab6bcefa0", "project": "IN_Statewide-StJosephCo_2011", "known_height_m": null, "error": "roof points 0"}
+{"facility_id": "dc_a9eeb2ecdcc1", "project": "USGS_LPC_WI_Kenosha_2017_LAS_2019", "known_height_m": null, "error": "ground points 0"}
+{"facility_id": "dc_19d78aae92b7", "project": "KS_JohnsonCo_2006", "known_height_m": null, "error": "roof points 2"}
+{"facility_id": "dc_8a72989b8621", "project": "ND_3DEPProcessing_1_D22", "known_height_m": null, "error": "roof points 0"}
+{"facility_id": "dc_827fe89cbc5e", "project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015", "known_height_m": 6.87, "height_m": 9.900000000000006, "n_roof": 20189, "n_ground": 13412, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_47d937b135c2", "project": "TX_Coastal_B1_2018", "known_height_m": 82.55, "error": "ground points 4"}
+{"facility_id": "dc_50e4626e32e8", "project": "FL_HillsboroughCo_2007", "known_height_m": 76.0, "height_m": 140.19, "n_roof": 16261, "n_ground": 7719, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_2e8f81227e3c", "project": "VA_LoudounCo_2012", "known_height_m": 8.59, "height_m": 15.359999999999957, "n_roof": 47796, "n_ground": 19539, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_27bede9eb66c", "project": "CA_SantaClaraCounty_2020", "known_height_m": 12.13, "height_m": 14.557999999999993, "n_roof": 13697, "n_ground": 36195, "n_class6": 13099, "epsg": "3857", "error": null}
+{"facility_id": "dc_1893390c83ef", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": 8.76, "height_m": 8.95999999999998, "n_roof": 172949, "n_ground": 57665, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_7265e2ab382c", "project": "OH_StatewideP3_5_B21", "known_height_m": 4.33, "height_m": 5.8400000000001455, "n_roof": 3682, "n_ground": 16193, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_132750142234", "project": "USGS_LPC_IL_4County_Cook_2017_LAS_2019", "known_height_m": 7.13, "height_m": 10.679999999999978, "n_roof": 23159, "n_ground": 34631, "n_class6": 19649, "epsg": "3857", "error": null}
+{"facility_id": "dc_0d9b2c88b783", "project": "CA_SantaClaraCounty_2020", "known_height_m": 5.84, "height_m": 8.216999999999985, "n_roof": 83704, "n_ground": 106843, "n_class6": 78529, "epsg": "3857", "error": null}
+{"facility_id": "dc_583b75cdc1d2", "project": "GA_Central_6_2018", "known_height_m": 9.03, "height_m": 9.504999999999995, "n_roof": 51997, "n_ground": 28312, "n_class6": 51839, "epsg": "3857", "error": null}
+{"facility_id": "dc_84a15c5e48cb", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": 7.36, "height_m": 8.039999999999964, "n_roof": 111502, "n_ground": 41528, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_e3e2113ca594", "project": "CT_Statewide_B3_2016", "known_height_m": 7.53, "height_m": 8.135000000000005, "n_roof": 9488, "n_ground": 11347, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_0967d5287af9", "project": "NY_NewYorkCity", "known_height_m": 69.18, "height_m": 115.18, "n_roof": 40970, "n_ground": 6053, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_b8ec7b743908", "project": "VA_LoudounCo_2012", "known_height_m": 4.06, "height_m": 12.28000000000003, "n_roof": 451, "n_ground": 2847, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_e3eb86c1081a", "project": "ARRA-CA_SanFranCoast_2010", "known_height_m": 7.42, "error": "ground points 0"}
+{"facility_id": "dc_83ab1d091133", "project": "AZ_MaricopaPinal_1_2020", "known_height_m": 8.3, "height_m": 10.228000000000009, "n_roof": 60753, "n_ground": 41587, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_672db836d74d", "project": "FL_HillsboroughCo-Lot2_2011", "known_height_m": 9.2, "height_m": 10.039999999999964, "n_roof": 10412, "n_ground": 12104, "n_class6": 10087, "epsg": "3857", "error": null}
+{"facility_id": "dc_b957334fcb5a", "project": "CA_SantaClaraCounty_2020", "known_height_m": 9.71, "height_m": 11.701000000000022, "n_roof": 27488, "n_ground": 31679, "n_class6": 25590, "epsg": "3857", "error": null}
+{"facility_id": "dc_8eb668a8b3c3", "project": "WA_KingCo_1_2021", "known_height_m": 8.67, "height_m": 9.419999999999959, "n_roof": 99246, "n_ground": 24459, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_7c8f0dd59535", "project": "CO_DRCOG_2_2020", "known_height_m": 9.44, "height_m": 9.417000000000144, "n_roof": 27010, "n_ground": 14576, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_c31443bd7e5d", "project": "KY_FullState", "known_height_m": 29.61, "error": "ground points 0"}
+{"facility_id": "dc_b5e19f1a3ea5", "project": "TX_Pecos_Dallas_B3_2018", "known_height_m": 7.17, "height_m": 7.701000000000022, "n_roof": 25143, "n_ground": 18140, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_663e3aabdd3a", "project": "TX_Pecos_Dallas_B3_2018", "known_height_m": 8.04, "height_m": 9.590000000000003, "n_roof": 41414, "n_ground": 27287, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_df65c9139bfb", "project": "USGS_Lidar_Point_Cloud_NJ_SdL5_2014_LAS_2015", "known_height_m": 9.38, "height_m": 9.529999999999973, "n_roof": 82978, "n_ground": 16969, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_be6fbb486171", "project": "USGS_LPC_TX_Central_B2_2017_LAS_2019", "known_height_m": 10.3, "height_m": 11.879999999999995, "n_roof": 98748, "n_ground": 53505, "n_class6": 98058, "epsg": "3857", "error": null}
+{"facility_id": "dc_e6c4c8934f01", "project": "TX_Pecos_Dallas_B3_2018", "known_height_m": 5.58, "height_m": 6.247000000000014, "n_roof": 15611, "n_ground": 8829, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_ec2547a1d26b", "project": "VA_LoudounCo_2012", "known_height_m": 5.48, "height_m": 6.419999999999959, "n_roof": 8574, "n_ground": 11066, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_aa188d117b03", "project": "NY_FEMAR2_Central_B1_2018", "known_height_m": 5.92, "height_m": 6.930000000000064, "n_roof": 702, "n_ground": 2412, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_3b1559745c3a", "project": "AZ_MaricopaPinal_1_2020", "known_height_m": 3.22, "error": "ground points 3"}
+{"facility_id": "dc_6be6451b0bd2", "project": "WA_KingCo_1_2021", "known_height_m": 18.86, "height_m": 21.83000000000004, "n_roof": 27676, "n_ground": 13892, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_058f35b988cf", "project": "NY_NewYorkCity", "known_height_m": 73.53, "height_m": 168.56200000000013, "n_roof": 89850, "n_ground": 8794, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_b853c136e629", "project": "GA_Statewide_B2_2018", "known_height_m": 30.27, "height_m": 88.90999999999997, "n_roof": 82170, "n_ground": 12607, "n_class6": 68660, "epsg": "3857", "error": null}
+{"facility_id": "dc_101d7e8f8cd1", "project": "USGS_LPC_MI_31Co_Oakland_2016_LAS_2019", "known_height_m": 7.2, "height_m": 7.760000000000048, "n_roof": 15986, "n_ground": 13571, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_cc8fe699ab97", "project": "IL_MidNorth_4_D22", "known_height_m": 9.36, "height_m": 10.59759999999983, "n_roof": 93777, "n_ground": 160415, "n_class6": 75272, "epsg": "3857", "error": null}
+{"facility_id": "dc_601b882f713f", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": 17.63, "height_m": 22.360000000000014, "n_roof": 86293, "n_ground": 61083, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_c8e79bad6c96", "project": "CA_SantaClaraCounty_2020", "known_height_m": 5.41, "height_m": 16.709999999999923, "n_roof": 15129, "n_ground": 15407, "n_class6": 13875, "epsg": "3857", "error": null}
+{"facility_id": "dc_9f34fd0de9e0", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": 7.11, "height_m": 8.479999999999961, "n_roof": 23126, "n_ground": 35183, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_7015a8562d9d", "project": "CA_LosAngeles_1_B23", "known_height_m": 35.53, "height_m": 37.51999999999998, "n_roof": 30607, "n_ground": 25946, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_65815b1ef945", "project": "AZ_MaricopaPinal_1_2020", "known_height_m": 9.44, "height_m": 10.990000000000009, "n_roof": 44924, "n_ground": 57680, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_e4de78d83084", "project": "NY_NewYorkCity", "known_height_m": 69.18, "height_m": 115.18, "n_roof": 40970, "n_ground": 6053, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_f2375e9e8272", "project": "USGS_LPC_UT_Wasatch_L4_2013_LAS_2016", "known_height_m": 23.42, "height_m": 31.799999999999955, "n_roof": 40621, "n_ground": 42891, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_f66efb0a0bc9", "project": "CA_SantaClaraCounty_2020", "known_height_m": 4.32, "height_m": 2.312999999999988, "n_roof": 8567, "n_ground": 102896, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_cb30a328369f", "project": "CA_LosAngeles_1_B23", "known_height_m": 14.89, "height_m": 19.87999999999988, "n_roof": 36426, "n_ground": 52685, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_9df53017280d", "project": "AZ_MaricopaPinal_1_2020", "known_height_m": 3.22, "error": "ground points 3"}
+{"facility_id": "dc_5e87bc712d75", "project": "PA_WesternPA_2_2019", "known_height_m": 16.82, "height_m": 59.90999999999997, "n_roof": 133700, "n_ground": 49988, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_4ca5071fffcd", "project": "USGS_LPC_MI_31Co_Oakland_2016_LAS_2019", "known_height_m": 7.43, "height_m": 8.930000000000007, "n_roof": 2985, "n_ground": 6725, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_6408ea6661a1", "project": "AZ_MaricopaPinal_1_2020", "known_height_m": 8.78, "height_m": 10.052599999999984, "n_roof": 4065, "n_ground": 5731, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_59773501dcdd", "project": "IL_MidNorth_4_D22", "known_height_m": 7.99, "error": "no overlapping nodes"}
+{"facility_id": "dc_8313dc48caac", "project": "CA_UpperSouthAmerican_Eldorado_2019", "known_height_m": 10.88, "error": "ground points 0"}
+{"facility_id": "dc_2d7b8c28a757", "project": "OH_StatewideP3_5_B21", "known_height_m": 5.16, "height_m": 5.739999999997963, "n_roof": 32076, "n_ground": 38048, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_2e8820a1a344", "project": "WA_KingCo_1_2021", "known_height_m": 9.51, "height_m": 16.67999999999995, "n_roof": 52203, "n_ground": 17695, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_ed793f68cc82", "project": "NY_NewYorkCity", "known_height_m": 106.8, "height_m": 142.43399999999997, "n_roof": 13377, "n_ground": 7492, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_c46ec9dd6e53", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": 3.86, "height_m": 0.7899999999999636, "n_roof": 6494, "n_ground": 16065, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_39d40801f80a", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": 7.36, "height_m": 8.039999999999964, "n_roof": 111502, "n_ground": 41528, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_8f0aa85ad64d", "project": "USGS_LPC_MI_WayneCo_2017_LAS_2018", "known_height_m": 14.45, "height_m": 15.036000000000001, "n_roof": 5368, "n_ground": 10851, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_b93bd4dfbee7", "project": "ARRA-LFTNE_ConnecticutZ18_2010", "known_height_m": 4.29, "height_m": 6.894999999999982, "n_roof": 1470, "n_ground": 2722, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_bb7e64ba6a05", "project": "TX_Pecos_Dallas_B3_2018", "known_height_m": 3.61, "height_m": 3.9735999999999763, "n_roof": 189, "n_ground": 4579, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_445b318d96ef", "project": "OH_Statewide_Phase1_1_2019", "known_height_m": 5.03, "height_m": 6.0, "n_roof": 3001, "n_ground": 10698, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_05ba33d454f3", "project": "ARRA-CA_SanFranCoast_2010", "known_height_m": 7.01, "error": "ground points 0"}
+{"facility_id": "dc_521feae1aae7", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": 2.61, "height_m": 1.509999999999991, "n_roof": 2275, "n_ground": 22659, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_4f36c545582c", "project": "CA_SantaClaraCounty_2020", "known_height_m": 6.92, "height_m": 9.285999999999945, "n_roof": 154588, "n_ground": 110872, "n_class6": 151165, "epsg": "3857", "error": null}
+{"facility_id": "dc_556a64184f4a", "project": "WA_KingCo_1_2021", "known_height_m": 18.86, "height_m": 21.83000000000004, "n_roof": 27676, "n_ground": 13892, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_2f2fa36dd479", "project": "TX_Pecos_Dallas_B3_2018", "known_height_m": 6.14, "height_m": 6.296999999999997, "n_roof": 3481, "n_ground": 9535, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_ee2dabe2d034", "project": "CA_OrangeCo_2011", "known_height_m": 6.07, "height_m": 7.349999999999994, "n_roof": 26831, "n_ground": 17023, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_bc06006b2111", "project": "MD_Baltimore_2008", "known_height_m": 29.67, "height_m": 58.05000000000001, "n_roof": 13897, "n_ground": 5390, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_5901d49adbc4", "project": "ARRA-CA_SanFranCoast_2010", "known_height_m": 8.41, "error": "ground points 0"}
+{"facility_id": "dc_8d2c754efaf1", "project": "MN_CentralMissRiver_4_B22", "known_height_m": 9.14, "height_m": 10.640000000000043, "n_roof": 31906, "n_ground": 88183, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_20ffe88937a6", "project": "IL_MidNorth_4_D22", "known_height_m": 7.62, "height_m": 7.995899999999892, "n_roof": 64003, "n_ground": 21997, "n_class6": 62418, "epsg": "3857", "error": null}
+{"facility_id": "dc_a1d2bf1489bd", "project": "USGS_LPC_TX_Central_B1_2017_LAS_2019", "known_height_m": 50.8, "height_m": 70.36500000000001, "n_roof": 17019, "n_ground": 22402, "n_class6": 16953, "epsg": "3857", "error": null}
+{"facility_id": "dc_54b013b60906", "project": "VA_LoudounCo_2012", "known_height_m": 8.84, "height_m": 9.529999999999973, "n_roof": 20357, "n_ground": 10786, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_ed562b27f502", "project": "VA_LoudounCo_2012", "known_height_m": 8.62, "height_m": 0.5400000000000205, "n_roof": 3543, "n_ground": 17929, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_22b86260251c", "project": "IL_MidNorth_4_D22", "known_height_m": 7.67, "height_m": 14.62070000000017, "n_roof": 125691, "n_ground": 62550, "n_class6": 121116, "epsg": "3857", "error": null}
+{"facility_id": "dc_ddc20b8cfb33", "project": "USGS_LPC_OK_Woodward_UTM15_B6_2016_LAS_2019", "known_height_m": 7.3, "height_m": 7.850000000000023, "n_roof": 82005, "n_ground": 79678, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_7d05eaf4ac3e", "project": "WI_DaneCo_2017", "known_height_m": 10.33, "height_m": 12.549000000000035, "n_roof": 3695, "n_ground": 8624, "n_class6": 3181, "epsg": "3857", "error": null}
+{"facility_id": "dc_b1a8f1928f7c", "project": "KS_JohnsonCo_2006", "known_height_m": 7.19328, "height_m": 7.039999999999964, "n_roof": 2412, "n_ground": 3091, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_e1661b2a1f9b", "project": "WA_KingCo_1_2021", "known_height_m": 8.66, "height_m": 9.029999999999973, "n_roof": 107069, "n_ground": 18642, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_515444aaf104", "project": "OR_OLCMetro_2019", "known_height_m": 44.71, "height_m": 61.64999999999998, "n_roof": 43275, "n_ground": 11064, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_dfc785a7c7de", "project": "NV_USFSR4_2_D23", "known_height_m": 11.69, "height_m": 11.75, "n_roof": 8036, "n_ground": 5968, "n_class6": 7506, "epsg": "3857", "error": null}
+{"facility_id": "dc_878c140caab9", "project": "OH_StatewideP3_5_B21", "known_height_m": 8.61, "height_m": 12.979999999999563, "n_roof": 26237, "n_ground": 9581, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_7bac40f4748e", "project": "WA_KingCo_1_2021", "known_height_m": 18.86, "height_m": 21.83000000000004, "n_roof": 27676, "n_ground": 13892, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_07598d7e4ad6", "project": "NV_ClarkCo_2_B22", "known_height_m": 6.04, "height_m": 7.094000000000051, "n_roof": 10315, "n_ground": 31923, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_506d216f297e", "project": "WA_KingCo_1_2021", "known_height_m": 23.01, "height_m": 26.209999999999923, "n_roof": 45915, "n_ground": 17523, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_dffc745c288e", "project": "TX_LowerRioGrande_3_D22", "known_height_m": 15.3, "height_m": 72.92000000000007, "n_roof": 73700, "n_ground": 81071, "n_class6": 72766, "epsg": "3857", "error": null}
+{"facility_id": "dc_89af903960ac", "project": "VA_LoudounCo_2012", "known_height_m": 8.91, "height_m": 9.850000000000023, "n_roof": 10113, "n_ground": 11329, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_597fa7e4dbb1", "project": "NY_NewYorkCity", "known_height_m": 69.18, "height_m": 115.18, "n_roof": 40970, "n_ground": 6053, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_d7f54557743c", "project": "USGS_LPC_MA_ME_MA_QL2_UTM18_L1_2015_LAS_2018", "known_height_m": 5.43, "height_m": 6.529999999999973, "n_roof": 3943, "n_ground": 15045, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_c67379e56350", "project": "USGS_Lidar_Point_Cloud_NJ_SdL5_2014_LAS_2015", "known_height_m": 54.25, "height_m": 70.57, "n_roof": 21774, "n_ground": 6643, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_2e34e7874bca", "project": "ARRA-CA_SanFranCoast_2010", "known_height_m": 8.84, "height_m": 9.099999999999909, "n_roof": 22010, "n_ground": 11187, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_5ed930ed15c9", "project": "CO_DRCOG_1_2020", "known_height_m": 8.47, "error": "ground points 0"}
+{"facility_id": "dc_9d41992d9e6f", "project": "PA_WesternPA_2_2019", "known_height_m": 16.82, "height_m": 59.90999999999997, "n_roof": 133700, "n_ground": 49988, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_924bac73f757", "project": "USGS_LPC_MI_WayneCo_2017_LAS_2018", "known_height_m": 9.72, "height_m": 11.979000000000013, "n_roof": 25978, "n_ground": 13661, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_3fa98b8aaba6", "project": "IN_Statewide_B2_2017", "known_height_m": 6.06, "height_m": 6.389999999999986, "n_roof": 23044, "n_ground": 16093, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_33e94a939c1b", "project": "VA_LoudounCo_2012", "known_height_m": 7.46, "height_m": 10.360000000000014, "n_roof": 27898, "n_ground": 21644, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_583749301cba", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": 8.76, "height_m": 8.95999999999998, "n_roof": 172949, "n_ground": 57665, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_3c2574f581bf", "project": "NV_ClarkCo_2_B22", "known_height_m": 5.36, "height_m": 5.985000000000127, "n_roof": 15253, "n_ground": 30810, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_86ba61e0a58f", "project": "TX_Pecos_Dallas_B3_2018", "known_height_m": 6.9, "height_m": 7.959000000000003, "n_roof": 72750, "n_ground": 36281, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_f905447e5849", "project": "USGS_LPC_TX_Central_B1_2017_LAS_2019", "known_height_m": 6.7, "height_m": 10.73999999999998, "n_roof": 2840, "n_ground": 10013, "n_class6": 1948, "epsg": "3857", "error": null}
+{"facility_id": "dc_06cf1c89d97f", "project": "IL_MidNorth_4_D22", "known_height_m": 10.48, "height_m": 10.68464999999992, "n_roof": 241, "n_ground": 17558, "n_class6": 212, "epsg": "3857", "error": null}
+{"facility_id": "dc_9c3dfd2fd93c", "project": "USGS_LPC_NC_Phase4_Mecklenburg_2016_LAS_2019", "known_height_m": 5.3, "height_m": 6.769999999999982, "n_roof": 17682, "n_ground": 30355, "n_class6": 14392, "epsg": "3857", "error": null}
+{"facility_id": "dc_f8e77a5485b8", "project": "TN_DavidsonCo_1_2022", "known_height_m": 4.9, "height_m": 3.949999999999932, "n_roof": 4592, "n_ground": 30372, "n_class6": 4435, "epsg": "3857", "error": null}
+{"facility_id": "dc_1fe64519a772", "project": "NV_ClarkCo_2_B22", "known_height_m": 12.74, "height_m": 15.257000000000062, "n_roof": 1688, "n_ground": 10875, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_543c04d60b95", "project": "USGS_LPC_IL_4County_Cook_2017_LAS_2019", "known_height_m": 10.47, "height_m": 16.680000000000007, "n_roof": 93933, "n_ground": 34592, "n_class6": 58239, "epsg": "3857", "error": null}
+{"facility_id": "dc_49e9f7db52dc", "project": "USGS_LPC_TX_Central_B1_2017_LAS_2019", "known_height_m": 7.7, "height_m": 6.859999999999985, "n_roof": 29444, "n_ground": 33117, "n_class6": 28364, "epsg": "3857", "error": null}
+{"facility_id": "dc_2e8f13854547", "project": "AZ_MaricopaPinal_1_2020", "known_height_m": 5.76, "height_m": 7.3086999999999875, "n_roof": 30854, "n_ground": 48309, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_1ecd2bc35dc3", "project": "USGS_LPC_IL_4County_Cook_2017_LAS_2019", "known_height_m": 39.43, "height_m": 59.109999999999985, "n_roof": 5814, "n_ground": 2363, "n_class6": 768, "epsg": "3857", "error": null}
+{"facility_id": "dc_c5b50e13b2ca", "project": "IA_FullState", "known_height_m": 5.65, "height_m": 9.182000000000016, "n_roof": 213, "n_ground": 1318, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_1d940d38b3eb", "project": "NV_ClarkCo_2_B22", "known_height_m": 10.39, "height_m": 11.394999999999982, "n_roof": 116800, "n_ground": 31724, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_18fb4cc70d24", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": 9.8, "height_m": 10.689999999999998, "n_roof": 45469, "n_ground": 19336, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_b630100d026f", "project": "USGS_LPC_NE_Eastern_UA_2016_LAS_2018", "known_height_m": 8.67, "height_m": 8.560000000000002, "n_roof": 13493, "n_ground": 12373, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_f49fd2c20dca", "project": "PA_WesternPA_2_2019", "known_height_m": 5.87, "height_m": 6.2890000000000725, "n_roof": 6742, "n_ground": 11281, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_f0251b9c4cc6", "project": "OH_Statewide_Phase1_1_2019", "known_height_m": 22.88, "height_m": 30.339999999999975, "n_roof": 104998, "n_ground": 47405, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_42e5e1f19e3b", "project": "OH_StatewideP3_5_B21", "known_height_m": 4.33, "height_m": 5.8400000000001455, "n_roof": 3682, "n_ground": 16193, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_d20b0b46a331", "project": "USGS_LPC_TX_Central_B2_2017_LAS_2019", "known_height_m": 6.31, "height_m": 6.8799999999999955, "n_roof": 49466, "n_ground": 42995, "n_class6": 48635, "epsg": "3857", "error": null}
+{"facility_id": "dc_55079160dfd9", "project": "MN_CentralMissRiver_4_B22", "known_height_m": 4.68, "height_m": 6.149999999999977, "n_roof": 85124, "n_ground": 139071, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_95c9a70f2492", "project": "USGS_LPC_NE_Eastern_UA_2016_LAS_2018", "known_height_m": 8.29, "height_m": 14.310000000000002, "n_roof": 13315, "n_ground": 9867, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_443bffa57334", "project": "USGS_LPC_FL_Southeast_B1_2018_LAS_2019", "known_height_m": 4.76, "height_m": 5.609999999999999, "n_roof": 72480, "n_ground": 78080, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_8411b70ee9f3", "project": "ARRA-CA_SanFranCoast_2010", "known_height_m": 5.69, "error": "ground points 0"}
+{"facility_id": "dc_1b48e32e32a9", "project": "VA_LoudounCo_2012", "known_height_m": 4.39, "height_m": 5.400000000000034, "n_roof": 545, "n_ground": 4165, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_4ecbe50b2051", "project": "NV_ClarkCo_2_B22", "known_height_m": 5.25, "height_m": 6.600300000000061, "n_roof": 13648, "n_ground": 38083, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_5ee3b5325f08", "project": "FL_Peninsular_FDEM_Orange_2018", "known_height_m": 8.23, "height_m": 8.930000000000064, "n_roof": 133230, "n_ground": 103564, "n_class6": 115431, "epsg": "3857", "error": null}
+{"facility_id": "dc_abc1bc37e941", "project": "CA_LosAngeles_1_B23", "known_height_m": 9.25, "height_m": 12.3900000000001, "n_roof": 125801, "n_ground": 66343, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_87d4cffa460b", "project": "OH_Statewide_Phase1_1_2019", "known_height_m": 7.4, "height_m": 9.909999999999968, "n_roof": 42760, "n_ground": 48834, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_1935437c7e01", "project": "OR_OLCMetro_2019", "known_height_m": 11.7, "height_m": 11.580000000000041, "n_roof": 30765, "n_ground": 18247, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_1f5c6ef67d69", "project": "GA_Statewide_B2_2018", "known_height_m": 20.65, "height_m": 61.14999999999998, "n_roof": 18389, "n_ground": 4159, "n_class6": 14375, "epsg": "3857", "error": null}
+{"facility_id": "dc_938aec8e77ee", "project": "USGS_LPC_TX_Central_B1_2017_LAS_2019", "known_height_m": 7.7, "height_m": 7.320000000000022, "n_roof": 32966, "n_ground": 47382, "n_class6": 32784, "epsg": "3857", "error": null}
+{"facility_id": "dc_5148f9e54a98", "project": "NY_NewYorkCity", "known_height_m": 69.18, "height_m": 115.18, "n_roof": 40970, "n_ground": 6053, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_14899623a0b1", "project": "USGS_LPC_WI_SEWRPC_2017_LAS_2019", "known_height_m": 8.68, "height_m": 8.932999999999993, "n_roof": 14262, "n_ground": 15391, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_02182668c9f0", "project": "USGS_LPC_IL_4County_Cook_2017_LAS_2019", "known_height_m": 55.68, "height_m": 63.09400000000002, "n_roof": 255, "n_ground": 176, "n_class6": 43, "epsg": "3857", "error": null}
+{"facility_id": "dc_b5e8b871ad80", "project": "FL_TopobathyFLKeysNOAA_Hydroflattened_2019", "known_height_m": 36.02, "height_m": 76.05, "n_roof": 137993, "n_ground": 1154, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_94b7312e4711", "project": "USGS_LPC_IL_4County_Cook_2017_LAS_2019", "known_height_m": 27.25, "height_m": 47.190000000000026, "n_roof": 236906, "n_ground": 43934, "n_class6": 47422, "epsg": "3857", "error": null}
+{"facility_id": "dc_3c5de49118a8", "project": "CA_FEMAR9Fresno_2_2019", "known_height_m": 4.63, "error": "roof points 5"}
+{"facility_id": "dc_7a05f73ca77d", "project": "USGS_LPC_OK_Woodward_UTM15_B6_2016_LAS_2019", "known_height_m": 4.8, "height_m": 5.350000000000023, "n_roof": 23761, "n_ground": 77424, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_087ab67b867b", "project": "NJ_NW6Co_2017", "known_height_m": 29.83, "height_m": 33.35860000000001, "n_roof": 8480, "n_ground": 11162, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_f03287bb770b", "project": "VA_LoudounCo_2012", "known_height_m": 60.0, "height_m": 11.139999999999986, "n_roof": 45045, "n_ground": 18904, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_5f57417784ad", "project": "USGS_Lidar_Point_Cloud_NJ_SdL5_2014_LAS_2015", "known_height_m": 54.25, "height_m": 70.57, "n_roof": 21774, "n_ground": 6643, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_0e25227f34f6", "project": "CT_Statewide_B1_2016", "known_height_m": 39.38, "height_m": 47.476, "n_roof": 1881, "n_ground": 5980, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_877f8d001c22", "project": "USGS_Lidar_Point_Cloud_NJ_SdL5_2014_LAS_2015", "known_height_m": 7.81, "height_m": 8.529999999999973, "n_roof": 20968, "n_ground": 11063, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_9fb1f8d58659", "project": "VA_LoudounCo_2012", "known_height_m": 7.82, "height_m": 8.319999999999993, "n_roof": 3736, "n_ground": 6007, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_2b8c784a19e7", "project": "USGS_LPC_IL_4County_Cook_2017_LAS_2019", "known_height_m": 5.57, "height_m": 6.159999999999997, "n_roof": 15330, "n_ground": 19424, "n_class6": 11986, "epsg": "3857", "error": null}
+{"facility_id": "dc_39ca538ce865", "project": "AZ_MaricopaPinal_1_2020", "known_height_m": 8.19, "height_m": 9.050999999999988, "n_roof": 93847, "n_ground": 57234, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_a83a8d15a315", "project": "CA_LosAngeles_1_B23", "known_height_m": 6.45, "height_m": 7.779999999999973, "n_roof": 74070, "n_ground": 39514, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_4b7a393d65ed", "project": "MO_StLouis_2012", "known_height_m": 4.83, "height_m": 4.810000000000002, "n_roof": 5475, "n_ground": 7841, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_087c9c57a7c0", "project": "VA_LoudounCo_2012", "known_height_m": 6.04, "height_m": 6.840000000000032, "n_roof": 11989, "n_ground": 13016, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_d9ae28f8917b", "project": "USGS_LPC_NE_Eastern_UA_2016_LAS_2018", "known_height_m": 8.97, "height_m": 12.180000000000007, "n_roof": 32131, "n_ground": 23508, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_999534d8e27f", "project": "USGS_LPC_WI_SEWRPC_2017_LAS_2019", "known_height_m": 3.89, "height_m": 4.791000000000054, "n_roof": 10334, "n_ground": 35287, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_dc75a6364fe9", "project": "ARRA-CA_SanFranCoast_2010", "known_height_m": 14.62, "error": "ground points 0"}
+{"facility_id": "dc_5cdbfb9dbc3c", "project": "GA_Statewide_B2_2018", "known_height_m": 20.65, "height_m": 61.14999999999998, "n_roof": 18389, "n_ground": 4159, "n_class6": 14375, "epsg": "3857", "error": null}
+{"facility_id": "dc_ce0c5992cc9b", "project": "FL_TopobathyFLKeysNOAA_Hydroflattened_2019", "known_height_m": 21.25, "height_m": 46.160000000000004, "n_roof": 87452, "n_ground": 2194, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_9c4211d3ccea", "project": "IL_MidNorth_4_D22", "known_height_m": 5.34, "error": "no overlapping nodes"}
+{"facility_id": "dc_e1b88786f3b0", "project": "CA_LosAngeles_1_B23", "known_height_m": 9.25, "height_m": 12.3900000000001, "n_roof": 125801, "n_ground": 66343, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_970d93b0c688", "project": "NY_NewYorkCity", "known_height_m": 15.26, "height_m": 19.31, "n_roof": 1798, "n_ground": 1972, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_574dbb1df5a6", "project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015", "known_height_m": 6.7, "height_m": 7.75, "n_roof": 35817, "n_ground": 23243, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_34886e6cf7de", "project": "WA_KingCo_1_2021", "known_height_m": 47.9, "height_m": 129.20000000000005, "n_roof": 117882, "n_ground": 32590, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_3c91f82abab9", "project": "CA_LosAngeles_1_B23", "known_height_m": 34.77, "height_m": 87.44000000000005, "n_roof": 48118, "n_ground": 27722, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_485eed312522", "project": "KS_Area3-NortheastA_2012", "known_height_m": 43.28, "height_m": 87.69, "n_roof": 2072, "n_ground": 2809, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_c231fc51e3eb", "project": "MN_CentralMissRiver_5_B22", "known_height_m": 4.18, "height_m": 4.469999999999914, "n_roof": 2081, "n_ground": 14451, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_63bb73652979", "project": "ARRA-CA_GoldenGate_2010", "known_height_m": 23.26, "height_m": 36.67119999999999, "n_roof": 2533, "n_ground": 1809, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_023d2663ae5d", "project": "CO_DRCOG_2_2020", "known_height_m": 16.32, "height_m": 28.99500000000012, "n_roof": 35160, "n_ground": 13574, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_960d4026cc0b", "project": "OH_Statewide_Phase1_1_2019", "known_height_m": 22.88, "height_m": 30.339999999999975, "n_roof": 104998, "n_ground": 47405, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_68281ce20aef", "project": "CA_SantaClaraCounty_2020", "known_height_m": 8.97, "height_m": 12.166000000000054, "n_roof": 60894, "n_ground": 89856, "n_class6": 58809, "epsg": "3857", "error": null}
+{"facility_id": "dc_96c5b654ee78", "project": "USGS_Lidar_Point_Cloud_NJ_SdL5_2014_LAS_2015", "known_height_m": 12.69, "height_m": 17.769000000000034, "n_roof": 17582, "n_ground": 7147, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_7dd700f2302b", "project": "USGS_LPC_NC_Phase4_Mecklenburg_2016_LAS_2019", "known_height_m": 6.9, "height_m": 9.189999999999998, "n_roof": 9510, "n_ground": 18408, "n_class6": 8497, "epsg": "3857", "error": null}
+{"facility_id": "dc_d120fdecb5fc", "project": "AZ_MaricopaPinal_1_2020", "known_height_m": 2.77, "height_m": 3.0264999999999986, "n_roof": 718, "n_ground": 23054, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_668ad699c3a5", "project": "USGS_LPC_MI_WayneCo_2017_LAS_2018", "known_height_m": 17.64, "height_m": 27.37899999999999, "n_roof": 38386, "n_ground": 25017, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_09dea9d939e5", "project": "GA_Statewide_B2_2018", "known_height_m": 21.38, "height_m": 21.860000000000014, "n_roof": 19426, "n_ground": 7145, "n_class6": 18776, "epsg": "3857", "error": null}
+{"facility_id": "dc_949ff6edb0fd", "project": "CA_SantaClaraCounty_2020", "known_height_m": 7.35, "height_m": 10.682999999999993, "n_roof": 126762, "n_ground": 63235, "n_class6": 121538, "epsg": "3857", "error": null}
+{"facility_id": "dc_7595c5d5e7dc", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": 7.23, "height_m": 7.580000000000041, "n_roof": 71180, "n_ground": 61353, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_b98bb7d5812f", "project": "USGS_Lidar_Point_Cloud_NJ_SdL5_2014_LAS_2015", "known_height_m": 54.25, "height_m": 70.57, "n_roof": 21774, "n_ground": 6643, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_49e0d2491132", "project": "USGS_LPC_NC_Phase4_Mecklenburg_2016_LAS_2019", "known_height_m": 6.4, "height_m": 7.689999999999998, "n_roof": 19641, "n_ground": 38098, "n_class6": 15885, "epsg": "3857", "error": null}
+{"facility_id": "dc_770feb7b2cec", "project": "FL_HillsboroughCo_2007", "known_height_m": 41.2, "height_m": 43.45700000000015, "n_roof": 18910, "n_ground": 11992, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_2e5749b84fc8", "project": "USGS_LPC_WI_SEWRPC_2017_LAS_2019", "known_height_m": 11.94, "height_m": 15.980999999999995, "n_roof": 4655, "n_ground": 6992, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_272219c4c331", "project": "USGS_LPC_NC_Phase4_Mecklenburg_2016_LAS_2019", "known_height_m": 6.9, "height_m": 7.6299999999999955, "n_roof": 7944, "n_ground": 28654, "n_class6": 6943, "epsg": "3857", "error": null}
+{"facility_id": "dc_3a23c08ab006", "project": "USGS_LPC_UT_Wasatch_L4_2013_LAS_2016", "known_height_m": 8.54, "height_m": 9.610000000000127, "n_roof": 46574, "n_ground": 40287, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_4465586fa278", "project": "GA_Statewide_B2_2018", "known_height_m": 37.45, "height_m": 45.79000000000002, "n_roof": 5318, "n_ground": 5608, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_0528a0ff632a", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": 5.51, "height_m": 8.810000000000002, "n_roof": 10150, "n_ground": 13097, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_e007921e0e2a", "project": "USGS_LPC_TX_Central_B2_2017_LAS_2019", "known_height_m": 10.3, "height_m": 11.879999999999995, "n_roof": 98748, "n_ground": 53505, "n_class6": 98058, "epsg": "3857", "error": null}
+{"facility_id": "dc_6a78d9936b54", "project": "TX_Pecos_Dallas_B3_2018", "known_height_m": 18.63, "height_m": 47.895099999999985, "n_roof": 13030, "n_ground": 18416, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_0a74f3f6a21d", "project": "AZ_MaricopaPinal_1_2020", "known_height_m": 3.31, "height_m": 5.0330000000000155, "n_roof": 4978, "n_ground": 31492, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_8adc27a50dae", "project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015", "known_height_m": 5.1, "height_m": 6.219999999999999, "n_roof": 17535, "n_ground": 11536, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_7c4b01474de7", "project": "WA_KingCo_1_2021", "known_height_m": 47.9, "height_m": 129.20000000000005, "n_roof": 117882, "n_ground": 32590, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_7dc677ea1823", "project": "KS_Area3-NortheastA_2012", "known_height_m": 18.55, "height_m": 26.779999999999973, "n_roof": 13931, "n_ground": 5808, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_f462f5b23353", "project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015", "known_height_m": 36.45, "height_m": 43.41999999999999, "n_roof": 5306, "n_ground": 8461, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_dbefe86a9d2c", "project": "AZ_MaricopaPinal_1_2020", "known_height_m": 6.63, "height_m": 7.9879999999999995, "n_roof": 94232, "n_ground": 59189, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_2705b2329455", "project": "USGS_LPC_NC_Phase4_Mecklenburg_2016_LAS_2019", "known_height_m": 8.4, "height_m": 9.420000000000016, "n_roof": 25453, "n_ground": 34331, "n_class6": 25232, "epsg": "3857", "error": null}
+{"facility_id": "dc_7fe3c888b6c0", "project": "WA_KingCo_1_2021", "known_height_m": 47.9, "height_m": 129.20000000000005, "n_roof": 117882, "n_ground": 32590, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_77d6c520b74a", "project": "IL_MidNorth_4_D22", "known_height_m": 7.83, "height_m": 8.33140000000003, "n_roof": 170410, "n_ground": 36702, "n_class6": 149241, "epsg": "3857", "error": null}
+{"facility_id": "dc_d3a8a17157cf", "project": "NY_Columbia_Rensselaer_2016", "known_height_m": 30.64, "height_m": 50.54000000000002, "n_roof": 43954, "n_ground": 24403, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_14a17660785d", "project": "TX_Pecos_Dallas_B3_2018", "known_height_m": 8.86, "height_m": 9.686999999999983, "n_roof": 59198, "n_ground": 36527, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_5c289e8fcbb5", "project": "NY_NewYorkCity", "known_height_m": 62.74, "height_m": 81.46000000000001, "n_roof": 39328, "n_ground": 6611, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_a6ee91f963a9", "project": "NY_FEMAR2_Central_B1_2018", "known_height_m": 12.37, "height_m": 17.16999999999996, "n_roof": 82981, "n_ground": 65914, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_e58ccf16d115", "project": "ARRA-CA_SanFranCoast_2010", "known_height_m": 9.63, "error": "ground points 0"}
+{"facility_id": "dc_f152760b1463", "project": "TX_Pecos_Dallas_B3_2018", "known_height_m": 8.8, "height_m": 11.19149999999999, "n_roof": 11686, "n_ground": 19755, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_5de7805a4d95", "project": "ARRA-CA_SanFranCoast_2010", "known_height_m": 6.61, "error": "ground points 0"}
+{"facility_id": "dc_1a16f88c10dd", "project": "USGS_LPC_NE_Eastern_UA_2016_LAS_2018", "known_height_m": 5.73, "height_m": 7.640000000000043, "n_roof": 17217, "n_ground": 19140, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_854a45524688", "project": "NY_3County_2019", "known_height_m": 16.39, "height_m": 29.37999999999988, "n_roof": 41336, "n_ground": 41855, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_64fcb38e770e", "project": "WV_FEMAR3_Southcentral_B3_2018", "known_height_m": 11.04, "height_m": 11.650000000000091, "n_roof": 48016, "n_ground": 38011, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_6fa7f8a2244a", "project": "IL_MidNorth_4_D22", "known_height_m": 8.52, "height_m": 13.853589999999997, "n_roof": 70288, "n_ground": 39441, "n_class6": 64726, "epsg": "3857", "error": null}
+{"facility_id": "dc_c5239980dbb9", "project": "IL_MidNorth_4_D22", "known_height_m": 6.9, "height_m": 7.9755799999999795, "n_roof": 22745, "n_ground": 23588, "n_class6": 21957, "epsg": "3857", "error": null}
+{"facility_id": "dc_70fb4023eb68", "project": "USGS_LPC_DE_DelawareValley_HD_2015_LAS_2017", "known_height_m": 35.99, "height_m": 57.809999999999995, "n_roof": 112057, "n_ground": 63090, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_2d889a97f7e9", "project": "CA_SantaClaraCounty_2020", "known_height_m": 2.37, "height_m": 8.69480000000003, "n_roof": 1027, "n_ground": 11326, "n_class6": 872, "epsg": "3857", "error": null}
+{"facility_id": "dc_bd177f82d3dd", "project": "KS_Area3-NortheastA_2012", "known_height_m": 32.65, "height_m": 108.83999999999997, "n_roof": 30155, "n_ground": 22972, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_ef06ca20995a", "project": "GA_Statewide_B2_2018", "known_height_m": 7.99, "height_m": 7.980000000000018, "n_roof": 139005, "n_ground": 29454, "n_class6": 135381, "epsg": "3857", "error": null}
+{"facility_id": "dc_7e1ec0fe32da", "project": "ARRA-CA_SanFranCoast_2010", "known_height_m": 4.8, "error": "ground points 0"}
+{"facility_id": "dc_e7bcef4e6ef3", "project": "MA_CentralEastern_1_2021", "known_height_m": 16.98, "height_m": 24.16999999999996, "n_roof": 26157, "n_ground": 37817, "n_class6": 25845, "epsg": "3857", "error": null}
+{"facility_id": "dc_acacfb9245c6", "project": "MN_CentralMissRiver_4_B22", "known_height_m": 12.7, "height_m": 14.069999999999993, "n_roof": 30172, "n_ground": 32780, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_26db4d08cc6d", "project": "TX_Pecos_Dallas_B3_2018", "known_height_m": 8.04, "height_m": 9.590000000000003, "n_roof": 41414, "n_ground": 27287, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_904e33ba7206", "project": "VA_LoudounCo_2012", "known_height_m": 8.62, "height_m": 0.5400000000000205, "n_roof": 3543, "n_ground": 17929, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_47dd6e6f269c", "project": "KY_FullState", "known_height_m": 3.57, "height_m": 3.8899999999999864, "n_roof": 1176, "n_ground": 2909, "n_class6": 1105, "epsg": "3857", "error": null}
+{"facility_id": "dc_fcd214823e30", "project": "TX_LowerRioGrande_3_D22", "known_height_m": 15.3, "height_m": 72.92000000000007, "n_roof": 73700, "n_ground": 81071, "n_class6": 72766, "epsg": "3857", "error": null}
+{"facility_id": "dc_1771855b67b2", "project": "ARRA-CA_GoldenGate_2010", "known_height_m": 9.68, "height_m": 11.07810000000003, "n_roof": 7190, "n_ground": 10616, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_65dbd76e7604", "project": "TX_Pecos_Dallas_B3_2018", "known_height_m": 32.91, "height_m": 35.70180000000002, "n_roof": 64773, "n_ground": 16136, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_e1ff79fe6a61", "project": "CA_LosAngeles_1_B23", "known_height_m": 6.29, "height_m": 8.75, "n_roof": 25259, "n_ground": 57141, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_1e39597e7669", "project": "TN_DavidsonCo_1_2022", "known_height_m": 44.87, "height_m": 52.67999999999995, "n_roof": 41615, "n_ground": 26610, "n_class6": 37930, "epsg": "3857", "error": null}
+{"facility_id": "dc_c71975653c6c", "project": "USGS_LPC_NE_Eastern_UA_2016_LAS_2018", "known_height_m": 4.94, "height_m": 5.339999999999975, "n_roof": 11180, "n_ground": 13898, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_ddc8ce7e149c", "project": "TX_Pecos_Dallas_B3_2018", "known_height_m": 6.4, "height_m": 7.023000000000025, "n_roof": 7017, "n_ground": 11702, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_3804fbe962f8", "project": "CA_OrangeCo_2011", "known_height_m": 5.6, "height_m": 6.3300000000000125, "n_roof": 2290, "n_ground": 5672, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_8d25991bfa8d", "project": "USGS_LPC_TX_Central_B1_2017_LAS_2019", "known_height_m": 6.61, "height_m": 7.52000000000001, "n_roof": 35787, "n_ground": 37440, "n_class6": 35445, "epsg": "3857", "error": null}
+{"facility_id": "dc_1cb4fe2a0b9e", "project": "USGS_Lidar_Point_Cloud_NJ_SdL5_2014_LAS_2015", "known_height_m": 9.38, "height_m": 9.529999999999973, "n_roof": 82978, "n_ground": 16969, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_90929b3b19a1", "project": "USGS_LPC_MA_ME_MA_QL2_UTM18_L1_2015_LAS_2018", "known_height_m": 9.52, "height_m": 13.770000000000095, "n_roof": 38304, "n_ground": 72696, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_0dc2e0d5e422", "project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015", "known_height_m": 7.66, "height_m": 8.050000000000011, "n_roof": 22628, "n_ground": 12401, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_fd5d2f4c2f9e", "project": "NY_NewYorkCity", "known_height_m": 80.33, "height_m": 96.82000000000001, "n_roof": 22660, "n_ground": 3107, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_0ef9a41e7d70", "project": "USGS_LPC_MD_VA_Sandy_NCR_2014_LAS_2015", "known_height_m": 15.19, "height_m": 23.920000000000016, "n_roof": 18181, "n_ground": 8000, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_12dcf424978c", "project": "CA_SantaClaraCounty_2020", "known_height_m": 8.49, "height_m": 16.612999999999943, "n_roof": 5034, "n_ground": 2833, "n_class6": 4489, "epsg": "3857", "error": null}
+{"facility_id": "dc_fc171f02d21c", "project": "WI_DaneCo_2017", "known_height_m": 15.98, "height_m": 42.769000000000005, "n_roof": 22453, "n_ground": 19004, "n_class6": 20453, "epsg": "3857", "error": null}
+{"facility_id": "dc_6b2ef030c33c", "project": "GA_Statewide_B2_2018", "known_height_m": 30.27, "height_m": 88.90999999999997, "n_roof": 82170, "n_ground": 12607, "n_class6": 68660, "epsg": "3857", "error": null}
+{"facility_id": "dc_7afdfff73d8e", "project": "OH_StatewideP3_5_B21", "known_height_m": 17.01, "height_m": 18.18000000000029, "n_roof": 96509, "n_ground": 18138, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_b067df925538", "project": "VA_FEMA_NorthCounties_2011", "known_height_m": 6.75, "height_m": 7.8700000000000045, "n_roof": 37895, "n_ground": 17081, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_cdfdfa748122", "project": "FL_Peninsular_FDEM_Orange_2018", "known_height_m": 8.36, "height_m": 11.180000000000064, "n_roof": 23529, "n_ground": 57781, "n_class6": 20746, "epsg": "3857", "error": null}
+{"facility_id": "dc_3fa01f9ed0e0", "project": "ARRA-CA_SanFranCoast_2010", "known_height_m": 7.26, "error": "ground points 0"}
+{"facility_id": "dc_c312286353c3", "project": "OK_Panhandle_B1B_2018", "known_height_m": 4.92, "height_m": 5.069999999999993, "n_roof": 36382, "n_ground": 32124, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_a33e0eaf3913", "project": "ARRA-CA_SanFranCoast_2010", "known_height_m": 10.71, "error": "ground points 0"}
+{"facility_id": "dc_ddb7e68d3679", "project": "KY_FullState", "known_height_m": 19.06, "height_m": 47.640000000000015, "n_roof": 17126, "n_ground": 7463, "n_class6": 15587, "epsg": "3857", "error": null}
+{"facility_id": "dc_a3de0719d6f7", "project": "USGS_LPC_OK_Woodward_UTM15_B6_2016_LAS_2019", "known_height_m": 4.3, "height_m": 3.5999999999999943, "n_roof": 413, "n_ground": 18423, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_ff3aba8fa11d", "project": "TX_Pecos_Dallas_B3_2018", "known_height_m": 10.9, "height_m": 13.698999999999984, "n_roof": 114087, "n_ground": 57792, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_88909d588f3f", "project": "MN_CentralMissRiver_4_B22", "known_height_m": 8.12, "height_m": 10.27400000000003, "n_roof": 299, "n_ground": 3643, "n_class6": 0, "epsg": "3857", "error": null}
+{"facility_id": "dc_cea813043db3", "project": "USGS_LPC_VA_Fairfax_County_2018", "known_height_m": 8.16, "height_m": 9.300000000000011, "n_roof": 63830, "n_ground": 12498, "n_class6": 0, "epsg": "3857", "error": null}

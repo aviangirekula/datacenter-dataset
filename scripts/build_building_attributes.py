@@ -351,6 +351,31 @@ def main() -> None:
           f"implausible building type; {int(downgrade.sum())} nearest-matches "
           f"downgraded to low confidence")
 
+    # Lidar heights, measured off USGS 3DEP point clouds. Validated against the
+    # 231 facilities that already had a USA Structures height: median absolute
+    # error 1.93 m, correlation 0.890, with a +1.55 m positive bias because the
+    # P90 of returns inside a footprint catches rooftop plant. The bias is
+    # reported rather than subtracted, since calibrating it away would turn a
+    # measurement into a fitted estimate.
+    #
+    # Values outside 0 to 150 m are dropped. They come from footprints that
+    # straddle a slope or catch a crane, and a negative building height is not a
+    # measurement worth keeping.
+    lidar_cache = REPO / "data" / "raw" / "lidar" / "lidar_heights.jsonl"
+    lidar: dict[str, float] = {}
+    if lidar_cache.exists():
+        with open(lidar_cache) as fh:
+            for line in fh:
+                try:
+                    r = json.loads(line)
+                except Exception:  # noqa: BLE001
+                    continue
+                if r.get("error") or r.get("height_m") is None:
+                    continue
+                h = float(r["height_m"])
+                if 0.0 <= h <= 150.0:
+                    lidar[str(r["facility_id"])] = h     # last good row wins
+
     # Fill height only where USA Structures has none. Provenance is recorded so a
     # reader can tell the two apart rather than seeing one undifferentiated column.
     osm_h = osm_heights()
@@ -361,6 +386,13 @@ def main() -> None:
         out.loc[gap, "height_m"] = fid[gap].map(osm_h)
         out.loc[gap, "height_source"] = "openstreetmap_tag"
         print(f"  [osm]  filled {int(gap.sum())} heights from OpenStreetMap tags")
+
+        if lidar:
+            gap = out["height_m"].isna() & fid.isin(lidar)
+            out.loc[gap, "height_m"] = fid[gap].map(lidar)
+            out.loc[gap, "height_source"] = "3dep_lidar"
+            print(f"  [lidar] filled {int(gap.sum())} heights from USGS 3DEP "
+                  f"point clouds")
 
     if "height_m" in out:
         out["multi_storey"] = np.where(
